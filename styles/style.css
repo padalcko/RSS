@@ -598,29 +598,73 @@ img {
 }
 
 .client-card {
+  min-height: 200px;
+  padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background: #fff;
-  border-radius: 14px;
-  padding: 20px;
   border: 2px solid #e5e7eb;
-  transition: 0.3s;
+  border-radius: 14px;
+
   color: #8E8F99;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
 .client-card:hover {
   border-color: var(--primary-color);
   color: var(--primary-color);
+  transform: translateY(-4px);
 }
 
 .client-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+}
+
+.client-logo svg {
+  display: block;
+  width: 48px;
+  height: 48px;
 }
 
 .client-name {
   text-align: center;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.25;
+}
+
+@media (max-width: 1200px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client-card {
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* LEAD */
