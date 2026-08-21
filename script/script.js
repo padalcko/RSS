@@ -1,103 +1,245 @@
 (() => {
   "use strict";
 
+  /* =========================================================
+     CONFIG
+  ========================================================= */
+
   const WEBHOOK_URL =
     "https://padalko.app.n8n.cloud/webhook/raccoon-seo-lead";
 
 
-  /* =========================================
+  /* =========================================================
      HELPERS
-  ========================================= */
+  ========================================================= */
 
-  const qs = (selector, scope = document) =>
-    scope.querySelector(selector);
-
-  const qsa = (selector, scope = document) =>
-    Array.from(scope.querySelectorAll(selector));
-
-  const normalizePhone = (phone = "") => {
-    return phone.replace(/[^\d+]/g, "");
+  const qs = (selector, scope = document) => {
+    return scope.querySelector(selector);
   };
 
-  const isValidPhone = (phone = "") => {
-    return /^\+\d{7,15}$/.test(phone);
+  const qsa = (selector, scope = document) => {
+    return Array.from(
+      scope.querySelectorAll(selector)
+    );
   };
+
+
+  /* =========================================================
+     CURRENT LANGUAGE
+  ========================================================= */
 
   const getCurrentLanguage = () => {
-    const htmlLang =
-      document.documentElement.getAttribute("lang");
+    const lang =
+      document.documentElement
+        .getAttribute("lang")
+        ?.toLowerCase();
 
-    return htmlLang === "pl" ? "pl" : "uk";
+    return lang === "pl"
+      ? "pl"
+      : "uk";
   };
 
-  const getTexts = () => {
-    const lang = getCurrentLanguage();
 
-    if (lang === "pl") {
-      return {
-        required:
-          "Wypełnij imię, telefon i adres e-mail.",
-        phone:
-          "Podaj numer telefonu w formacie międzynarodowym, np. +48123456789.",
-        sending:
-          "Wysyłam zgłoszenie...",
-        success:
-          "Dziękujemy! Zgłoszenie zostało wysłane. Wkrótce się skontaktujemy.",
-        error:
-          "Nie udało się wysłać formularza. Spróbuj ponownie później.",
-        subscribeSuccess:
-          "Dziękujemy! Zapisano adres e-mail do newslettera.",
-        subscribeError:
-          "Nie udało się zapisać do newslettera. Spróbuj ponownie później."
-      };
-    }
+  /* =========================================================
+     TRANSLATIONS
+  ========================================================= */
 
-    return {
+  const translations = {
+    uk: {
       required:
         "Заповніть імʼя, телефон та email.",
-      phone:
-        "Вкажіть телефон у міжнародному форматі, наприклад: +48123456789.",
+
+      invalidPhone:
+        "Вкажіть телефон у міжнародному форматі, наприклад +48123456789.",
+
       sending:
-        "Відправляю заявку...",
+        "Відправляємо заявку...",
+
       success:
         "Дякуємо! Заявку відправлено. Ми скоро звʼяжемося з вами.",
+
       error:
-        "Не вдалося відправити форму. Спробуйте ще раз пізніше.",
+        "Не вдалося відправити заявку. Спробуйте ще раз пізніше.",
+
       subscribeSuccess:
-        "Дякуємо! Email додано до підписки.",
+        "Дякуємо! Ваш email додано до підписки.",
+
       subscribeError:
         "Не вдалося оформити підписку. Спробуйте ще раз пізніше."
-    };
+    },
+
+    pl: {
+      required:
+        "Wypełnij imię, telefon i adres e-mail.",
+
+      invalidPhone:
+        "Podaj numer telefonu w formacie międzynarodowym, np. +48123456789.",
+
+      sending:
+        "Wysyłamy zgłoszenie...",
+
+      success:
+        "Dziękujemy! Zgłoszenie zostało wysłane. Wkrótce się skontaktujemy.",
+
+      error:
+        "Nie udało się wysłać zgłoszenia. Spróbuj ponownie później.",
+
+      subscribeSuccess:
+        "Dziękujemy! Twój adres e-mail został dodany do newslettera.",
+
+      subscribeError:
+        "Nie udało się zapisać do newslettera. Spróbuj ponownie później."
+    }
   };
 
 
-  /* =========================================
-     MODAL
-  ========================================= */
+  const getTexts = () => {
+    return translations[
+      getCurrentLanguage()
+    ];
+  };
 
-  const backdrop = qs(".js-backdrop");
-  const openModalButtons = qsa(".js-open-modal");
-  const closeModalButton = qs(".js-close-modal");
+
+  /* =========================================================
+     PHONE HELPERS
+  ========================================================= */
+
+  const normalizePhone = (
+    phone = ""
+  ) => {
+    const trimmed =
+      String(phone).trim();
+
+    if (!trimmed) {
+      return "";
+    }
+
+    const hasPlus =
+      trimmed.startsWith("+");
+
+    const digits =
+      trimmed.replace(/\D/g, "");
+
+    return hasPlus
+      ? `+${digits}`
+      : digits;
+  };
+
+
+  const isValidPhone = (
+    phone = ""
+  ) => {
+    return /^\+\d{7,15}$/.test(
+      phone
+    );
+  };
+
+
+  /* =========================================================
+     BODY LOCK
+  ========================================================= */
+
+  const lockBody = () => {
+    document.body.classList.add(
+      "modal-open"
+    );
+  };
+
+
+  const unlockBody = () => {
+    const backdrop =
+      qs(".js-backdrop");
+
+    const navList =
+      qs(".nav-list");
+
+    const modalOpen =
+      backdrop &&
+      !backdrop.classList.contains(
+        "is-hidden"
+      );
+
+    const menuOpen =
+      navList &&
+      navList.classList.contains(
+        "open"
+      );
+
+    if (
+      !modalOpen &&
+      !menuOpen
+    ) {
+      document.body.classList.remove(
+        "modal-open"
+      );
+    }
+  };
+
+
+  /* =========================================================
+     MODAL
+  ========================================================= */
+
+  const backdrop =
+    qs(".js-backdrop");
+
+  const modal =
+    qs(".modal");
+
+  const openModalButtons =
+    qsa(".js-open-modal");
+
+  const closeModalButton =
+    qs(".js-close-modal");
+
 
   const openModal = () => {
-    if (!backdrop) return;
+    if (!backdrop) {
+      return;
+    }
 
-    backdrop.classList.remove("is-hidden");
-    document.body.classList.add("modal-open");
+    backdrop.classList.remove(
+      "is-hidden"
+    );
+
+    lockBody();
+
+    const firstInput =
+      qs(
+        "input, select, textarea",
+        backdrop
+      );
+
+    if (firstInput) {
+      window.setTimeout(() => {
+        firstInput.focus();
+      }, 100);
+    }
   };
+
 
   const closeModal = () => {
-    if (!backdrop) return;
+    if (!backdrop) {
+      return;
+    }
 
-    backdrop.classList.add("is-hidden");
-    document.body.classList.remove("modal-open");
+    backdrop.classList.add(
+      "is-hidden"
+    );
+
+    unlockBody();
   };
 
-  if (openModalButtons.length) {
-    openModalButtons.forEach((button) => {
-      button.addEventListener("click", openModal);
-    });
-  }
+
+  openModalButtons.forEach(
+    (button) => {
+      button.addEventListener(
+        "click",
+        openModal
+      );
+    }
+  );
+
 
   if (closeModalButton) {
     closeModalButton.addEventListener(
@@ -106,149 +248,322 @@
     );
   }
 
+
   if (backdrop) {
-    backdrop.addEventListener("click", (event) => {
-      if (event.target === backdrop) {
-        closeModal();
+    backdrop.addEventListener(
+      "click",
+      (event) => {
+        if (
+          event.target === backdrop
+        ) {
+          closeModal();
+        }
       }
-    });
+    );
   }
 
-  document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      backdrop &&
-      !backdrop.classList.contains("is-hidden")
-    ) {
-      closeModal();
+
+  if (modal) {
+    modal.addEventListener(
+      "click",
+      (event) => {
+        event.stopPropagation();
+      }
+    );
+  }
+
+
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        event.key === "Escape"
+      ) {
+        if (
+          backdrop &&
+          !backdrop.classList.contains(
+            "is-hidden"
+          )
+        ) {
+          closeModal();
+        }
+
+        closeMobileMenu();
+      }
     }
-  });
+  );
 
 
-  /* =========================================
+  /* =========================================================
      BURGER MENU
-  ========================================= */
+  ========================================================= */
 
-  const burger = qs(".burger");
-  const navList = qs(".nav-list");
+  const burger =
+    qs(".burger");
 
-  const closeBurgerMenu = () => {
-    if (!burger || !navList) return;
+  const navList =
+    qs(".nav-list");
 
-    navList.classList.remove("open");
-    burger.classList.remove("active");
+
+  function openMobileMenu() {
+    if (
+      !burger ||
+      !navList
+    ) {
+      return;
+    }
+
+    navList.classList.add(
+      "open"
+    );
+
+    burger.classList.add(
+      "active"
+    );
+
+    burger.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    lockBody();
+  }
+
+
+  function closeMobileMenu() {
+    if (
+      !burger ||
+      !navList
+    ) {
+      return;
+    }
+
+    navList.classList.remove(
+      "open"
+    );
+
+    burger.classList.remove(
+      "active"
+    );
+
     burger.setAttribute(
       "aria-expanded",
       "false"
     );
 
-    if (!backdrop ||
-        backdrop.classList.contains("is-hidden")) {
-      document.body.classList.remove(
-        "modal-open"
-      );
-    }
-  };
+    unlockBody();
+  }
 
-  const openBurgerMenu = () => {
-    if (!burger || !navList) return;
 
-    navList.classList.add("open");
-    burger.classList.add("active");
-    burger.setAttribute(
-      "aria-expanded",
-      "true"
-    );
-  };
+  if (
+    burger &&
+    navList
+  ) {
+    burger.addEventListener(
+      "click",
+      () => {
+        const isOpen =
+          navList.classList.contains(
+            "open"
+          );
 
-  if (burger && navList) {
-    burger.addEventListener("click", () => {
-      const isOpen =
-        navList.classList.contains("open");
-
-      if (isOpen) {
-        closeBurgerMenu();
-      } else {
-        openBurgerMenu();
+        if (isOpen) {
+          closeMobileMenu();
+        } else {
+          openMobileMenu();
+        }
       }
-    });
+    );
 
-    qsa(".nav-list .nav-link").forEach((link) => {
+
+    qsa(
+      ".nav-list .nav-link"
+    ).forEach((link) => {
       link.addEventListener(
         "click",
-        closeBurgerMenu
+        closeMobileMenu
       );
     });
   }
 
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) {
-      closeBurgerMenu();
+
+  window.addEventListener(
+    "resize",
+    () => {
+      if (
+        window.innerWidth > 900
+      ) {
+        closeMobileMenu();
+      }
     }
-  });
-
-
-  /* =========================================
-     SCROLL SPY
-  ========================================= */
-
-  const sections = qsa("section[id]");
-  const navLinks = qsa(
-    '.nav-link[href^="/#"], .nav-link[href^="#"]'
   );
 
-  const updateActiveNavigation = () => {
-    if (!sections.length || !navLinks.length) {
+
+  /* =========================================================
+     SMOOTH INTERNAL ANCHORS
+  ========================================================= */
+
+  qsa('a[href^="#"]').forEach(
+    (link) => {
+      link.addEventListener(
+        "click",
+        (event) => {
+          const href =
+            link.getAttribute(
+              "href"
+            );
+
+          if (
+            !href ||
+            href === "#"
+          ) {
+            return;
+          }
+
+          const target =
+            qs(href);
+
+          if (!target) {
+            return;
+          }
+
+          event.preventDefault();
+
+          const header =
+            qs(".header");
+
+          const headerHeight =
+            header
+              ? header.offsetHeight
+              : 0;
+
+          const top =
+            target.getBoundingClientRect()
+              .top +
+            window.pageYOffset -
+            headerHeight -
+            20;
+
+          window.scrollTo({
+            top,
+            behavior: "smooth"
+          });
+
+          closeMobileMenu();
+        }
+      );
+    }
+  );
+
+
+  /* =========================================================
+     SCROLL SPY
+  ========================================================= */
+
+  const sections =
+    qsa("section[id]");
+
+  const internalNavLinks =
+    qsa(
+      '.nav-link[href^="#"], .nav-link[href^="/#"], .nav-link[href^="/pl/#"]'
+    );
+
+
+  const getAnchorIdFromHref = (
+    href
+  ) => {
+    if (!href) {
+      return "";
+    }
+
+    const hashPosition =
+      href.indexOf("#");
+
+    if (hashPosition === -1) {
+      return "";
+    }
+
+    return href.substring(
+      hashPosition + 1
+    );
+  };
+
+
+  const updateActiveNav = () => {
+    if (
+      !sections.length ||
+      !internalNavLinks.length
+    ) {
       return;
     }
 
-    let currentSection = "";
+    const header =
+      qs(".header");
 
     const offset =
-      window.pageYOffset + 180;
+      window.scrollY +
+      (
+        header
+          ? header.offsetHeight
+          : 0
+      ) +
+      120;
 
-    sections.forEach((section) => {
-      if (
-        offset >= section.offsetTop
-      ) {
-        currentSection =
-          section.getAttribute("id");
+    let currentSection = "";
+
+    sections.forEach(
+      (section) => {
+        if (
+          offset >=
+          section.offsetTop
+        ) {
+          currentSection =
+            section.id;
+        }
       }
-    });
-
-    if (!currentSection) return;
-
-    navLinks.forEach((link) => {
-      const href =
-        link.getAttribute("href") || "";
-
-      const cleanHref =
-        href.replace(/^\/?/, "");
-
-      const isMatch =
-        cleanHref === `#${currentSection}`;
-
-      link.classList.toggle(
-        "active",
-        isMatch
-      );
-    });
-  };
-
-  if (sections.length && navLinks.length) {
-    window.addEventListener(
-      "scroll",
-      updateActiveNavigation,
-      { passive: true }
     );
 
-    updateActiveNavigation();
+    if (!currentSection) {
+      return;
+    }
+
+    internalNavLinks.forEach(
+      (link) => {
+        const id =
+          getAnchorIdFromHref(
+            link.getAttribute(
+              "href"
+            )
+          );
+
+        link.classList.toggle(
+          "active",
+          id === currentSection
+        );
+      }
+    );
+  };
+
+
+  if (
+    sections.length &&
+    internalNavLinks.length
+  ) {
+    window.addEventListener(
+      "scroll",
+      updateActiveNav,
+      {
+        passive: true
+      }
+    );
+
+    updateActiveNav();
   }
 
 
-  /* =========================================
+  /* =========================================================
      FORM STATUS
-  ========================================= */
+  ========================================================= */
 
   const setFormStatus = (
     form,
@@ -256,26 +571,71 @@
     type = ""
   ) => {
     const status =
-      qs(".js-form-status", form);
+      qs(
+        ".js-form-status",
+        form
+      );
 
-    if (!status) return;
+    if (!status) {
+      return;
+    }
 
-    status.textContent = message;
+    status.textContent =
+      message;
 
-    status.className =
-      "form-status js-form-status";
+    status.classList.remove(
+      "success",
+      "error"
+    );
 
     if (type) {
-      status.classList.add(type);
+      status.classList.add(
+        type
+      );
     }
   };
 
 
-  /* =========================================
-     COLLECT LEAD FORM DATA
-  ========================================= */
+  /* =========================================================
+     BUTTON LOADING STATE
+  ========================================================= */
 
-  const collectFormData = (form) => {
+  const setButtonLoading = (
+    button,
+    loading
+  ) => {
+    if (!button) {
+      return;
+    }
+
+    if (loading) {
+      button.dataset.originalText =
+        button.textContent.trim();
+
+      button.disabled = true;
+    } else {
+      button.disabled = false;
+
+      if (
+        button.dataset.originalText
+      ) {
+        button.textContent =
+          button.dataset.originalText;
+
+        delete button.dataset
+          .originalText;
+      }
+    }
+  };
+
+
+  /* =========================================================
+     COLLECT LEAD DATA
+  ========================================================= */
+
+  const collectLeadData = (
+    form
+  ) => {
     const formData =
       new FormData(form);
 
@@ -283,9 +643,6 @@
       Object.fromEntries(
         formData.entries()
       );
-
-    const pageTitle =
-      document.title || "";
 
     return {
       createdAt:
@@ -300,10 +657,16 @@
       pageUrl:
         window.location.href,
 
-      pageTitle,
+      pagePath:
+        window.location.pathname,
+
+      pageTitle:
+        document.title,
 
       name:
-        (data.name || "").trim(),
+        String(
+          data.name || ""
+        ).trim(),
 
       phone:
         normalizePhone(
@@ -311,85 +674,112 @@
         ),
 
       email:
-        (data.email || "").trim(),
+        String(
+          data.email || ""
+        ).trim(),
 
       company:
-        (data.company || "").trim(),
+        String(
+          data.company || ""
+        ).trim(),
 
       service:
-        data.service || "",
+        String(
+          data.service || ""
+        ).trim(),
 
       budget:
-        data.budget || "",
+        String(
+          data.budget || ""
+        ).trim(),
 
       comment:
-        (data.comment || "").trim()
+        String(
+          data.comment || ""
+        ).trim(),
+
+      userAgent:
+        navigator.userAgent
     };
   };
 
 
-  /* =========================================
-     SEND TO N8N
-  ========================================= */
+  /* =========================================================
+     SEND WEBHOOK
+  ========================================================= */
 
-  const sendToN8n = async (payload) => {
-    const response =
-      await fetch(WEBHOOK_URL, {
-        method: "POST",
+  const sendToWebhook =
+    async (payload) => {
 
-        headers: {
-          "Content-Type":
-            "application/json"
-        },
+      const response =
+        await fetch(
+          WEBHOOK_URL,
+          {
+            method: "POST",
 
-        body:
-          JSON.stringify(payload)
-      });
+            headers: {
+              "Content-Type":
+                "application/json"
+            },
 
-    if (!response.ok) {
-      throw new Error(
-        `Webhook error: ${response.status}`
-      );
-    }
+            body:
+              JSON.stringify(
+                payload
+              )
+          }
+        );
 
-    const contentType =
-      response.headers.get(
-        "content-type"
-      );
 
-    if (
-      contentType &&
-      contentType.includes(
-        "application/json"
-      )
-    ) {
-      try {
-        return await response.json();
-      } catch (error) {
-        return {
-          success: true
-        };
+      if (!response.ok) {
+        throw new Error(
+          `Webhook returned ${response.status}`
+        );
       }
-    }
 
-    return {
-      success: true
+
+      const contentType =
+        response.headers.get(
+          "content-type"
+        );
+
+
+      if (
+        contentType &&
+        contentType.includes(
+          "application/json"
+        )
+      ) {
+        try {
+          return await response.json();
+        } catch (error) {
+          return {
+            success: true
+          };
+        }
+      }
+
+
+      return {
+        success: true
+      };
     };
-  };
 
 
-  /* =========================================
+  /* =========================================================
      LEAD FORMS
-  ========================================= */
+  ========================================================= */
 
   const leadForms =
     qsa(".js-lead-form");
 
-  if (leadForms.length) {
-    leadForms.forEach((form) => {
+
+  leadForms.forEach(
+    (form) => {
+
       form.addEventListener(
         "submit",
         async (event) => {
+
           event.preventDefault();
 
           const texts =
@@ -402,7 +792,10 @@
             );
 
           const payload =
-            collectFormData(form);
+            collectLeadData(form);
+
+
+          /* REQUIRED */
 
           if (
             !payload.name ||
@@ -418,6 +811,9 @@
             return;
           }
 
+
+          /* PHONE */
+
           if (
             !isValidPhone(
               payload.phone
@@ -425,27 +821,62 @@
           ) {
             setFormStatus(
               form,
-              texts.phone,
+              texts.invalidPhone,
               "error"
             );
 
             return;
           }
 
+
+          /* EMAIL */
+
+          const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (
+            !emailPattern.test(
+              payload.email
+            )
+          ) {
+            setFormStatus(
+              form,
+              texts.required,
+              "error"
+            );
+
+            return;
+          }
+
+
           try {
+
+            if (
+              submitButton
+            ) {
+              submitButton.dataset.originalText =
+                submitButton
+                  .textContent
+                  .trim();
+
+              submitButton.textContent =
+                texts.sending;
+
+              submitButton.disabled =
+                true;
+            }
+
+
             setFormStatus(
               form,
               texts.sending
             );
 
-            if (submitButton) {
-              submitButton.disabled =
-                true;
-            }
 
-            await sendToN8n(
+            await sendToWebhook(
               payload
             );
+
 
             setFormStatus(
               form,
@@ -453,82 +884,137 @@
               "success"
             );
 
+
             form.reset();
+
 
             if (
               form.classList.contains(
                 "modal-form"
               )
             ) {
-              setTimeout(() => {
-                closeModal();
-              }, 1400);
+              window.setTimeout(
+                () => {
+                  closeModal();
+                },
+                1600
+              );
             }
+
           } catch (error) {
+
             console.error(
               "Lead form error:",
               error
             );
+
 
             setFormStatus(
               form,
               texts.error,
               "error"
             );
+
           } finally {
-            if (submitButton) {
+
+            if (
+              submitButton
+            ) {
               submitButton.disabled =
                 false;
+
+              if (
+                submitButton.dataset
+                  .originalText
+              ) {
+                submitButton.textContent =
+                  submitButton.dataset
+                    .originalText;
+
+                delete submitButton
+                  .dataset
+                  .originalText;
+              }
             }
+
           }
+
         }
       );
-    });
-  }
+
+    }
+  );
 
 
-  /* =========================================
-     FOOTER SUBSCRIBE
-  ========================================= */
+  /* =========================================================
+     NEWSLETTER
+  ========================================================= */
 
   const subscribeForms =
     qsa(".subscribe-form");
 
-  if (subscribeForms.length) {
-    subscribeForms.forEach((form) => {
+
+  subscribeForms.forEach(
+    (form) => {
+
       form.addEventListener(
         "submit",
         async (event) => {
+
           event.preventDefault();
 
           const texts =
             getTexts();
 
-          const emailInput =
+          const input =
             qs(
               ".subscribe-input",
               form
             );
 
-          const submitButton =
+          const button =
             qs(
               'button[type="submit"]',
               form
             );
 
-          const email =
-            emailInput
-              ? emailInput.value.trim()
-              : "";
 
-          if (!email) return;
+          if (!input) {
+            return;
+          }
+
+
+          const email =
+            input.value.trim();
+
+
+          if (!email) {
+            return;
+          }
+
+
+          const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+          if (
+            !emailPattern.test(
+              email
+            )
+          ) {
+            input.focus();
+
+            return;
+          }
+
 
           const payload = {
+
             createdAt:
               new Date().toISOString(),
 
             leadSource:
-              "Footer Subscribe Form",
+              "Raccoon SEO Studio Newsletter",
 
             language:
               getCurrentLanguage(),
@@ -536,11 +1022,14 @@
             pageUrl:
               window.location.href,
 
+            pagePath:
+              window.location.pathname,
+
             pageTitle:
-              document.title || "",
+              document.title,
 
             name:
-              "Newsletter subscriber",
+              "",
 
             phone:
               "",
@@ -560,68 +1049,168 @@
               "Newsletter subscription"
           };
 
+
           try {
-            if (submitButton) {
-              submitButton.disabled =
-                true;
+
+            if (button) {
+              setButtonLoading(
+                button,
+                true
+              );
             }
 
-            await sendToN8n(
+
+            await sendToWebhook(
               payload
             );
 
+
             form.reset();
+
 
             window.alert(
               texts.subscribeSuccess
             );
+
           } catch (error) {
+
             console.error(
-              "Subscribe error:",
+              "Newsletter error:",
               error
             );
+
 
             window.alert(
               texts.subscribeError
             );
+
           } finally {
-            if (submitButton) {
-              submitButton.disabled =
-                false;
+
+            if (button) {
+              setButtonLoading(
+                button,
+                false
+              );
             }
+
           }
+
         }
       );
-    });
-  }
+
+    }
+  );
 
 
-  /* =========================================
-     EXTERNAL LINKS SAFETY
-  ========================================= */
+  /* =========================================================
+     EXTERNAL LINKS
+  ========================================================= */
 
   qsa(
     'a[target="_blank"]'
   ).forEach((link) => {
-    const rel =
-      link.getAttribute("rel") || "";
 
-    const relValues =
+    const currentRel =
+      link.getAttribute(
+        "rel"
+      ) || "";
+
+    const values =
       new Set(
-        rel
-          .split(" ")
+        currentRel
+          .split(/\s+/)
           .filter(Boolean)
       );
 
-    relValues.add("noopener");
-    relValues.add("noreferrer");
+    values.add(
+      "noopener"
+    );
+
+    values.add(
+      "noreferrer"
+    );
 
     link.setAttribute(
       "rel",
-      Array.from(
-        relValues
-      ).join(" ")
+      Array.from(values).join(" ")
     );
+
   });
+
+
+  /* =========================================================
+     HASH FROM ANOTHER PAGE
+  ========================================================= */
+
+  const scrollToCurrentHash =
+    () => {
+
+      if (
+        !window.location.hash
+      ) {
+        return;
+      }
+
+
+      const target =
+        qs(
+          window.location.hash
+        );
+
+
+      if (!target) {
+        return;
+      }
+
+
+      window.setTimeout(
+        () => {
+
+          const header =
+            qs(".header");
+
+          const headerHeight =
+            header
+              ? header.offsetHeight
+              : 0;
+
+
+          const top =
+            target
+              .getBoundingClientRect()
+              .top +
+            window.pageYOffset -
+            headerHeight -
+            20;
+
+
+          window.scrollTo({
+            top,
+            behavior: "smooth"
+          });
+
+        },
+        100
+      );
+
+    };
+
+
+  window.addEventListener(
+    "load",
+    scrollToCurrentHash
+  );
+
+
+  /* =========================================================
+     INITIAL STATE
+  ========================================================= */
+
+  if (burger) {
+    burger.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+  }
 
 })();
