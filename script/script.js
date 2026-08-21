@@ -1,243 +1,627 @@
 (() => {
-  const WEBHOOK_URL = "https://padalko.app.n8n.cloud/webhook/raccoon-seo-lead";
+  "use strict";
 
-  /* ============================
-     MODAL
-  ============================ */
-  const refs = {
-    openModalBtn: document.querySelector(".js-open-modal"),
-    closeModalBtn: document.querySelector(".js-close-modal"),
-    modal: document.querySelector(".js-backdrop"),
-  };
+  const WEBHOOK_URL =
+    "https://padalko.app.n8n.cloud/webhook/raccoon-seo-lead";
 
-  const toggleModal = () => {
-    if (!refs.modal) return;
 
-    const isHidden = refs.modal.classList.toggle("is-hidden");
-    document.body.style.overflow = isHidden ? "auto" : "hidden";
-  };
+  /* =========================================
+     HELPERS
+  ========================================= */
 
-  if (refs.openModalBtn && refs.closeModalBtn && refs.modal) {
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
+  const qs = (selector, scope = document) =>
+    scope.querySelector(selector);
 
-    refs.modal.addEventListener("click", (e) => {
-      if (e.target === refs.modal) toggleModal();
-    });
-  }
+  const qsa = (selector, scope = document) =>
+    Array.from(scope.querySelectorAll(selector));
 
-  /* ============================
-     SCROLL SPY
-  ============================ */
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  if (sections.length && navLinks.length) {
-    window.addEventListener("scroll", () => {
-      let current = "";
-      const scrollPos = window.pageYOffset + 200;
-
-      sections.forEach((section) => {
-        if (scrollPos >= section.offsetTop) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.toggle(
-          "active",
-          link.getAttribute("href") === `#${current}`
-        );
-      });
-    });
-  }
-
-  /* ============================
-     BURGER MENU
-  ============================ */
-  const burger = document.querySelector(".burger");
-  const navList = document.querySelector(".nav-list");
-  const contactsList = document.querySelector(".contacts-list");
-
-  const closeBurgerMenu = () => {
-    if (!burger || !navList || !contactsList) return;
-
-    navList.classList.remove("open");
-    contactsList.classList.remove("open");
-    burger.classList.remove("active");
-    document.body.style.overflow = "auto";
-    burger.setAttribute("aria-expanded", "false");
-  };
-
-  if (burger && navList && contactsList) {
-    burger.addEventListener("click", () => {
-      const isOpen = navList.classList.toggle("open");
-
-      contactsList.classList.toggle("open");
-      burger.classList.toggle("active");
-
-      document.body.style.overflow = isOpen ? "hidden" : "auto";
-      burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    });
-
-    document.querySelectorAll(".nav-list .nav-link").forEach((link) => {
-      link.addEventListener("click", closeBurgerMenu);
-    });
-  }
-
-  /* ============================
-     LEAD FORMS TO N8N
-  ============================ */
-  const leadForms = document.querySelectorAll(".js-lead-form");
-
-  const normalizePhone = (phone) => {
+  const normalizePhone = (phone = "") => {
     return phone.replace(/[^\d+]/g, "");
   };
 
-  const isValidPhone = (phone) => {
+  const isValidPhone = (phone = "") => {
     return /^\+\d{7,15}$/.test(phone);
   };
 
-  const setFormStatus = (form, message, type = "") => {
-    const status = form.querySelector(".js-form-status");
+  const getCurrentLanguage = () => {
+    const htmlLang =
+      document.documentElement.getAttribute("lang");
+
+    return htmlLang === "pl" ? "pl" : "uk";
+  };
+
+  const getTexts = () => {
+    const lang = getCurrentLanguage();
+
+    if (lang === "pl") {
+      return {
+        required:
+          "Wypełnij imię, telefon i adres e-mail.",
+        phone:
+          "Podaj numer telefonu w formacie międzynarodowym, np. +48123456789.",
+        sending:
+          "Wysyłam zgłoszenie...",
+        success:
+          "Dziękujemy! Zgłoszenie zostało wysłane. Wkrótce się skontaktujemy.",
+        error:
+          "Nie udało się wysłać formularza. Spróbuj ponownie później.",
+        subscribeSuccess:
+          "Dziękujemy! Zapisano adres e-mail do newslettera.",
+        subscribeError:
+          "Nie udało się zapisać do newslettera. Spróbuj ponownie później."
+      };
+    }
+
+    return {
+      required:
+        "Заповніть імʼя, телефон та email.",
+      phone:
+        "Вкажіть телефон у міжнародному форматі, наприклад: +48123456789.",
+      sending:
+        "Відправляю заявку...",
+      success:
+        "Дякуємо! Заявку відправлено. Ми скоро звʼяжемося з вами.",
+      error:
+        "Не вдалося відправити форму. Спробуйте ще раз пізніше.",
+      subscribeSuccess:
+        "Дякуємо! Email додано до підписки.",
+      subscribeError:
+        "Не вдалося оформити підписку. Спробуйте ще раз пізніше."
+    };
+  };
+
+
+  /* =========================================
+     MODAL
+  ========================================= */
+
+  const backdrop = qs(".js-backdrop");
+  const openModalButtons = qsa(".js-open-modal");
+  const closeModalButton = qs(".js-close-modal");
+
+  const openModal = () => {
+    if (!backdrop) return;
+
+    backdrop.classList.remove("is-hidden");
+    document.body.classList.add("modal-open");
+  };
+
+  const closeModal = () => {
+    if (!backdrop) return;
+
+    backdrop.classList.add("is-hidden");
+    document.body.classList.remove("modal-open");
+  };
+
+  if (openModalButtons.length) {
+    openModalButtons.forEach((button) => {
+      button.addEventListener("click", openModal);
+    });
+  }
+
+  if (closeModalButton) {
+    closeModalButton.addEventListener(
+      "click",
+      closeModal
+    );
+  }
+
+  if (backdrop) {
+    backdrop.addEventListener("click", (event) => {
+      if (event.target === backdrop) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      backdrop &&
+      !backdrop.classList.contains("is-hidden")
+    ) {
+      closeModal();
+    }
+  });
+
+
+  /* =========================================
+     BURGER MENU
+  ========================================= */
+
+  const burger = qs(".burger");
+  const navList = qs(".nav-list");
+
+  const closeBurgerMenu = () => {
+    if (!burger || !navList) return;
+
+    navList.classList.remove("open");
+    burger.classList.remove("active");
+    burger.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    if (!backdrop ||
+        backdrop.classList.contains("is-hidden")) {
+      document.body.classList.remove(
+        "modal-open"
+      );
+    }
+  };
+
+  const openBurgerMenu = () => {
+    if (!burger || !navList) return;
+
+    navList.classList.add("open");
+    burger.classList.add("active");
+    burger.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+  };
+
+  if (burger && navList) {
+    burger.addEventListener("click", () => {
+      const isOpen =
+        navList.classList.contains("open");
+
+      if (isOpen) {
+        closeBurgerMenu();
+      } else {
+        openBurgerMenu();
+      }
+    });
+
+    qsa(".nav-list .nav-link").forEach((link) => {
+      link.addEventListener(
+        "click",
+        closeBurgerMenu
+      );
+    });
+  }
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) {
+      closeBurgerMenu();
+    }
+  });
+
+
+  /* =========================================
+     SCROLL SPY
+  ========================================= */
+
+  const sections = qsa("section[id]");
+  const navLinks = qsa(
+    '.nav-link[href^="/#"], .nav-link[href^="#"]'
+  );
+
+  const updateActiveNavigation = () => {
+    if (!sections.length || !navLinks.length) {
+      return;
+    }
+
+    let currentSection = "";
+
+    const offset =
+      window.pageYOffset + 180;
+
+    sections.forEach((section) => {
+      if (
+        offset >= section.offsetTop
+      ) {
+        currentSection =
+          section.getAttribute("id");
+      }
+    });
+
+    if (!currentSection) return;
+
+    navLinks.forEach((link) => {
+      const href =
+        link.getAttribute("href") || "";
+
+      const cleanHref =
+        href.replace(/^\/?/, "");
+
+      const isMatch =
+        cleanHref === `#${currentSection}`;
+
+      link.classList.toggle(
+        "active",
+        isMatch
+      );
+    });
+  };
+
+  if (sections.length && navLinks.length) {
+    window.addEventListener(
+      "scroll",
+      updateActiveNavigation,
+      { passive: true }
+    );
+
+    updateActiveNavigation();
+  }
+
+
+  /* =========================================
+     FORM STATUS
+  ========================================= */
+
+  const setFormStatus = (
+    form,
+    message,
+    type = ""
+  ) => {
+    const status =
+      qs(".js-form-status", form);
 
     if (!status) return;
 
     status.textContent = message;
-    status.className = `form-status js-form-status ${type}`.trim();
+
+    status.className =
+      "form-status js-form-status";
+
+    if (type) {
+      status.classList.add(type);
+    }
   };
 
+
+  /* =========================================
+     COLLECT LEAD FORM DATA
+  ========================================= */
+
   const collectFormData = (form) => {
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
+    const formData =
+      new FormData(form);
+
+    const data =
+      Object.fromEntries(
+        formData.entries()
+      );
+
+    const pageTitle =
+      document.title || "";
 
     return {
-      createdAt: new Date().toISOString(),
-      leadSource: "Raccoon SEO Studio Website",
-      pageUrl: window.location.href,
+      createdAt:
+        new Date().toISOString(),
 
-      name: (data.name || "").trim(),
-      phone: normalizePhone(data.phone || ""),
-      email: (data.email || "").trim(),
-      company: (data.company || "").trim(),
-      service: data.service || "",
-      comment: (data.comment || "").trim(),
+      leadSource:
+        "Raccoon SEO Studio Website",
+
+      language:
+        getCurrentLanguage(),
+
+      pageUrl:
+        window.location.href,
+
+      pageTitle,
+
+      name:
+        (data.name || "").trim(),
+
+      phone:
+        normalizePhone(
+          data.phone || ""
+        ),
+
+      email:
+        (data.email || "").trim(),
+
+      company:
+        (data.company || "").trim(),
+
+      service:
+        data.service || "",
+
+      budget:
+        data.budget || "",
+
+      comment:
+        (data.comment || "").trim()
     };
   };
 
-  const sendLeadToN8n = async (payload) => {
-    const response = await fetch(WEBHOOK_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    });
+
+  /* =========================================
+     SEND TO N8N
+  ========================================= */
+
+  const sendToN8n = async (payload) => {
+    const response =
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+
+        headers: {
+          "Content-Type":
+            "application/json"
+        },
+
+        body:
+          JSON.stringify(payload)
+      });
 
     if (!response.ok) {
-      throw new Error(`Webhook error: ${response.status}`);
+      throw new Error(
+        `Webhook error: ${response.status}`
+      );
     }
 
-    try {
-      return await response.json();
-    } catch (error) {
-      return { success: true };
+    const contentType =
+      response.headers.get(
+        "content-type"
+      );
+
+    if (
+      contentType &&
+      contentType.includes(
+        "application/json"
+      )
+    ) {
+      try {
+        return await response.json();
+      } catch (error) {
+        return {
+          success: true
+        };
+      }
     }
+
+    return {
+      success: true
+    };
   };
+
+
+  /* =========================================
+     LEAD FORMS
+  ========================================= */
+
+  const leadForms =
+    qsa(".js-lead-form");
 
   if (leadForms.length) {
     leadForms.forEach((form) => {
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+      form.addEventListener(
+        "submit",
+        async (event) => {
+          event.preventDefault();
 
-        const submitButton = form.querySelector('button[type="submit"]');
-        const payload = collectFormData(form);
+          const texts =
+            getTexts();
 
-        if (!payload.name || !payload.phone || !payload.email) {
-          setFormStatus(
-            form,
-            "Заповніть імʼя, телефон та email.",
-            "error"
-          );
-          return;
-        }
+          const submitButton =
+            qs(
+              'button[type="submit"]',
+              form
+            );
 
-        if (!isValidPhone(payload.phone)) {
-          setFormStatus(
-            form,
-            "Вкажіть телефон у міжнародному форматі, наприклад: +12345678901.",
-            "error"
-          );
-          return;
-        }
+          const payload =
+            collectFormData(form);
 
-        try {
-          setFormStatus(form, "Відправляю заявку...");
+          if (
+            !payload.name ||
+            !payload.phone ||
+            !payload.email
+          ) {
+            setFormStatus(
+              form,
+              texts.required,
+              "error"
+            );
 
-          if (submitButton) {
-            submitButton.disabled = true;
+            return;
           }
 
-          await sendLeadToN8n(payload);
+          if (
+            !isValidPhone(
+              payload.phone
+            )
+          ) {
+            setFormStatus(
+              form,
+              texts.phone,
+              "error"
+            );
 
-          setFormStatus(
-            form,
-            "Дякую! Заявку відправлено. Ми скоро звʼяжемось з вами.",
-            "success"
-          );
+            return;
+          }
 
-          form.reset();
-        } catch (error) {
-          console.error(error);
+          try {
+            setFormStatus(
+              form,
+              texts.sending
+            );
 
-          setFormStatus(
-            form,
-            "Заявку не вдалося відправити. Перевірте Webhook URL, CORS або Respond to Webhook у n8n.",
-            "error"
-          );
-        } finally {
-          if (submitButton) {
-            submitButton.disabled = false;
+            if (submitButton) {
+              submitButton.disabled =
+                true;
+            }
+
+            await sendToN8n(
+              payload
+            );
+
+            setFormStatus(
+              form,
+              texts.success,
+              "success"
+            );
+
+            form.reset();
+
+            if (
+              form.classList.contains(
+                "modal-form"
+              )
+            ) {
+              setTimeout(() => {
+                closeModal();
+              }, 1400);
+            }
+          } catch (error) {
+            console.error(
+              "Lead form error:",
+              error
+            );
+
+            setFormStatus(
+              form,
+              texts.error,
+              "error"
+            );
+          } finally {
+            if (submitButton) {
+              submitButton.disabled =
+                false;
+            }
           }
         }
-      });
+      );
     });
   }
 
-  /* ============================
-     FOOTER SUBSCRIBE FORM
-  ============================ */
-  const subscribeForm = document.querySelector(".subscribe-form");
 
-  if (subscribeForm) {
-    subscribeForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
+  /* =========================================
+     FOOTER SUBSCRIBE
+  ========================================= */
 
-      const emailInput = subscribeForm.querySelector(".subscribe-input");
-      const email = emailInput ? emailInput.value.trim() : "";
+  const subscribeForms =
+    qsa(".subscribe-form");
 
-      if (!email) return;
+  if (subscribeForms.length) {
+    subscribeForms.forEach((form) => {
+      form.addEventListener(
+        "submit",
+        async (event) => {
+          event.preventDefault();
 
-      const payload = {
-        createdAt: new Date().toISOString(),
-        leadSource: "Footer Subscribe Form",
-        pageUrl: window.location.href,
-        name: "Підписник",
-        phone: "",
-        email,
-        company: "",
-        service: "Підписка на новини",
-        comment: "Користувач підписався через форму у футері",
-      };
+          const texts =
+            getTexts();
 
-      try {
-        await sendLeadToN8n(payload);
-        subscribeForm.reset();
-        alert("Дякую! Ви підписались на новини.");
-      } catch (error) {
-        console.error(error);
-        alert("Не вдалося відправити підписку. Перевірте n8n webhook.");
-      }
+          const emailInput =
+            qs(
+              ".subscribe-input",
+              form
+            );
+
+          const submitButton =
+            qs(
+              'button[type="submit"]',
+              form
+            );
+
+          const email =
+            emailInput
+              ? emailInput.value.trim()
+              : "";
+
+          if (!email) return;
+
+          const payload = {
+            createdAt:
+              new Date().toISOString(),
+
+            leadSource:
+              "Footer Subscribe Form",
+
+            language:
+              getCurrentLanguage(),
+
+            pageUrl:
+              window.location.href,
+
+            pageTitle:
+              document.title || "",
+
+            name:
+              "Newsletter subscriber",
+
+            phone:
+              "",
+
+            email,
+
+            company:
+              "",
+
+            service:
+              "Newsletter",
+
+            budget:
+              "",
+
+            comment:
+              "Newsletter subscription"
+          };
+
+          try {
+            if (submitButton) {
+              submitButton.disabled =
+                true;
+            }
+
+            await sendToN8n(
+              payload
+            );
+
+            form.reset();
+
+            window.alert(
+              texts.subscribeSuccess
+            );
+          } catch (error) {
+            console.error(
+              "Subscribe error:",
+              error
+            );
+
+            window.alert(
+              texts.subscribeError
+            );
+          } finally {
+            if (submitButton) {
+              submitButton.disabled =
+                false;
+            }
+          }
+        }
+      );
     });
   }
+
+
+  /* =========================================
+     EXTERNAL LINKS SAFETY
+  ========================================= */
+
+  qsa(
+    'a[target="_blank"]'
+  ).forEach((link) => {
+    const rel =
+      link.getAttribute("rel") || "";
+
+    const relValues =
+      new Set(
+        rel
+          .split(" ")
+          .filter(Boolean)
+      );
+
+    relValues.add("noopener");
+    relValues.add("noreferrer");
+
+    link.setAttribute(
+      "rel",
+      Array.from(
+        relValues
+      ).join(" ")
+    );
+  });
+
 })();
