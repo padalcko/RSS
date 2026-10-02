@@ -1,0 +1,29 @@
+# Preserve the canonical .html URLs; index documents use their directory URL.
+/index.html / 301!
+/pl/index.html /pl/ 301!
+/cases/expres-polish /cases/expres-polish.html 301!
+/cases/expres-polish/ /cases/expres-polish.html 301!
+/cases/gloss-garage /cases/gloss-garage.html 301!
+/cases/gloss-garage/ /cases/gloss-garage.html 301!
+/cases/laser-tech-service /cases/laser-tech-service.html 301!
+/cases/laser-tech-service/ /cases/laser-tech-service.html 301!
+/cases/lts-market /cases/lts-market.html 301!
+/cases/lts-market/ /cases/lts-market.html 301!
+/clients /clients.html 301!
+/clients/ /clients.html 301!
+/pl/cases/expres-polish /pl/cases/expres-polish.html 301!
+/pl/cases/expres-polish/ /pl/cases/expres-polish.html 301!
+/pl/cases/gloss-garage /pl/cases/gloss-garage.html 301!
+/pl/cases/gloss-garage/ /pl/cases/gloss-garage.html 301!
+/pl/cases/laser-tech-service /pl/cases/laser-tech-service.html 301!
+/pl/cases/laser-tech-service/ /pl/cases/laser-tech-service.html 301!
+/pl/cases/lts-market /pl/cases/lts-market.html 301!
+/pl/cases/lts-market/ /pl/cases/lts-market.html 301!
+/pl/clients /pl/clients.html 301!
+/pl/clients/ /pl/clients.html 301!
+# Keep repository and maintenance files out of the public site.
+/.git/* /404.html 404!
+/scripts/* /404.html 404!
+/docs/* /404.html 404!
+/.DS_Store /404.html 404!
+/cases/.DS_Store /404.html 404!

@@ -11,11 +11,6 @@
     content="Realizacje Raccoon SEO Studio: Gloss Garage, Expres Polish i Laser Tech Service. Strony internetowe, SEO, local SEO, analityka oraz automatyzacja AI."
   />
 
-  <meta
-    name="keywords"
-    content="realizacje SEO, portfolio stron internetowych, Raccoon SEO Studio, Gloss Garage, Expres Polish, Laser Tech Service"
-  />
-
   <meta name="author" content="Raccoon SEO Studio" />
   <meta name="robots" content="index, follow" />
 
@@ -100,7 +95,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
 
@@ -109,9 +104,21 @@
     rel="stylesheet"
     href="/styles/style.css"
   />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#4D5AE5" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raccoon SEO Studio — SEO, Web, AI Automation" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/clients.html#webpage", "url": "https://raccoon-studio.com.ua/pl/clients.html", "name": "Realizacje Raccoon SEO Studio — strony, SEO i automatyzacja", "description": "Realizacje Raccoon SEO Studio: Gloss Garage, Expres Polish i Laser Tech Service. Strony internetowe, SEO, local SEO, analityka oraz automatyzacja AI.", "inLanguage": "pl", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
 </head>
 
 <body class="clients-page">
+  <a class="skip-link" href="#main-content">Przejdź do treści</a>
 
   <!-- HEADER -->
   <header class="header">
@@ -130,7 +137,7 @@
           SEO<span class="logo-dark">STUDIO</span>
         </a>
 
-        <ul class="nav-list">
+        <ul class="nav-list" id="site-navigation">
 
           <li>
             <a
@@ -212,7 +219,7 @@
 
           <a
             href="/pl/clients.html"
-            class="language-link active"
+            class="language-link active" aria-current="page"
             lang="pl"
           >
             PL
@@ -226,6 +233,7 @@
           type="button"
           aria-label="Otwórz menu"
           aria-expanded="false"
+          aria-controls="site-navigation"
         >
           <span></span>
           <span></span>
@@ -261,7 +269,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- HERO -->
     <section class="clients-hero">
@@ -283,7 +291,7 @@
             Pokazujemy nie tylko gotową stronę,
             ale cały proces: od struktury i designu
             przez SEO i analitykę
-            po automatyzację i rozwój projektu.
+            po automatyzację i rozwój projektu. Wszystkie te strony stworzyła nasza agencja Raccoon SEO Studio. Prowadzimy również ich blogi i tworzymy treści na strony.
           </p>
 
         </div>
@@ -307,19 +315,11 @@
 
               <a
                 href="/pl/cases/gloss-garage.html"
-                class="case-placeholder case-placeholder-dark"
+                class="project-screenshot-link"
                 aria-label="Zobacz realizację Gloss Garage"
               >
-
-                <span>
-                  GLOSS GARAGE
-                </span>
-
-                <small>
-                  PDR • WROCŁAW
-                </small>
-
-              </a>
+<img src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="900" alt="Strona główna Gloss Garage" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -390,19 +390,11 @@
 
               <a
                 href="/pl/cases/expres-polish.html"
-                class="case-placeholder case-placeholder-light"
+                class="project-screenshot-link"
                 aria-label="Zobacz realizację Expres Polish"
               >
-
-                <span>
-                  EXPRES POLISH
-                </span>
-
-                <small>
-                  LANGUAGE SCHOOL • WROCŁAW
-                </small>
-
-              </a>
+<img src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="900" alt="Strona główna Expres Polish" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -477,19 +469,11 @@
 
               <a
                 href="/pl/cases/laser-tech-service.html"
-                class="case-placeholder case-placeholder-blue"
+                class="project-screenshot-link"
                 aria-label="Zobacz realizację Laser Tech Service"
               >
-
-                <span>
-                  LASER TECH SERVICE
-                </span>
-
-                <small>
-                  TECHNICAL SERVICE • POLAND
-                </small>
-
-              </a>
+<img src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="740" alt="Strona główna Laser Tech Service" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -556,6 +540,8 @@
             </div>
 
           </article>
+          <article class="client-project-card"><div class="client-project-visual"><a href="/pl/cases/lts-market.html" class="project-screenshot-link" aria-label="Zobacz case study LTS Market"><img src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="900" alt="Strona główna LTS Market — katalog urządzeń" loading="lazy" decoding="async" /></a></div><div class="client-project-content"><div class="client-project-tags"><span>Web Development</span><span>Multilingual SEO</span></div><h2 class="client-project-title">LTS Market</h2><p class="client-project-text">Katalog nowych i używanych urządzeń z kartami produktów, trzema wersjami językowymi i strukturą SEO.</p><div class="client-project-actions"><a href="/pl/cases/lts-market.html" class="client-project-btn">Zobacz case study</a><a href="https://ltsmarket.pl/" target="_blank" rel="noopener noreferrer" class="client-project-link">Zobacz stronę ↗</a></div></div></article>
+
 
         </div>
 

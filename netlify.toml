@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Keep existing canonical .html routes; do not rewrite links at deploy time.
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = false

@@ -11,11 +11,6 @@
     content="Кейси Raccoon SEO Studio: Gloss Garage, Expres Polish та Laser Tech Service. Створення сайтів, SEO, локальне просування, аналітика та AI-автоматизація."
   />
 
-  <meta
-    name="keywords"
-    content="кейси SEO, portfolio web development, Raccoon SEO Studio, Gloss Garage, Expres Polish, Laser Tech Service, SEO кейси, створення сайтів"
-  />
-
   <meta name="author" content="Raccoon SEO Studio" />
   <meta name="robots" content="index, follow" />
 
@@ -100,7 +95,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
 
@@ -109,9 +104,21 @@
     rel="stylesheet"
     href="/styles/style.css"
   />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#4D5AE5" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raccoon SEO Studio — SEO, Web, AI Automation" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/clients.html#webpage", "url": "https://raccoon-studio.com.ua/clients.html", "name": "Кейси Raccoon SEO Studio — сайти, SEO та автоматизація", "description": "Кейси Raccoon SEO Studio: Gloss Garage, Expres Polish та Laser Tech Service. Створення сайтів, SEO, локальне просування, аналітика та AI-автоматизація.", "inLanguage": "uk", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
 </head>
 
 <body class="clients-page">
+  <a class="skip-link" href="#main-content">Перейти до вмісту</a>
 
   <!-- =========================
        HEADER
@@ -134,7 +141,7 @@
           SEO<span class="logo-dark">STUDIO</span>
         </a>
 
-        <ul class="nav-list">
+        <ul class="nav-list" id="site-navigation">
 
           <li>
             <a
@@ -204,7 +211,7 @@
 
           <a
             href="/clients.html"
-            class="language-link active"
+            class="language-link active" aria-current="page"
             lang="uk"
           >
             UA
@@ -230,6 +237,7 @@
           type="button"
           aria-label="Відкрити меню"
           aria-expanded="false"
+          aria-controls="site-navigation"
         >
           <span></span>
           <span></span>
@@ -266,7 +274,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- =========================
          CLIENTS HERO
@@ -291,7 +299,7 @@
             Тут ми показуємо не просто готові сайти,
             а весь підхід: від структури та дизайну
             до SEO, аналітики, автоматизації
-            та подальшого розвитку проєкту.
+            та подальшого розвитку проєкту. Усі ці сайти створила наша агенція Raccoon SEO Studio. Ми також ведемо їхні блоги та наповнюємо сайти контентом.
           </p>
 
         </div>
@@ -321,19 +329,11 @@
 
               <a
                 href="/cases/gloss-garage.html"
-                class="case-placeholder case-placeholder-dark"
+                class="project-screenshot-link"
                 aria-label="Переглянути кейс Gloss Garage"
               >
-
-                <span>
-                  GLOSS GARAGE
-                </span>
-
-                <small>
-                  PDR • WROCŁAW
-                </small>
-
-              </a>
+<img src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="900" alt="Головна сторінка сайту Gloss Garage" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -408,19 +408,11 @@
 
               <a
                 href="/cases/expres-polish.html"
-                class="case-placeholder case-placeholder-light"
+                class="project-screenshot-link"
                 aria-label="Переглянути кейс Expres Polish"
               >
-
-                <span>
-                  EXPRES POLISH
-                </span>
-
-                <small>
-                  LANGUAGE SCHOOL • WROCŁAW
-                </small>
-
-              </a>
+<img src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="900" alt="Головна сторінка сайту Expres Polish" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -499,19 +491,11 @@
 
               <a
                 href="/cases/laser-tech-service.html"
-                class="case-placeholder case-placeholder-blue"
+                class="project-screenshot-link"
                 aria-label="Переглянути кейс Laser Tech Service"
               >
-
-                <span>
-                  LASER TECH SERVICE
-                </span>
-
-                <small>
-                  TECHNICAL SERVICE • POLAND
-                </small>
-
-              </a>
+<img src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 50vw" width="1200" height="740" alt="Головна сторінка сайту Laser Tech Service" loading="lazy" decoding="async" />
+</a>
 
             </div>
 
@@ -578,6 +562,8 @@
             </div>
 
           </article>
+          <article class="client-project-card"><div class="client-project-visual"><a href="/cases/lts-market.html" class="project-screenshot-link" aria-label="Переглянути кейс LTS Market"><img src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" sizes="(max-width: 700px) 100vw, 50vw" width="1200" height="900" alt="Головна сторінка сайту LTS Market — каталог обладнання" loading="lazy" decoding="async" /></a></div><div class="client-project-content"><div class="client-project-tags"><span>Web Development</span><span>Multilingual SEO</span></div><h2 class="client-project-title">LTS Market</h2><p class="client-project-text">Каталог нового й уживаного обладнання з картками товарів, трьома мовними версіями та SEO-структурою.</p><div class="client-project-actions"><a href="/cases/lts-market.html" class="client-project-btn">Переглянути кейс</a><a href="https://ltsmarket.pl/" target="_blank" rel="noopener noreferrer" class="client-project-link">Відкрити сайт ↗</a></div></div></article>
+
 
         </div>
 

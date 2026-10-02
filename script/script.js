@@ -403,57 +403,49 @@
      SMOOTH INTERNAL ANCHORS
   ========================================================= */
 
-  qsa('a[href^="#"]').forEach(
-    (link) => {
-      link.addEventListener(
-        "click",
-        (event) => {
-          const href =
-            link.getAttribute(
-              "href"
-            );
-
-          if (
-            !href ||
-            href === "#"
-          ) {
-            return;
-          }
-
-          const target =
-            qs(href);
-
-          if (!target) {
-            return;
-          }
-
-          event.preventDefault();
-
-          const header =
-            qs(".header");
-
-          const headerHeight =
-            header
-              ? header.offsetHeight
-              : 0;
-
-          const top =
-            target.getBoundingClientRect()
-              .top +
-            window.pageYOffset -
-            headerHeight -
-            20;
-
-          window.scrollTo({
-            top,
-            behavior: "smooth"
-          });
-
-          closeMobileMenu();
-        }
-      );
+  const anchorTarget = (hash) => {
+    if (!hash || hash === "#") return null;
+    try {
+      return document.getElementById(decodeURIComponent(hash.slice(1)));
+    } catch {
+      return null;
     }
-  );
+  };
+
+  const scrollToAnchor = (target, focus = false) => {
+    const headerHeight = qs(".header")?.offsetHeight || 0;
+    if (focus) {
+      const addedTabIndex = !target.hasAttribute("tabindex");
+      if (addedTabIndex) target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+      if (addedTabIndex) {
+        target.addEventListener("blur", () => target.removeAttribute("tabindex"), { once: true });
+      }
+    }
+    window.scrollTo({
+      top: Math.max(0, target.getBoundingClientRect().top + window.scrollY - headerHeight - 20),
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+    });
+  };
+
+  const normalizedPath = (path) => path.replace(/\/index\.html$/, "/");
+
+  qsa('a[href*="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
+      const url = new URL(link.href, window.location.href);
+      if (url.origin !== window.location.origin ||
+          normalizedPath(url.pathname) !== normalizedPath(window.location.pathname) ||
+          url.search !== window.location.search) return;
+      const target = anchorTarget(url.hash);
+      if (!target) return;
+      event.preventDefault();
+      closeMobileMenu();
+      if (window.location.hash !== url.hash) window.history.pushState(null, "", url.hash);
+      scrollToAnchor(target, true);
+    });
+  });
 
 
   /* =========================================================
@@ -1142,64 +1134,13 @@
      HASH FROM ANOTHER PAGE
   ========================================================= */
 
-  const scrollToCurrentHash =
-    () => {
+  const scrollToCurrentHash = () => {
+    const target = anchorTarget(window.location.hash);
+    if (target) scrollToAnchor(target);
+  };
 
-      if (
-        !window.location.hash
-      ) {
-        return;
-      }
-
-
-      const target =
-        qs(
-          window.location.hash
-        );
-
-
-      if (!target) {
-        return;
-      }
-
-
-      window.setTimeout(
-        () => {
-
-          const header =
-            qs(".header");
-
-          const headerHeight =
-            header
-              ? header.offsetHeight
-              : 0;
-
-
-          const top =
-            target
-              .getBoundingClientRect()
-              .top +
-            window.pageYOffset -
-            headerHeight -
-            20;
-
-
-          window.scrollTo({
-            top,
-            behavior: "smooth"
-          });
-
-        },
-        100
-      );
-
-    };
-
-
-  window.addEventListener(
-    "load",
-    scrollToCurrentHash
-  );
+  window.addEventListener("load", scrollToCurrentHash);
+  window.addEventListener("hashchange", scrollToCurrentHash);
 
 
   /* =========================================================

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://raccoon-studio.com.ua/sitemap.xml

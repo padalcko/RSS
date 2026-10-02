@@ -11,11 +11,6 @@
     content="Raccoon SEO Studio — SEO, tworzenie stron internetowych, automatyzacje AI, n8n, integracje CRM i rozwiązania digital dla firm."
   />
 
-  <meta
-    name="keywords"
-    content="SEO, tworzenie stron internetowych, AI automation, n8n, integracje CRM, automatyzacja biznesu, web development"
-  />
-
   <meta name="author" content="Raccoon SEO Studio" />
   <meta name="robots" content="index, follow" />
 
@@ -100,7 +95,7 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
 
@@ -109,9 +104,21 @@
     rel="stylesheet"
     href="/styles/style.css"
   />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#4D5AE5" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raccoon SEO Studio — SEO, Web, AI Automation" />
+  <meta property="og:locale:alternate" content="uk_UA" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/#webpage", "url": "https://raccoon-studio.com.ua/pl/", "name": "Raccoon SEO Studio — SEO, strony internetowe i automatyzacja AI", "description": "Raccoon SEO Studio — SEO, tworzenie stron internetowych, automatyzacje AI, n8n, integracje CRM i rozwiązania digital dla firm.", "inLanguage": "pl", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Przejdź do treści</a>
 
   <!-- =========================
        HEADER
@@ -134,7 +141,7 @@
           SEO<span class="logo-dark">STUDIO</span>
         </a>
 
-        <ul class="nav-list">
+        <ul class="nav-list" id="site-navigation">
 
           <li>
             <a
@@ -216,7 +223,7 @@
 
           <a
             href="/pl/"
-            class="language-link active"
+            class="language-link active" aria-current="page"
             lang="pl"
           >
             PL
@@ -230,6 +237,7 @@
           type="button"
           aria-label="Otwórz menu"
           aria-expanded="false"
+          aria-controls="site-navigation"
         >
           <span></span>
           <span></span>
@@ -266,7 +274,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- =========================
          HERO
@@ -324,10 +332,7 @@
 
           <div class="hero-image">
 
-            <img
-              src="/images/hero-main.jpg"
-              alt="Raccoon SEO Studio — SEO, strony internetowe i automatyzacja"
-            />
+            <img src="/images/optimized/hero-500.webp" srcset="/images/optimized/hero-400.webp 400w, /images/optimized/hero-500.webp 500w" sizes="(max-width: 900px) 100vw, 50vw" width="500" height="339" alt="Raccoon SEO Studio — SEO, strony internetowe i automatyzacja" decoding="async" />
 
             <div class="hero-image-overlay"></div>
 
@@ -554,11 +559,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/yuriy_chistyakov.png"
-              alt="Jurij Czistiakow — SEO Specialist"
-              class="team-img"
-            />
+            <img src="/images/optimized/yuriy-800.webp" srcset="/images/optimized/yuriy-400.webp 400w, /images/optimized/yuriy-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Jurij Czistiakow — SEO Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -577,11 +578,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/Padalko Oleksandr.png"
-              alt="Oleksandr Padalko — Frontend Developer i AI Automator"
-              class="team-img"
-            />
+            <img src="/images/optimized/oleksandr-800.webp" srcset="/images/optimized/oleksandr-400.webp 400w, /images/optimized/oleksandr-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Oleksandr Padalko — Frontend Developer i AI Automator" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -600,11 +597,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/the_duck.png"
-              alt="The Kaczka — Brainstorming Specialist"
-              class="team-img"
-            />
+            <img src="/images/optimized/duck-800.webp" srcset="/images/optimized/duck-400.webp 400w, /images/optimized/duck-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1422" alt="The Kaczka — Brainstorming Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -623,11 +616,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/Yuliia Hamoliuk.png"
-              alt="Julia Hamoliuk — Content Manager"
-              class="team-img"
-            />
+            <img src="/images/optimized/yuliia-800.webp" srcset="/images/optimized/yuliia-400.webp 400w, /images/optimized/yuliia-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Julia Hamoliuk — Content Manager" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -678,10 +667,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-                alt="SEO i pozycjonowanie stron"
-              />
+              <img src="/images/optimized/seo-800.webp" srcset="/images/optimized/seo-400.webp 400w, /images/optimized/seo-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="570" alt="SEO i pozycjonowanie stron" loading="lazy" decoding="async" />
 
             </div>
 
@@ -708,10 +694,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-                alt="Tworzenie stron internetowych"
-              />
+              <img src="/images/optimized/web-800.webp" srcset="/images/optimized/web-400.webp 400w, /images/optimized/web-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="533" alt="Tworzenie stron internetowych" loading="lazy" decoding="async" />
 
             </div>
 
@@ -737,10 +720,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                alt="AI i automatyzacja procesów biznesowych"
-              />
+              <img src="/images/optimized/automation-800.webp" srcset="/images/optimized/automation-400.webp 400w, /images/optimized/automation-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="533" alt="AI i automatyzacja procesów biznesowych" loading="lazy" decoding="async" />
 
             </div>
 
@@ -766,10 +746,7 @@
 
             <div class="content-img">
 
-              <img
-                src="/images/Portfolio/social-content.jpg"
-                alt="Content i digital marketing"
-              />
+              <img src="/images/optimized/social-800.webp" srcset="/images/optimized/social-400.webp 400w, /images/optimized/social-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="531" alt="Content i digital marketing" loading="lazy" decoding="async" />
 
             </div>
 
@@ -815,7 +792,7 @@
             </p>
 
             <h2 class="section-title home-cases-title">
-              Od problemu do działającego rozwiązania
+              Od zadania do działającego rozwiązania
             </h2>
 
           </div>
@@ -830,168 +807,54 @@
         </div>
 
 
-        <div class="home-cases-grid">
+        <p class="home-cases-description">Tworzymy nie tylko strony internetowe, ale kompletne rozwiązania digital dla biznesu — od struktury, projektu i wdrożenia po SEO, analitykę, content oraz dalszy rozwój. Poniżej prezentujemy projekty, nad którymi Raccoon SEO Studio pracuje kompleksowo.</p>
+
+        <div class="home-cases-grid content-list">
 
           <!-- GLOSS GARAGE -->
-          <article class="home-case-card">
-
-            <a
-              href="/pl/cases/gloss-garage.html"
-              class="home-case-media"
-              aria-label="Zobacz realizację Gloss Garage"
-            >
-
-              <div class="case-placeholder case-placeholder-dark">
-
-                <span>
-                  GLOSS GARAGE
-                </span>
-
-                <small>
-                  PDR • WROCŁAW
-                </small>
-
-              </div>
-
-            </a>
-
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-                <span>Web Development</span>
-                <span>Local SEO</span>
-              </div>
-
-              <h3>
-                Gloss Garage
-              </h3>
-
-              <p>
-                Strona i struktura SEO
-                dla serwisu usuwania wgnieceń
-                bez lakierowania we Wrocławiu.
-              </p>
-
-              <a
-                href="/pl/cases/gloss-garage.html"
-                class="case-link"
-              >
-                Zobacz realizację →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Strona główna Gloss Garage" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/pl/cases/gloss-garage.html" aria-label="Zobacz realizację Gloss Garage">Gloss Garage <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Strona serwisu PDR we Wrocławiu, stworzona z myślą o promocji usług usuwania wgnieceń bez lakierowania. Opracowaliśmy strukturę i stronę, wdrożyliśmy lokalne SEO oraz analitykę. Nadal rozwijamy content i widoczność organiczną projektu.</p>
+            </div>
           </article>
 
 
           <!-- EXPRES POLISH -->
-          <article class="home-case-card">
-
-            <a
-              href="/pl/cases/expres-polish.html"
-              class="home-case-media"
-              aria-label="Zobacz realizację Expres Polish"
-            >
-
-              <div class="case-placeholder case-placeholder-light">
-
-                <span>
-                  EXPRES POLISH
-                </span>
-
-                <small>
-                  LANGUAGE SCHOOL
-                </small>
-
-              </div>
-
-            </a>
-
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-                <span>Web Development</span>
-                <span>Automation</span>
-                <span>AI</span>
-              </div>
-
-              <h3>
-                Expres Polish
-              </h3>
-
-              <p>
-                Strona szkoły językowej
-                z SEO, formularzami,
-                automatyzacją n8n
-                i konsultantem AI.
-              </p>
-
-              <a
-                href="/pl/cases/expres-polish.html"
-                class="case-link"
-              >
-                Zobacz realizację →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Strona główna Expres Polish" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/pl/cases/expres-polish.html" aria-label="Zobacz realizację Expres Polish">Expres Polish <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Wielojęzyczna strona szkoły języka polskiego dla Ukraińców i Białorusinów w Polsce. Przygotowaliśmy strukturę kursów i landing pages, podstawy SEO, analitykę oraz system pozyskiwania zgłoszeń. Rozwijamy blog i treści informacyjne szkoły.</p>
+            </div>
           </article>
 
 
           <!-- LASER TECH SERVICE -->
-          <article class="home-case-card">
-
-            <a
-              href="/pl/cases/laser-tech-service.html"
-              class="home-case-media"
-              aria-label="Zobacz realizację Laser Tech Service"
-            >
-
-              <div class="case-placeholder case-placeholder-blue">
-
-                <span>
-                  LASER TECH SERVICE
-                </span>
-
-                <small>
-                  SERVICE • POLAND
-                </small>
-
-              </div>
-
-            </a>
-
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-                <span>Technical SEO</span>
-                <span>Analytics</span>
-              </div>
-
-              <h3>
-                Laser Tech Service
-              </h3>
-
-              <p>
-                Firmowa strona serwisu
-                urządzeń laserowych
-                z wielojęzycznością,
-                SEO i analityką.
-              </p>
-
-              <a
-                href="/pl/cases/laser-tech-service.html"
-                class="case-link"
-              >
-                Zobacz realizację →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Strona główna Laser Tech Service" decoding="async" height="740" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/pl/cases/laser-tech-service.html" aria-label="Zobacz realizację Laser Tech Service">Laser Tech Service <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Strona serwisu profesjonalnych urządzeń laserowych i kosmetologicznych obsługującego klientów w całej Polsce. Stworzyliśmy wielojęzyczną strukturę, strony usług i realizacji, SEO oraz analitykę. Regularnie rozwijamy blog i publikujemy rzeczywiste przypadki napraw urządzeń.</p>
+            </div>
           </article>
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Strona główna LTS Market — katalog urządzeń" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" width="1200"/>
+            </div>
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/pl/cases/lts-market.html" aria-label="Zobacz realizację LTS Market">LTS Market <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Wielojęzyczny katalog profesjonalnych urządzeń dla branży beauty. Stworzyliśmy strukturę dla nowych i używanych urządzeń, podstron produktowych, leasingu oraz zapytań ofertowych. Projekt rozwijamy jako platformę sprzedażową wspieraną przez SEO i content marketing.</p>
+            </div>
+          </article>
+
 
         </div>
 

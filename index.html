@@ -11,11 +11,6 @@
     content="Raccoon SEO Studio — SEO-просування, створення сайтів, AI-автоматизація, n8n, CRM-інтеграції та digital-рішення для бізнесу."
   />
 
-  <meta
-    name="keywords"
-    content="SEO, створення сайтів, AI automation, n8n, CRM інтеграції, автоматизація бізнесу, веб розробка"
-  />
-
   <meta name="author" content="Raccoon SEO Studio" />
   <meta name="robots" content="index, follow" />
 
@@ -92,18 +87,30 @@
   />
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;display=swap"
     rel="stylesheet"
   />
 
   <!-- CSS -->
   <link
     rel="stylesheet"
-    href="styles/style.css"
+    href="/styles/style.css"
   />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#4D5AE5" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Raccoon SEO Studio — SEO, Web, AI Automation" />
+  <meta property="og:locale:alternate" content="pl_PL" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/#webpage", "url": "https://raccoon-studio.com.ua/", "name": "Raccoon SEO Studio — SEO, сайти та AI-автоматизація для бізнесу", "description": "Raccoon SEO Studio — SEO-просування, створення сайтів, AI-автоматизація, n8n, CRM-інтеграції та digital-рішення для бізнесу.", "inLanguage": "uk", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Перейти до вмісту</a>
 
   <!-- =========================
        HEADER
@@ -125,7 +132,7 @@
           SEO<span class="logo-dark">STUDIO</span>
         </a>
 
-        <ul class="nav-list">
+        <ul class="nav-list" id="site-navigation">
 
           <li>
             <a
@@ -194,7 +201,7 @@
 
           <a
             href="/"
-            class="language-link active"
+            class="language-link active" aria-current="page"
             lang="uk"
           >
             UA
@@ -219,6 +226,7 @@
           type="button"
           aria-label="Відкрити меню"
           aria-expanded="false"
+          aria-controls="site-navigation"
         >
           <span></span>
           <span></span>
@@ -253,7 +261,7 @@
   </header>
 
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- =========================
          HERO
@@ -308,10 +316,7 @@
 
           <div class="hero-image">
 
-            <img
-              src="/images/hero-main.jpg"
-              alt="Raccoon SEO Studio — digital-проєкти, SEO та автоматизація"
-            />
+            <img src="/images/optimized/hero-500.webp" srcset="/images/optimized/hero-400.webp 400w, /images/optimized/hero-500.webp 500w" sizes="(max-width: 900px) 100vw, 50vw" width="500" height="339" alt="Raccoon SEO Studio — digital-проєкти, SEO та автоматизація" decoding="async" />
 
             <div class="hero-image-overlay"></div>
 
@@ -534,11 +539,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/yuriy_chistyakov.png"
-              alt="Юрій Чистяков — SEO Specialist"
-              class="team-img"
-            />
+            <img src="/images/optimized/yuriy-800.webp" srcset="/images/optimized/yuriy-400.webp 400w, /images/optimized/yuriy-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Юрій Чистяков — SEO Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -557,11 +558,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/Padalko Oleksandr.png"
-              alt="Олександр Падалко — Frontend Developer та AI Automator"
-              class="team-img"
-            />
+            <img src="/images/optimized/oleksandr-800.webp" srcset="/images/optimized/oleksandr-400.webp 400w, /images/optimized/oleksandr-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Олександр Падалко — Frontend Developer та AI Automator" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -580,11 +577,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/the_duck.png"
-              alt="The Качка — Brainstorming Specialist"
-              class="team-img"
-            />
+            <img src="/images/optimized/duck-800.webp" srcset="/images/optimized/duck-400.webp 400w, /images/optimized/duck-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1422" alt="The Качка — Brainstorming Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -603,11 +596,7 @@
 
           <li class="team-item">
 
-            <img
-              src="/images/team/Yuliia Hamoliuk.png"
-              alt="Юлія Гамолюк — Content Manager"
-              class="team-img"
-            />
+            <img src="/images/optimized/yuliia-800.webp" srcset="/images/optimized/yuliia-400.webp 400w, /images/optimized/yuliia-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Юлія Гамолюк — Content Manager" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -658,10 +647,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
-                alt="SEO-просування бізнесу"
-              />
+              <img src="/images/optimized/seo-800.webp" srcset="/images/optimized/seo-400.webp 400w, /images/optimized/seo-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="570" alt="SEO-просування бізнесу" loading="lazy" decoding="async" />
 
             </div>
 
@@ -686,10 +672,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
-                alt="Розробка корпоративного сайту"
-              />
+              <img src="/images/optimized/web-800.webp" srcset="/images/optimized/web-400.webp 400w, /images/optimized/web-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="533" alt="Розробка корпоративного сайту" loading="lazy" decoding="async" />
 
             </div>
 
@@ -714,10 +697,7 @@
 
             <div class="content-img">
 
-              <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                alt="AI та автоматизація бізнесу"
-              />
+              <img src="/images/optimized/automation-800.webp" srcset="/images/optimized/automation-400.webp 400w, /images/optimized/automation-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="533" alt="AI та автоматизація бізнесу" loading="lazy" decoding="async" />
 
             </div>
 
@@ -742,10 +722,7 @@
 
             <div class="content-img">
 
-              <img
-                src="/images/Portfolio/social-content.jpg"
-                alt="Контент та digital-маркетинг"
-              />
+              <img src="/images/optimized/social-800.webp" srcset="/images/optimized/social-400.webp 400w, /images/optimized/social-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="531" alt="Контент та digital-маркетинг" loading="lazy" decoding="async" />
 
             </div>
 
@@ -804,172 +781,57 @@
         </div>
 
 
-        <div class="home-cases-grid">
+        <p class="home-cases-description">Ми створюємо не просто сайти, а повноцінні digital-рішення для бізнесу: від структури, дизайну та розробки до SEO, аналітики, контенту й подальшого розвитку. Нижче — проєкти, над якими Raccoon SEO Studio працює комплексно.</p>
+
+        <div class="home-cases-grid content-list">
 
           <!-- GLOSS GARAGE -->
 
-          <article class="home-case-card">
-
-            <a
-              href="/cases/gloss-garage.html"
-              class="home-case-media"
-              aria-label="Переглянути кейс Gloss Garage"
-            >
-
-              <div class="case-placeholder case-placeholder-dark">
-
-                <span>
-                  GLOSS GARAGE
-                </span>
-
-                <small>
-                  PDR • WROCŁAW
-                </small>
-
-              </div>
-
-            </a>
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-
-                <span>Web Development</span>
-                <span>Local SEO</span>
-
-              </div>
-
-              <h3>
-                Gloss Garage
-              </h3>
-
-              <p>
-                Сайт і SEO-структура для сервісу
-                видалення вм'ятин без фарбування
-                у Вроцлаві.
-              </p>
-
-              <a
-                href="/cases/gloss-garage.html"
-                class="case-link"
-              >
-                Переглянути кейс →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Головна сторінка сайту Gloss Garage" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/cases/gloss-garage.html" aria-label="Переглянути кейс Gloss Garage">Gloss Garage <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Сайт PDR-сервісу у Вроцлаві для просування послуг з видалення вм’ятин без фарбування. Розробили структуру та сайт, налаштували локальне SEO й аналітику. Продовжуємо розвивати контент і органічну видимість проєкту.</p>
+            </div>
           </article>
 
 
           <!-- EXPRES POLISH -->
 
-          <article class="home-case-card">
-
-            <a
-              href="/cases/expres-polish.html"
-              class="home-case-media"
-              aria-label="Переглянути кейс Expres Polish"
-            >
-
-              <div class="case-placeholder case-placeholder-light">
-
-                <span>
-                  EXPRES POLISH
-                </span>
-
-                <small>
-                  LANGUAGE SCHOOL
-                </small>
-
-              </div>
-
-            </a>
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-
-                <span>Web Development</span>
-                <span>Automation</span>
-                <span>AI</span>
-
-              </div>
-
-              <h3>
-                Expres Polish
-              </h3>
-
-              <p>
-                Сайт мовної школи з SEO,
-                формами заявок, n8n-автоматизацією
-                та AI-консультантом.
-              </p>
-
-              <a
-                href="/cases/expres-polish.html"
-                class="case-link"
-              >
-                Переглянути кейс →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Головна сторінка сайту Expres Polish" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/cases/expres-polish.html" aria-label="Переглянути кейс Expres Polish">Expres Polish <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Мультимовний сайт школи польської мови для українців і білорусів у Польщі. Побудували структуру курсів і посадкових сторінок, підготували SEO-основу, аналітику та систему збору заявок. Розвиваємо блог і інформаційний контент школи.</p>
+            </div>
           </article>
 
 
           <!-- LASER TECH SERVICE -->
 
-          <article class="home-case-card">
-
-            <a
-              href="/cases/laser-tech-service.html"
-              class="home-case-media"
-              aria-label="Переглянути кейс Laser Tech Service"
-            >
-
-              <div class="case-placeholder case-placeholder-blue">
-
-                <span>
-                  LASER TECH SERVICE
-                </span>
-
-                <small>
-                  SERVICE • POLAND
-                </small>
-
-              </div>
-
-            </a>
-
-            <div class="home-case-content">
-
-              <div class="home-case-tags">
-
-                <span>Technical SEO</span>
-                <span>Analytics</span>
-
-              </div>
-
-              <h3>
-                Laser Tech Service
-              </h3>
-
-              <p>
-                Корпоративний сайт сервісного центру
-                лазерного обладнання з мультимовністю,
-                SEO та аналітикою.
-              </p>
-
-              <a
-                href="/cases/laser-tech-service.html"
-                class="case-link"
-              >
-                Переглянути кейс →
-              </a>
-
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Головна сторінка сайту Laser Tech Service" decoding="async" height="740" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" width="1200"/>
             </div>
-
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/cases/laser-tech-service.html" aria-label="Переглянути кейс Laser Tech Service">Laser Tech Service <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Сайт сервісу професійного лазерного та косметологічного обладнання з орієнтацією на клієнтів по всій Польщі. Розробили мультимовну структуру, сторінки послуг і реалізацій, SEO та аналітику. Регулярно розвиваємо блог і публікуємо реальні кейси ремонту обладнання.</p>
+            </div>
           </article>
+          <article class="home-case-card content-item">
+            <div class="home-case-media content-img">
+              <img alt="Головна сторінка сайту LTS Market — каталог обладнання" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" width="1200"/>
+            </div>
+            <div class="home-case-content content-info">
+              <h3 class="content-title"><a href="/cases/lts-market.html" aria-label="Переглянути кейс LTS Market">LTS Market <span aria-hidden="true">→</span></a></h3>
+              <p class="content-text">Мультимовний каталог професійного обладнання для beauty-індустрії. Створили структуру для нового та вживаного обладнання, окремих товарів, лізингу й заявок. Проєкт розвивається як комерційний майданчик із SEO-контентом і блогом.</p>
+            </div>
+          </article>
+
 
         </div>
 
@@ -1610,7 +1472,7 @@
 
 
   <!-- JS -->
-  <script src="script/script.js"></script>
+  <script src="/script/script.js"></script>
 
 </body>
 </html>
