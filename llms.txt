@@ -1,0 +1,31 @@
+# Raccoon SEO Studio
+
+> Raccoon SEO Studio is a digital studio offering SEO, website development, AI and n8n automation, CRM integrations, analytics, and digital content services.
+
+This file is a human- and machine-readable index of the studio's public website. The website is available in Ukrainian and Polish. Use the linked pages as the source of truth; do not infer client results, performance figures, or service guarantees that are not stated there.
+
+## Studio information
+
+- Official website: https://raccoon-studio.com.ua/
+- Public site languages: Ukrainian and Polish
+- Services: SEO and search visibility, website development, AI and n8n automation, CRM integrations, analytics, and content
+- Contact: seoraccoonstudio@gmail.com
+- Phone: +48 793-121-665
+
+## Main pages
+
+- [Ukrainian home page](https://raccoon-studio.com.ua/)
+- [Polish home page](https://raccoon-studio.com.ua/pl/)
+- [Ukrainian project portfolio](https://raccoon-studio.com.ua/clients.html)
+- [Polish project portfolio](https://raccoon-studio.com.ua/pl/clients.html)
+
+## Published project studies
+
+- [Gloss Garage — Ukrainian](https://raccoon-studio.com.ua/cases/gloss-garage.html)
+- [Gloss Garage — Polish](https://raccoon-studio.com.ua/pl/cases/gloss-garage.html)
+- [Expres Polish — Ukrainian](https://raccoon-studio.com.ua/cases/expres-polish.html)
+- [Expres Polish — Polish](https://raccoon-studio.com.ua/pl/cases/expres-polish.html)
+- [Laser Tech Service — Ukrainian](https://raccoon-studio.com.ua/cases/laser-tech-service.html)
+- [Laser Tech Service — Polish](https://raccoon-studio.com.ua/pl/cases/laser-tech-service.html)
+- [LTS Market — Ukrainian](https://raccoon-studio.com.ua/cases/lts-market.html)
+- [LTS Market — Polish](https://raccoon-studio.com.ua/pl/cases/lts-market.html)

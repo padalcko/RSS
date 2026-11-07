@@ -92,13 +92,28 @@ for file, page in pages.items():
     check('case-placeholder' not in page.text, f'{file}: placeholder screenshot remains')
     blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page.text, re.S)
     check(bool(blocks), f'{file}: missing JSON-LD')
+    structured_nodes = []
     for block in blocks:
         try:
             data = json.loads(block)
-            wp = next(n for n in data['@graph'] if n['@type'] == 'WebPage')
-            check(wp['url'] == expected and wp['inLanguage'] == lang, f'{file}: inconsistent structured data')
+            structured_nodes.extend(data.get('@graph', [data]))
         except (ValueError, KeyError, StopIteration) as error:
             errors.append(f'{file}: invalid JSON-LD {error}')
+    web_pages = [node for node in structured_nodes if node.get('@type') == 'WebPage']
+    check(bool(web_pages), f'{file}: missing WebPage structured data')
+    if web_pages:
+        check(web_pages[0]['url'] == expected and web_pages[0]['inLanguage'] == lang, f'{file}: inconsistent structured data')
+    if file in ('index.html', 'pl/index.html'):
+        organizations = [node for node in structured_nodes if node.get('@type') == 'Organization']
+        check(len(organizations) == 1, f'{file}: expected one Organization structured-data node')
+        if organizations:
+            check(len(organizations[0].get('knowsAbout', [])) >= 5, f'{file}: missing organization service areas')
+            check(set(organizations[0].get('contactPoint', {}).get('availableLanguage', [])) == {'Ukrainian', 'Polish'}, f'{file}: incorrect organization contact languages')
+        faq_pages = [node for node in structured_nodes if node.get('@type') == 'FAQPage']
+        check(len(faq_pages) == 1, f'{file}: expected one FAQPage structured-data node')
+        if faq_pages:
+            check(faq_pages[0].get('url') == expected and faq_pages[0].get('inLanguage') == lang, f'{file}: inconsistent FAQPage structured data')
+            check(len(faq_pages[0].get('mainEntity', [])) == 4, f'{file}: expected four structured FAQ answers')
 
 check(len(set(titles)) == len(titles), 'Duplicate page titles')
 check(len(set(descriptions)) == len(descriptions), 'Duplicate descriptions')
@@ -112,6 +127,10 @@ for node in tree.findall('s:url', ns):
     expected = {a['hreflang']: a['href'] for a in indexable[target].select('link', rel='alternate') if 'hreflang' in a}
     check({a.attrib['hreflang']: a.attrib['href'] for a in node.findall('x:link', ns)} == expected, 'Sitemap hreflang mismatch')
 check('Sitemap: ' + BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text(), 'robots sitemap link missing')
+llms_text = (ROOT / 'llms.txt').read_text()
+llms_urls = re.findall(r'\]\((https://raccoon-studio\.com\.ua/[^)]*)\)', llms_text)
+check(len(llms_urls) == len(set(llms_urls)), 'Duplicate llms.txt page links')
+check(set(llms_urls) == set(locations), 'llms.txt does not link to every canonical page')
 manifest = json.loads((ROOT / 'site.webmanifest').read_text())
 for icon in manifest['icons']:
     check((ROOT / icon['src'].lstrip('/')).is_file(), 'Missing manifest icon')

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Machine-readable index of the public website.
+# This is an informational convention, not a crawler access rule.
+# https://raccoon-studio.com.ua/llms.txt
+
 Sitemap: https://raccoon-studio.com.ua/sitemap.xml
