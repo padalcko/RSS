@@ -113,7 +113,7 @@ for file, page in pages.items():
         check(len(faq_pages) == 1, f'{file}: expected one FAQPage structured-data node')
         if faq_pages:
             check(faq_pages[0].get('url') == expected and faq_pages[0].get('inLanguage') == lang, f'{file}: inconsistent FAQPage structured data')
-            check(len(faq_pages[0].get('mainEntity', [])) == 4, f'{file}: expected four structured FAQ answers')
+            check(len(faq_pages[0].get('mainEntity', [])) == 8, f'{file}: expected eight structured FAQ answers')
 
 check(len(set(titles)) == len(titles), 'Duplicate page titles')
 check(len(set(descriptions)) == len(descriptions), 'Duplicate descriptions')
