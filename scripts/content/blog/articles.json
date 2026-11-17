@@ -1,12 +1,66 @@
 [
   {
+    "id": "multi-regional-seo",
+    "category": "seo",
+    "published": "2026-11-17",
+    "modified": "2026-11-17",
+    "image": "/images/blog/multi-regional-seo-raccoon-studio.webp",
+    "socialImage": "/images/blog/multi-regional-seo-raccoon-studio.webp",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "hreflang": {
+      "uk": "uk-UA",
+      "pl": "pl-PL",
+      "en": "en"
+    },
+    "contactLink": true,
+    "inlineCode": true,
+    "translations": {
+      "uk": {
+        "slug": "multirehionalne-seo",
+        "title": "Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі",
+        "seoTitle": "Мультирегіональне SEO в Україні та Європі | Raccoon Studio",
+        "description": "Як просувати сайт у кількох містах і країнах? Розбираємо локальне SEO, структуру регіональних сторінок, Google Business Profile та hreflang.",
+        "excerpt": "Один бізнес може працювати в кількох містах і країнах, але це не означає, що достатньо скопіювати одну сторінку й замінити назву міста. Розбираю, як побудувати регіональну SEO-стратегію без зайвих сайтів і технічних помилок.",
+        "source": "regional-uk.md",
+        "ctaTitle": "Плануєте вихід у нові регіони?",
+        "cta": "Raccoon SEO Studio допомагає розробляти багатомовні сайти, планувати регіональну структуру та налаштовувати технічне SEO для різних ринків.",
+        "button": "Обговорити проєкт",
+        "imageAlt": "SEO-Єнот аналізує просування сайтів в Україні, Польщі та країнах Європи"
+      },
+      "pl": {
+        "slug": "seo-wieloregionalne",
+        "title": "SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie",
+        "seoTitle": "SEO wieloregionalne w Polsce i Europie | Raccoon Studio",
+        "description": "Jak pozycjonować stronę w kilku miastach i krajach? Poznaj strategie lokalnego SEO, strukturę stron regionalnych, hreflang i Profil Firmy w Google.",
+        "excerpt": "Firma działa w kilku miastach? Samo kopiowanie podstron i zmienianie nazw lokalizacji nie wystarczy. Sprawdź, jak zaplanować skuteczną strukturę SEO.",
+        "source": "regional-pl.md",
+        "ctaTitle": "Planujesz rozwój na nowych rynkach?",
+        "cta": "Raccoon SEO Studio pomaga tworzyć wielojęzyczne strony internetowe, planować strukturę regionalną i wdrażać techniczne SEO.",
+        "button": "Porozmawiajmy o projekcie",
+        "imageAlt": "Szop SEO analizuje pozycjonowanie stron w Polsce i innych krajach Europy"
+      },
+      "en": {
+        "slug": "multi-regional-seo",
+        "title": "Multi-Regional SEO: How to Grow Across European Markets",
+        "seoTitle": "Multi-Regional SEO Across Europe | Raccoon Studio",
+        "description": "Learn how to expand SEO across European cities and countries using regional landing pages, Google Business Profile, hreflang and a practical site structure.",
+        "excerpt": "Expanding into new cities does not mean duplicating the same landing page dozens of times. Here is how I approach regional website structure, local search and international SEO.",
+        "source": "regional-en.md",
+        "ctaTitle": "Expanding Into New Markets?",
+        "cta": "Raccoon SEO Studio helps businesses develop multilingual websites, plan regional structures and implement technical SEO across markets.",
+        "button": "Discuss Your Project",
+        "imageAlt": "SEO Raccoon analyzing multi-regional website optimization across Europe"
+      }
+    }
+  },
+  {
     "id": "three-seo-rules",
     "category": "seo",
     "published": "2026-11-17",
     "modified": "2026-11-17",
-    "image": "/images/blog/website-launch.svg",
-    "socialImage": "/images/blog/website-launch.png",
-    "showCardAuthor": true,
+    "image": "/images/blog/three-seo-rules-raccoon-studio.png",
+    "socialImage": "/images/blog/three-seo-rules-raccoon-studio.png",
     "translations": {
       "uk": {
         "slug": "try-pravyla-seo",
@@ -50,14 +104,19 @@
           "website-launch": "How to Prepare a New Website for SEO"
         }
       }
-    }
+    },
+    "relatedIds": [
+      "website-launch"
+    ],
+    "imageWidth": 1672,
+    "imageHeight": 941
   },
   {
     "id": "website-launch",
     "category": "seo",
     "published": "2026-11-17",
     "modified": "2026-11-17",
-    "image": "/images/blog/website-launch.svg",
+    "image": "/images/blog/website-launch.png",
     "socialImage": "/images/blog/website-launch.png",
     "translations": {
       "uk": {
@@ -78,6 +137,11 @@
         "description": "Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.",
         "source": "launch-en.md"
       }
-    }
+    },
+    "relatedIds": [
+      "three-seo-rules"
+    ],
+    "imageWidth": 1671,
+    "imageHeight": 941
   }
 ]

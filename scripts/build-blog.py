@@ -22,6 +22,7 @@ KEYS = ['all','seo','ai','automation','development','cases']
 
 def home(lang): return '/' if lang == 'uk' else f'/{lang}/'
 def route(lang, article=None): return home(lang)+'blog/'+(article['translations'][lang]['slug']+'/' if article else '')
+def language_tag(lang,article=None): return (article or {}).get('hreflang',{}).get(lang,lang)
 def source(article,lang): return (CONTENT/article['translations'][lang]['source']).read_text().strip()
 def words(article,lang): return len(re.findall(r"[^\W_]+(?:[’'’-][^\W_]+)*", source(article,lang)))
 def minutes(article,lang): return max(1,math.ceil(words(article,lang)/200))
@@ -40,8 +41,8 @@ def breadcrumbs(lang,article=None):
 def card(article,lang,link_title=None):
  c=COPY[lang]; t=article['translations'][lang]
  excerpt=t.get('excerpt',t['description'])
- author=f"<span>{c['author']}</span>" if article.get('showCardAuthor') else ''
- return f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{c['image']}" width="1200" height="675" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
+ author=f"<span>{c['author']}</span>"
+ return f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
 
 def listing(lang):
  c=COPY[lang]; bc,_=breadcrumbs(lang)
@@ -54,16 +55,20 @@ def article_body(article,lang):
  blocks=source(article,lang).split('\n\n')
  intro=blocks.pop(0)
  body='\n'.join(f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
- related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations']][:3]
+ related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
+ if article.get('inlineCode'): body=re.sub(r'`([^`]+)`',r'<code>\1</code>',body)
+ cta_button=(f"<a class=\"nav-cta\" style=\"color: var(--white)\" href=\"{home(lang)}#contacts\">{e(t.get('button',c['button']))}</a>" if article.get('contactLink') else f"<button type=\"button\" class=\"nav-cta js-open-modal\">{e(t.get('button',c['button']))}</button>")
  cta_heading=f"<h2>{e(t['ctaTitle'])}</h2>" if t.get('ctaTitle') else ''
  related_html=f'<section class="blog-related"><h2>{c["related"]}</h2><ul class="blog-grid">'+''.join(card(a,lang,t.get('relatedTitles',{}).get(a['id'])) for a in related)+'</ul></section>' if related else ''
- return f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{c['image']}" width="1200" height="675" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta">{cta_heading}<p>{e(t.get('cta',c['cta']))}</p><div><button type="button" class="nav-cta js-open-modal">{e(t.get('button',c['button']))}</button><a href="{home(lang)}#services">{c['services']}</a></div></aside>{related_html}</div>'''
+ return f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta">{cta_heading}<p>{e(t.get('cta',c['cta']))}</p><div>{cta_button}<a href="{home(lang)}#services">{c['services']}</a></div></aside>{related_html}</div>'''
 
 def build_page(lang,article=None):
  c=COPY[lang]; url=BASE+route(lang,article); t=article['translations'][lang] if article else None
  title=t.get('seoTitle',t['title']) if t else c['name']+' | Raccoon SEO Studio'
  description=t['description'] if t else c['subtitle']
- social=BASE+(article['socialImage'] if article else ARTICLES[0]['socialImage'])
+ visual=article or next(a for a in ARTICLES if a['id']=='website-launch')
+ social=BASE+visual['socialImage']
+ image_alt=visual['translations'][lang].get('imageAlt',c['image'])
  original=(ROOT/(home(lang).strip('/')+'/' if lang!='uk' else '')/'index.html').read_text()
  header=re.search(r'<header\b.*?</header>',original,re.S)[0]
  for target in COPY:
@@ -80,7 +85,7 @@ def build_page(lang,article=None):
  schema={'@type':'BlogPosting' if article else 'Blog','@id':url+'#'+('article' if article else 'blog'),'url':url,'name':title,'description':description,'inLanguage':lang,'publisher':{'@id':BASE+'/#organization'}}
  if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
  else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],'image':BASE+a['socialImage']} for a in ARTICLES if lang in a['translations']]
- alternates='\n'.join(f'<link rel="alternate" hreflang="{l}" href="{BASE+route(l,article)}">' for l in COPY)+f'\n<link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}">'
+ alternates='\n'.join(f'<link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}">' for l in COPY)+f'\n<link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}">'
  locale={'uk':'uk_UA','pl':'pl_PL','en':'en_GB'}
  og_locales='\n'.join(f'<meta property="og:locale:alternate" content="{value}">' for l,value in locale.items() if l!=lang)
  html=f'''<!DOCTYPE html>
@@ -90,8 +95,8 @@ def build_page(lang,article=None):
 <meta name="author" content="Oleksandr Padalko"><meta name="robots" content="index, follow">
 <link rel="canonical" href="{url}">{alternates}
 <meta property="og:type" content="{'article' if article else 'website'}"><meta property="og:site_name" content="Raccoon SEO Studio"><meta property="og:locale" content="{locale[lang]}">{og_locales}
-<meta property="og:title" content="{e(title,quote=True)}"><meta property="og:description" content="{e(description,quote=True)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{social}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="675"><meta property="og:image:alt" content="{c['image']}">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title,quote=True)}"><meta name="twitter:description" content="{e(description,quote=True)}"><meta name="twitter:image" content="{social}"><meta name="twitter:image:alt" content="{c['image']}">
+<meta property="og:title" content="{e(title,quote=True)}"><meta property="og:description" content="{e(description,quote=True)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{social}"><meta property="og:image:width" content="{visual.get('imageWidth',1200)}"><meta property="og:image:height" content="{visual.get('imageHeight',675)}"><meta property="og:image:alt" content="{e(image_alt)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title,quote=True)}"><meta name="twitter:description" content="{e(description,quote=True)}"><meta name="twitter:image" content="{social}"><meta name="twitter:image:alt" content="{e(image_alt)}">
 {common}
 <link rel="stylesheet" href="/styles/blog.css"><meta name="theme-color" content="#4D5AE5">
 <script type="application/ld+json">{json.dumps({'@context':'https://schema.org','@graph':[publisher,bc,schema]},ensure_ascii=False)}</script>
@@ -109,17 +114,34 @@ def build_page(lang,article=None):
 
 
 def build():
+ import sys
+ selected=next((a for a in ARTICLES if a['id']==sys.argv[1]),None) if len(sys.argv)>1 else None
  for lang in COPY:
-  build_page(lang)
-  for article in ARTICLES:
-   if lang in article['translations']: build_page(lang,article)
+  if selected:
+   path=ROOT/route(lang).strip('/')/'index.html'
+   existing=path.read_text()
+   if route(lang,selected) not in existing:
+    existing=re.sub(r'(<ul\b[^>]*id="blog-results"[^>]*>)',lambda m:m[0]+card(selected,lang),existing,count=1)
+    def add_schema(m):
+     data=json.loads(m[1])
+     for item in data.get('@graph',[]):
+      if item.get('@type')=='Blog':
+       item['blogPost'].insert(0,{'@type':'BlogPosting','headline':selected['translations'][lang]['title'],'url':BASE+route(lang,selected),'author':{'@type':'Person','name':'Oleksandr Padalko'},'datePublished':selected['published'],'dateModified':selected['modified'],'image':BASE+selected['socialImage']})
+     return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False)+'</script>'
+    existing=re.sub(r'<script type="application/ld\+json">(.*?)</script>',add_schema,existing,flags=re.S)
+    path.write_text(existing)
+   build_page(lang,selected)
+  else:
+   build_page(lang)
+   for article in ARTICLES:
+    if lang in article['translations']: build_page(lang,article)
  # Preserve existing sitemap bytes outside this generated block.
  path=ROOT/'sitemap.xml'; sitemap=path.read_text()
  sitemap=re.sub(r'\s*<!-- BLOG START -->.*?<!-- BLOG END -->','',sitemap,flags=re.S)
  entries=[]
  for article in [None]+ARTICLES:
   for lang in COPY:
-   links=''.join(f'<xhtml:link rel="alternate" hreflang="{l}" href="{BASE+route(l,article)}" />' for l in COPY)
+   links=''.join(f'<xhtml:link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}" />' for l in COPY)
    links+=f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}" />'
    entries.append(f'  <url><loc>{BASE+route(lang,article)}</loc>'+ (f'<lastmod>{article["modified"]}</lastmod>' if article else '')+links+'</url>')
  sitemap=sitemap.replace('</urlset>','  <!-- BLOG START -->\n'+'\n'.join(entries)+'\n  <!-- BLOG END -->\n</urlset>'); path.write_text(sitemap)

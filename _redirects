@@ -42,6 +42,10 @@
 /pl/blog/trzy-zasady-seo/index.html /pl/blog/trzy-zasady-seo/ 301!
 /en/blog/three-seo-rules/index.html /en/blog/three-seo-rules/ 301!
 
+/blog/multirehionalne-seo/index.html /blog/multirehionalne-seo/ 301!
+/pl/blog/seo-wieloregionalne/index.html /pl/blog/seo-wieloregionalne/ 301!
+/en/blog/multi-regional-seo/index.html /en/blog/multi-regional-seo/ 301!
+
 # Native localized 404 fallbacks. Existing files shadow these non-forced rules.
 /pl/* /pl/404.html 404
 /en/* /en/404.html 404
