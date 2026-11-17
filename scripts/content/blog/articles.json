@@ -1,0 +1,83 @@
+[
+  {
+    "id": "three-seo-rules",
+    "category": "seo",
+    "published": "2026-11-17",
+    "modified": "2026-11-17",
+    "image": "/images/blog/website-launch.svg",
+    "socialImage": "/images/blog/website-launch.png",
+    "showCardAuthor": true,
+    "translations": {
+      "uk": {
+        "slug": "try-pravyla-seo",
+        "title": "Три правила SEO, які я не раджу порушувати",
+        "seoTitle": "Три правила SEO, які я не раджу порушувати | Raccoon Studio",
+        "description": "Чому не варто бездумно змінювати URL, переробляти успішні сторінки та копіювати конкурентів. Три практичні правила технічного SEO.",
+        "excerpt": "Не кожна зміна робить сайт кращим. Розбираю три правила, які допомагають зберегти пошуковий трафік і не повторювати чужих помилок.",
+        "source": "rules-uk.md",
+        "ctaTitle": "Плануєте оновлення сайту?",
+        "cta": "Перед редизайном або зміною структури варто перевірити, які сторінки вже приносять результат. Raccoon SEO Studio допоможе оцінити технічні ризики та підготувати сайт до змін.",
+        "button": "Обговорити проєкт",
+        "relatedTitles": {
+          "website-launch": "Як правильно запускати новий сайт із погляду SEO"
+        }
+      },
+      "pl": {
+        "slug": "trzy-zasady-seo",
+        "title": "Trzy zasady SEO, których nie warto łamać",
+        "seoTitle": "3 zasady SEO, których nie warto łamać | Raccoon Studio",
+        "description": "Zmiana adresów URL, przebudowa działających stron i kopiowanie konkurencji mogą zaszkodzić SEO. Poznaj trzy praktyczne zasady.",
+        "excerpt": "Nie każda zmiana poprawia wyniki strony. Trzy zasady, które pomagają chronić ruch organiczny i unikać niepotrzebnego ryzyka.",
+        "source": "rules-pl.md",
+        "ctaTitle": "Planujesz modernizację strony?",
+        "cta": "Przed redesignem lub zmianą struktury warto sprawdzić, które podstrony już przynoszą rezultaty. Raccoon SEO Studio pomaga ocenić ryzyko techniczne i przygotować witrynę do zmian.",
+        "button": "Porozmawiajmy o projekcie",
+        "relatedTitles": {
+          "website-launch": "Jak przygotować nową stronę do SEO"
+        }
+      },
+      "en": {
+        "slug": "three-seo-rules",
+        "title": "Three SEO Rules I Would Not Ignore",
+        "seoTitle": "Three SEO Rules I Would Not Ignore | Raccoon Studio",
+        "description": "Changing URLs, rewriting successful pages and copying competitors can damage organic visibility. Three practical rules for safer SEO decisions.",
+        "excerpt": "Not every website improvement leads to better results. Three practical principles for protecting organic traffic and avoiding unnecessary SEO risks.",
+        "source": "rules-en.md",
+        "ctaTitle": "Planning a Website Redesign?",
+        "cta": "Before changing your website structure, it is worth checking which pages already perform well. Raccoon SEO Studio can help assess technical risks and prepare the website for changes.",
+        "button": "Discuss Your Project",
+        "relatedTitles": {
+          "website-launch": "How to Prepare a New Website for SEO"
+        }
+      }
+    }
+  },
+  {
+    "id": "website-launch",
+    "category": "seo",
+    "published": "2026-11-17",
+    "modified": "2026-11-17",
+    "image": "/images/blog/website-launch.svg",
+    "socialImage": "/images/blog/website-launch.png",
+    "translations": {
+      "uk": {
+        "slug": "zapusk-novoho-saitu-seo",
+        "title": "Запуск нового сайту: чому SEO потрібно продумати ще до публікації",
+        "description": "Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.",
+        "source": "launch-uk.md"
+      },
+      "pl": {
+        "slug": "start-nowej-strony-seo",
+        "title": "Start nowej strony internetowej. Dlaczego SEO warto zaplanować przed publikacją?",
+        "description": "Nowa strona nie zdobywa ruchu z Google? Sprawdź, jakie błędy techniczne i problemy z treścią mogą utrudniać jej rozwój.",
+        "source": "launch-pl.md"
+      },
+      "en": {
+        "slug": "new-website-seo-launch",
+        "title": "Launching a New Website: Why SEO Should Start Before Publication",
+        "description": "Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.",
+        "source": "launch-en.md"
+      }
+    }
+  }
+]

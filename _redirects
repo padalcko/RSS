@@ -30,6 +30,18 @@
 
 /en/index.html /en/ 301!
 
+# Blog index documents use canonical directory URLs.
+/blog/index.html /blog/ 301!
+/blog/zapusk-novoho-saitu-seo/index.html /blog/zapusk-novoho-saitu-seo/ 301!
+/pl/blog/index.html /pl/blog/ 301!
+/pl/blog/start-nowej-strony-seo/index.html /pl/blog/start-nowej-strony-seo/ 301!
+/en/blog/index.html /en/blog/ 301!
+/en/blog/new-website-seo-launch/index.html /en/blog/new-website-seo-launch/ 301!
+
+/blog/try-pravyla-seo/index.html /blog/try-pravyla-seo/ 301!
+/pl/blog/trzy-zasady-seo/index.html /pl/blog/trzy-zasady-seo/ 301!
+/en/blog/three-seo-rules/index.html /en/blog/three-seo-rules/ 301!
+
 # Native localized 404 fallbacks. Existing files shadow these non-forced rules.
 /pl/* /pl/404.html 404
 /en/* /en/404.html 404
