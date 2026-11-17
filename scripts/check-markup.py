@@ -23,7 +23,8 @@ def validate_css(rules):
         elif rule.type == 'at-rule' and rule.content:
             validate_css(tinycss2.parse_rule_list(rule.content, skip_comments=True, skip_whitespace=True))
 
-validate_css(tinycss2.parse_stylesheet((root / 'styles/style.css').read_text(), skip_comments=True, skip_whitespace=True))
+for stylesheet in (root / 'styles').glob('*.css'):
+    validate_css(tinycss2.parse_stylesheet(stylesheet.read_text(), skip_comments=True, skip_whitespace=True))
 print(f'{len(files)} HTML documents and shared CSS: {len(errors)} parse errors')
 for error in errors:
     print(error)

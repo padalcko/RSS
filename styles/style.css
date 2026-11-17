@@ -4436,3 +4436,9 @@ a:focus-visible, .burger:focus-visible {
   .header .logo { font-size: 14px; margin-right: 0; letter-spacing: .02em; }
   .header .header-container { padding-inline: 16px; gap: 8px; }
 }
+
+/* Equal team geometry across UA/PL/EN, retaining the original photographs. */
+.studio-v5 .team-img { aspect-ratio: 2 / 3; object-fit: cover; object-position: 50% 45%; }
+.studio-v5 .team-content { display: grid; grid-template-rows: 52px 48px; gap: 8px; padding: 24px 16px; min-height: 156px; }
+.studio-v5 .team-name { align-self: center; margin: 0; }
+.studio-v5 .team-role { margin: 0; line-height: 24px; }

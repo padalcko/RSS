@@ -23,7 +23,7 @@ class Page(HTMLParser):
         return [a for t, a, _ in self.tags if t == tag and all(a.get(k) == v for k, v in attrs.items())]
 
 pages = {str(p.relative_to(ROOT)): Page(p) for p in ROOT.rglob('*.html')}
-indexable = {f: p for f, p in pages.items() if f != '404.html'}
+indexable = {f: p for f, p in pages.items() if Path(f).name != '404.html'}
 errors = []
 
 def check(condition, message):
@@ -68,8 +68,9 @@ for file, page in pages.items():
             check('width' in attrs and 'height' in attrs, f'{file}:{line}: missing image dimensions')
         if tag == 'a' and attrs.get('target') == '_blank':
             check('noopener' in attrs.get('rel', '').split(), f'{file}:{line}: missing noopener')
-    if file == '404.html':
-        check('noindex' in page.select('meta', name='robots')[0]['content'], '404 must be noindex')
+    if Path(file).name == '404.html':
+        check('noindex' in page.select('meta', name='robots')[0]['content'], f'{file}: 404 must be noindex')
+        check(not page.select('link', rel='canonical'), f'{file}: 404 must not declare canonical')
         continue
     title = re.search(r'<title>(.*?)</title>', page.text, re.S).group(1).strip()
     titles.append(title)

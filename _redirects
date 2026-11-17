@@ -29,3 +29,7 @@
 /cases/.DS_Store /404.html 404!
 
 /en/index.html /en/ 301!
+
+# Native localized 404 fallbacks. Existing files shadow these non-forced rules.
+/pl/* /pl/404.html 404
+/en/* /en/404.html 404

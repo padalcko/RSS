@@ -4,20 +4,293 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, follow" />
-  <title>404 — Raccoon SEO Studio</title>
+  <title>404 — Сторінку не знайдено | Raccoon SEO Studio</title>
+  <meta name="description" content="Сторінку не знайдено. Поверніться на головну Raccoon SEO Studio або перегляньте наші проєкти." />
   <link rel="stylesheet" href="/styles/style.css" />
+  <link rel="stylesheet" href="/styles/error-404.css" />
   <link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
   <link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
   <link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
 </head>
-<body>
-  <main class="section container" id="main-content">
-    <img src="/images/brand/raccoon-logo-128.webp" alt="Raccoon SEO Studio" width="64" height="64" class="error-logo" />
-    <h1 class="section-title">404</h1>
-    <p class="section-description">Сторінку не знайдено. Перевірте адресу або поверніться на головну.</p>
-    <p class="section-description" lang="pl">Nie znaleziono strony. Sprawdź adres lub wróć na stronę główną.</p>
-    <div class="error-actions"><a class="hero-btn" href="/">Головна українською</a><a class="hero-btn" href="/pl/" lang="pl">Strona główna po polsku</a></div>
-  </main>
+<body class="studio-v5 error-page">
+<a class="skip-link" href="#main-content">Перейти до вмісту</a>
+<header class="header">
+    <div class="container header-container">
+
+      <nav
+        class="nav"
+        aria-label="Головна навігація"
+      >
+
+        <a
+          href="/"
+          class="logo"
+          aria-label="Raccoon SEO Studio"
+        >
+          RACCOON<span class="logo-dark">STUDIO</span>
+        </a>
+
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/">Головна</a></li><li><a class="nav-link" href="/#services">Послуги</a></li><li><a class="nav-link" href="/#work">Портфоліо</a></li><li><a class="nav-link" href="/#team">Команда</a></li><li><a class="nav-link" href="/#contacts">Контакти</a></li><li><button type="button" class="nav-cta js-open-modal">Обговорити проєкт</button></li></ul>
+
+      </nav>
+
+      <div class="header-right">
+
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Мова сайту: Українська"><span aria-hidden="true">🇺🇦</span><span>UA</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/404.html" class="language-link" lang="uk" hreflang="uk" aria-current="page"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/pl/404.html" class="language-link" lang="pl" hreflang="pl"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true"></span></a><a href="/en/404.html" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <ul class="contacts-list">
+
+        <li>
+          <a
+            href="mailto:seoraccoonstudio@gmail.com"
+            class="contact-link"
+          >
+            seoraccoonstudio@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="tel:+48793121665"
+            class="contact-link"
+          >
+            +48 793-121-665
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </header>
+<main id="main-content" class="debug-main" tabindex="-1">
+  <section class="debug-panel container" aria-labelledby="error-title">
+    <div class="debug-topbar"><p class="debug-label"><span class="debug-dot" aria-hidden="true"></span>RACCOON SYSTEM / ЗВІТ ПРО ПОМИЛКУ</p><p class="debug-online"><span aria-hidden="true">&gt;_</span> СИСТЕМА ПРАЦЮЄ</p></div>
+    <div class="debug-scene">
+      <div class="debug-copy"><p class="debug-code" aria-hidden="true">404<span class="debug-code-dot">.</span></p><h1 id="error-title"><span class="visually-hidden">404 — </span>Сторінка втекла з репозиторію.</h1><p class="debug-description">Ми вже шукаємо винного серед комітів. А поки повернімо вас туди, де все працює.</p></div>
+      <div class="debug-visual">
+        <div class="debug-mascot"><span class="debug-bracket debug-bracket-start" aria-hidden="true"></span><img src="/images/brand/raccoon-logo.webp" width="463" height="512" alt="Raccoon SEO Studio" fetchpriority="high" decoding="async" /><span class="debug-bracket debug-bracket-end" aria-hidden="true"></span><span class="debug-coordinate" aria-hidden="true">RACCOON / DEV.01</span></div>
+        <div class="debug-terminal" aria-hidden="true"><div class="debug-terminal-title"><span class="debug-terminal-dots">● ● ●</span><span>raccoon@studio:~$ diagnose /404</span></div><ol class="debug-lines"><li style="--line-delay: 700ms"><span aria-hidden="true">›</span> Перевіряємо маршрут...</li>
+<li style="--line-delay: 1050ms"><span aria-hidden="true">›</span> Шукаємо сторінку в репозиторії...</li>
+<li style="--line-delay: 1400ms"><span aria-hidden="true">›</span> Ресурс не знайдено.</li>
+<li style="--line-delay: 1750ms"><span aria-hidden="true">›</span> Єнота-розробника повідомлено.</li>
+<li style="--line-delay: 2100ms"><span aria-hidden="true">›</span> Варіанти відновлення доступні.</li></ol><p class="debug-success"><span>✓</span> Система працює. Помилка лише в маршруті.</p></div>
+      </div>
+      <div class="debug-actions"><a class="debug-primary" href="/">На головну <span aria-hidden="true">↗</span></a><a class="debug-secondary" href="/clients.html">Переглянути кейси</a><a class="debug-contact" href="/#contacts">Зв'язатися зі студією <span aria-hidden="true">→</span></a></div>
+    </div>
+    <p class="debug-bottom">ПОМИЛКА 404 · МАРШРУТ НЕ ЗНАЙДЕНО · ПОВЕРНЕННЯ ДОСТУПНЕ</p>
+  </section>
+</main>
+<footer
+    id="contacts"
+    class="footer"
+  >
+
+    <div class="container footer-container">
+
+      <div class="footer-info">
+
+        <a
+          href="/"
+          class="logo logo-footer"
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
+
+        <p class="footer-text">
+          SEO, сайти та AI-автоматизація
+          для розвитку бізнесу.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links"><a href="/#services">Послуги</a>
+
+        <p class="footer-subtitle">
+          Навігація
+        </p>
+
+        <a href="/">
+          Головна
+        </a>
+
+        <a href="/clients.html">
+          Кейси
+        </a>
+
+        <a href="/#lead">
+          Залишити заявку
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <p class="footer-subtitle">
+          Контакти
+        </p>
+
+        <a href="tel:+48793121665">
+          +48 793-121-665
+        </a>
+
+        <a href="mailto:seoraccoonstudio@gmail.com">
+          seoraccoonstudio@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="footer-cta"><p class="footer-subtitle">Маєте ідею або проєкт?</p><p>Обговорімо, як перетворити вашу ідею на ефективне онлайн-рішення.</p><button type="button" class="modal-btn js-open-modal">Обговорити проєкт</button></div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      Created by Raccoon Studio © 2026
+    </div>
+
+  </footer>
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Закрити"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Обговоримо ваш проєкт
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Ім’я</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Ваше імʼя"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Телефон</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">Email</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Компанія</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Назва компанії"
+        />
+
+        <label class="modal-field" for="modal-service">Послуга</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Оберіть послугу
+          </option>
+
+          <option value="SEO просування">
+            SEO просування
+          </option>
+
+          <option value="Створення сайту">
+            Створення сайту
+          </option>
+
+          <option value="AI агент для сайту">
+            AI агент для сайту
+          </option>
+
+          <option value="n8n автоматизація">
+            n8n автоматизація
+          </option>
+
+          <option value="Комплексне рішення">
+            Комплексне рішення
+          </option>
+
+        </select>
+
+        <label class="modal-field" for="modal-comment">Повідомлення</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Коротко опишіть задачу"
+        ></textarea>
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Я приймаю умови Політики конфіденційності
+
+        </label>
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Відправити
+        </button>
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+<script src="/script/script.js" defer></script>
 </body>
 </html>
