@@ -32,10 +32,10 @@
   </url>
   <url>
     <loc>https://raccoon-studio.com.ua/</loc>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/" />
-  </url>
+
+
+
+  <xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/" /><xhtml:link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/" /><xhtml:link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/" /></url>
   <url>
     <loc>https://raccoon-studio.com.ua/pl/cases/expres-polish.html</loc>
     <xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/cases/expres-polish.html" />
@@ -68,8 +68,9 @@
   </url>
   <url>
     <loc>https://raccoon-studio.com.ua/pl/</loc>
-    <xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/" />
-    <xhtml:link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/" />
-  </url>
+
+
+
+  <xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/" /><xhtml:link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/" /><xhtml:link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/" /></url>
+  <url><loc>https://raccoon-studio.com.ua/en/</loc><xhtml:link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/" /><xhtml:link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/" /><xhtml:link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/" /><xhtml:link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/" /></url>
 </urlset>

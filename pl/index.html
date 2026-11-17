@@ -38,6 +38,7 @@
     href="https://raccoon-studio.com.ua/"
   />
 
+  <link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/" />
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Raccoon SEO Studio" />
@@ -104,10 +105,6 @@
     rel="stylesheet"
     href="/styles/style.css"
   />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#4D5AE5" />
   <meta property="og:image:width" content="1200" />
@@ -125,7 +122,7 @@
         "url": "https://raccoon-studio.com.ua/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://raccoon-studio.com.ua/images/icon-512.png"
+          "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"
         },
         "email": "seoraccoonstudio@gmail.com",
         "telephone": "+48793121665",
@@ -245,9 +242,13 @@
     ]
   }
   </script>
+  <link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+  <link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
 </head>
 
-<body>
+<body class="studio-v5">
   <a class="skip-link" href="#main-content">Przejdź do treści</a>
 
   <!-- =========================
@@ -271,95 +272,14 @@
           RACCOON<span class="logo-dark">STUDIO</span>
         </a>
 
-        <ul class="nav-list" id="site-navigation">
-
-          <li>
-            <a
-              href="/pl/#studio"
-              class="nav-link active"
-            >
-              O nas
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pl/#portfolio"
-              class="nav-link"
-            >
-              Usługi
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pl/clients.html"
-              class="nav-link"
-            >
-              Realizacje
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pl/#stack"
-              class="nav-link"
-            >
-              Technologie
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pl/#automation"
-              class="nav-link"
-            >
-              Automatyzacje
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="/pl/#contacts"
-              class="nav-link"
-            >
-              Kontakt
-            </a>
-          </li>
-
-        </ul>
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/pl/">Strona główna</a></li><li><a class="nav-link" href="/pl/#services">Usługi</a></li><li><a class="nav-link" href="/pl/#work">Portfolio</a></li><li><a class="nav-link" href="/pl/#team">Zespół</a></li><li><a class="nav-link" href="/pl/#contacts">Kontakt</a></li><li><button type="button" class="nav-cta js-open-modal">Porozmawiajmy o projekcie</button></li></ul>
 
       </nav>
 
 
       <div class="header-right">
 
-        <div
-          class="language-switch"
-          aria-label="Przełącznik języka"
-        >
-
-          <a
-            href="/"
-            class="language-link"
-            lang="uk"
-          >
-            UA
-          </a>
-
-          <span class="language-divider">
-            /
-          </span>
-
-          <a
-            href="/pl/"
-            class="language-link active" aria-current="page"
-            lang="pl"
-          >
-            PL
-          </a>
-
-        </div>
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Język strony: Polski"><span aria-hidden="true">🇵🇱</span><span>PL</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/" class="language-link" lang="uk" hreflang="uk"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true"></span></a><a href="/pl/" class="language-link" lang="pl" hreflang="pl" aria-current="page"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/en/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
 
 
         <button
@@ -410,85 +330,14 @@
          HERO
     ========================== -->
 
-    <section
-      class="hero"
-      id="studio"
-    >
-
-      <div class="hero-inner container">
-
-        <div class="hero-left">
-
-          <p class="hero-label">
-            <span class="hero-label-indicator" aria-hidden="true"></span>
-            SYSTEMY DIGITAL DLA ROZWOJU FIRM
-          </p>
-
-          <h1 class="hero-title">
-            Budujemy systemy digital
-            <span>dla rozwoju biznesu.</span>
-          </h1>
-
-          <p class="hero-text">
-            Strony internetowe, SEO i automatyzacja AI — połączone w jeden
-            przejrzysty system, który pomaga firmom pozyskiwać klientów online.
-          </p>
-
-          <div class="hero-actions">
-            <button class="hero-btn js-open-modal" type="button">
-              Porozmawiajmy o projekcie <span aria-hidden="true">↗</span>
-            </button>
-            <a href="/pl/clients.html" class="hero-link">
-              Zobacz realizacje <span aria-hidden="true">→</span>
-            </a>
-          </div>
-
-          <ul class="hero-capabilities" aria-label="Obszary działania">
-            <li>SEO</li>
-            <li>Web</li>
-            <li>AI &amp; Automation</li>
-          </ul>
-
-        </div>
-
-        <div class="hero-right">
-          <div class="hero-image hero-showcase">
-            <div class="hero-showcase-topbar">
-              <span class="hero-showcase-window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span>RACCOON STUDIO <span aria-hidden="true">/</span> PROJECTS</span>
-              <span class="hero-showcase-index">01 — 04</span>
-            </div>
-            <div class="hero-showcase-screen">
-              <img src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 48vw" width="1200" height="740" alt="Strona Laser Tech Service — rzeczywisty projekt Raccoon SEO Studio" fetchpriority="high" decoding="async" />
-            </div>
-            <div class="hero-showcase-caption">
-              <div>
-                <span>WEB DEVELOPMENT · SEO · ANALITYKA</span>
-                <strong>Laser Tech Service</strong>
-              </div>
-              <span class="hero-showcase-arrow" aria-hidden="true">↗</span>
-            </div>
-            <div class="hero-float-card hero-float-card-seo" aria-hidden="true">
-              <span class="hero-float-icon">↗</span>
-              <span><small>WIDOCZNOŚĆ ORGANICZNA</small><strong>SEO / Visibility</strong></span>
-            </div>
-            <div class="hero-float-card hero-float-card-ai" aria-hidden="true">
-              <span class="hero-float-icon hero-float-icon-ai">✳</span>
-              <span><small>INTELIGENTNE PROCESY</small><strong>AI / Automation</strong></span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section>
+    <section class="hero" id="studio"><div class="hero-inner container"><div class="hero-left"><p class="hero-label">RACCOON SEO STUDIO</p><h1 class="hero-title">Tworzymy strony, które wspierają Twój biznes</h1><p class="hero-text">Tworzenie stron, techniczne SEO i automatyzacja z AI, które pomagają rozwijać Twoją firmę.</p><div class="hero-actions"><button class="hero-btn js-open-modal" type="button">Porozmawiajmy o projekcie</button><a class="hero-link" href="#work">Nasze realizacje <span aria-hidden="true">↗</span></a></div></div><div class="hero-graphic" aria-hidden="true"><div class="graphic-orbit"></div><div class="graphic-window"><div class="graphic-dots">● ● ●</div><div class="graphic-layout"><span></span><span></span><span></span></div><div class="graphic-lines"></div></div><div class="graphic-node">&lt;/&gt;</div><div class="graphic-star">✳</div></div></div></section>
 
 
     <!-- =========================
          FEATURES
     ========================== -->
 
-    <section class="section">
+    <section class="section" id="services">
 
       <div class="container">
 
@@ -496,175 +345,44 @@
 
           <li class="features-item">
 
-            <div class="features-icon">
+            <div class="features-icon"><svg class="precision-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="7" y="10" width="50" height="42" rx="4"/><path d="M7 21h50M14 15h1m5 0h1"/><g class="icon-accent"><path d="m25 30-7 6 7 6m14-12 7 6-7 6m-5-15-4 24"/></g></svg></div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <line
-                  x1="21"
-                  y1="21"
-                  x2="16.65"
-                  y2="16.65"
-                ></line>
-              </svg>
+            <h2 class="features-subtitle">Web Development</h2>
 
-            </div>
-
-            <h2 class="features-subtitle">
-              RACCOON
-            </h2>
-
-            <p class="features-text">
-              Analizujemy stronę,
-              znajdujemy obszary do poprawy
-              i budujemy strategię zwiększania
-              widoczności w Google.
-            </p>
+            <p class="features-text">Tworzenie nowoczesnych, szybkich i responsywnych stron z przemyślaną strukturą oraz wygodnym interfejsem.</p>
 
           </li>
 
 
           <li class="features-item">
 
-            <div class="features-icon">
+            <div class="features-icon"><svg class="precision-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="7" width="20" height="13" rx="3"/><path d="M18 20v10h28v8M18 30v8"/><rect x="8" y="38" width="20" height="13" rx="3"/><g class="icon-accent"><circle cx="46" cy="15" r="8"/><path d="m52 21 5 5M14 44h8"/><circle cx="46" cy="46" r="8"/></g></svg></div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
+            <h2 class="features-subtitle">Technical SEO</h2>
 
-            </div>
-
-            <h2 class="features-subtitle">
-              Web Development
-            </h2>
-
-            <p class="features-text">
-              Tworzymy szybkie,
-              responsywne strony internetowe
-              z przemyślaną strukturą,
-              SEO i czytelną ścieżką użytkownika.
-            </p>
+            <p class="features-text">Optymalizacja techniczna, indeksowanie, struktura stron i metadane wspierające widoczność w wyszukiwarkach.</p>
 
           </li>
 
 
           <li class="features-item">
 
-            <div class="features-icon">
+            <div class="features-icon"><svg class="precision-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="22" y="22" width="20" height="20" rx="4"/><path d="M32 12v10m0 20v10M12 32h10m20 0h10"/><g class="icon-accent"><circle cx="32" cy="8" r="4"/><circle cx="56" cy="32" r="4"/><circle cx="32" cy="56" r="4"/><circle cx="8" cy="32" r="4"/><path d="m28 32 3 3 5-6"/></g></svg></div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <rect
-                  x="3"
-                  y="3"
-                  width="18"
-                  height="18"
-                  rx="3"
-                ></rect>
+            <h2 class="features-subtitle">AI &amp; Automation</h2>
 
-                <path d="M8 12h8"></path>
-                <path d="M12 8v8"></path>
-              </svg>
-
-            </div>
-
-            <h2 class="features-subtitle">
-              AI Automation
-            </h2>
-
-            <p class="features-text">
-              Tworzymy agentów AI,
-              integracje oraz automatyzacje n8n
-              do obsługi leadów,
-              danych i procesów biznesowych.
-            </p>
+            <p class="features-text">Integracja asystentów AI oraz automatyzacja procesów biznesowych, formularzy i komunikacji z klientami.</p>
 
           </li>
 
 
           <li class="features-item">
 
-            <div class="features-icon">
+            <div class="features-icon"><svg class="precision-icon" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="10" width="52" height="36" rx="4"/><path d="M25 46v8m14-8v8M20 54h24"/><g class="icon-accent"><path d="M12 33h8l5-10 7 17 7-13 5 6h8"/><circle cx="49" cy="17" r="2"/></g></svg></div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <line
-                  x1="12"
-                  y1="20"
-                  x2="12"
-                  y2="10"
-                ></line>
+            <h2 class="features-subtitle">Performance &amp; Support</h2>
 
-                <line
-                  x1="18"
-                  y1="20"
-                  x2="18"
-                  y2="4"
-                ></line>
-
-                <line
-                  x1="6"
-                  y1="20"
-                  x2="6"
-                  y2="14"
-                ></line>
-              </svg>
-
-            </div>
-
-            <h2 class="features-subtitle">
-              Analityka
-            </h2>
-
-            <p class="features-text">
-              Wdrażamy analitykę
-              i sprawdzamy, które strony,
-              kanały oraz rozwiązania
-              rzeczywiście przynoszą efekty.
-            </p>
+            <p class="features-text">Optymalizacja wydajności, wsparcie i dalszy rozwój istniejących projektów internetowych.</p>
 
           </li>
 
@@ -679,7 +397,7 @@
          TEAM
     ========================== -->
 
-    <section class="section team-section">
+    <section class="section team-section" id="team">
 
       <div class="container">
 
@@ -698,7 +416,7 @@
 
           <li class="team-item">
 
-            <img src="/images/optimized/yuriy-800.webp" srcset="/images/optimized/yuriy-400.webp 400w, /images/optimized/yuriy-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Jurij Czistiakow — SEO Specialist" loading="lazy" decoding="async" class="team-img" />
+            <img src="/images/optimized/yuriy-800.webp" srcset="/images/optimized/yuriy-400.webp 400w, /images/optimized/yuriy-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Юрій Чистяков — SEO Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -717,7 +435,7 @@
 
           <li class="team-item">
 
-            <img src="/images/optimized/oleksandr-800.webp" srcset="/images/optimized/oleksandr-400.webp 400w, /images/optimized/oleksandr-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Oleksandr Padalko — Frontend Developer i AI Automator" loading="lazy" decoding="async" class="team-img" />
+            <img src="/images/optimized/oleksandr-800.webp" srcset="/images/optimized/oleksandr-400.webp 400w, /images/optimized/oleksandr-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Олександр Падалко — Frontend Developer та AI Automator" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -736,7 +454,7 @@
 
           <li class="team-item">
 
-            <img src="/images/optimized/duck-800.webp" srcset="/images/optimized/duck-400.webp 400w, /images/optimized/duck-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1422" alt="The Kaczka — Brainstorming Specialist" loading="lazy" decoding="async" class="team-img" />
+            <img src="/images/optimized/duck-800.webp" srcset="/images/optimized/duck-400.webp 400w, /images/optimized/duck-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1422" alt="The Качка — Brainstorming Specialist" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -755,7 +473,7 @@
 
           <li class="team-item">
 
-            <img src="/images/optimized/yuliia-800.webp" srcset="/images/optimized/yuliia-400.webp 400w, /images/optimized/yuliia-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Julia Hamoliuk — Content Manager" loading="lazy" decoding="async" class="team-img" />
+            <img src="/images/optimized/yuliia-800.webp" srcset="/images/optimized/yuliia-400.webp 400w, /images/optimized/yuliia-800.webp 800w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" width="800" height="1200" alt="Юлія Гамолюк — Content Manager" loading="lazy" decoding="async" class="team-img" />
 
             <div class="team-content">
 
@@ -918,7 +636,7 @@
          CASES
     ========================== -->
 
-    <section class="section home-cases-section">
+    <section class="section home-cases-section" id="work">
 
       <div class="container">
 
@@ -953,46 +671,46 @@
           <!-- GLOSS GARAGE -->
           <article class="home-case-card content-item">
             <div class="home-case-media content-img">
-              <img alt="Strona główna Gloss Garage" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" width="1200"/>
+              <img alt="Strona główna Gloss Garage" decoding="async" height="900" loading="lazy" sizes="(max-width: 599px) 100vw, 550px" src="/images/cases/gloss-garage-1200.webp" srcset="/images/cases/gloss-garage-600.webp 600w, /images/cases/gloss-garage-1200.webp 1200w" width="1200"/>
             </div>
             <div class="home-case-content content-info">
               <h3 class="content-title"><a href="/pl/cases/gloss-garage.html" aria-label="Zobacz realizację Gloss Garage">Gloss Garage <span aria-hidden="true">→</span></a></h3>
               <p class="content-text">Strona serwisu PDR we Wrocławiu, stworzona z myślą o promocji usług usuwania wgnieceń bez lakierowania. Opracowaliśmy strukturę i stronę, wdrożyliśmy lokalne SEO oraz analitykę. Nadal rozwijamy content i widoczność organiczną projektu.</p>
             </div>
-          </article>
+          <p class="case-categories">Web Development · Local SEO</p><a class="project-visit" href="https://gg-pdr.pl/" target="_blank" rel="noopener noreferrer">Odwiedź stronę ↗</a></article>
 
 
           <!-- EXPRES POLISH -->
           <article class="home-case-card content-item">
             <div class="home-case-media content-img">
-              <img alt="Strona główna Expres Polish" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" width="1200"/>
+              <img alt="Strona główna Expres Polish" decoding="async" height="900" loading="lazy" sizes="(max-width: 599px) 100vw, 550px" src="/images/cases/expres-polish-1200.webp" srcset="/images/cases/expres-polish-600.webp 600w, /images/cases/expres-polish-1200.webp 1200w" width="1200"/>
             </div>
             <div class="home-case-content content-info">
               <h3 class="content-title"><a href="/pl/cases/expres-polish.html" aria-label="Zobacz realizację Expres Polish">Expres Polish <span aria-hidden="true">→</span></a></h3>
               <p class="content-text">Wielojęzyczna strona szkoły języka polskiego dla Ukraińców i Białorusinów w Polsce. Przygotowaliśmy strukturę kursów i landing pages, podstawy SEO, analitykę oraz system pozyskiwania zgłoszeń. Rozwijamy blog i treści informacyjne szkoły.</p>
             </div>
-          </article>
+          <p class="case-categories">Web Development · Content · SEO</p><a class="project-visit" href="https://expres-polish.pl/" target="_blank" rel="noopener noreferrer">Odwiedź stronę ↗</a></article>
 
 
           <!-- LASER TECH SERVICE -->
           <article class="home-case-card content-item">
             <div class="home-case-media content-img">
-              <img alt="Strona główna Laser Tech Service" decoding="async" height="740" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" width="1200"/>
+              <img alt="Strona główna Laser Tech Service" decoding="async" height="740" loading="lazy" sizes="(max-width: 599px) 100vw, 550px" src="/images/cases/laser-tech-service-1200.webp" srcset="/images/cases/laser-tech-service-600.webp 600w, /images/cases/laser-tech-service-1200.webp 1200w" width="1200"/>
             </div>
             <div class="home-case-content content-info">
               <h3 class="content-title"><a href="/pl/cases/laser-tech-service.html" aria-label="Zobacz realizację Laser Tech Service">Laser Tech Service <span aria-hidden="true">→</span></a></h3>
               <p class="content-text">Strona serwisu profesjonalnych urządzeń laserowych i kosmetologicznych obsługującego klientów w całej Polsce. Stworzyliśmy wielojęzyczną strukturę, strony usług i realizacji, SEO oraz analitykę. Regularnie rozwijamy blog i publikujemy rzeczywiste przypadki napraw urządzeń.</p>
             </div>
-          </article>
+          <p class="case-categories">Web Development · Technical SEO · Support</p><a class="project-visit" href="https://lasertechservice.pl/" target="_blank" rel="noopener noreferrer">Odwiedź stronę ↗</a></article>
           <article class="home-case-card content-item">
             <div class="home-case-media content-img">
-              <img alt="Strona główna LTS Market — katalog urządzeń" decoding="async" height="900" loading="lazy" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 50vw, 270px" src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" width="1200"/>
+              <img alt="Strona główna LTS Market — katalog urządzeń" decoding="async" height="900" loading="lazy" sizes="(max-width: 599px) 100vw, 550px" src="/images/cases/lts-market-1200.webp" srcset="/images/cases/lts-market-600.webp 600w, /images/cases/lts-market-1200.webp 1200w" width="1200"/>
             </div>
             <div class="home-case-content content-info">
               <h3 class="content-title"><a href="/pl/cases/lts-market.html" aria-label="Zobacz realizację LTS Market">LTS Market <span aria-hidden="true">→</span></a></h3>
               <p class="content-text">Wielojęzyczny katalog profesjonalnych urządzeń dla branży beauty. Stworzyliśmy strukturę dla nowych i używanych urządzeń, podstron produktowych, leasingu oraz zapytań ofertowych. Projekt rozwijamy jako platformę sprzedażową wspieraną przez SEO i content marketing.</p>
             </div>
-          </article>
+          <p class="case-categories">Web Development · E-commerce · SEO</p><a class="project-visit" href="https://ltsmarket.pl/" target="_blank" rel="noopener noreferrer">Odwiedź stronę ↗</a></article>
 
 
         </div>
@@ -1237,40 +955,37 @@
       <div class="container">
         <p class="section-eyebrow">NAJCZĘSTSZE PYTANIA</p>
         <h2 class="section-title" id="faq-title">Pytania o SEO, strony i AI</h2>
-        <div class="faq-list">
-          <details class="faq-item" name="faq">
-            <summary>Jakie usługi oferuje Raccoon SEO Studio?</summary>
-            <div class="faq-answer"><p>Studio zajmuje się SEO i widocznością w wyszukiwarkach, tworzeniem stron internetowych, automatyzacją AI i n8n, integracjami CRM, analityką oraz contentem digital.</p></div>
+        <div class="faq-list"><div class="faq-column"><details class="faq-item">
+            <summary aria-controls="faq-answer-1" aria-expanded="false">Jakie usługi oferuje Raccoon SEO Studio?</summary>
+            <div class="faq-answer" id="faq-answer-1"><p>Studio zajmuje się SEO i widocznością w wyszukiwarkach, tworzeniem stron internetowych, automatyzacją AI i n8n, integracjami CRM, analityką oraz contentem digital.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Czy zajmujecie się AI i automatyzacją?</summary>
-            <div class="faq-answer"><p>Tak. Studio tworzy rozwiązania AI i automatyzacje n8n oraz integruje je z CRM i innymi systemami biznesowymi.</p></div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-2" aria-expanded="false">Czy zajmujecie się AI i automatyzacją?</summary>
+            <div class="faq-answer" id="faq-answer-2"><p>Tak. Studio tworzy rozwiązania AI i automatyzacje n8n oraz integruje je z CRM i innymi systemami biznesowymi.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Gdzie można zobaczyć przykłady realizacji?</summary>
-            <div class="faq-answer"><p>Opublikowane <a href="/pl/clients.html">projekty i ich opisy</a> są dostępne na stronie realizacji Raccoon SEO Studio.</p></div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-3" aria-expanded="false">Gdzie można zobaczyć przykłady realizacji?</summary>
+            <div class="faq-answer" id="faq-answer-3"><p>Opublikowane <a href="/pl/clients.html">projekty i ich opisy</a> są dostępne na stronie realizacji Raccoon SEO Studio.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Jak skontaktować się z Raccoon SEO Studio?</summary>
-            <div class="faq-answer"><p>Ze studiem można skontaktować się przez <a href="#lead">formularz na stronie</a>, e-mail <a href="mailto:seoraccoonstudio@gmail.com">seoraccoonstudio@gmail.com</a> lub telefonicznie pod numerem <a href="tel:+48793121665">+48 793-121-665</a>.</p></div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-4" aria-expanded="false">Jak skontaktować się z Raccoon SEO Studio?</summary>
+            <div class="faq-answer" id="faq-answer-4"><p>Ze studiem można skontaktować się przez <a href="#lead">formularz na stronie</a>, e-mail <a href="mailto:seoraccoonstudio@gmail.com">seoraccoonstudio@gmail.com</a> lub telefonicznie pod numerem <a href="tel:+48793121665">+48 793-121-665</a>.</p></div>
+          </details></div><div class="faq-column"><details class="faq-item">
+            <summary aria-controls="faq-answer-5" aria-expanded="false">Co obejmuje pozycjonowanie SEO?</summary>
+            <div class="faq-answer" id="faq-answer-5"><p>Pracę rozpoczynamy od analizy strony, jej stanu technicznego i popytu w wyszukiwarce. Następnie ustalamy priorytety dotyczące struktury, treści i ulepszeń technicznych.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Co obejmuje pozycjonowanie SEO?</summary>
-            <div class="faq-answer"><p>Pracę rozpoczynamy od analizy strony, jej stanu technicznego i popytu w wyszukiwarce. Następnie ustalamy priorytety dotyczące struktury, treści i ulepszeń technicznych.</p></div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-6" aria-expanded="false">Czy tworzycie strony internetowe od podstaw?</summary>
+            <div class="faq-answer" id="faq-answer-6"><p>Tak. Studio tworzy strony dopasowane do celów firmy, wygody użytkowników, technicznego SEO i możliwości dalszego rozwoju.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Czy tworzycie strony internetowe od podstaw?</summary>
-            <div class="faq-answer"><p>Tak. Studio tworzy strony dopasowane do celów firmy, wygody użytkowników, technicznego SEO i możliwości dalszego rozwoju.</p></div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-7" aria-expanded="false">Jakie procesy biznesowe można zautomatyzować?</summary>
+            <div class="faq-answer" id="faq-answer-7"><p>W zależności od procesu można zautomatyzować obsługę zapytań, przekazywanie danych między usługami, pracę z CRM i rutynowe zadania za pomocą n8n oraz AI.</p></div>
           </details>
-          <details class="faq-item" name="faq">
-            <summary>Jakie procesy biznesowe można zautomatyzować?</summary>
-            <div class="faq-answer"><p>W zależności od procesu można zautomatyzować obsługę zapytań, przekazywanie danych między usługami, pracę z CRM i rutynowe zadania za pomocą n8n oraz AI.</p></div>
-          </details>
-          <details class="faq-item" name="faq">
-            <summary>Jak rozpoczyna się współpraca?</summary>
-            <div class="faq-answer"><p>Opisz zadanie w <a href="#lead">formularzu</a> lub skontaktuj się bezpośrednio ze studiem. Ustalimy potrzeby, priorytety i omówimy odpowiedni zakres prac.</p></div>
-          </details>
-        </div>
+<details class="faq-item">
+            <summary aria-controls="faq-answer-8" aria-expanded="false">Jak rozpoczyna się współpraca?</summary>
+            <div class="faq-answer" id="faq-answer-8"><p>Opisz zadanie w <a href="#lead">formularzu</a> lub skontaktuj się bezpośrednio ze studiem. Ustalimy potrzeby, priorytety i omówimy odpowiedni zakres prac.</p></div>
+          </details></div></div>
       </div>
     </section>
 
@@ -1278,176 +993,7 @@
          LEAD FORM
     ========================== -->
 
-    <section
-      id="lead"
-      class="section lead-section"
-    >
-
-      <div class="container lead-container">
-
-        <div class="lead-content">
-
-          <h2 class="section-title lead-title">
-            Porozmawiajmy o Twoim projekcie
-          </h2>
-
-          <p class="lead-text">
-            Opowiedz nam,
-            jakie wyzwanie stoi przed Twoją firmą.
-            Pomożemy określić,
-            jakie rozwiązanie będzie najbardziej odpowiednie:
-            SEO, strona internetowa,
-            automatyzacja, AI
-            lub kompleksowy system.
-          </p>
-
-          <ul class="lead-benefits">
-
-            <li>
-              Przeanalizujemy zadanie
-            </li>
-
-            <li>
-              Zaproponujemy konkretny plan działania
-            </li>
-
-            <li>
-              Wskażemy możliwości automatyzacji
-            </li>
-
-            <li>
-              Dobierzemy technologie do biznesu
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <form class="lead-form js-lead-form">
-
-          <label>
-            Imię *
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Twoje imię"
-              autocomplete="name"
-              required
-            />
-          </label>
-
-
-          <label>
-            Telefon *
-
-            <input
-              type="tel"
-              name="phone"
-              placeholder="+48 000 000 000"
-              autocomplete="tel"
-              required
-            />
-          </label>
-
-
-          <label>
-            Email *
-
-            <input
-              type="email"
-              name="email"
-              placeholder="email@example.com"
-              autocomplete="email"
-              required
-            />
-          </label>
-
-
-          <label>
-            Firma
-
-            <input
-              type="text"
-              name="company"
-              placeholder="Nazwa firmy"
-              autocomplete="organization"
-            />
-          </label>
-
-
-          <label class="lead-form-full">
-            Usługa
-
-            <select name="service">
-
-              <option value="">
-                Wybierz usługę
-              </option>
-
-              <option value="SEO">
-                SEO
-              </option>
-
-              <option value="Tworzenie strony internetowej">
-                Tworzenie strony internetowej
-              </option>
-
-              <option value="Content">
-                Content
-              </option>
-
-              <option value="AI agent">
-                AI agent
-              </option>
-
-              <option value="n8n automation">
-                n8n automation
-              </option>
-
-              <option value="CRM i integracje">
-                CRM i integracje
-              </option>
-
-              <option value="Kompleksowe rozwiązanie">
-                Kompleksowe rozwiązanie
-              </option>
-
-            </select>
-
-          </label>
-
-
-          <label class="lead-form-full">
-            Komentarz
-
-            <textarea
-              name="comment"
-              placeholder="Krótko opisz zadanie"
-            ></textarea>
-
-          </label>
-
-
-          <button
-            type="submit"
-            class="lead-btn"
-          >
-            Wyślij zgłoszenie
-          </button>
-
-
-          <p
-            class="form-status js-form-status"
-            aria-live="polite"
-          ></p>
-
-        </form>
-
-      </div>
-
-    </section>
+    <section id="lead" class="section project-cta"><div class="container"><h2 class="section-title">Masz pomysł lub projekt?</h2><p>Porozmawiajmy o tym, jak zamienić Twój pomysł w skuteczne rozwiązanie online.</p><button type="button" class="hero-btn js-open-modal">Porozmawiajmy o projekcie</button></div></section>
 
   </main>
 
@@ -1468,11 +1014,7 @@
         <a
           href="/pl/"
           class="logo logo-footer"
-        >
-          <span class="logo-accent">
-            SEO
-          </span>STUDIO
-        </a>
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
 
         <p class="footer-text">
           SEO, strony internetowe
@@ -1483,7 +1025,7 @@
       </div>
 
 
-      <div class="footer-links">
+      <div class="footer-links"><a href="/pl/#services">Usługi</a>
 
         <p class="footer-subtitle">
           Nawigacja
@@ -1521,37 +1063,13 @@
       </div>
 
 
-      <div class="footer-subscribe">
-
-        <p class="footer-subtitle">
-          Zapisz się do newslettera
-        </p>
-
-        <form class="subscribe-form">
-
-          <input
-            type="email"
-            placeholder="E-mail"
-            class="subscribe-input"
-            required
-          />
-
-          <button
-            type="submit"
-            class="subscribe-btn"
-          >
-            Zapisz się
-          </button>
-
-        </form>
-
-      </div>
+      <div class="footer-cta"><p class="footer-subtitle">Masz pomysł lub projekt?</p><p>Porozmawiajmy o tym, jak zamienić Twój pomysł w skuteczne rozwiązanie online.</p><button type="button" class="modal-btn js-open-modal">Porozmawiajmy o projekcie</button></div>
 
     </div>
 
 
     <div class="footer-bottom">
-      Raccoon SEO Studio © 2026
+      Created by Raccoon Studio © 2026
     </div>
 
   </footer>
@@ -1588,39 +1106,39 @@
 
       <form class="modal-form js-lead-form">
 
-        <input
+        <label class="modal-field" for="modal-name">Imię</label><input
           type="text"
-          name="name"
+          id="modal-name" name="name" autocomplete="name"
           class="modal-input"
           placeholder="Twoje imię"
           required
         />
 
-        <input
+        <label class="modal-field" for="modal-phone">Telefon</label><input
           type="tel"
-          name="phone"
+          id="modal-phone" name="phone" autocomplete="tel"
           class="modal-input"
           placeholder="+48 000 000 000"
           required
         />
 
-        <input
+        <label class="modal-field" for="modal-email">E-mail</label><input
           type="email"
-          name="email"
+          id="modal-email" name="email" autocomplete="email"
           class="modal-input"
           placeholder="Email"
           required
         />
 
-        <input
+        <label class="modal-field" for="modal-company">Firma</label><input
           type="text"
-          name="company"
+          id="modal-company" name="company"
           class="modal-input"
           placeholder="Nazwa firmy"
         />
 
-        <select
-          name="service"
+        <label class="modal-field" for="modal-service">Usługa</label><select
+          id="modal-service" name="service"
           class="modal-input"
         >
 
@@ -1651,8 +1169,8 @@
         </select>
 
 
-        <textarea
-          name="comment"
+        <label class="modal-field" for="modal-comment">Wiadomość</label><textarea
+          id="modal-comment" name="comment"
           class="modal-textarea"
           placeholder="Krótko opisz zadanie"
         ></textarea>

@@ -2,12 +2,12 @@
 
 > Raccoon SEO Studio is a digital studio offering SEO, website development, AI and n8n automation, CRM integrations, analytics, and digital content services.
 
-This file is a human- and machine-readable index of the studio's public website. The website is available in Ukrainian and Polish. Use the linked pages as the source of truth; do not infer client results, performance figures, or service guarantees that are not stated there.
+This file is a human- and machine-readable index of the studio's public website. The website is available in Ukrainian, Polish and English (home page). Use the linked pages as the source of truth; do not infer client results, performance figures, or service guarantees that are not stated there.
 
 ## Studio information
 
 - Official website: https://raccoon-studio.com.ua/
-- Public site languages: Ukrainian and Polish
+- Public site languages: Ukrainian, Polish and English (home page)
 - Services: SEO and search visibility, website development, AI and n8n automation, CRM integrations, analytics, and content
 - Contact: seoraccoonstudio@gmail.com
 - Phone: +48 793-121-665
@@ -16,6 +16,7 @@ This file is a human- and machine-readable index of the studio's public website.
 
 - [Ukrainian home page](https://raccoon-studio.com.ua/)
 - [Polish home page](https://raccoon-studio.com.ua/pl/)
+- [English home page](https://raccoon-studio.com.ua/en/)
 - [Ukrainian project portfolio](https://raccoon-studio.com.ua/clients.html)
 - [Polish project portfolio](https://raccoon-studio.com.ua/pl/clients.html)
 

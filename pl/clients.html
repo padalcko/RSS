@@ -104,17 +104,17 @@
     rel="stylesheet"
     href="/styles/style.css"
   />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#4D5AE5" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Raccoon SEO Studio — SEO, Web, AI Automation" />
   <meta property="og:locale:alternate" content="uk_UA" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/clients.html#webpage", "url": "https://raccoon-studio.com.ua/pl/clients.html", "name": "Realizacje Raccoon SEO Studio — strony, SEO i automatyzacja", "description": "Realizacje Raccoon SEO Studio: Gloss Garage, Expres Polish i Laser Tech Service. Strony internetowe, SEO, local SEO, analityka oraz automatyzacja AI.", "inLanguage": "pl", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"}, "email": "seoraccoonstudio@gmail.com", "telephone": "+48793121665"}, {"@type": "WebSite", "@id": "https://raccoon-studio.com.ua/#website", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "inLanguage": ["uk", "pl"], "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}, {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/clients.html#webpage", "url": "https://raccoon-studio.com.ua/pl/clients.html", "name": "Realizacje Raccoon SEO Studio — strony, SEO i automatyzacja", "description": "Realizacje Raccoon SEO Studio: Gloss Garage, Expres Polish i Laser Tech Service. Strony internetowe, SEO, local SEO, analityka oraz automatyzacja AI.", "inLanguage": "pl", "isPartOf": {"@id": "https://raccoon-studio.com.ua/#website"}, "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}}]}</script>
+  <link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+  <link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
 </head>
 
 <body class="clients-page">
@@ -200,32 +200,7 @@
 
       <div class="header-right">
 
-        <div
-          class="language-switch"
-          aria-label="Przełącznik języka"
-        >
-
-          <a
-            href="/clients.html"
-            class="language-link"
-            lang="uk"
-          >
-            UA
-          </a>
-
-          <span class="language-divider">
-            /
-          </span>
-
-          <a
-            href="/pl/clients.html"
-            class="language-link active" aria-current="page"
-            lang="pl"
-          >
-            PL
-          </a>
-
-        </div>
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Język strony: Polski"><span aria-hidden="true">🇵🇱</span><span>PL</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/clients.html" class="language-link" lang="uk" hreflang="uk"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true"></span></a><a href="/pl/clients.html" class="language-link" lang="pl" hreflang="pl" aria-current="page"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/en/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
 
 
         <button
@@ -599,11 +574,7 @@
         <a
           href="/pl/"
           class="logo logo-footer"
-        >
-          <span class="logo-accent">
-            SEO
-          </span>STUDIO
-        </a>
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
 
         <p class="footer-text">
           SEO, strony internetowe
@@ -614,7 +585,7 @@
       </div>
 
 
-      <div class="footer-links">
+      <div class="footer-links"><a href="/pl/#services">Usługi</a>
 
         <p class="footer-subtitle">
           Nawigacja
@@ -652,40 +623,145 @@
       </div>
 
 
-      <div class="footer-subscribe">
-
-        <p class="footer-subtitle">
-          Zapisz się do newslettera
-        </p>
-
-        <form class="subscribe-form">
-
-          <input
-            type="email"
-            placeholder="E-mail"
-            class="subscribe-input"
-            required
-          />
-
-          <button
-            type="submit"
-            class="subscribe-btn"
-          >
-            Zapisz się
-          </button>
-
-        </form>
-
-      </div>
+      <div class="footer-cta"><p class="footer-subtitle">Masz pomysł lub projekt?</p><p>Porozmawiajmy o tym, jak zamienić Twój pomysł w skuteczne rozwiązanie online.</p><button type="button" class="modal-btn js-open-modal">Porozmawiajmy o projekcie</button></div>
 
     </div>
 
 
     <div class="footer-bottom">
-      Raccoon SEO Studio © 2026
+      Created by Raccoon Studio © 2026
     </div>
 
   </footer>
+
+
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Zamknij"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Porozmawiajmy o projekcie
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Imię</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Twoje imię"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Telefon</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">E-mail</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Firma</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Nazwa firmy"
+        />
+
+        <label class="modal-field" for="modal-service">Usługa</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Wybierz usługę
+          </option>
+
+          <option value="SEO">
+            SEO
+          </option>
+
+          <option value="Tworzenie strony internetowej">
+            Tworzenie strony internetowej
+          </option>
+
+          <option value="AI agent">
+            AI agent
+          </option>
+
+          <option value="n8n automation">
+            n8n automation
+          </option>
+
+          <option value="Kompleksowe rozwiązanie">
+            Kompleksowe rozwiązanie
+          </option>
+
+        </select>
+
+
+        <label class="modal-field" for="modal-comment">Wiadomość</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Krótko opisz zadanie"
+        ></textarea>
+
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Akceptuję warunki Polityki prywatności
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Wyślij
+        </button>
+
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
 
 
   <!-- JS -->

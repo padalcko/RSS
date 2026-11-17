@@ -20,11 +20,13 @@ function assert(value, message) { if (!value) throw new Error(message); checks.p
 class URL { constructor(value, base) { Object.assign(this, JSON.parse(_parseURL(value, base))); } }
 class Element {
   constructor(attrs = {}) {
-    this.attrs = attrs; this.listeners = {}; this.style = {};
+    this.attrs = attrs; this.listeners = {}; this.style = {}; this.children = [];
     this.dataset = {}; this.offsetHeight = 76; this.offsetTop = 800;
     const values = new Set();
     this.classList = { add: x => values.add(x), remove: x => values.delete(x), contains: x => values.has(x), toggle: (x,on) => on ? values.add(x) : values.delete(x) };
   }
+  querySelector() { return this.children[0] || null; }
+  contains(el) { return el === this || this.children.some(child => child.contains(el)); }
   get href() { return this.attrs.href || ''; }
   get target() { return this.attrs.target || ''; }
   get id() { return this.attrs.id || ''; }
@@ -44,6 +46,7 @@ class Element {
 const burger = new Element(), nav = new Element(), header = new Element(), section = new Element({id:'lead'});
 const link = new Element({href:'/#lead'}), other = new Element({href:'/pl/#lead'}), bad = new Element({href:'/#%E0%A4%A'});
 const links=[link,other,bad];
+nav.children=links;
 const document = {
   body: new Element(), activeElement:null,
   documentElement:new Element({lang:'uk'}),
@@ -73,6 +76,7 @@ context.eval('''
 assert(burger.getAttribute('aria-expanded')==='false','menu starts closed');
 burger.fire('click');
 assert(nav.classList.contains('open') && document.body.classList.contains('modal-open'),'mobile menu opens and locks scroll');
+assert(document.activeElement===link,'opening menu focuses its first link');
 let event = link.fire('click');
 assert(event.defaultPrevented,'root-relative same-page hash handled');
 assert(!nav.classList.contains('open') && !document.body.classList.contains('modal-open'),'anchor closes mobile menu');
@@ -92,6 +96,7 @@ window.location.hash='#%E0%A4%A';window.listeners.load[0]();
 assert(true,'unknown and malformed initial hashes do not throw');
 burger.fire('click');document.listeners.keydown({key:'Escape'});
 assert(!nav.classList.contains('open'),'Escape closes menu');
+assert(document.activeElement===burger,'Escape restores focus to the menu button');
 burger.fire('click');window.innerWidth=1200;window.listeners.resize[0]();
 assert(burger.getAttribute('aria-expanded')==='false','desktop resize resets menu');
 ''')

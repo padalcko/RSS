@@ -27,3 +27,5 @@
 /docs/* /404.html 404!
 /.DS_Store /404.html 404!
 /cases/.DS_Store /404.html 404!
+
+/en/index.html /en/ 301!

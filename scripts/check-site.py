@@ -78,17 +78,19 @@ for file, page in pages.items():
     descriptions.append(metas[0]['content'])
     expected = BASE.rstrip('/') + route(file)
     check(page.select('link', rel='canonical') == [{'rel': 'canonical', 'href': expected}], f'{file}: wrong canonical')
-    lang = 'pl' if file.startswith('pl/') else 'uk'
+    lang = 'en' if file.startswith('en/') else 'pl' if file.startswith('pl/') else 'uk'
     check(page.select('html')[0]['lang'] == lang, f'{file}: wrong language')
-    root_route = route(file)[3:] if lang == 'pl' else route(file)
+    root_route = route(file)[3:] if lang in ('pl', 'en') else route(file)
     expected_alts = {'uk': BASE.rstrip('/') + root_route, 'pl': BASE.rstrip('/') + '/pl' + root_route, 'x-default': BASE.rstrip('/') + root_route}
+    if root_route == '/':
+        expected_alts['en'] = BASE + 'en/'
     alts = {a['hreflang']: a['href'] for a in page.select('link', rel='alternate') if 'hreflang' in a}
     check(alts == expected_alts, f'{file}: incorrect language alternatives')
     check(page.select('meta', property='og:url')[0]['content'] == expected, f'{file}: incorrect og:url')
     for alt in alts.values():
         target, _ = local_target(alt, file)
         check(target in indexable, f'{file}: missing language page {alt}')
-    check(bool(page.select('link', rel='icon', type='image/svg+xml')), f'{file}: missing SVG favicon')
+    check(bool(page.select('link', rel='icon', type='image/png', sizes='32x32')), f'{file}: missing branded PNG favicon')
     check('case-placeholder' not in page.text, f'{file}: placeholder screenshot remains')
     blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', page.text, re.S)
     check(bool(blocks), f'{file}: missing JSON-LD')
@@ -103,7 +105,7 @@ for file, page in pages.items():
     check(bool(web_pages), f'{file}: missing WebPage structured data')
     if web_pages:
         check(web_pages[0]['url'] == expected and web_pages[0]['inLanguage'] == lang, f'{file}: inconsistent structured data')
-    if file in ('index.html', 'pl/index.html'):
+    if file in ('index.html', 'pl/index.html', 'en/index.html'):
         organizations = [node for node in structured_nodes if node.get('@type') == 'Organization']
         check(len(organizations) == 1, f'{file}: expected one Organization structured-data node')
         if organizations:
@@ -134,7 +136,7 @@ check(set(llms_urls) == set(locations), 'llms.txt does not link to every canonic
 manifest = json.loads((ROOT / 'site.webmanifest').read_text())
 for icon in manifest['icons']:
     check((ROOT / icon['src'].lstrip('/')).is_file(), 'Missing manifest icon')
-ET.parse(ROOT / 'favicon.svg')
+check((ROOT / 'images/brand/raccoon-favicon.ico').is_file(), 'Missing branded ICO favicon')
 css = (ROOT / 'styles/style.css').read_text()
 for url in re.findall(r'url\([\'"]?([^\)\'"]+)', css):
     target, _ = local_target(url, 'styles/style.css')
