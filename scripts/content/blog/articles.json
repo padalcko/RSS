@@ -1,5 +1,45 @@
 [
   {
+    "id": "n8n-ai-agent-guide",
+    "category": "automation",
+    "published": "2026-11-19",
+    "modified": "2026-11-19",
+    "image": "/images/blog/n8n-ai-agent-automation-2026.webp",
+    "socialImage": "/images/blog/n8n-ai-agent-automation-2026.webp",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "showCta": false,
+    "relatedIds": [
+      "n8n-business-automation"
+    ],
+    "translations": {
+      "uk": {
+        "slug": "yak-stvoryty-ai-agenta-n8n",
+        "title": "Як створити власного AI-агента на n8n і позбутися щоденної рутини",
+        "seoTitle": "Як створити AI-агента в n8n без програмування: інструкція 2026",
+        "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.",
+        "source": "n8n-ai-agent-uk.md",
+        "imageAlt": "AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря."
+      },
+      "pl": {
+        "slug": "jak-stworzyc-agenta-ai-n8n",
+        "title": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
+        "seoTitle": "Jak stworzyć agenta AI w n8n? Poradnik krok po kroku 2026",
+        "description": "Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.",
+        "source": "n8n-ai-agent-pl.md",
+        "imageAlt": "Agent AI w n8n automatyzujący pocztę, wiadomości, arkusze i kalendarz."
+      },
+      "en": {
+        "slug": "how-to-build-ai-agent-n8n",
+        "title": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
+        "seoTitle": "How to Build an AI Agent with n8n: Beginner's Guide 2026",
+        "description": "Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.",
+        "source": "n8n-ai-agent-en.md",
+        "imageAlt": "AI agent built with n8n automating email, messages, spreadsheets and calendar tasks."
+      }
+    }
+  },
+  {
     "id": "n8n-business-automation",
     "category": "automation",
     "published": "2026-11-19",

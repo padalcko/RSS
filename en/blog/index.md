@@ -8,6 +8,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![AI agent built with n8n automating email, messages, spreadsheets and calendar tasks.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Automation
+
+## [How to Build Your Own AI Agent with n8n and Automate Everyday Tasks](https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/)
+
+Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.
+
+Oleksandr Padalko · 19/11/2026 · 7 min read
+
 ![SEO Raccoon illustrating n8n business workflow automation](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
 
 Automation

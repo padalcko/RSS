@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="uk"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJBB3K4Q');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Як створити AI-агента в n8n без програмування: інструкція 2026</title><meta name="description" content="Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.">
+<meta name="author" content="Oleksandr Padalko"><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/"><link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/">
+<link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/">
+<link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/">
+<link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Raccoon SEO Studio"><meta property="og:locale" content="uk_UA"><meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Як створити AI-агента в n8n без програмування: інструкція 2026"><meta property="og:description" content="Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців."><meta property="og:url" content="https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/"><meta property="og:image" content="https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp"><meta property="og:image:width" content="1672"><meta property="og:image:height" content="941"><meta property="og:image:alt" content="AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Як створити AI-агента в n8n без програмування: інструкція 2026"><meta name="twitter:description" content="Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців."><meta name="twitter:image" content="https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp"><meta name="twitter:image:alt" content="AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.">
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+<link
+    rel="stylesheet"
+    href="/styles/style.css"
+  />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+<link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+<link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
+<link rel="stylesheet" href="/styles/blog.css"><meta name="theme-color" content="#4D5AE5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://raccoon-studio.com.ua/"}, {"@type": "ListItem", "position": 2, "name": "Блог SEO-Єнота", "item": "https://raccoon-studio.com.ua/blog/"}, {"@type": "ListItem", "position": 3, "name": "Як створити власного AI-агента на n8n і позбутися щоденної рутини", "item": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/"}]}, {"@type": "BlogPosting", "@id": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/#article", "url": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/", "name": "Як створити AI-агента в n8n без програмування: інструкція 2026", "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.", "inLanguage": "uk", "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}, "headline": "Як створити власного AI-агента на n8n і позбутися щоденної рутини", "author": {"@type": "Person", "name": "Oleksandr Padalko", "jobTitle": "Frontend Developer / SEO Engineer", "worksFor": {"@id": "https://raccoon-studio.com.ua/#organization"}}, "datePublished": "2026-11-19", "dateModified": "2026-11-19", "image": "https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp", "wordCount": 1198, "articleSection": "Автоматизація", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/"}, "isPartOf": {"@type": "Blog", "@id": "https://raccoon-studio.com.ua/blog/#blog", "name": "Блог SEO-Єнота"}}]}</script>
+</head><body class="studio-v5 blog-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJBB3K4Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#main-content">Перейти до вмісту</a>
+<header class="header">
+    <div class="container header-container">
+
+        <a
+          href="/"
+          class="logo"
+          aria-label="Raccoon SEO Studio"
+        >
+          RACCOON<span class="logo-dark">STUDIO</span>
+        </a>
+
+      <div class="header-right">
+
+      <nav
+        class="nav"
+        aria-label="Головна навігація"
+      >
+
+
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/">Головна</a></li><li><a class="nav-link" href="/#services">Послуги</a></li><li><a class="nav-link" href="/#work">Портфоліо</a></li><li><a class="nav-link" href="/#team">Команда</a></li><li><a class="nav-link" href="/#contacts">Контакти</a></li><li><a class="nav-link active" href="/blog/">Блог</a></li><li><button type="button" class="nav-cta js-open-modal">Обговорити проєкт</button></li></ul>
+
+      </nav>
+
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Мова сайту: Українська"><span aria-hidden="true">🇺🇦</span><span>UA</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/blog/yak-stvoryty-ai-agenta-n8n/" class="language-link" lang="uk" hreflang="uk" aria-current="page"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/pl/blog/jak-stworzyc-agenta-ai-n8n/" class="language-link" lang="pl" hreflang="pl"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true"></span></a><a href="/en/blog/how-to-build-ai-agent-n8n/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <ul class="contacts-list">
+
+        <li>
+          <a
+            href="mailto:seoraccoonstudio@gmail.com"
+            class="contact-link"
+          >
+            seoraccoonstudio@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="tel:+48793121665"
+            class="contact-link"
+          >
+            +48 793-121-665
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </header>
+<main id="main-content" tabindex="-1"><div class="container blog-article-container"><nav class="blog-breadcrumbs" aria-label="Навігаційний шлях"><ol><li><a href="/">Головна</a></li><li><a href="/blog/">Блог SEO-Єнота</a></li><li><span aria-current="page">Як створити власного AI-агента на n8n і позбутися щоденної рутини</span></li></ol></nav><article><header class="blog-article-heading"><p class="blog-category">Автоматизація</p><h1>Як створити власного AI-агента на n8n і позбутися щоденної рутини</h1><p class="blog-intro" data-article-intro>У кожного є справи, які доводиться повторювати майже щодня. Перевірити електронну пошту, відповісти на повідомлення, перенести контакти клієнта в таблицю, підготувати звіт або згадати про зустріч. Окремо ці завдання здаються дрібницями. Разом вони забирають чимало часу.</p><div class="blog-meta"><span>Олександр Падалко</span><time datetime="2026-11-19">19.11.2026</time><span>6 хв читання</span></div></header><img class="blog-article-image" src="/images/blog/n8n-ai-agent-automation-2026.webp" alt="AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря." width="1672" height="941" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body><p>Частину такої роботи можна доручити AI-агенту. Він здатний отримувати інформацію, розуміти зміст запитів і користуватися підключеними сервісами. Наприклад, прочитати заявку, визначити її тему, записати дані в таблицю та повідомити відповідального працівника.</p>
+<p>Для створення такого помічника необов&#x27;язково писати складну програму. Існує платформа n8n, у якій більшість процесів можна зібрати з готових блоків.</p>
+<p>Розберемося, як це працює і як створити першого агента власноруч.</p>
+<h2>Що таке AI-агент</h2>
+<p>Уявімо звичайного чат-бота. Ви ставите запитання, він формує відповідь. На цьому його робота переважно закінчується.</p>
+<p>AI-агент працює інакше. Крім мовної моделі, він може мати інструменти для виконання конкретних дій.</p>
+<p>Наприклад, агенту можна дозволити працювати з Google Sheets. Тоді після вашого прохання він зможе не лише запропонувати ідеї для публікацій, а й записати їх у таблицю.</p>
+<p>Якщо підключити календар, агент зможе шукати вільний час або створювати події. Якщо надати доступ до пошти, він зможе знаходити потрібні листи та готувати відповіді.</p>
+<p>При цьому агент не отримує автоматичного доступу до всіх ваших облікових записів. Кожне підключення потрібно налаштувати окремо.</p>
+<h2>Чому AI-агенти стають корисними в повсякденному житті</h2>
+<p>Найцікавіше в цій технології не те, що комп&#x27;ютер може підтримувати розмову. Значно важливіше, що він може виконувати повторювану роботу.</p>
+<p>Власник невеликого магазину може використовувати агента для впорядкування замовлень. Менеджер може автоматизувати підготовку щоденних звітів. Людина, яка отримує десятки електронних листів, може доручити агенту розподіляти повідомлення за темами.</p>
+<p>Наприклад, ви щодня витрачаєте близько 40 хвилин на перенесення інформації з повідомлень у таблиці. Якщо автоматизація скоротить цю роботу на три чверті, за 22 робочі дні можна заощадити приблизно 11 годин.</p>
+<p>Це умовний приклад. Реальна економія часу залежить від кількості завдань, якості налаштування та необхідності перевіряти результати.</p>
+<p>Проте принцип зрозумілий. Людина займається рішеннями, а повторювані операції виконує система.</p>
+<h2>Що таке n8n</h2>
+<p>n8n є платформою автоматизації, яка дозволяє з&#x27;єднувати різні програми в один процес.</p>
+<p>У її редакторі використовуються вузли, які називаються nodes. Кожен вузол виконує певну функцію.</p>
+<p>Один отримує повідомлення, інший звертається до штучного інтелекту, наступний працює з таблицею, а останній надсилає сповіщення.</p>
+<p>З&#x27;єднавши такі вузли, ми отримуємо workflow, тобто автоматизований робочий процес.</p>
+<p>n8n можна використовувати як хмарний сервіс або встановити на власному сервері. Самостійне розміщення дає більше контролю над інфраструктурою, але потребує оновлень, резервного копіювання та адміністрування.</p>
+<h2>Чим AI-агент відрізняється від звичайної автоматизації</h2>
+<p>Припустімо, що після заповнення контактної форми потрібно додати новий рядок у Google Sheets.</p>
+<p>Для цього достатньо звичайного workflow. Штучний інтелект тут не потрібен.</p>
+<p>Інша ситуація виникає, коли клієнти надсилають повідомлення у довільній формі. Один запитує ціну, другий описує технічну несправність, третій хоче перенести зустріч.</p>
+<p>Тут агент може проаналізувати текст, визначити тему й обрати потрібний інструмент.</p>
+<p>Отже, AI має сенс там, де потрібно розуміти зміст інформації або приймати рішення між кількома дозволеними діями.</p>
+<h2>Створюємо першого AI-агента</h2>
+<p>Для прикладу зробимо помічника, який пропонуватиме ідеї для публікацій і за вашим проханням записуватиме їх у Google Sheets.</p>
+<p>Це зручне навчальне завдання, оскільки результат легко перевірити.</p>
+<h3>Крок 1. Підготуйте облікові записи</h3>
+<p>Вам знадобляться n8n, Google-акаунт і доступ до мовної моделі, яка підтримує виклик інструментів.</p>
+<p>Можна використовувати n8n Cloud або власну інсталяцію.</p>
+<p>Якщо ви обираєте OpenAI API, потрібен окремий API-ключ. Підписка ChatGPT не означає автоматичної оплати API-запитів.</p>
+<h3>Крок 2. Створіть workflow</h3>
+<p>Відкрийте редактор n8n і створіть новий workflow.</p>
+<p>Додайте вузол Chat Trigger, який у списку тригерів може відображатися як On chat message.</p>
+<p>Цей вузол дозволяє надсилати повідомлення агенту через тестовий чат.</p>
+<p>Поки не потрібно публікувати чат або відкривати його стороннім користувачам.</p>
+<h3>Крок 3. Додайте AI Agent</h3>
+<p>Після Chat Trigger додайте вузол AI Agent.</p>
+<p>Саме він оброблятиме запити, звертатиметься до мовної моделі й користуватиметься підключеними інструментами.</p>
+<p>З&#x27;єднайте основний вихід Chat Trigger з основним входом AI Agent.</p>
+<h3>Крок 4. Підключіть мовну модель</h3>
+<p>У нижній частині вузла AI Agent знайдіть роз&#x27;єм Chat Model.</p>
+<p>Додайте сумісну модель, наприклад OpenAI Chat Model.</p>
+<p>Створіть облікові дані провайдера, введіть API-ключ і виберіть доступну модель із підтримкою tool calling.</p>
+<p>Збережіть налаштування.</p>
+<h3>Крок 5. Напишіть інструкцію для агента</h3>
+<p>У налаштуваннях AI Agent знайдіть поле System Message. Залежно від версії редактора воно може розташовуватися в розділі Options.</p>
+<p>Вставте такий текст:</p>
+<p>&quot;Ти допомагаєш користувачу планувати публікації для соціальних мереж. Пропонуй зрозумілі теми, заголовки та короткі описи. Для кожної ідеї вказуй соціальну мережу, заголовок, опис і заклик до дії. Не вигадуй факти. Записуй інформацію в Google Sheets лише після прямого прохання користувача. Після виконання дії повідомляй результат. Якщо інформації недостатньо, постав уточнювальне запитання.&quot;</p>
+<p>Це звичайна текстова інструкція. Знання програмування для її створення не потрібні.</p>
+<h3>Крок 6. Додайте пам&#x27;ять</h3>
+<p>Підключіть Simple Memory до роз&#x27;єму Memory у вузлі AI Agent.</p>
+<p>Для стандартного Chat Trigger використайте Session ID із підключеного тригера. Встановіть невелике контекстне вікно, наприклад 5 повідомлень.</p>
+<p>Тепер агент зможе враховувати попередні репліки в межах розмови.</p>
+<p>Simple Memory підходить для початкового прикладу. Для складніших систем із кількома виконавцями може знадобитися інше сховище пам&#x27;яті.</p>
+<h3>Крок 7. Підключіть Google Sheets</h3>
+<p>Створіть таблицю Google Sheets із чотирма стовпцями:</p>
+<p>Platform, Title, Description, CTA.</p>
+<p>У n8n підключіть до роз&#x27;єму Tool вузла AI Agent інструмент Google Sheets Tool.</p>
+<p>Виберіть операцію Append Row, авторизуйте Google-акаунт і вкажіть потрібний документ та вкладку.</p>
+<p>Налаштуйте відповідність полів. Якщо редактор підтримує автоматичне заповнення параметрів моделлю, використайте відповідну опцію для чотирьох стовпців.</p>
+<p>Агент повинен мати право додавати рядки лише до потрібної таблиці.</p>
+<h3>Крок 8. Перевірте роботу</h3>
+<p>Відкрийте тестовий чат і напишіть:</p>
+<p>&quot;Запропонуй три ідеї для Instagram про використання штучного інтелекту в малому бізнесі&quot;.</p>
+<p>Після отримання відповіді напишіть:</p>
+<p>&quot;Збережи ці три ідеї в Google Sheets&quot;.</p>
+<p>Перевірте, чи з&#x27;явилися нові рядки в таблиці.</p>
+<p>Якщо запис не відбувся, відкрийте історію Executions і перевірте, на якому вузлі виникла помилка.</p>
+<p>Найчастіше варто перевірити авторизацію, вибраний документ, назви стовпців і налаштування інструмента.</p>
+<h2>Що ще можна автоматизувати</h2>
+<p>Після першого прикладу можна перейти до практичніших завдань.</p>
+<p>Наприклад, агент може отримувати заявки із сайту, визначати тему звернення та записувати інформацію в CRM.</p>
+<p>Інший сценарій передбачає щоденне формування звіту. Workflow запускається за розкладом, отримує статистику з підключених сервісів, а агент допомагає підготувати зрозуміле резюме.</p>
+<p>Також можна створити помічника для роботи з поштою. Він знаходитиме важливі повідомлення, групуватиме їх і готуватиме чернетки відповідей.</p>
+<p>Починати краще з одного завдання. Так простіше перевірити правильність роботи та оцінити реальну користь.</p>
+<h2>Безпека та контроль</h2>
+<p>AI-агент може помилятися. Він здатний неправильно зрозуміти повідомлення або обрати невідповідну дію.</p>
+<p>Тому не варто одразу дозволяти йому самостійно видаляти інформацію, здійснювати платежі чи надсилати важливі листи.</p>
+<p>Для таких операцій краще передбачити підтвердження людини.</p>
+<p>Окремої уваги потребують персональні дані. Якщо агент працює з інформацією клієнтів у Європейському Союзі, потрібно враховувати вимоги GDPR і правила передачі даних зовнішнім сервісам.</p>
+<h2>Скільки це коштує</h2>
+<p>Вартість залежить від способу розміщення n8n, обраної AI-моделі та кількості виконаних операцій.</p>
+<p>У хмарному варіанті потрібно враховувати тариф n8n. При встановленні на власному сервері виникають витрати на інфраструктуру та обслуговування.</p>
+<p>Окремо можуть оплачуватися запити до мовної моделі та використання додаткових сервісів.</p>
+<p>Для простого агента не завжди потрібна найдорожча модель. Важливіше, щоб вона підтримувала необхідні інструменти й надійно виконувала поставлені завдання.</p>
+<h2>Висновок</h2>
+<p>AI-агент не повинен бути складною системою, яка намагається робити все одночасно.</p>
+<p>Набагато корисніше створити невеликого помічника, який виконує одну конкретну роботу. Наприклад, упорядковує заявки, готує чернетки або переносить інформацію в таблиці.</p>
+<p>Коли такий процес працює стабільно, його можна поступово розширювати.</p>
+<p>Головна користь автоматизації полягає не в самій технології. Вона в тому, що у людини залишається більше часу на справи, які потребують уваги, досвіду та особистого рішення.</p></div><aside class="blog-author"><h2>Про автора</h2><p>Олександр Падалко</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><section class="blog-related"><h2>Пов’язані статті</h2><ul class="blog-grid"><li class="blog-card" data-category="automation" data-search="n8n: як автоматизувати бізнес-процеси без зайвої рутини Заявки, таблиці, повідомлення, звіти та десятки повторюваних дій. Розбираю, як n8n допомагає зв&#x27;язати різні сервіси в одну систему й позбутися частини ручної роботи."><article><a href="/blog/n8n-avtomatyzatsiia-biznesu/"><img src="/images/blog/n8n-business-automation-raccoon-studio.webp" alt="SEO-Єнот працює з n8n та автоматизацією бізнес-процесів" width="1672" height="941" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">Автоматизація</span><h3>n8n: як автоматизувати бізнес-процеси без зайвої рутини</h3><p>Заявки, таблиці, повідомлення, звіти та десятки повторюваних дій. Розбираю, як n8n допомагає зв&#x27;язати різні сервіси в одну систему й позбутися частини ручної роботи.</p><p class="blog-meta"><span>Олександр Падалко</span><time datetime="2026-11-19">19.11.2026</time><span>7 хв читання</span></p><span class="blog-read">Читати статтю <span aria-hidden="true">↗</span></span></div></a></article></li></ul></section></div></main>
+<footer
+    id="contacts"
+    class="footer"
+  >
+
+    <div class="container footer-container">
+
+      <div class="footer-info">
+
+        <a
+          href="/"
+          class="logo logo-footer"
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
+
+        <p class="footer-text">
+          SEO, сайти та AI-автоматизація
+          для розвитку бізнесу.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links"><a href="/#services">Послуги</a>
+
+        <p class="footer-subtitle">
+          Навігація
+        </p>
+
+        <a href="/">
+          Головна
+        </a>
+
+        <a href="/clients.html">
+          Кейси
+        </a>
+
+        <a href="/#lead">
+          Залишити заявку
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <p class="footer-subtitle">
+          Контакти
+        </p>
+
+        <a href="tel:+48793121665">
+          +48 793-121-665
+        </a>
+
+        <a href="mailto:seoraccoonstudio@gmail.com">
+          seoraccoonstudio@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="footer-cta"><p class="footer-subtitle">Маєте ідею або проєкт?</p><p>Обговорімо, як перетворити вашу ідею на ефективне онлайн-рішення.</p><button type="button" class="modal-btn js-open-modal">Обговорити проєкт</button></div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      Created by Raccoon Studio © 2026
+    </div>
+
+  </footer>
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Закрити"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Обговоримо ваш проєкт
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Ім’я</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Ваше імʼя"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Телефон</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">Email</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Компанія</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Назва компанії"
+        />
+
+        <label class="modal-field" for="modal-service">Послуга</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Оберіть послугу
+          </option>
+
+          <option value="SEO просування">
+            SEO просування
+          </option>
+
+          <option value="Створення сайту">
+            Створення сайту
+          </option>
+
+          <option value="AI агент для сайту">
+            AI агент для сайту
+          </option>
+
+          <option value="n8n автоматизація">
+            n8n автоматизація
+          </option>
+
+          <option value="Комплексне рішення">
+            Комплексне рішення
+          </option>
+
+        </select>
+
+        <label class="modal-field" for="modal-comment">Повідомлення</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Коротко опишіть задачу"
+        ></textarea>
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Я приймаю умови Політики конфіденційності
+
+        </label>
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Відправити
+        </button>
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+<script src="/script/script.js" defer></script>
+
+</body></html>

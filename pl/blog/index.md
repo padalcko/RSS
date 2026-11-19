@@ -8,6 +8,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Agent AI w n8n automatyzujący pocztę, wiadomości, arkusze i kalendarz.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Automatyzacja
+
+## [Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki](https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/)
+
+Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.
+
+Oleksandr Padalko · 19.11.2026 · 6 min czytania
+
 ![Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
 
 Automatyzacja

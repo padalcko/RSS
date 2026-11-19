@@ -238,6 +238,16 @@ GA4, GTM, Search Console, відстеження конверсій та ана�
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Автоматизація
+
+### [Як створити власного AI-агента на n8n і позбутися щоденної рутини](https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/)
+
+Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.
+
+Олександр Падалко · 19.11.2026 · 6 хв читання
+
 ![SEO-Єнот працює з n8n та автоматизацією бізнес-процесів](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
 
 Автоматизація
@@ -1009,6 +1019,232 @@ SEO
 Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.
 
 Олександр Падалко · 17.11.2026 · 4 хв читання
+
+---
+
+## Як створити власного AI-агента на n8n і позбутися щоденної рутини
+
+Мова: Українська
+
+Канонічна HTML-сторінка: https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/
+
+> Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.
+
+Автоматизація
+
+У кожного є справи, які доводиться повторювати майже щодня. Перевірити електронну пошту, відповісти на повідомлення, перенести контакти клієнта в таблицю, підготувати звіт або згадати про зустріч. Окремо ці завдання здаються дрібницями. Разом вони забирають чимало часу.
+
+Олександр Падалко · 19.11.2026 · 6 хв читання
+
+![AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Частину такої роботи можна доручити AI-агенту. Він здатний отримувати інформацію, розуміти зміст запитів і користуватися підключеними сервісами. Наприклад, прочитати заявку, визначити її тему, записати дані в таблицю та повідомити відповідального працівника.
+
+Для створення такого помічника необов'язково писати складну програму. Існує платформа n8n, у якій більшість процесів можна зібрати з готових блоків.
+
+Розберемося, як це працює і як створити першого агента власноруч.
+
+### Що таке AI-агент
+
+Уявімо звичайного чат-бота. Ви ставите запитання, він формує відповідь. На цьому його робота переважно закінчується.
+
+AI-агент працює інакше. Крім мовної моделі, він може мати інструменти для виконання конкретних дій.
+
+Наприклад, агенту можна дозволити працювати з Google Sheets. Тоді після вашого прохання він зможе не лише запропонувати ідеї для публікацій, а й записати їх у таблицю.
+
+Якщо підключити календар, агент зможе шукати вільний час або створювати події. Якщо надати доступ до пошти, він зможе знаходити потрібні листи та готувати відповіді.
+
+При цьому агент не отримує автоматичного доступу до всіх ваших облікових записів. Кожне підключення потрібно налаштувати окремо.
+
+### Чому AI-агенти стають корисними в повсякденному житті
+
+Найцікавіше в цій технології не те, що комп'ютер може підтримувати розмову. Значно важливіше, що він може виконувати повторювану роботу.
+
+Власник невеликого магазину може використовувати агента для впорядкування замовлень. Менеджер може автоматизувати підготовку щоденних звітів. Людина, яка отримує десятки електронних листів, може доручити агенту розподіляти повідомлення за темами.
+
+Наприклад, ви щодня витрачаєте близько 40 хвилин на перенесення інформації з повідомлень у таблиці. Якщо автоматизація скоротить цю роботу на три чверті, за 22 робочі дні можна заощадити приблизно 11 годин.
+
+Це умовний приклад. Реальна економія часу залежить від кількості завдань, якості налаштування та необхідності перевіряти результати.
+
+Проте принцип зрозумілий. Людина займається рішеннями, а повторювані операції виконує система.
+
+### Що таке n8n
+
+n8n є платформою автоматизації, яка дозволяє з'єднувати різні програми в один процес.
+
+У її редакторі використовуються вузли, які називаються nodes. Кожен вузол виконує певну функцію.
+
+Один отримує повідомлення, інший звертається до штучного інтелекту, наступний працює з таблицею, а останній надсилає сповіщення.
+
+З'єднавши такі вузли, ми отримуємо workflow, тобто автоматизований робочий процес.
+
+n8n можна використовувати як хмарний сервіс або встановити на власному сервері. Самостійне розміщення дає більше контролю над інфраструктурою, але потребує оновлень, резервного копіювання та адміністрування.
+
+### Чим AI-агент відрізняється від звичайної автоматизації
+
+Припустімо, що після заповнення контактної форми потрібно додати новий рядок у Google Sheets.
+
+Для цього достатньо звичайного workflow. Штучний інтелект тут не потрібен.
+
+Інша ситуація виникає, коли клієнти надсилають повідомлення у довільній формі. Один запитує ціну, другий описує технічну несправність, третій хоче перенести зустріч.
+
+Тут агент може проаналізувати текст, визначити тему й обрати потрібний інструмент.
+
+Отже, AI має сенс там, де потрібно розуміти зміст інформації або приймати рішення між кількома дозволеними діями.
+
+### Створюємо першого AI-агента
+
+Для прикладу зробимо помічника, який пропонуватиме ідеї для публікацій і за вашим проханням записуватиме їх у Google Sheets.
+
+Це зручне навчальне завдання, оскільки результат легко перевірити.
+
+#### Крок 1. Підготуйте облікові записи
+
+Вам знадобляться n8n, Google-акаунт і доступ до мовної моделі, яка підтримує виклик інструментів.
+
+Можна використовувати n8n Cloud або власну інсталяцію.
+
+Якщо ви обираєте OpenAI API, потрібен окремий API-ключ. Підписка ChatGPT не означає автоматичної оплати API-запитів.
+
+#### Крок 2. Створіть workflow
+
+Відкрийте редактор n8n і створіть новий workflow.
+
+Додайте вузол Chat Trigger, який у списку тригерів може відображатися як On chat message.
+
+Цей вузол дозволяє надсилати повідомлення агенту через тестовий чат.
+
+Поки не потрібно публікувати чат або відкривати його стороннім користувачам.
+
+#### Крок 3. Додайте AI Agent
+
+Після Chat Trigger додайте вузол AI Agent.
+
+Саме він оброблятиме запити, звертатиметься до мовної моделі й користуватиметься підключеними інструментами.
+
+З'єднайте основний вихід Chat Trigger з основним входом AI Agent.
+
+#### Крок 4. Підключіть мовну модель
+
+У нижній частині вузла AI Agent знайдіть роз'єм Chat Model.
+
+Додайте сумісну модель, наприклад OpenAI Chat Model.
+
+Створіть облікові дані провайдера, введіть API-ключ і виберіть доступну модель із підтримкою tool calling.
+
+Збережіть налаштування.
+
+#### Крок 5. Напишіть інструкцію для агента
+
+У налаштуваннях AI Agent знайдіть поле System Message. Залежно від версії редактора воно може розташовуватися в розділі Options.
+
+Вставте такий текст:
+
+"Ти допомагаєш користувачу планувати публікації для соціальних мереж. Пропонуй зрозумілі теми, заголовки та короткі описи. Для кожної ідеї вказуй соціальну мережу, заголовок, опис і заклик до дії. Не вигадуй факти. Записуй інформацію в Google Sheets лише після прямого прохання користувача. Після виконання дії повідомляй результат. Якщо інформації недостатньо, постав уточнювальне запитання."
+
+Це звичайна текстова інструкція. Знання програмування для її створення не потрібні.
+
+#### Крок 6. Додайте пам'ять
+
+Підключіть Simple Memory до роз'єму Memory у вузлі AI Agent.
+
+Для стандартного Chat Trigger використайте Session ID із підключеного тригера. Встановіть невелике контекстне вікно, наприклад 5 повідомлень.
+
+Тепер агент зможе враховувати попередні репліки в межах розмови.
+
+Simple Memory підходить для початкового прикладу. Для складніших систем із кількома виконавцями може знадобитися інше сховище пам'яті.
+
+#### Крок 7. Підключіть Google Sheets
+
+Створіть таблицю Google Sheets із чотирма стовпцями:
+
+Platform, Title, Description, CTA.
+
+У n8n підключіть до роз'єму Tool вузла AI Agent інструмент Google Sheets Tool.
+
+Виберіть операцію Append Row, авторизуйте Google-акаунт і вкажіть потрібний документ та вкладку.
+
+Налаштуйте відповідність полів. Якщо редактор підтримує автоматичне заповнення параметрів моделлю, використайте відповідну опцію для чотирьох стовпців.
+
+Агент повинен мати право додавати рядки лише до потрібної таблиці.
+
+#### Крок 8. Перевірте роботу
+
+Відкрийте тестовий чат і напишіть:
+
+"Запропонуй три ідеї для Instagram про використання штучного інтелекту в малому бізнесі".
+
+Після отримання відповіді напишіть:
+
+"Збережи ці три ідеї в Google Sheets".
+
+Перевірте, чи з'явилися нові рядки в таблиці.
+
+Якщо запис не відбувся, відкрийте історію Executions і перевірте, на якому вузлі виникла помилка.
+
+Найчастіше варто перевірити авторизацію, вибраний документ, назви стовпців і налаштування інструмента.
+
+### Що ще можна автоматизувати
+
+Після першого прикладу можна перейти до практичніших завдань.
+
+Наприклад, агент може отримувати заявки із сайту, визначати тему звернення та записувати інформацію в CRM.
+
+Інший сценарій передбачає щоденне формування звіту. Workflow запускається за розкладом, отримує статистику з підключених сервісів, а агент допомагає підготувати зрозуміле резюме.
+
+Також можна створити помічника для роботи з поштою. Він знаходитиме важливі повідомлення, групуватиме їх і готуватиме чернетки відповідей.
+
+Починати краще з одного завдання. Так простіше перевірити правильність роботи та оцінити реальну користь.
+
+### Безпека та контроль
+
+AI-агент може помилятися. Він здатний неправильно зрозуміти повідомлення або обрати невідповідну дію.
+
+Тому не варто одразу дозволяти йому самостійно видаляти інформацію, здійснювати платежі чи надсилати важливі листи.
+
+Для таких операцій краще передбачити підтвердження людини.
+
+Окремої уваги потребують персональні дані. Якщо агент працює з інформацією клієнтів у Європейському Союзі, потрібно враховувати вимоги GDPR і правила передачі даних зовнішнім сервісам.
+
+### Скільки це коштує
+
+Вартість залежить від способу розміщення n8n, обраної AI-моделі та кількості виконаних операцій.
+
+У хмарному варіанті потрібно враховувати тариф n8n. При встановленні на власному сервері виникають витрати на інфраструктуру та обслуговування.
+
+Окремо можуть оплачуватися запити до мовної моделі та використання додаткових сервісів.
+
+Для простого агента не завжди потрібна найдорожча модель. Важливіше, щоб вона підтримувала необхідні інструменти й надійно виконувала поставлені завдання.
+
+### Висновок
+
+AI-агент не повинен бути складною системою, яка намагається робити все одночасно.
+
+Набагато корисніше створити невеликого помічника, який виконує одну конкретну роботу. Наприклад, упорядковує заявки, готує чернетки або переносить інформацію в таблиці.
+
+Коли такий процес працює стабільно, його можна поступово розширювати.
+
+Головна користь автоматизації полягає не в самій технології. Вона в тому, що у людини залишається більше часу на справи, які потребують уваги, досвіду та особистого рішення.
+
+### Про автора
+
+Олександр Падалко
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+### Пов’язані статті
+
+![SEO-Єнот працює з n8n та автоматизацією бізнес-процесів](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
+
+Автоматизація
+
+#### [n8n: як автоматизувати бізнес-процеси без зайвої рутини](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/)
+
+Заявки, таблиці, повідомлення, звіти та десятки повторюваних дій. Розбираю, як n8n допомагає зв'язати різні сервіси в одну систему й позбутися частини ручної роботи.
+
+Олександр Падалко · 19.11.2026 · 7 хв читання
 
 ---
 
@@ -2130,6 +2366,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![AI agent built with n8n automating email, messages, spreadsheets and calendar tasks.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Automation
+
+### [How to Build Your Own AI Agent with n8n and Automate Everyday Tasks](https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/)
+
+Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.
+
+Oleksandr Padalko · 19/11/2026 · 7 min read
+
 ![SEO Raccoon illustrating n8n business workflow automation](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
 
 Automation
@@ -2169,6 +2415,246 @@ SEO
 Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.
 
 Oleksandr Padalko · 17/11/2026 · 4 min read
+
+---
+
+## How to Build Your Own AI Agent with n8n and Automate Everyday Tasks
+
+Language: English
+
+Canonical HTML page: https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/
+
+> Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.
+
+Automation
+
+Checking email, replying to messages, copying customer details into spreadsheets and preparing reports are ordinary parts of daily work.
+
+Oleksandr Padalko · 19/11/2026 · 7 min read
+
+![AI agent built with n8n automating email, messages, spreadsheets and calendar tasks.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Each task may take only a few minutes, but together they can consume a surprising amount of time.
+
+An AI agent can take over some of this repetitive work. It can interpret information, use connected applications and carry out specific actions.
+
+You do not necessarily need advanced programming skills to build one. With n8n, many automations can be created using a visual workflow editor.
+
+Here is how the technology works and how to build a simple agent yourself.
+
+### What is an AI agent?
+
+A traditional chatbot mainly responds to questions.
+
+An AI agent can go further because it has access to tools that allow it to perform actions.
+
+For example, an agent connected to Google Sheets can add information to a spreadsheet. With calendar access, it can search for available times or create events. When connected to email, it can find messages and prepare draft replies.
+
+These capabilities are not automatic.
+
+You must configure each integration and decide which permissions the agent receives.
+
+### Why are AI agents useful?
+
+Their main advantage is the ability to reduce repetitive work.
+
+A small business owner might use an agent to organize incoming requests. An office employee could automate parts of daily reporting. Someone managing several projects might use an agent to summarize messages and identify tasks requiring attention.
+
+Consider a person who spends 40 minutes each working day copying information between applications.
+
+If automation reduces that work by 75%, the time saved over 22 working days would be approximately 11 hours.
+
+This is an illustrative calculation rather than a guaranteed result. Actual savings depend on the process, the quality of the automation and how much human review is required.
+
+The goal is to spend less time moving information around and more time making useful decisions.
+
+### What is n8n?
+
+n8n is a workflow automation platform that connects applications and services.
+
+Its visual editor uses building blocks called nodes.
+
+One node receives a message. Another sends information to an AI model. A third updates a spreadsheet, while another delivers a notification.
+
+Together, these nodes form a workflow.
+
+n8n is available as a hosted cloud service and can also be installed on your own server.
+
+Self-hosting offers greater control over infrastructure, although it also requires maintenance, updates and backups.
+
+### Do you always need an AI agent?
+
+No. Many tasks are better handled by ordinary automation.
+
+If every contact form submission should simply create a new spreadsheet row, a standard workflow is usually sufficient.
+
+An AI agent becomes useful when the system must interpret language or choose between different actions.
+
+A customer might ask about pricing, describe a technical problem or request a change to an appointment.
+
+An agent can classify the message and select an appropriate connected tool.
+
+This distinction matters because conventional workflows are often simpler, less expensive and easier to predict.
+
+### Building your first AI agent
+
+We will create an assistant that suggests social media content ideas and saves them to Google Sheets when requested.
+
+It is a straightforward example with an outcome that is easy to verify.
+
+#### Step 1. Prepare your accounts
+
+You will need access to n8n, a Google account and an AI model that supports tool calling.
+
+You can use n8n Cloud or a self-hosted installation.
+
+If you choose OpenAI API, you will need an API key and the appropriate API billing setup.
+
+A ChatGPT subscription does not automatically include API usage.
+
+#### Step 2. Create a workflow
+
+Open the n8n editor and create a new workflow.
+
+Add a Chat Trigger node, which may appear as On chat message in the trigger selection interface.
+
+This node lets you interact with your agent through a test chat.
+
+Keep the chat private while configuring and testing the workflow.
+
+#### Step 3. Add AI Agent
+
+Add the AI Agent node and connect it to the Chat Trigger.
+
+The AI Agent node receives user messages, works with the language model and can call connected tools.
+
+#### Step 4. Connect a language model
+
+Find the Chat Model connection beneath the AI Agent node.
+
+Add a compatible model, such as OpenAI Chat Model.
+
+Configure the provider credentials, enter your API key and select an available model that supports tool calling.
+
+Save the configuration.
+
+#### Step 5. Write the agent's instructions
+
+Open the AI Agent settings and find System Message. Depending on the editor version, it may be located under Options.
+
+Enter the following instructions:
+
+"You are an assistant that helps users plan social media content. Suggest practical topics, clear titles and short descriptions. Each idea must include a platform, title, description and call to action. Do not invent facts. Save ideas to Google Sheets only when the user explicitly requests it. After taking an action, explain the result. Ask a clarifying question when necessary information is missing."
+
+These instructions are written in ordinary language. No programming syntax is required.
+
+#### Step 6. Add conversation memory
+
+Connect Simple Memory to the AI Agent's Memory input.
+
+For the standard Chat Trigger setup, use the session identifier provided by the connected trigger.
+
+Set a small context window, such as 5 messages.
+
+The agent can now use earlier messages from the conversation when interpreting follow-up requests.
+
+Simple Memory is suitable for an introductory example. More complex production systems may require a different memory backend.
+
+#### Step 7. Connect Google Sheets
+
+Create a spreadsheet with four columns:
+
+Platform, Title, Description, CTA.
+
+Connect Google Sheets Tool to the AI Agent's Tool input.
+
+Choose the Append Row operation, authenticate your Google account and select the correct document and sheet.
+
+Map the four fields. Where supported, you can allow the model to determine individual tool parameters automatically.
+
+Make sure the integration has permission to update the intended spreadsheet.
+
+#### Step 8. Test the agent
+
+Open the test chat and enter:
+
+"Suggest three Instagram post ideas about using AI in a small business."
+
+After reviewing the response, enter:
+
+"Save these three ideas to Google Sheets."
+
+Open your spreadsheet and check whether three new rows have been created.
+
+If the operation fails, inspect the Executions history in n8n.
+
+Check the Google credentials, spreadsheet selection, column names and tool configuration.
+
+### What else can you automate?
+
+Once the first workflow is working, you can apply the same principles to more useful tasks.
+
+An agent can help process website inquiries, classify messages and record relevant information in a CRM.
+
+Another workflow can run on a schedule, collect business metrics and ask an agent to prepare a short report.
+
+Email organization is another practical use case. An agent can identify important messages, group them by topic and prepare draft replies.
+
+Start with one task and measure whether the automation actually saves time before adding more complexity.
+
+### Security and human oversight
+
+AI agents can make mistakes. They may misunderstand instructions or choose an inappropriate action.
+
+For that reason, sensitive operations should not be fully automated without appropriate safeguards.
+
+Deleting information, sending important emails and making payments should generally require human approval.
+
+Access permissions should be limited, and execution logs should be reviewed regularly.
+
+When processing personal data in the European Union, consider GDPR requirements and the data-handling terms of any external AI providers.
+
+### How much does an AI agent cost?
+
+Costs depend on where n8n runs, which language model you choose and how frequently the workflow executes.
+
+n8n Cloud has subscription plans and execution limits. A self-hosted installation involves server and maintenance costs.
+
+Language model API calls and some third-party services may introduce additional charges.
+
+For a simple workflow, the most expensive AI model is not necessarily the best choice.
+
+Reliable tool use and predictable results matter more than model size alone.
+
+### Final thoughts
+
+Your first AI agent does not need to be a complicated system.
+
+A small assistant that consistently performs one useful task is a better starting point than an ambitious workflow with dozens of integrations.
+
+Once the basic process works reliably, you can expand it gradually.
+
+The real value of AI automation is not the technology itself. It is the time you get back when routine work no longer requires your constant attention.
+
+### About the author
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+### Related articles
+
+![SEO Raccoon illustrating n8n business workflow automation](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
+
+Automation
+
+#### [n8n: How to Automate Business Workflows and Reduce Repetitive Work](https://raccoon-studio.com.ua/en/blog/n8n-business-automation/)
+
+Website enquiries, spreadsheets, messages and reports often involve unnecessary manual work. Here is how n8n connects business tools into practical automated workflows.
+
+Олександр Падалко · 19/11/2026 · 7 min read
 
 ---
 
@@ -3306,6 +3792,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Agent AI w n8n automatyzujący pocztę, wiadomości, arkusze i kalendarz.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Automatyzacja
+
+### [Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki](https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/)
+
+Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.
+
+Oleksandr Padalko · 19.11.2026 · 6 min czytania
+
 ![Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
 
 Automatyzacja
@@ -3583,6 +4079,228 @@ Raccoon SEO Studio
 Raccoon SEO Studio pomaga integrować strony internetowe z n8n, automatyzować obsługę zgłoszeń, powiadomienia, raporty i narzędzia AI.
 
 [Porozmawiajmy o projekcie](https://raccoon-studio.com.ua/pl/#contacts)[Usługi studia](https://raccoon-studio.com.ua/pl/#services)
+
+---
+
+## Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki
+
+Język: Polski
+
+Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/
+
+> Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.
+
+Automatyzacja
+
+Sprawdzanie poczty, odpowiadanie na wiadomości, przepisywanie danych klientów do arkusza czy przygotowywanie raportów. Każda z tych czynności zajmuje kilka minut, ale w ciągu tygodnia potrafią pochłonąć sporą część dnia pracy.
+
+Oleksandr Padalko · 19.11.2026 · 6 min czytania
+
+![Agent AI w n8n automatyzujący pocztę, wiadomości, arkusze i kalendarz.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
+
+Niektóre z nich można przekazać agentowi AI. Taki program potrafi analizować wiadomości, korzystać z podłączonych narzędzi i wykonywać określone zadania.
+
+Co ważne, nie trzeba od razu zatrudniać programisty. Platforma n8n pozwala tworzyć wiele automatyzacji w edytorze wizualnym.
+
+Zobaczmy, jak działa takie rozwiązanie i jak przygotować pierwszego agenta krok po kroku.
+
+### Czym właściwie jest agent AI
+
+Zwykły chatbot odpowiada na pytania. Agent AI może dodatkowo korzystać z narzędzi, które pozwalają mu wykonywać działania.
+
+Jeżeli podłączymy Google Sheets, agent będzie mógł dopisywać informacje do arkusza. Po połączeniu z kalendarzem może wyszukiwać terminy i tworzyć wydarzenia. Dostęp do poczty pozwoli mu analizować wiadomości i przygotowywać odpowiedzi.
+
+Nie oznacza to jednak, że agent automatycznie uzyskuje dostęp do wszystkich naszych danych.
+
+Każde narzędzie wymaga odpowiedniej konfiguracji i uprawnień.
+
+### Po co nam agenci AI
+
+Największą zaletą takich systemów jest ograniczenie powtarzalnej pracy.
+
+Właściciel sklepu internetowego może wykorzystać agenta do porządkowania zamówień. Pracownik biura może zautomatyzować przygotowywanie raportów. Osoba prowadząca kilka projektów może otrzymywać uporządkowane podsumowania wiadomości.
+
+Załóżmy, że codziennie poświęcamy 40 minut na przepisywanie danych i sortowanie informacji. Jeżeli automatyzacja ograniczy ten czas o 75%, w ciągu 22 dni roboczych zaoszczędzimy około 11 godzin.
+
+To przykład obliczeniowy, a nie obietnica konkretnego wyniku. Faktyczne oszczędności zależą od rodzaju pracy i jakości automatyzacji.
+
+Najważniejsza jest możliwość skupienia się na zadaniach wymagających ludzkiej oceny.
+
+### Co to jest n8n
+
+n8n to platforma do automatyzacji procesów, która pozwala łączyć różne aplikacje i usługi.
+
+W edytorze pracujemy z elementami nazywanymi nodes, czyli węzłami.
+
+Jeden węzeł odbiera wiadomość, drugi przekazuje ją do modelu AI, kolejny zapisuje wynik w arkuszu, a następny wysyła powiadomienie.
+
+Połączone elementy tworzą workflow, czyli przepływ pracy.
+
+Z n8n można korzystać w chmurze albo uruchomić platformę na własnym serwerze. Samodzielna instalacja zapewnia większą kontrolę nad środowiskiem, ale wymaga aktualizacji, kopii zapasowych i administracji.
+
+### Kiedy potrzebujemy agenta, a kiedy zwykłej automatyzacji
+
+Nie każda automatyzacja wymaga sztucznej inteligencji.
+
+Jeżeli po wysłaniu formularza kontaktowego chcemy po prostu dodać nowy wiersz do arkusza, wystarczy standardowy workflow.
+
+Agent AI przydaje się wtedy, gdy trzeba zrozumieć treść wiadomości albo zdecydować, którego narzędzia użyć.
+
+Przykładowo klient może zapytać o cenę, opisać problem techniczny albo poprosić o zmianę terminu wizyty.
+
+Agent może rozpoznać temat i przekazać sprawę do odpowiedniego procesu.
+
+### Tworzymy pierwszego agenta AI
+
+Zbudujemy prostego asystenta, który proponuje pomysły na posty i na nasze polecenie zapisuje je w Google Sheets.
+
+Dzięki temu łatwo sprawdzimy, czy wszystko działa prawidłowo.
+
+#### Krok 1. Przygotowanie kont
+
+Potrzebujemy dostępu do n8n, konta Google oraz modelu językowego obsługującego wywoływanie narzędzi.
+
+Możemy wybrać n8n Cloud albo własną instalację.
+
+Jeżeli korzystamy z OpenAI API, potrzebny będzie osobny klucz API. Subskrypcja ChatGPT nie obejmuje automatycznie opłat za API.
+
+#### Krok 2. Nowy workflow
+
+Otwórz edytor n8n i utwórz nowy workflow.
+
+Dodaj Chat Trigger. W interfejsie może on występować pod nazwą On chat message.
+
+Ten element umożliwia rozmowę z agentem w oknie testowym.
+
+Na tym etapie nie udostępniaj czatu publicznie.
+
+#### Krok 3. Dodanie AI Agent
+
+Dodaj węzeł AI Agent i połącz go z Chat Trigger.
+
+Agent będzie analizował wiadomości oraz wybierał odpowiednie narzędzia.
+
+#### Krok 4. Podłączenie modelu językowego
+
+Pod węzłem AI Agent znajdź złącze Chat Model.
+
+Dodaj na przykład OpenAI Chat Model.
+
+Skonfiguruj dane uwierzytelniające, wprowadź klucz API i wybierz dostępny model obsługujący tool calling.
+
+Zapisz ustawienia.
+
+#### Krok 5. Instrukcja dla agenta
+
+W ustawieniach AI Agent znajdź System Message. W zależności od wersji n8n pole może znajdować się w sekcji Options.
+
+Wprowadź następującą instrukcję:
+
+"Jesteś asystentem pomagającym planować publikacje w mediach społecznościowych. Proponuj konkretne tematy, zrozumiałe tytuły i krótkie opisy. Każdy pomysł powinien zawierać nazwę platformy, tytuł, opis oraz wezwanie do działania. Nie wymyślaj faktów. Zapisuj pomysły w Google Sheets wyłącznie na wyraźne polecenie użytkownika. Po wykonaniu działania poinformuj o wyniku. Jeśli brakuje informacji, zadaj pytanie."
+
+Nie jest to kod programistyczny. To zwykły opis zasad pracy.
+
+#### Krok 6. Pamięć rozmowy
+
+Podłącz Simple Memory do złącza Memory w AI Agent.
+
+W standardowej konfiguracji Chat Trigger użyj identyfikatora sesji przekazywanego przez ten węzeł.
+
+Ustaw niewielkie okno kontekstu, na przykład 5 wiadomości.
+
+Agent będzie mógł uwzględniać wcześniejsze wypowiedzi w tej samej rozmowie.
+
+Simple Memory sprawdza się w prostym przykładzie. W większych instalacjach może być potrzebne inne rozwiązanie do przechowywania pamięci.
+
+#### Krok 7. Google Sheets
+
+Utwórz arkusz z kolumnami:
+
+Platform, Title, Description, CTA.
+
+Podłącz Google Sheets Tool do złącza Tool w AI Agent.
+
+Wybierz operację Append Row, połącz konto Google i wskaż właściwy dokument oraz zakładkę.
+
+Skonfiguruj mapowanie czterech pól. Jeśli interfejs udostępnia automatyczne określanie wartości parametrów przez model, możesz wykorzystać tę funkcję.
+
+Sprawdź uprawnienia dostępu do arkusza.
+
+#### Krok 8. Test działania
+
+W oknie testowym napisz:
+
+"Zaproponuj trzy pomysły na posty na Instagramie o wykorzystaniu AI w małej firmie".
+
+Następnie wyślij:
+
+"Zapisz te trzy pomysły w Google Sheets".
+
+Otwórz arkusz i sprawdź, czy pojawiły się trzy nowe wiersze.
+
+Jeżeli zapis się nie powiedzie, przejdź do Executions i sprawdź historię wykonania.
+
+Zweryfikuj połączenie z Google, wybór arkusza, nazwy kolumn oraz konfigurację narzędzia.
+
+### Jakie inne zadania można automatyzować
+
+Podobny agent może obsługiwać zgłoszenia z formularza kontaktowego, analizować ich treść i przekazywać informacje do CRM.
+
+Może również pomagać w przygotowywaniu raportów. Workflow uruchamiany według harmonogramu pobiera dane, a agent opracowuje krótkie podsumowanie.
+
+Kolejnym przykładem jest porządkowanie poczty. Agent może klasyfikować wiadomości, wyszukiwać pilne sprawy i przygotowywać wersje robocze odpowiedzi.
+
+Warto zaczynać od jednego zadania, a następnie stopniowo rozwijać system.
+
+### Bezpieczeństwo i kontrola
+
+Agent AI nie jest nieomylny. Może źle zinterpretować polecenie lub wybrać niewłaściwe działanie.
+
+Dlatego operacje takie jak usuwanie danych, wysyłanie ważnych wiadomości czy realizowanie płatności powinny wymagać zatwierdzenia przez człowieka.
+
+Trzeba również kontrolować uprawnienia i historię wykonywanych operacji.
+
+W przypadku przetwarzania danych osobowych w Unii Europejskiej należy uwzględnić wymagania RODO oraz zasady przekazywania informacji zewnętrznym dostawcom usług AI.
+
+### Ile kosztuje agent AI
+
+Koszt zależy od sposobu uruchomienia n8n, wybranego modelu i liczby operacji.
+
+n8n Cloud wiąże się z opłatami zgodnymi z wybranym planem. Własna instalacja wymaga serwera oraz jego utrzymania.
+
+Dodatkowe koszty mogą wynikać z korzystania z API modelu językowego i płatnych integracji.
+
+Do prostych zadań nie zawsze potrzebny jest najbardziej zaawansowany model. Ważniejsza jest poprawna obsługa narzędzi i stabilność działania.
+
+### Podsumowanie
+
+Pierwszy agent AI nie musi być rozbudowany.
+
+Wystarczy, że poprawnie wykonuje jedną przydatną czynność. Może porządkować wiadomości, zapisywać informacje albo przygotowywać zestawienia.
+
+Gdy taki proces działa niezawodnie, można dodawać kolejne funkcje.
+
+Największą korzyścią nie jest samo korzystanie ze sztucznej inteligencji. Jest nią czas odzyskany dzięki ograniczeniu pracy, którą wcześniej trzeba było wykonywać ręcznie.
+
+### O autorze
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+### Powiązane artykuły
+
+![Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n](https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp)
+
+Automatyzacja
+
+#### [n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/)
+
+Formularze, wiadomości, arkusze i raporty nie muszą wymagać ciągłego ręcznego przepisywania danych. Sprawdź, jak n8n łączy narzędzia w jeden proces.
+
+Олександр Падалко · 19.11.2026 · 5 min czytania
 
 ---
 

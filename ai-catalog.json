@@ -104,11 +104,25 @@
       "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
     },
     {
+      "name": "Як створити власного AI-агента на n8n і позбутися щоденної рутини",
+      "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/index.md"
+    },
+    {
       "name": "Запуск нового сайту: чому SEO потрібно продумати ще до публікації",
       "description": "Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.",
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/",
       "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
+    },
+    {
+      "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
+      "description": "Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/index.md"
     },
     {
       "name": "Multi-Regional SEO: How to Grow Across European Markets",
@@ -144,6 +158,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
+      "description": "Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/index.md"
     },
     {
       "name": "SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie",
@@ -204,6 +225,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
     },
     {
+      "name": "Як створити власного AI-агента на n8n і позбутися щоденної рутини",
+      "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/index.md"
+    },
+    {
       "name": "Запуск нового сайту: чому SEO потрібно продумати ще до публікації",
       "description": "Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.",
       "language": "uk",
@@ -260,6 +288,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/index.md"
     },
     {
+      "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
+      "description": "Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/index.md"
+    },
+    {
       "name": "Multi-Regional SEO: How to Grow Across European Markets",
       "description": "Learn how to expand SEO across European cities and countries using regional landing pages, Google Business Profile, hreflang and a practical site structure.",
       "language": "en",
@@ -307,6 +342,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
+      "description": "Sprawdź, jak zbudować agenta AI w n8n. Praktyczny poradnik dla początkujących, konfiguracja krok po kroku i przykłady automatyzacji.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/index.md"
     },
     {
       "name": "SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie",
