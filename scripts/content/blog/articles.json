@@ -1,5 +1,62 @@
 [
   {
+    "id": "n8n-business-automation",
+    "category": "automation",
+    "published": "2026-11-19",
+    "modified": "2026-11-19",
+    "image": "/images/blog/n8n-business-automation-raccoon-studio.webp",
+    "socialImage": "/images/blog/n8n-business-automation-raccoon-studio.webp",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "hreflang": {
+      "uk": "uk-UA",
+      "pl": "pl-PL",
+      "en": "en"
+    },
+    "contactLink": true,
+    "translations": {
+      "uk": {
+        "slug": "n8n-avtomatyzatsiia-biznesu",
+        "title": "n8n: як автоматизувати бізнес-процеси без зайвої рутини",
+        "seoTitle": "n8n: автоматизація бізнес-процесів без зайвої рутини | Raccoon Studio",
+        "description": "Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу.",
+        "excerpt": "Заявки, таблиці, повідомлення, звіти та десятки повторюваних дій. Розбираю, як n8n допомагає зв'язати різні сервіси в одну систему й позбутися частини ручної роботи.",
+        "source": "n8n-uk.md",
+        "author": "Олександр Падалко",
+        "ctaTitle": "Хочете автоматизувати роботу свого бізнесу?",
+        "cta": "Raccoon SEO Studio допомагає інтегрувати сайти з n8n, налаштовувати автоматичну обробку заявок, сповіщення, звіти та AI-інструменти.",
+        "button": "Обговорити проєкт",
+        "imageAlt": "SEO-Єнот працює з n8n та автоматизацією бізнес-процесів"
+      },
+      "pl": {
+        "slug": "automatyzacja-biznesu-n8n",
+        "title": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę",
+        "seoTitle": "n8n i automatyzacja procesów biznesowych | Raccoon Studio",
+        "description": "Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm.",
+        "excerpt": "Formularze, wiadomości, arkusze i raporty nie muszą wymagać ciągłego ręcznego przepisywania danych. Sprawdź, jak n8n łączy narzędzia w jeden proces.",
+        "source": "n8n-pl.md",
+        "author": "Олександр Падалко",
+        "ctaTitle": "Chcesz zautomatyzować procesy w swojej firmie?",
+        "cta": "Raccoon SEO Studio pomaga integrować strony internetowe z n8n, automatyzować obsługę zgłoszeń, powiadomienia, raporty i narzędzia AI.",
+        "button": "Porozmawiajmy o projekcie",
+        "imageAlt": "Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n"
+      },
+      "en": {
+        "slug": "n8n-business-automation",
+        "title": "n8n: How to Automate Business Workflows and Reduce Repetitive Work",
+        "seoTitle": "n8n Business Automation: Practical Workflows | Raccoon Studio",
+        "description": "Learn how n8n connects website forms, Telegram, Google Sheets, SEO reporting, AI agents and monitoring into practical business workflows.",
+        "excerpt": "Website enquiries, spreadsheets, messages and reports often involve unnecessary manual work. Here is how n8n connects business tools into practical automated workflows.",
+        "source": "n8n-en.md",
+        "author": "Олександр Падалко",
+        "ctaTitle": "Want to Automate Your Business Workflows?",
+        "cta": "Raccoon SEO Studio helps connect websites with n8n and automate enquiries, notifications, reporting and AI-powered workflows.",
+        "button": "Discuss Your Project",
+        "imageAlt": "SEO Raccoon illustrating n8n business workflow automation"
+      }
+    }
+  },
+  {
     "id": "multi-regional-seo",
     "category": "seo",
     "published": "2026-11-17",

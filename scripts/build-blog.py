@@ -39,7 +39,7 @@ def breadcrumbs(lang,article=None):
  return html,schema
 
 def card(article,lang,link_title=None):
- c=COPY[lang]; t=article['translations'][lang]
+ t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}
  excerpt=t.get('excerpt',t['description'])
  author=f"<span>{c['author']}</span>"
  return f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
@@ -51,7 +51,7 @@ def listing(lang):
 <section class="section blog-listing"><div class="container" data-blog><div class="blog-tools" hidden><label class="blog-search"><span>{c['search']}</span><input type="search" placeholder="{c['search']}" aria-controls="blog-results" autocomplete="off"></label><div class="blog-filters" role="group" aria-label="{e(c['categories'][0])}">{filters}</div></div><p class="blog-count" aria-live="polite" data-label="{c['results']}"></p><ul id="blog-results" class="blog-grid">{''.join(card(a,lang) for a in ARTICLES if lang in a['translations'])}</ul><p class="blog-empty" hidden>{c['empty']}</p><nav class="blog-pagination" aria-label="{c['pagination']}" hidden><button type="button" data-page="previous">{c['previous']}</button><span aria-live="polite"></span><button type="button" data-page="next">{c['next']}</button></nav></div></section>'''
 
 def article_body(article,lang):
- c=COPY[lang]; t=article['translations'][lang]; bc,_=breadcrumbs(lang,article)
+ t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}; bc,_=breadcrumbs(lang,article)
  blocks=source(article,lang).split('\n\n')
  intro=blocks.pop(0)
  body='\n'.join(f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)

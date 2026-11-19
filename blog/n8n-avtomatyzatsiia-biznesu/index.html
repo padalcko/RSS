@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="uk"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n8n: автоматизація бізнес-процесів без зайвої рутини | Raccoon Studio</title><meta name="description" content="Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу.">
+<meta name="author" content="Oleksandr Padalko"><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/"><link rel="alternate" hreflang="uk-UA" href="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/">
+<link rel="alternate" hreflang="pl-PL" href="https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/">
+<link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/blog/n8n-business-automation/">
+<link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Raccoon SEO Studio"><meta property="og:locale" content="uk_UA"><meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="n8n: автоматизація бізнес-процесів без зайвої рутини | Raccoon Studio"><meta property="og:description" content="Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу."><meta property="og:url" content="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/"><meta property="og:image" content="https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp"><meta property="og:image:width" content="1672"><meta property="og:image:height" content="941"><meta property="og:image:alt" content="SEO-Єнот працює з n8n та автоматизацією бізнес-процесів">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="n8n: автоматизація бізнес-процесів без зайвої рутини | Raccoon Studio"><meta name="twitter:description" content="Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу."><meta name="twitter:image" content="https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp"><meta name="twitter:image:alt" content="SEO-Єнот працює з n8n та автоматизацією бізнес-процесів">
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+<link
+    rel="stylesheet"
+    href="/styles/style.css"
+  />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+<link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+<link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
+<link rel="stylesheet" href="/styles/blog.css"><meta name="theme-color" content="#4D5AE5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Головна", "item": "https://raccoon-studio.com.ua/"}, {"@type": "ListItem", "position": 2, "name": "Блог SEO-Єнота", "item": "https://raccoon-studio.com.ua/blog/"}, {"@type": "ListItem", "position": 3, "name": "n8n: як автоматизувати бізнес-процеси без зайвої рутини", "item": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/"}]}, {"@type": "BlogPosting", "@id": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/#article", "url": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/", "name": "n8n: автоматизація бізнес-процесів без зайвої рутини | Raccoon Studio", "description": "Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу.", "inLanguage": "uk", "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}, "headline": "n8n: як автоматизувати бізнес-процеси без зайвої рутини", "author": {"@type": "Person", "name": "Oleksandr Padalko", "jobTitle": "Frontend Developer / SEO Engineer", "worksFor": {"@id": "https://raccoon-studio.com.ua/#organization"}}, "datePublished": "2026-11-19", "dateModified": "2026-11-19", "image": "https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp", "wordCount": 1261, "articleSection": "Автоматизація", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/"}, "isPartOf": {"@type": "Blog", "@id": "https://raccoon-studio.com.ua/blog/#blog", "name": "Блог SEO-Єнота"}}]}</script>
+</head><body class="studio-v5 blog-page">
+<a class="skip-link" href="#main-content">Перейти до вмісту</a>
+<header class="header">
+    <div class="container header-container">
+
+        <a
+          href="/"
+          class="logo"
+          aria-label="Raccoon SEO Studio"
+        >
+          RACCOON<span class="logo-dark">STUDIO</span>
+        </a>
+
+      <div class="header-right">
+
+      <nav
+        class="nav"
+        aria-label="Головна навігація"
+      >
+
+
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/">Головна</a></li><li><a class="nav-link" href="/#services">Послуги</a></li><li><a class="nav-link" href="/#work">Портфоліо</a></li><li><a class="nav-link" href="/#team">Команда</a></li><li><a class="nav-link" href="/#contacts">Контакти</a></li><li><a class="nav-link active" href="/blog/">Блог</a></li><li><button type="button" class="nav-cta js-open-modal">Обговорити проєкт</button></li></ul>
+
+      </nav>
+
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Мова сайту: Українська"><span aria-hidden="true">🇺🇦</span><span>UA</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/blog/n8n-avtomatyzatsiia-biznesu/" class="language-link" lang="uk" hreflang="uk" aria-current="page"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/pl/blog/automatyzacja-biznesu-n8n/" class="language-link" lang="pl" hreflang="pl"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true"></span></a><a href="/en/blog/n8n-business-automation/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Відкрити меню"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+      <ul class="contacts-list">
+
+        <li>
+          <a
+            href="mailto:seoraccoonstudio@gmail.com"
+            class="contact-link"
+          >
+            seoraccoonstudio@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="tel:+48793121665"
+            class="contact-link"
+          >
+            +48 793-121-665
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </header>
+<main id="main-content" tabindex="-1"><div class="container blog-article-container"><nav class="blog-breadcrumbs" aria-label="Навігаційний шлях"><ol><li><a href="/">Головна</a></li><li><a href="/blog/">Блог SEO-Єнота</a></li><li><span aria-current="page">n8n: як автоматизувати бізнес-процеси без зайвої рутини</span></li></ol></nav><article><header class="blog-article-heading"><p class="blog-category">Автоматизація</p><h1>n8n: як автоматизувати бізнес-процеси без зайвої рутини</h1><p class="blog-intro" data-article-intro>Є одна річ, яку я регулярно помічаю під час роботи із сайтами. Компанії витрачають багато часу не на саму роботу, а на передачу інформації між різними сервісами.</p><div class="blog-meta"><span>Олександр Падалко</span><time datetime="2026-11-19">19.11.2026</time><span>7 хв читання</span></div></header><img class="blog-article-image" src="/images/blog/n8n-business-automation-raccoon-studio.webp" alt="SEO-Єнот працює з n8n та автоматизацією бізнес-процесів" width="1672" height="941" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body><p>Клієнт залишив заявку на сайті. Менеджер отримав повідомлення на пошту, відкрив його, переніс номер телефону в таблицю, написав колезі в Telegram і створив завдання.</p>
+<p>Усе це займає кілька хвилин.</p>
+<p>Але якщо заявок десятки, а крім них є звіти, нагадування, перевірки сайтів та інші повторювані дії, за місяць накопичується чимало зайвої роботи.</p>
+<p>Саме для таких ситуацій я використовую n8n.</p>
+<h2>Що таке n8n</h2>
+<p>n8n це платформа автоматизації робочих процесів.</p>
+<p>Вона дозволяє з&#x27;єднувати різні сервіси, передавати між ними дані та запускати дії за визначеними правилами.</p>
+<p>Наприклад, відвідувач заповнює контактну форму на сайті. n8n отримує дані, перевіряє необхідні поля, записує заявку в таблицю та надсилає повідомлення менеджеру в Telegram.</p>
+<p>Усе відбувається автоматично.</p>
+<p>Для цього не обов&#x27;язково розробляти окремий серверний застосунок.</p>
+<p>Багато сценаріїв можна побудувати через візуальний редактор, у якому дії з&#x27;єднуються між собою.</p>
+<p>Але називати n8n інструментом, який зовсім не потребує технічних знань, я б не став.</p>
+<p>Прості автоматизації справді доступні без програмування. Для складніших інтеграцій потрібно розуміти API, вебхуки, JSON, авторизацію та обробку помилок.</p>
+<h2>Як працює автоматизація</h2>
+<p>Основою n8n є workflow, тобто сценарій виконання дій.</p>
+<p>Він складається з вузлів, які називаються nodes.</p>
+<p>Одні вузли запускають процес, інші обробляють дані або виконують конкретні операції.</p>
+<p>Наприклад, сценарій може починатися з webhook.</p>
+<p>Webhook це адреса, на яку сайт надсилає інформацію після певної події.</p>
+<p>Далі n8n перевіряє отримані дані, виконує потрібні дії та передає результат наступним вузлам.</p>
+<p>Зазвичай у сценарії є три логічні частини.</p>
+<h3>Подія</h3>
+<p>Щось повинно запустити процес.</p>
+<p>Це може бути нова заявка, повідомлення, запланований час або зміна інформації в іншому сервісі.</p>
+<h3>Обробка</h3>
+<p>Система перевіряє дані, визначає подальші дії, виконує фільтрацію або звертається до зовнішнього API.</p>
+<h3>Результат</h3>
+<p>Наприклад, створюється запис у CRM, надсилається повідомлення або оновлюється таблиця.</p>
+<p>У складних сценаріях ці етапи можуть повторюватися, розгалужуватися й виконуватися за різними умовами.</p>
+<h2>Автоматизація заявок із сайту</h2>
+<p>Це один із найзрозуміліших прикладів для малого бізнесу.</p>
+<p>Уявімо сайт сервісної компанії у Вроцлаві.</p>
+<p>Клієнт залишає заявку на ремонт обладнання.</p>
+<p>Замість того щоб просто відправити лист на електронну пошту, сайт може передати дані в n8n.</p>
+<p>Далі сценарій перевіряє, чи вказаний номер телефону, записує звернення в Google Sheets і надсилає менеджеру повідомлення.</p>
+<p>Якщо є CRM, можна створити нову картку клієнта.</p>
+<p>Якщо звернення потребує термінової реакції, можна додати відповідну позначку.</p>
+<p>Тут важливо не ускладнювати процес без потреби.</p>
+<p>Іноді достатньо одного повідомлення в Telegram і збереження заявки в таблиці.</p>
+<p>Автоматизація повинна вирішувати конкретну проблему, а не створювати додаткові етапи заради красивої схеми.</p>
+<h2>Google Sheets як проста система обліку</h2>
+<p>Не кожній компанії потрібна велика CRM.</p>
+<p>Для невеликого бізнесу таблиця іноді є цілком достатнім інструментом.</p>
+<p>За допомогою n8n можна автоматично додавати нові записи, оновлювати статуси, перевіряти наявність повторних звернень та формувати короткі звіти.</p>
+<p>Наприклад, щовечора система підраховує кількість нових заявок і надсилає підсумок відповідальній людині.</p>
+<p>Менеджеру більше не потрібно вручну збирати ці дані з кількох джерел.</p>
+<p>Але варто пам&#x27;ятати, що Google Sheets не замінює повноцінну базу даних для всіх сценаріїв.</p>
+<p>Коли зростає кількість записів, користувачів і взаємопов&#x27;язаних процесів, може знадобитися інша архітектура.</p>
+<h2>n8n та AI-агенти</h2>
+<p>Одна з цікавих можливостей n8n полягає в інтеграції мовних моделей.</p>
+<p>Можна створити сценарій, у якому AI аналізує звернення клієнта, визначає його тему та готує відповідь.</p>
+<p>Наприклад, користувач пише, що на сайті перестала працювати форма.</p>
+<p>AI може класифікувати звернення як технічну проблему й передати його відповідальному спеціалісту.</p>
+<p>Або клієнт цікавиться послугами SEO. Система визначає категорію запиту та готує повідомлення менеджеру.</p>
+<p>Важливо розуміти, що AI не повинен безконтрольно приймати всі рішення.</p>
+<p>Для фінансових операцій, зміни важливих даних або публікації інформації я рекомендую передбачати перевірки й підтвердження.</p>
+<p>Також потрібно контролювати, які персональні дані передаються зовнішнім моделям.</p>
+<h2>Автоматизація SEO-завдань</h2>
+<p>Для SEO-інженера n8n може бути корисним не менше, ніж для менеджера.</p>
+<p>Одна з можливостей полягає в автоматичному зборі даних із Google Search Console через API.</p>
+<p>Наприклад, сценарій регулярно отримує покази, кліки та інші доступні показники для визначених сторінок.</p>
+<p>Після цього дані можна записувати в таблицю або передавати в систему звітності.</p>
+<p>Інший сценарій може перевіряти доступність важливих URL.</p>
+<p>Якщо сторінка почала повертати HTTP 500 або іншу неочікувану відповідь, система надсилає повідомлення.</p>
+<p>Але потрібно розрізняти технічний моніторинг і повноцінний SEO-аудит.</p>
+<p>Автоматична перевірка HTTP-статусу не визначає якість контенту, пошуковий намір або всі проблеми індексації.</p>
+<p>n8n допомагає збирати інформацію та реагувати на події. Оцінка причин і стратегічні рішення залишаються окремим завданням.</p>
+<h2>Моніторинг доступності сайту</h2>
+<p>Ще один практичний сценарій це перевірка роботи сайту за розкладом.</p>
+<p>Наприклад, кожні п&#x27;ять хвилин n8n надсилає HTTP-запит на визначену сторінку.</p>
+<p>Якщо відповідь не відповідає очікуваним умовам, система може повідомити адміністратора.</p>
+<p>Для кількох сайтів можна використовувати спільний список адрес.</p>
+<p>Однак один невдалий запит не завжди означає, що сайт справді недоступний.</p>
+<p>Причиною може бути тимчасова мережева помилка.</p>
+<p>Тому в хорошому сценарії варто передбачити повторну перевірку, обмеження кількості сповіщень і журнал подій.</p>
+<p>Інакше замість корисного моніторингу можна отримати десятки повідомлень про одну короткочасну проблему.</p>
+<h2>Інтеграція з GitHub</h2>
+<p>n8n також може взаємодіяти з GitHub.</p>
+<p>Наприклад, автоматично створювати issue після отримання повідомлення про технічну проблему або передавати інформацію про новий реліз у Telegram.</p>
+<p>Можна реалізувати й складніші процеси, пов&#x27;язані з файлами репозиторію.</p>
+<p>Але я не рекомендую дозволяти автоматизації без перевірки змінювати production-код.</p>
+<p>Для таких операцій краще використовувати окремі гілки, pull request, обмежені права доступу та перевірки перед злиттям.</p>
+<p>Автоматизація повинна зменшувати ризики, а не створювати нові.</p>
+<h2>Робота з PostgreSQL</h2>
+<p>Коли даних стає багато, замість таблиць можна використовувати PostgreSQL.</p>
+<p>n8n дозволяє взаємодіяти з базою даних, виконувати запити та передавати результати іншим сервісам.</p>
+<p>Наприклад, система може отримувати статистику замовлень, формувати короткий звіт і надсилати його керівнику.</p>
+<p>Можлива й інтеграція з AI, який допомагає формувати запити до даних природною мовою.</p>
+<p>Однак доступ AI до бази потребує особливої обережності.</p>
+<p>Я б починав із прав тільки на читання, обмеженого набору таблиць і перевірки запитів.</p>
+<p>Надавати мовній моделі необмежений доступ до робочої бази даних небезпечно.</p>
+<h2>Де розмістити n8n</h2>
+<p>Є два основні підходи.</p>
+<p>Перший це використання хмарної версії сервісу.</p>
+<p>Другий це самостійне розгортання на сервері.</p>
+<p>Self-hosted варіант дає більше контролю над середовищем, але потребує відповідальності за оновлення, резервне копіювання, безпеку та доступність.</p>
+<p>Для власного сервера можна використовувати Docker.</p>
+<p>Важливо налаштувати HTTPS, захист облікових даних, резервні копії та контроль доступу.</p>
+<p>Також слід враховувати ліцензійні умови n8n, особливо якщо автоматизація використовується в комерційних продуктах або надається як сервіс.</p>
+<h2>Що потрібно врахувати в Польщі та Європейському Союзі</h2>
+<p>Автоматизація часто працює з персональними даними.</p>
+<p>Ім&#x27;я, номер телефону, електронна адреса та зміст звернення можуть підпадати під вимоги GDPR.</p>
+<p>Тому потрібно визначити правову підставу обробки, обмежити доступ до даних і встановити обґрунтовані строки їх зберігання.</p>
+<p>Якщо інформація передається стороннім сервісам, необхідно перевірити відповідні договори та умови обробки.</p>
+<p>Не варто надсилати всі дані клієнта в кожен підключений сервіс лише тому, що це технічно можливо.</p>
+<p>Передавайте тільки те, що необхідно для конкретного процесу.</p>
+<h2>Із чого почати автоматизацію</h2>
+<p>Я б не починав із великої системи на двадцять сценаріїв.</p>
+<p>Краще знайти одну дію, яку співробітники повторюють щодня.</p>
+<p>Наприклад, перенесення заявок із сайту в таблицю.</p>
+<p>Спочатку потрібно описати, як цей процес працює вручну.</p>
+<p>Потім визначити, що саме можна автоматизувати, які дані потрібні та що робити у випадку помилки.</p>
+<p>Після запуску варто перевірити сценарій на реальних, але контрольованих прикладах.</p>
+<p>І тільки коли він працює стабільно, переходити до наступної автоматизації.</p>
+<h2>Висновок</h2>
+<p>Для мене n8n цікавий не кількістю інтеграцій і не красивими схемами.</p>
+<p>Його цінність у тому, що він дозволяє прибрати частину повторюваної роботи.</p>
+<p>Заявки не губляться між поштою й месенджерами. Дані не потрібно переносити вручну. Про проблеми із сайтом можна дізнатися раніше, ніж про них повідомить клієнт.</p>
+<p>Але автоматизація не виправить погано організований бізнес-процес.</p>
+<p>Якщо незрозуміло, хто відповідає за заявку, які дані потрібно зберігати й що вважати успішним результатом, n8n лише зробить цей хаос швидшим.</p>
+<p>Тому я завжди починав би не з вибору вузлів, а з простого питання.</p>
+<p>Яку конкретну роботу ми хочемо перестати виконувати вручну?</p></div><aside class="blog-author"><h2>Про автора</h2><p>Олександр Падалко</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta"><h2>Хочете автоматизувати роботу свого бізнесу?</h2><p>Raccoon SEO Studio допомагає інтегрувати сайти з n8n, налаштовувати автоматичну обробку заявок, сповіщення, звіти та AI-інструменти.</p><div><a class="nav-cta" style="color: var(--white)" href="/#contacts">Обговорити проєкт</a><a href="/#services">Послуги студії</a></div></aside></div></main>
+<footer
+    id="contacts"
+    class="footer"
+  >
+
+    <div class="container footer-container">
+
+      <div class="footer-info">
+
+        <a
+          href="/"
+          class="logo logo-footer"
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
+
+        <p class="footer-text">
+          SEO, сайти та AI-автоматизація
+          для розвитку бізнесу.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links"><a href="/#services">Послуги</a>
+
+        <p class="footer-subtitle">
+          Навігація
+        </p>
+
+        <a href="/">
+          Головна
+        </a>
+
+        <a href="/clients.html">
+          Кейси
+        </a>
+
+        <a href="/#lead">
+          Залишити заявку
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <p class="footer-subtitle">
+          Контакти
+        </p>
+
+        <a href="tel:+48793121665">
+          +48 793-121-665
+        </a>
+
+        <a href="mailto:seoraccoonstudio@gmail.com">
+          seoraccoonstudio@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="footer-cta"><p class="footer-subtitle">Маєте ідею або проєкт?</p><p>Обговорімо, як перетворити вашу ідею на ефективне онлайн-рішення.</p><button type="button" class="modal-btn js-open-modal">Обговорити проєкт</button></div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      Created by Raccoon Studio © 2026
+    </div>
+
+  </footer>
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Закрити"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Обговоримо ваш проєкт
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Ім’я</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Ваше імʼя"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Телефон</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">Email</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Компанія</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Назва компанії"
+        />
+
+        <label class="modal-field" for="modal-service">Послуга</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Оберіть послугу
+          </option>
+
+          <option value="SEO просування">
+            SEO просування
+          </option>
+
+          <option value="Створення сайту">
+            Створення сайту
+          </option>
+
+          <option value="AI агент для сайту">
+            AI агент для сайту
+          </option>
+
+          <option value="n8n автоматизація">
+            n8n автоматизація
+          </option>
+
+          <option value="Комплексне рішення">
+            Комплексне рішення
+          </option>
+
+        </select>
+
+        <label class="modal-field" for="modal-comment">Повідомлення</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Коротко опишіть задачу"
+        ></textarea>
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Я приймаю умови Політики конфіденційності
+
+        </label>
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Відправити
+        </button>
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+<script src="/script/script.js" defer></script>
+
+</body></html>

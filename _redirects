@@ -46,6 +46,10 @@
 /pl/blog/seo-wieloregionalne/index.html /pl/blog/seo-wieloregionalne/ 301!
 /en/blog/multi-regional-seo/index.html /en/blog/multi-regional-seo/ 301!
 
+/blog/n8n-avtomatyzatsiia-biznesu/index.html /blog/n8n-avtomatyzatsiia-biznesu/ 301!
+/pl/blog/automatyzacja-biznesu-n8n/index.html /pl/blog/automatyzacja-biznesu-n8n/ 301!
+/en/blog/n8n-business-automation/index.html /en/blog/n8n-business-automation/ 301!
+
 # Native localized 404 fallbacks. Existing files shadow these non-forced rules.
 /pl/* /pl/404.html 404
 /en/* /en/404.html 404

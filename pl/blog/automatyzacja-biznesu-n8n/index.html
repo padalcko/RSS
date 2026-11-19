@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>n8n i automatyzacja procesów biznesowych | Raccoon Studio</title><meta name="description" content="Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm.">
+<meta name="author" content="Oleksandr Padalko"><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/"><link rel="alternate" hreflang="uk-UA" href="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/">
+<link rel="alternate" hreflang="pl-PL" href="https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/">
+<link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/blog/n8n-business-automation/">
+<link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Raccoon SEO Studio"><meta property="og:locale" content="pl_PL"><meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="n8n i automatyzacja procesów biznesowych | Raccoon Studio"><meta property="og:description" content="Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm."><meta property="og:url" content="https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/"><meta property="og:image" content="https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp"><meta property="og:image:width" content="1672"><meta property="og:image:height" content="941"><meta property="og:image:alt" content="Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="n8n i automatyzacja procesów biznesowych | Raccoon Studio"><meta name="twitter:description" content="Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm."><meta name="twitter:image" content="https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp"><meta name="twitter:image:alt" content="Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n">
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+<link
+    rel="stylesheet"
+    href="/styles/style.css"
+  />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+<link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+<link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
+<link rel="stylesheet" href="/styles/blog.css"><meta name="theme-color" content="#4D5AE5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://raccoon-studio.com.ua/pl/"}, {"@type": "ListItem", "position": 2, "name": "Blog SEO Szopa", "item": "https://raccoon-studio.com.ua/pl/blog/"}, {"@type": "ListItem", "position": 3, "name": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę", "item": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/"}]}, {"@type": "BlogPosting", "@id": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/#article", "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/", "name": "n8n i automatyzacja procesów biznesowych | Raccoon Studio", "description": "Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm.", "inLanguage": "pl", "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}, "headline": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę", "author": {"@type": "Person", "name": "Oleksandr Padalko", "jobTitle": "Frontend Developer / SEO Engineer", "worksFor": {"@id": "https://raccoon-studio.com.ua/#organization"}}, "datePublished": "2026-11-19", "dateModified": "2026-11-19", "image": "https://raccoon-studio.com.ua/images/blog/n8n-business-automation-raccoon-studio.webp", "wordCount": 1000, "articleSection": "Automatyzacja", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/"}, "isPartOf": {"@type": "Blog", "@id": "https://raccoon-studio.com.ua/pl/blog/#blog", "name": "Blog SEO Szopa"}}]}</script>
+</head><body class="studio-v5 blog-page">
+<a class="skip-link" href="#main-content">Przejdź do treści</a>
+<header class="header">
+
+    <div class="container header-container">
+
+        <a
+          href="/pl/"
+          class="logo"
+          aria-label="Raccoon SEO Studio"
+        >
+          RACCOON<span class="logo-dark">STUDIO</span>
+        </a>
+
+
+      <div class="header-right">
+
+      <nav
+        class="nav"
+        aria-label="Główna nawigacja"
+      >
+
+
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/pl/">Strona główna</a></li><li><a class="nav-link" href="/pl/#services">Usługi</a></li><li><a class="nav-link" href="/pl/#work">Portfolio</a></li><li><a class="nav-link" href="/pl/#team">Zespół</a></li><li><a class="nav-link" href="/pl/#contacts">Kontakt</a></li><li><a class="nav-link active" href="/pl/blog/">Blog</a></li><li><button type="button" class="nav-cta js-open-modal">Porozmawiajmy o projekcie</button></li></ul>
+
+      </nav>
+
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Język strony: Polski"><span aria-hidden="true">🇵🇱</span><span>PL</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/blog/n8n-avtomatyzatsiia-biznesu/" class="language-link" lang="uk" hreflang="uk"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true"></span></a><a href="/pl/blog/automatyzacja-biznesu-n8n/" class="language-link" lang="pl" hreflang="pl" aria-current="page"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/en/blog/n8n-business-automation/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
+
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+
+      <ul class="contacts-list">
+
+        <li>
+          <a
+            href="mailto:seoraccoonstudio@gmail.com"
+            class="contact-link"
+          >
+            seoraccoonstudio@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="tel:+48793121665"
+            class="contact-link"
+          >
+            +48 793-121-665
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+<main id="main-content" tabindex="-1"><div class="container blog-article-container"><nav class="blog-breadcrumbs" aria-label="Ścieżka nawigacji"><ol><li><a href="/pl/">Strona główna</a></li><li><a href="/pl/blog/">Blog SEO Szopa</a></li><li><span aria-current="page">n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę</span></li></ol></nav><article><header class="blog-article-heading"><p class="blog-category">Automatyzacja</p><h1>n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę</h1><p class="blog-intro" data-article-intro>W wielu firmach sporo czasu zajmuje nie sama obsługa klienta, lecz przenoszenie informacji pomiędzy różnymi narzędziami.</p><div class="blog-meta"><span>Олександр Падалко</span><time datetime="2026-11-19">19.11.2026</time><span>5 min czytania</span></div></header><img class="blog-article-image" src="/images/blog/n8n-business-automation-raccoon-studio.webp" alt="Szop SEO przedstawia automatyzację procesów biznesowych za pomocą n8n" width="1672" height="941" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body><p>Klient wypełnia formularz na stronie. Wiadomość trafia na pocztę. Pracownik przepisuje numer telefonu do arkusza, informuje kolegę przez Telegram i tworzy zadanie.</p>
+<p>Każda czynność trwa chwilę.</p>
+<p>Problem zaczyna się wtedy, gdy podobne operacje powtarzają się kilkadziesiąt razy dziennie.</p>
+<p>Właśnie w takich sytuacjach przydaje się n8n.</p>
+<h2>Czym jest n8n</h2>
+<p>n8n to platforma do automatyzacji procesów i integracji aplikacji.</p>
+<p>Pozwala łączyć różne usługi, przesyłać między nimi informacje i wykonywać określone działania po wystąpieniu konkretnego zdarzenia.</p>
+<p>Przykładowo klient wysyła formularz kontaktowy. n8n odbiera dane, sprawdza wymagane pola, zapisuje zgłoszenie w Google Sheets i wysyła powiadomienie do menedżera.</p>
+<p>Cały proces może działać bez ręcznego udziału pracownika.</p>
+<p>Dużą zaletą jest wizualny edytor, w którym kolejne działania przedstawione są jako połączone elementy.</p>
+<p>Nie oznacza to jednak, że znajomość technologii jest całkowicie zbędna.</p>
+<p>Proste procesy można skonfigurować bez pisania kodu. Bardziej zaawansowane integracje wymagają zrozumienia API, webhooków, JSON i mechanizmów uwierzytelniania.</p>
+<h2>Jak działa workflow</h2>
+<p>Podstawą n8n jest workflow, czyli scenariusz automatyzacji.</p>
+<p>Składa się on z węzłów, nazywanych nodes.</p>
+<p>Niektóre węzły uruchamiają proces, inne przetwarzają dane lub wykonują określone operacje.</p>
+<p>Scenariusz może rozpoczynać się od webhooka, który odbiera informacje przesłane przez stronę internetową.</p>
+<p>Następnie dane są sprawdzane i przekazywane do kolejnych działań.</p>
+<p>Najprostszy proces obejmuje zdarzenie, przetwarzanie oraz rezultat.</p>
+<p>Zdarzeniem może być nowy formularz, wiadomość lub zaplanowana godzina.</p>
+<p>Przetwarzanie może obejmować filtrowanie danych, obliczenia albo komunikację z zewnętrznym API.</p>
+<p>Rezultatem może być zapis w CRM, aktualizacja arkusza lub powiadomienie.</p>
+<h2>Automatyzacja formularzy kontaktowych</h2>
+<p>Wyobraźmy sobie firmę usługową działającą we Wrocławiu.</p>
+<p>Klient przesyła zapytanie przez stronę internetową.</p>
+<p>Zamiast ograniczać się do wiadomości e-mail, formularz może przekazywać dane do n8n.</p>
+<p>Scenariusz sprawdza numer telefonu, zapisuje zgłoszenie w arkuszu i informuje odpowiedzialnego pracownika przez Telegram.</p>
+<p>Jeżeli firma korzysta z CRM, można również automatycznie utworzyć kartę klienta.</p>
+<p>Ważne, aby nie komplikować procesu bez potrzeby.</p>
+<p>Czasami proste powiadomienie i zapis danych wystarczą, aby usprawnić pracę zespołu.</p>
+<h2>Google Sheets jako narzędzie organizacji</h2>
+<p>Nie każda mała firma potrzebuje rozbudowanego systemu CRM.</p>
+<p>Arkusz kalkulacyjny może wystarczyć do prowadzenia podstawowego rejestru zgłoszeń.</p>
+<p>n8n umożliwia automatyczne dodawanie wierszy, aktualizowanie statusów i przygotowywanie zestawień.</p>
+<p>Przykładowo każdego wieczoru system może policzyć nowe zgłoszenia i wysłać krótkie podsumowanie.</p>
+<p>Trzeba jednak pamiętać, że arkusz nie zastąpi bazy danych we wszystkich zastosowaniach.</p>
+<p>Przy większej liczbie użytkowników, danych i zależności warto rozważyć bardziej odpowiednią architekturę.</p>
+<h2>n8n i agenci AI</h2>
+<p>n8n pozwala integrować modele językowe z procesami biznesowymi.</p>
+<p>Można przygotować scenariusz, który analizuje treść wiadomości i przypisuje ją do odpowiedniej kategorii.</p>
+<p>Zapytanie o pozycjonowanie strony może trafić do specjalisty SEO, a zgłoszenie niedziałającego formularza do osoby odpowiedzialnej za rozwój witryny.</p>
+<p>AI może również przygotować propozycję odpowiedzi.</p>
+<p>Nie powinien jednak bez kontroli podejmować wszystkich decyzji.</p>
+<p>W przypadku operacji finansowych, modyfikacji ważnych danych lub publikacji treści warto stosować zatwierdzanie przez człowieka.</p>
+<p>Należy też kontrolować, jakie informacje są przekazywane zewnętrznym modelom.</p>
+<h2>Automatyzacja pracy SEO</h2>
+<p>Dla specjalisty SEO n8n może być przydatnym narzędziem do zbierania danych i monitorowania zdarzeń.</p>
+<p>Za pomocą Google Search Console API można pobierać dostępne dane o wyświetleniach i kliknięciach.</p>
+<p>Następnie można zapisywać je w arkuszu albo przekazywać do systemu raportowania.</p>
+<p>Inny scenariusz może regularnie sprawdzać odpowiedzi HTTP najważniejszych adresów URL.</p>
+<p>Jeżeli strona zacznie zwracać nieoczekiwany błąd, administrator otrzyma powiadomienie.</p>
+<p>Nie należy jednak mylić monitoringu technicznego z pełnym audytem SEO.</p>
+<p>Sprawdzenie kodu odpowiedzi nie wystarcza do oceny jakości treści, intencji użytkownika czy wszystkich problemów indeksowania.</p>
+<h2>Monitorowanie dostępności stron</h2>
+<p>n8n może cyklicznie wysyłać żądania HTTP do wskazanych witryn.</p>
+<p>Jeżeli odpowiedź nie spełnia ustalonych warunków, system może wysłać alert.</p>
+<p>W przypadku wielu stron można przechowywać listę adresów w jednym miejscu.</p>
+<p>Warto jednak przewidzieć ponowne sprawdzenie przed wysłaniem alarmu.</p>
+<p>Pojedyncza awaria połączenia nie zawsze oznacza rzeczywistą niedostępność witryny.</p>
+<p>Dobrze zaprojektowany monitoring powinien ograniczać liczbę powtarzających się powiadomień i zapisywać historię zdarzeń.</p>
+<h2>Integracja z GitHub</h2>
+<p>n8n może współpracować z GitHub.</p>
+<p>Przykładowo po otrzymaniu zgłoszenia technicznego może automatycznie utworzyć issue.</p>
+<p>Może również powiadamiać zespół o nowych wersjach aplikacji.</p>
+<p>Bardziej zaawansowane procesy pozwalają modyfikować pliki repozytorium.</p>
+<p>Nie zalecałbym jednak automatycznego wprowadzania zmian bezpośrednio do kodu produkcyjnego bez kontroli.</p>
+<p>Bezpieczniejsze są osobne gałęzie, pull requesty, ograniczone uprawnienia i testy przed wdrożeniem.</p>
+<h2>PostgreSQL i dane biznesowe</h2>
+<p>Gdy arkusze przestają wystarczać, można wykorzystać PostgreSQL.</p>
+<p>n8n potrafi wykonywać zapytania do bazy i przekazywać wyniki do innych systemów.</p>
+<p>Przykładowo można pobierać statystyki zamówień i wysyłać kierownikowi codzienny raport.</p>
+<p>Możliwe jest również połączenie bazy z agentem AI.</p>
+<p>Takie rozwiązanie wymaga jednak odpowiednich zabezpieczeń.</p>
+<p>Dostęp tylko do odczytu, ograniczenie dostępnych tabel i kontrola zapytań powinny być podstawą projektu.</p>
+<p>Nie należy udostępniać modelowi językowemu nieograniczonego dostępu do produkcyjnej bazy danych.</p>
+<h2>Gdzie uruchomić n8n</h2>
+<p>Można korzystać z usługi chmurowej albo uruchomić własną instalację.</p>
+<p>Wariant self-hosted daje większą kontrolę nad środowiskiem.</p>
+<p>Wymaga jednak samodzielnego dbania o aktualizacje, kopie zapasowe, bezpieczeństwo i dostępność.</p>
+<p>Jednym ze sposobów wdrożenia jest Docker.</p>
+<p>Należy skonfigurować HTTPS, ochronę danych uwierzytelniających i ograniczenia dostępu.</p>
+<p>Warto również zapoznać się z warunkami licencyjnymi n8n, szczególnie przy komercyjnym udostępnianiu automatyzacji.</p>
+<h2>Automatyzacja a RODO</h2>
+<p>W Polsce i Unii Europejskiej wiele procesów automatyzacji wiąże się z przetwarzaniem danych osobowych.</p>
+<p>Imię, adres e-mail, numer telefonu czy treść zgłoszenia mogą podlegać przepisom RODO.</p>
+<p>Dlatego trzeba określić podstawę prawną przetwarzania, odpowiednio zabezpieczyć dane i ustalić zasady ich przechowywania.</p>
+<p>Jeżeli informacje trafiają do zewnętrznych usług, należy sprawdzić odpowiednie umowy i warunki przetwarzania.</p>
+<p>Najlepiej przekazywać tylko dane niezbędne do wykonania konkretnego zadania.</p>
+<h2>Od czego zacząć</h2>
+<p>Nie zaczynałbym od budowania kilkunastu skomplikowanych scenariuszy.</p>
+<p>Lepiej wybrać jedną powtarzalną czynność.</p>
+<p>Może to być przenoszenie zgłoszeń ze strony do arkusza.</p>
+<p>Najpierw należy opisać obecny proces, ustalić potrzebne dane i określić sposób obsługi błędów.</p>
+<p>Następnie można przygotować prosty workflow i sprawdzić go na kontrolowanych przykładach.</p>
+<p>Dopiero po potwierdzeniu stabilnego działania warto rozwijać kolejne automatyzacje.</p>
+<h2>Podsumowanie</h2>
+<p>Największą zaletą n8n nie jest liczba dostępnych integracji.</p>
+<p>Jest nią możliwość ograniczenia powtarzalnej pracy.</p>
+<p>Zgłoszenia mogą trafiać bezpośrednio do odpowiednich osób, raporty mogą powstawać automatycznie, a problemy techniczne mogą być wykrywane wcześniej.</p>
+<p>Jednak automatyzacja nie naprawi źle zaplanowanego procesu.</p>
+<p>Jeżeli firma nie wie, kto odpowiada za klienta i jakie informacje powinny być przechowywane, nawet najlepszy workflow nie rozwiąże problemu.</p>
+<p>Dlatego przed uruchomieniem n8n warto zadać jedno pytanie.</p>
+<p>Którą czynność naprawdę chcemy przestać wykonywać ręcznie?</p></div><aside class="blog-author"><h2>O autorze</h2><p>Олександр Падалко</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta"><h2>Chcesz zautomatyzować procesy w swojej firmie?</h2><p>Raccoon SEO Studio pomaga integrować strony internetowe z n8n, automatyzować obsługę zgłoszeń, powiadomienia, raporty i narzędzia AI.</p><div><a class="nav-cta" style="color: var(--white)" href="/pl/#contacts">Porozmawiajmy o projekcie</a><a href="/pl/#services">Usługi studia</a></div></aside></div></main>
+<footer
+    id="contacts"
+    class="footer"
+  >
+
+    <div class="container footer-container">
+
+      <div class="footer-info">
+
+        <a
+          href="/pl/"
+          class="logo logo-footer"
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
+
+        <p class="footer-text">
+          SEO, strony internetowe
+          i automatyzacja AI
+          dla rozwoju biznesu.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links"><a href="/pl/#services">Usługi</a>
+
+        <p class="footer-subtitle">
+          Nawigacja
+        </p>
+
+        <a href="/pl/">
+          Strona główna
+        </a>
+
+        <a href="/pl/clients.html">
+          Realizacje
+        </a>
+
+        <a href="/pl/#lead">
+          Wyślij zapytanie
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <p class="footer-subtitle">
+          Kontakt
+        </p>
+
+        <a href="tel:+48793121665">
+          +48 793-121-665
+        </a>
+
+        <a href="mailto:seoraccoonstudio@gmail.com">
+          seoraccoonstudio@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="footer-cta"><p class="footer-subtitle">Masz pomysł lub projekt?</p><p>Porozmawiajmy o tym, jak zamienić Twój pomysł w skuteczne rozwiązanie online.</p><button type="button" class="modal-btn js-open-modal">Porozmawiajmy o projekcie</button></div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      Created by Raccoon Studio © 2026
+    </div>
+
+  </footer>
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Zamknij"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Porozmawiajmy o projekcie
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Imię</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Twoje imię"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Telefon</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">E-mail</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Firma</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Nazwa firmy"
+        />
+
+        <label class="modal-field" for="modal-service">Usługa</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Wybierz usługę
+          </option>
+
+          <option value="SEO">
+            SEO
+          </option>
+
+          <option value="Tworzenie strony internetowej">
+            Tworzenie strony internetowej
+          </option>
+
+          <option value="AI agent">
+            AI agent
+          </option>
+
+          <option value="n8n automation">
+            n8n automation
+          </option>
+
+          <option value="Kompleksowe rozwiązanie">
+            Kompleksowe rozwiązanie
+          </option>
+
+        </select>
+
+
+        <label class="modal-field" for="modal-comment">Wiadomość</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Krótko opisz zadanie"
+        ></textarea>
+
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Akceptuję warunki Polityki prywatności
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Wyślij
+        </button>
+
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+<script src="/script/script.js" defer></script>
+
+</body></html>

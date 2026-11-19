@@ -45,3 +45,6 @@ This file is a human- and machine-readable index of the studio's public website.
 - [Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі](https://raccoon-studio.com.ua/blog/multirehionalne-seo/)
 - [SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie](https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/)
 - [Multi-Regional SEO: How to Grow Across European Markets](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/)
+- [n8n: як автоматизувати бізнес-процеси без зайвої рутини](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/)
+- [n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/)
+- [n8n: How to Automate Business Workflows and Reduce Repetitive Work](https://raccoon-studio.com.ua/en/blog/n8n-business-automation/)
