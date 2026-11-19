@@ -1,0 +1,382 @@
+{
+  "name": "Raccoon SEO Studio",
+  "url": "https://raccoon-studio.com.ua/",
+  "type": "Web Development and SEO Studio",
+  "languages": [
+    "uk",
+    "pl",
+    "en"
+  ],
+  "services": [
+    {
+      "name": "Web Development",
+      "description": "Розробка сучасних, швидких, адаптивних сайтів із продуманою структурою та зручним інтерфейсом.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/#services"
+    },
+    {
+      "name": "Technical SEO",
+      "description": "Технічна оптимізація, індексація, структура сторінок, метадані та покращення видимості у пошукових системах.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/#services"
+    },
+    {
+      "name": "AI & Automation",
+      "description": "Інтеграція AI-асистентів, автоматизація бізнес-процесів, форм заявок і комунікації з клієнтами.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/#services"
+    },
+    {
+      "name": "Performance & Support",
+      "description": "Оптимізація продуктивності, підтримка, розвиток та вдосконалення існуючих вебпроєктів.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/#services"
+    },
+    {
+      "name": "Web Development",
+      "description": "Modern, fast and responsive websites with a thoughtful structure and an intuitive interface.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/#services"
+    },
+    {
+      "name": "Technical SEO",
+      "description": "Technical optimisation, indexing, page structure and metadata to improve search visibility.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/#services"
+    },
+    {
+      "name": "AI & Automation",
+      "description": "AI assistant integration and automation of business processes, enquiry forms and customer communications.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/#services"
+    },
+    {
+      "name": "Performance & Support",
+      "description": "Performance optimisation, ongoing support and improvements to existing web projects.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/#services"
+    },
+    {
+      "name": "Web Development",
+      "description": "Tworzenie nowoczesnych, szybkich i responsywnych stron z przemyślaną strukturą oraz wygodnym interfejsem.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/#services"
+    },
+    {
+      "name": "Technical SEO",
+      "description": "Optymalizacja techniczna, indeksowanie, struktura stron i metadane wspierające widoczność w wyszukiwarkach.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/#services"
+    },
+    {
+      "name": "AI & Automation",
+      "description": "Integracja asystentów AI oraz automatyzacja procesów biznesowych, formularzy i komunikacji z klientami.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/#services"
+    },
+    {
+      "name": "Performance & Support",
+      "description": "Optymalizacja wydajności, wsparcie i dalszy rozwój istniejących projektów internetowych.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/#services"
+    }
+  ],
+  "articles": [
+    {
+      "name": "Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі",
+      "description": "Як просувати сайт у кількох містах і країнах? Розбираємо локальне SEO, структуру регіональних сторінок, Google Business Profile та hreflang.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/multirehionalne-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/multirehionalne-seo/index.md"
+    },
+    {
+      "name": "n8n: як автоматизувати бізнес-процеси без зайвої рутини",
+      "description": "Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/",
+      "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
+    },
+    {
+      "name": "Три правила SEO, які я не раджу порушувати",
+      "description": "Чому не варто бездумно змінювати URL, переробляти успішні сторінки та копіювати конкурентів. Три практичні правила технічного SEO.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
+    },
+    {
+      "name": "Запуск нового сайту: чому SEO потрібно продумати ще до публікації",
+      "description": "Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
+    },
+    {
+      "name": "Multi-Regional SEO: How to Grow Across European Markets",
+      "description": "Learn how to expand SEO across European cities and countries using regional landing pages, Google Business Profile, hreflang and a practical site structure.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/multi-regional-seo/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/multi-regional-seo/index.md"
+    },
+    {
+      "name": "n8n: How to Automate Business Workflows and Reduce Repetitive Work",
+      "description": "Learn how n8n connects website forms, Telegram, Google Sheets, SEO reporting, AI agents and monitoring into practical business workflows.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/n8n-business-automation/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/n8n-business-automation/index.md"
+    },
+    {
+      "name": "Launching a New Website: Why SEO Should Start Before Publication",
+      "description": "Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/index.md"
+    },
+    {
+      "name": "Three SEO Rules I Would Not Ignore",
+      "description": "Changing URLs, rewriting successful pages and copying competitors can damage organic visibility. Three practical rules for safer SEO decisions.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
+    },
+    {
+      "name": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę",
+      "description": "Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie",
+      "description": "Jak pozycjonować stronę w kilku miastach i krajach? Poznaj strategie lokalnego SEO, strukturę stron regionalnych, hreflang i Profil Firmy w Google.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/index.md"
+    },
+    {
+      "name": "Start nowej strony internetowej. Dlaczego SEO warto zaplanować przed publikacją?",
+      "description": "Nowa strona nie zdobywa ruchu z Google? Sprawdź, jakie błędy techniczne i problemy z treścią mogą utrudniać jej rozwój.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/index.md"
+    },
+    {
+      "name": "Trzy zasady SEO, których nie warto łamać",
+      "description": "Zmiana adresów URL, przebudowa działających stron i kopiowanie konkurencji mogą zaszkodzić SEO. Poznaj trzy praktyczne zasady.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/index.md"
+    }
+  ],
+  "pages": [
+    {
+      "name": "Створюємо сайти, які працюють на ваш бізнес",
+      "description": "Raccoon SEO Studio — SEO-просування, створення сайтів, AI-автоматизація, n8n, CRM-інтеграції та digital-рішення для бізнесу.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/",
+      "markdown": "https://raccoon-studio.com.ua/index.md"
+    },
+    {
+      "name": "Блог SEO-Єнота",
+      "description": "SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/",
+      "markdown": "https://raccoon-studio.com.ua/blog/index.md"
+    },
+    {
+      "name": "Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі",
+      "description": "Як просувати сайт у кількох містах і країнах? Розбираємо локальне SEO, структуру регіональних сторінок, Google Business Profile та hreflang.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/multirehionalne-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/multirehionalne-seo/index.md"
+    },
+    {
+      "name": "n8n: як автоматизувати бізнес-процеси без зайвої рутини",
+      "description": "Що таке n8n і як автоматизувати заявки, Telegram, Google Sheets, SEO-звіти та AI-агентів. Практичний погляд на автоматизацію малого бізнесу.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/",
+      "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
+    },
+    {
+      "name": "Три правила SEO, які я не раджу порушувати",
+      "description": "Чому не варто бездумно змінювати URL, переробляти успішні сторінки та копіювати конкурентів. Три практичні правила технічного SEO.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
+    },
+    {
+      "name": "Запуск нового сайту: чому SEO потрібно продумати ще до публікації",
+      "description": "Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
+    },
+    {
+      "name": "Expres Polish",
+      "description": "Кейс Expres Polish від Raccoon SEO Studio: сайт мовної школи, SEO-структура, форми заявок, n8n-автоматизація, Google Sheets, Telegram та AI-консультант.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/cases/expres-polish.html",
+      "markdown": "https://raccoon-studio.com.ua/cases/expres-polish.md"
+    },
+    {
+      "name": "Gloss Garage",
+      "description": "Кейс Gloss Garage від Raccoon SEO Studio: створення сайту для PDR-сервісу у Вроцлаві, польська локалізація, Local SEO, аналітика, мобільний UX та підготовка до просування.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/cases/gloss-garage.html",
+      "markdown": "https://raccoon-studio.com.ua/cases/gloss-garage.md"
+    },
+    {
+      "name": "Laser Tech Service",
+      "description": "Кейс Laser Tech Service від Raccoon SEO Studio: корпоративний сайт сервісу лазерного обладнання, PL/RU локалізація, технічне SEO, schema.org, GA4, GTM та Google Ads.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/cases/laser-tech-service.html",
+      "markdown": "https://raccoon-studio.com.ua/cases/laser-tech-service.md"
+    },
+    {
+      "name": "Мультимовний каталог обладнання для beauty-бізнесу",
+      "description": "Кейс LTS Market: каталог нового й уживаного косметологічного обладнання, сторінки товарів, три мовні версії та SEO-структура.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/cases/lts-market.html",
+      "markdown": "https://raccoon-studio.com.ua/cases/lts-market.md"
+    },
+    {
+      "name": "Проєкти, які ми перетворюємо на працюючі digital-рішення",
+      "description": "Кейси Raccoon SEO Studio: Gloss Garage, Expres Polish та Laser Tech Service. Створення сайтів, SEO, локальне просування, аналітика та AI-автоматизація.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/clients.html",
+      "markdown": "https://raccoon-studio.com.ua/clients.md"
+    },
+    {
+      "name": "Websites that work for your business",
+      "description": "Raccoon SEO Studio — Website development, technical SEO, AI automation, n8n and CRM integrations for your business.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/",
+      "markdown": "https://raccoon-studio.com.ua/en/index.md"
+    },
+    {
+      "name": "SEO Raccoon's Blog",
+      "description": "SEO, AI, web development and automation. We write about what we actually test.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/index.md"
+    },
+    {
+      "name": "Multi-Regional SEO: How to Grow Across European Markets",
+      "description": "Learn how to expand SEO across European cities and countries using regional landing pages, Google Business Profile, hreflang and a practical site structure.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/multi-regional-seo/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/multi-regional-seo/index.md"
+    },
+    {
+      "name": "n8n: How to Automate Business Workflows and Reduce Repetitive Work",
+      "description": "Learn how n8n connects website forms, Telegram, Google Sheets, SEO reporting, AI agents and monitoring into practical business workflows.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/n8n-business-automation/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/n8n-business-automation/index.md"
+    },
+    {
+      "name": "Launching a New Website: Why SEO Should Start Before Publication",
+      "description": "Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/index.md"
+    },
+    {
+      "name": "Three SEO Rules I Would Not Ignore",
+      "description": "Changing URLs, rewriting successful pages and copying competitors can damage organic visibility. Three practical rules for safer SEO decisions.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
+    },
+    {
+      "name": "Tworzymy strony, które wspierają Twój biznes",
+      "description": "Raccoon SEO Studio — SEO, tworzenie stron internetowych, automatyzacje AI, n8n, integracje CRM i rozwiązania digital dla firm.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/",
+      "markdown": "https://raccoon-studio.com.ua/pl/index.md"
+    },
+    {
+      "name": "Blog SEO Szopa",
+      "description": "SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/index.md"
+    },
+    {
+      "name": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę",
+      "description": "Jak wykorzystać n8n do automatyzacji formularzy, Telegrama, Google Sheets, raportów SEO i agentów AI? Praktyczny poradnik dla firm.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie",
+      "description": "Jak pozycjonować stronę w kilku miastach i krajach? Poznaj strategie lokalnego SEO, strukturę stron regionalnych, hreflang i Profil Firmy w Google.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/index.md"
+    },
+    {
+      "name": "Start nowej strony internetowej. Dlaczego SEO warto zaplanować przed publikacją?",
+      "description": "Nowa strona nie zdobywa ruchu z Google? Sprawdź, jakie błędy techniczne i problemy z treścią mogą utrudniać jej rozwój.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/index.md"
+    },
+    {
+      "name": "Trzy zasady SEO, których nie warto łamać",
+      "description": "Zmiana adresów URL, przebudowa działających stron i kopiowanie konkurencji mogą zaszkodzić SEO. Poznaj trzy praktyczne zasady.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/index.md"
+    },
+    {
+      "name": "Strona szkoły językowej połączona z automatyzacją i rozwiązaniami AI",
+      "description": "Case study Expres Polish: strona szkoły języka polskiego, SEO, formularze leadowe, webhooki, automatyzacja n8n, Google Sheets, Telegram i konsultant AI.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/cases/expres-polish.html",
+      "markdown": "https://raccoon-studio.com.ua/pl/cases/expres-polish.md"
+    },
+    {
+      "name": "Cyfrowa obecność dla serwisu PDR we Wrocławiu",
+      "description": "Case study Gloss Garage: projekt strony internetowej dla serwisu PDR we Wrocławiu. Web development, local SEO, UX, analityka i przygotowanie strony do pozyskiwania klientów z Google.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/cases/gloss-garage.html",
+      "markdown": "https://raccoon-studio.com.ua/pl/cases/gloss-garage.md"
+    },
+    {
+      "name": "Cyfrowy ekosystem dla specjalistycznego serwisu technologicznego",
+      "description": "Case study Laser Tech Service: strona internetowa i SEO dla profesjonalnego serwisu laserów kosmetycznych. Multilingual SEO, analityka, Google Ads i rozwój widoczności w całej Polsce.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/cases/laser-tech-service.html",
+      "markdown": "https://raccoon-studio.com.ua/pl/cases/laser-tech-service.md"
+    },
+    {
+      "name": "Wielojęzyczny katalog urządzeń dla branży beauty",
+      "description": "Case study LTS Market: katalog nowych i używanych urządzeń kosmetologicznych, strony produktów, trzy wersje językowe i struktura SEO.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/cases/lts-market.html",
+      "markdown": "https://raccoon-studio.com.ua/pl/cases/lts-market.md"
+    },
+    {
+      "name": "Projekty, które zamieniamy w działające rozwiązania digital",
+      "description": "Realizacje Raccoon SEO Studio: Gloss Garage, Expres Polish i Laser Tech Service. Strony internetowe, SEO, local SEO, analityka oraz automatyzacja AI.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/clients.html",
+      "markdown": "https://raccoon-studio.com.ua/pl/clients.md"
+    }
+  ],
+  "contact": {
+    "email": "seoraccoonstudio@gmail.com",
+    "telephone": "+48793121665",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "business inquiries",
+      "email": "seoraccoonstudio@gmail.com",
+      "telephone": "+48793121665",
+      "availableLanguage": [
+        "Ukrainian",
+        "Polish"
+      ]
+    }
+  }
+}

@@ -1,50 +1,54 @@
 # Raccoon SEO Studio
 
-> Raccoon SEO Studio is a digital studio offering SEO, website development, AI and n8n automation, CRM integrations, analytics, and digital content services.
+Raccoon SEO Studio — вебстудія, що спеціалізується на розробці сайтів, технічному SEO, AI-автоматизації та інтеграції цифрових інструментів для бізнесу.
 
-This file is a human- and machine-readable index of the studio's public website. The website is available in Ukrainian, Polish and English (home page and blog). Use the linked pages as the source of truth; do not infer client results, performance figures, or service guarantees that are not stated there.
+Website: https://raccoon-studio.com.ua/
 
-## Studio information
+Languages: Ukrainian, Polish, English.
 
-- Official website: https://raccoon-studio.com.ua/
-- Public site languages: Ukrainian, Polish and English (home page and blog)
-- Services: SEO and search visibility, website development, AI and n8n automation, CRM integrations, analytics, and content
-- Contact: seoraccoonstudio@gmail.com
-- Phone: +48 793-121-665
+Основні напрямки:
 
-## Main pages
+- Website Development
+- Technical SEO
+- SEO Optimization
+- AI Automation
+- Business Process Automation
+- n8n Integrations
+- Website Performance Optimization
+- Analytics Integration
 
-- [Ukrainian home page](https://raccoon-studio.com.ua/)
-- [Polish home page](https://raccoon-studio.com.ua/pl/)
-- [English home page](https://raccoon-studio.com.ua/en/)
-- [Ukrainian project portfolio](https://raccoon-studio.com.ua/clients.html)
-- [Polish project portfolio](https://raccoon-studio.com.ua/pl/clients.html)
+## Pages / Сторінки / Strony
 
-## Published project studies
+- [uk — Створюємо сайти, які працюють на ваш бізнес](https://raccoon-studio.com.ua/) — [Markdown](https://raccoon-studio.com.ua/index.md)
+- [uk — Блог SEO-Єнота](https://raccoon-studio.com.ua/blog/) — [Markdown](https://raccoon-studio.com.ua/blog/index.md)
+- [uk — Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі](https://raccoon-studio.com.ua/blog/multirehionalne-seo/) — [Markdown](https://raccoon-studio.com.ua/blog/multirehionalne-seo/index.md)
+- [uk — n8n: як автоматизувати бізнес-процеси без зайвої рутини](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/) — [Markdown](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md)
+- [uk — Три правила SEO, які я не раджу порушувати](https://raccoon-studio.com.ua/blog/try-pravyla-seo/) — [Markdown](https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md)
+- [uk — Запуск нового сайту: чому SEO потрібно продумати ще до публікації](https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/) — [Markdown](https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md)
+- [uk — Expres Polish](https://raccoon-studio.com.ua/cases/expres-polish.html) — [Markdown](https://raccoon-studio.com.ua/cases/expres-polish.md)
+- [uk — Gloss Garage](https://raccoon-studio.com.ua/cases/gloss-garage.html) — [Markdown](https://raccoon-studio.com.ua/cases/gloss-garage.md)
+- [uk — Laser Tech Service](https://raccoon-studio.com.ua/cases/laser-tech-service.html) — [Markdown](https://raccoon-studio.com.ua/cases/laser-tech-service.md)
+- [uk — Мультимовний каталог обладнання для beauty-бізнесу](https://raccoon-studio.com.ua/cases/lts-market.html) — [Markdown](https://raccoon-studio.com.ua/cases/lts-market.md)
+- [uk — Проєкти, які ми перетворюємо на працюючі digital-рішення](https://raccoon-studio.com.ua/clients.html) — [Markdown](https://raccoon-studio.com.ua/clients.md)
+- [en — Websites that work for your business](https://raccoon-studio.com.ua/en/) — [Markdown](https://raccoon-studio.com.ua/en/index.md)
+- [en — SEO Raccoon's Blog](https://raccoon-studio.com.ua/en/blog/) — [Markdown](https://raccoon-studio.com.ua/en/blog/index.md)
+- [en — Multi-Regional SEO: How to Grow Across European Markets](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/) — [Markdown](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/index.md)
+- [en — n8n: How to Automate Business Workflows and Reduce Repetitive Work](https://raccoon-studio.com.ua/en/blog/n8n-business-automation/) — [Markdown](https://raccoon-studio.com.ua/en/blog/n8n-business-automation/index.md)
+- [en — Launching a New Website: Why SEO Should Start Before Publication](https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/) — [Markdown](https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/index.md)
+- [en — Three SEO Rules I Would Not Ignore](https://raccoon-studio.com.ua/en/blog/three-seo-rules/) — [Markdown](https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md)
+- [pl — Tworzymy strony, które wspierają Twój biznes](https://raccoon-studio.com.ua/pl/) — [Markdown](https://raccoon-studio.com.ua/pl/index.md)
+- [pl — Blog SEO Szopa](https://raccoon-studio.com.ua/pl/blog/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/index.md)
+- [pl — n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md)
+- [pl — SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie](https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/index.md)
+- [pl — Start nowej strony internetowej. Dlaczego SEO warto zaplanować przed publikacją?](https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/index.md)
+- [pl — Trzy zasady SEO, których nie warto łamać](https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/index.md)
+- [pl — Strona szkoły językowej połączona z automatyzacją i rozwiązaniami AI](https://raccoon-studio.com.ua/pl/cases/expres-polish.html) — [Markdown](https://raccoon-studio.com.ua/pl/cases/expres-polish.md)
+- [pl — Cyfrowa obecność dla serwisu PDR we Wrocławiu](https://raccoon-studio.com.ua/pl/cases/gloss-garage.html) — [Markdown](https://raccoon-studio.com.ua/pl/cases/gloss-garage.md)
+- [pl — Cyfrowy ekosystem dla specjalistycznego serwisu technologicznego](https://raccoon-studio.com.ua/pl/cases/laser-tech-service.html) — [Markdown](https://raccoon-studio.com.ua/pl/cases/laser-tech-service.md)
+- [pl — Wielojęzyczny katalog urządzeń dla branży beauty](https://raccoon-studio.com.ua/pl/cases/lts-market.html) — [Markdown](https://raccoon-studio.com.ua/pl/cases/lts-market.md)
+- [pl — Projekty, które zamieniamy w działające rozwiązania digital](https://raccoon-studio.com.ua/pl/clients.html) — [Markdown](https://raccoon-studio.com.ua/pl/clients.md)
 
-- [Gloss Garage — Ukrainian](https://raccoon-studio.com.ua/cases/gloss-garage.html)
-- [Gloss Garage — Polish](https://raccoon-studio.com.ua/pl/cases/gloss-garage.html)
-- [Expres Polish — Ukrainian](https://raccoon-studio.com.ua/cases/expres-polish.html)
-- [Expres Polish — Polish](https://raccoon-studio.com.ua/pl/cases/expres-polish.html)
-- [Laser Tech Service — Ukrainian](https://raccoon-studio.com.ua/cases/laser-tech-service.html)
-- [Laser Tech Service — Polish](https://raccoon-studio.com.ua/pl/cases/laser-tech-service.html)
-- [LTS Market — Ukrainian](https://raccoon-studio.com.ua/cases/lts-market.html)
-- [LTS Market — Polish](https://raccoon-studio.com.ua/pl/cases/lts-market.html)
+## AI resources
 
-## SEO Raccoon blog
-
-- [Ukrainian blog](https://raccoon-studio.com.ua/blog/)
-- [Website launch and SEO — Ukrainian](https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/)
-- [Polish blog](https://raccoon-studio.com.ua/pl/blog/)
-- [Website launch and SEO — Polish](https://raccoon-studio.com.ua/pl/blog/start-nowej-strony-seo/)
-- [English blog](https://raccoon-studio.com.ua/en/blog/)
-- [Website launch and SEO — English](https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/)
-- [Three SEO rules — Ukrainian](https://raccoon-studio.com.ua/blog/try-pravyla-seo/)
-- [Three SEO rules — Polish](https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/)
-- [Three SEO rules — English](https://raccoon-studio.com.ua/en/blog/three-seo-rules/)
-- [Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі](https://raccoon-studio.com.ua/blog/multirehionalne-seo/)
-- [SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie](https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/)
-- [Multi-Regional SEO: How to Grow Across European Markets](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/)
-- [n8n: як автоматизувати бізнес-процеси без зайвої рутини](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/)
-- [n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/)
-- [n8n: How to Automate Business Workflows and Reduce Repetitive Work](https://raccoon-studio.com.ua/en/blog/n8n-business-automation/)
+- [Full text](https://raccoon-studio.com.ua/llms-full.txt)
+- [Catalogue](https://raccoon-studio.com.ua/ai-catalog.json)

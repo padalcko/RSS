@@ -1,5 +1,5 @@
 [build]
-  command = "python3 scripts/gtm.py"
+  command = "python3 scripts/gtm.py && python3 scripts/ai_resources.py"
   publish = "."
 
 # Keep existing canonical .html routes; do not rewrite links at deploy time.

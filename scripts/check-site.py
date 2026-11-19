@@ -139,7 +139,8 @@ check('Sitemap: ' + BASE + 'sitemap.xml' in (ROOT / 'robots.txt').read_text(), '
 llms_text = (ROOT / 'llms.txt').read_text()
 llms_urls = re.findall(r'\]\((https://raccoon-studio\.com\.ua/[^)]*)\)', llms_text)
 check(len(llms_urls) == len(set(llms_urls)), 'Duplicate llms.txt page links')
-check(set(llms_urls) == set(locations), 'llms.txt does not link to every canonical page')
+expected_md = {u + 'index.md' if u.endswith('/') else u.removesuffix('.html') + '.md' for u in locations}
+check(set(llms_urls) == set(locations) | expected_md | {BASE + 'llms-full.txt', BASE + 'ai-catalog.json'}, 'llms.txt canonical/Markdown/resource links mismatch')
 manifest = json.loads((ROOT / 'site.webmanifest').read_text())
 for icon in manifest['icons']:
     check((ROOT / icon['src'].lstrip('/')).is_file(), 'Missing manifest icon')

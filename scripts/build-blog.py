@@ -169,4 +169,7 @@ def build():
  sitemap=sitemap.replace('</urlset>','  <!-- BLOG START -->\n'+'\n'.join(entries)+'\n  <!-- BLOG END -->\n</urlset>'); path.write_text(sitemap)
  print('Built 3 blog indexes and',sum(len(a['translations']) for a in ARTICLES),'article pages.')
 
-if __name__=='__main__': build()
+if __name__=='__main__':
+ build()
+ from ai_resources import build as build_ai
+ build_ai()
