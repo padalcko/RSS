@@ -42,6 +42,8 @@ def local_target(url, file):
         target += 'index.html'
     return target, unquote(parsed.fragment)
 
+blog_articles = json.loads((ROOT / 'scripts/content/blog/articles.json').read_text())
+
 titles = []
 descriptions = []
 image_count = 0
@@ -85,6 +87,10 @@ for file, page in pages.items():
     expected_alts = {'uk': BASE.rstrip('/') + root_route, 'pl': BASE.rstrip('/') + '/pl' + root_route, 'x-default': BASE.rstrip('/') + root_route}
     if root_route == '/':
         expected_alts['en'] = BASE + 'en/'
+    if '/blog/' in '/' + file:
+        article = next((a for a in blog_articles if any(file.endswith('/'+t['slug']+'/index.html') for t in a['translations'].values())), None)
+        expected_alts = {(article or {}).get('hreflang', {}).get(l, l): BASE + ('' if l == 'uk' else l + '/') + 'blog/' + (article['translations'][l]['slug']+'/' if article else '') for l in ('uk','pl','en')}
+        expected_alts['x-default'] = BASE + 'blog/' + (article['translations']['uk']['slug']+'/' if article else '')
     alts = {a['hreflang']: a['href'] for a in page.select('link', rel='alternate') if 'hreflang' in a}
     check(alts == expected_alts, f'{file}: incorrect language alternatives')
     check(page.select('meta', property='og:url')[0]['content'] == expected, f'{file}: incorrect og:url')
@@ -102,7 +108,7 @@ for file, page in pages.items():
             structured_nodes.extend(data.get('@graph', [data]))
         except (ValueError, KeyError, StopIteration) as error:
             errors.append(f'{file}: invalid JSON-LD {error}')
-    web_pages = [node for node in structured_nodes if node.get('@type') == 'WebPage']
+    web_pages = [node for node in structured_nodes if node.get('@type') in ('WebPage', 'Blog', 'BlogPosting')]
     check(bool(web_pages), f'{file}: missing WebPage structured data')
     if web_pages:
         check(web_pages[0]['url'] == expected and web_pages[0]['inLanguage'] == lang, f'{file}: inconsistent structured data')

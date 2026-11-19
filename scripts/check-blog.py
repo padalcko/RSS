@@ -32,7 +32,7 @@ for article in [None]+b.ARTICLES:
   assert sum(t=='h1' for t,a in p.tags)==1,route
   canonical=[a['href'] for t,a in p.tags if t=='link' and a.get('rel')=='canonical'];assert canonical==[b.BASE+route]
   alt={a['hreflang']:a['href'] for t,a in p.tags if t=='link' and a.get('rel')=='alternate'}
-  assert alt=={**{l:b.BASE+b.route(l,article) for l in b.COPY},'x-default':b.BASE+b.route('uk',article)}
+  assert alt=={**{b.language_tag(l,article):b.BASE+b.route(l,article) for l in b.COPY},'x-default':b.BASE+b.route('uk',article)}
   languages={a['lang']:a['href'] for t,a in p.tags if t=='a' and a.get('class')=='language-link'}
   assert languages=={l:b.route(l,article) for l in b.COPY}
   assert urls.count(b.BASE+route)==1
@@ -48,7 +48,7 @@ for article in [None]+b.ARTICLES:
     content=(dest/'index.html' if dest.is_dir() else dest).read_text()
     assert f'id="{url.split("#")[1]}"' in content,(route,url)
   if article:
-   expected=[re.sub(r'^#{2,3} ','',block) for block in b.source(article,lang).split('\n\n')]
+   expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in b.source(article,lang).split('\n\n')]
    assert p.blocks==expected,(route,'article changed')
    assert schema['author']['name']=='Oleksandr Padalko'
    assert schema['datePublished']==article['published'] and schema['dateModified']==article['modified']

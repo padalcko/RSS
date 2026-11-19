@@ -62,6 +62,21 @@ def article_body(article,lang):
  related_html=f'<section class="blog-related"><h2>{c["related"]}</h2><ul class="blog-grid">'+''.join(card(a,lang,t.get('relatedTitles',{}).get(a['id'])) for a in related)+'</ul></section>' if related else ''
  return f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta">{cta_heading}<p>{e(t.get('cta',c['cta']))}</p><div>{cta_button}<a href="{home(lang)}#services">{c['services']}</a></div></aside>{related_html}</div>'''
 
+def semantic_html(html):
+ """Normalize publication semantics without rewriting existing content or chrome."""
+ def publication(m):
+  card=m[0]
+  if '<article>' not in card:
+   card=re.sub(r'(<li\b[^>]*>)',r'\1<article>',card,count=1)
+   card=card.replace('</li>','</article></li>')
+  return card
+ html=re.sub(r'<li\s+class="blog-card".*?</li>',publication,html,flags=re.S)
+ def related(m):
+  return re.sub(r'(<article>.*?</article>)',lambda card:card[0].replace('<h2>','<h3>').replace('</h2>','</h3>'),m[0],flags=re.S)
+ html=re.sub(r'<section class="blog-related">.*?</section>',related,html,flags=re.S)
+ html=re.sub(r'(<nav class="blog-pagination"[^>]*>.*?)<span aria-live="polite">',r'\1<span aria-live="polite" aria-current="page">',html,flags=re.S)
+ return html
+
 def build_page(lang,article=None):
  c=COPY[lang]; url=BASE+route(lang,article); t=article['translations'][lang] if article else None
  title=t.get('seoTitle',t['title']) if t else c['name']+' | Raccoon SEO Studio'
@@ -110,11 +125,17 @@ def build_page(lang,article=None):
 {'' if article else '<script src="/script/blog.js" defer></script>'}
 </body></html>
 '''
- out=ROOT/route(lang,article).strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(html)
+ out=ROOT/route(lang,article).strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(semantic_html(html))
 
 
 def build():
  import sys
+ if '--semantics' in sys.argv:
+  for lang in COPY:
+   for path in (ROOT/route(lang).strip('/')).rglob('*.html'):
+    path.write_text(semantic_html(path.read_text()))
+  print('Updated blog semantics from the shared generator; content and chrome retained.')
+  return
  selected=next((a for a in ARTICLES if a['id']==sys.argv[1]),None) if len(sys.argv)>1 else None
  for lang in COPY:
   if selected:
@@ -129,7 +150,7 @@ def build():
        item['blogPost'].insert(0,{'@type':'BlogPosting','headline':selected['translations'][lang]['title'],'url':BASE+route(lang,selected),'author':{'@type':'Person','name':'Oleksandr Padalko'},'datePublished':selected['published'],'dateModified':selected['modified'],'image':BASE+selected['socialImage']})
      return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False)+'</script>'
     existing=re.sub(r'<script type="application/ld\+json">(.*?)</script>',add_schema,existing,flags=re.S)
-    path.write_text(existing)
+    path.write_text(semantic_html(existing))
    build_page(lang,selected)
   else:
    build_page(lang)

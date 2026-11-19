@@ -42,3 +42,6 @@ This file is a human- and machine-readable index of the studio's public website.
 - [Three SEO rules — Ukrainian](https://raccoon-studio.com.ua/blog/try-pravyla-seo/)
 - [Three SEO rules — Polish](https://raccoon-studio.com.ua/pl/blog/trzy-zasady-seo/)
 - [Three SEO rules — English](https://raccoon-studio.com.ua/en/blog/three-seo-rules/)
+- [Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі](https://raccoon-studio.com.ua/blog/multirehionalne-seo/)
+- [SEO wieloregionalne: jak rozwijać widoczność w Polsce i Europie](https://raccoon-studio.com.ua/pl/blog/seo-wieloregionalne/)
+- [Multi-Regional SEO: How to Grow Across European Markets](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/)
