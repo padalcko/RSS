@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the three static error pages with the existing localized site chrome."""
 from pathlib import Path
+from gtm import inject_gtm
 import re
 from html import escape
 
@@ -93,7 +94,7 @@ def build():
 </body>
 </html>
 '''
-  (ROOT/('404.html' if lang=='uk' else f'{lang}/404.html')).write_text(page)
+  (ROOT/('404.html' if lang=='uk' else f'{lang}/404.html')).write_text(inject_gtm(page))
 
 if __name__=='__main__':
  build()

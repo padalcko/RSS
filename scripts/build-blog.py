@@ -6,6 +6,7 @@ Add an entry to articles.json and localized Markdown (paragraphs, H2/H3) to publ
 Run after editing shared home page chrome. No runtime dependencies or CMS.
 """
 from pathlib import Path
+from gtm import inject_gtm
 from html import escape as e
 import json, math, re
 
@@ -125,7 +126,7 @@ def build_page(lang,article=None):
 {'' if article else '<script src="/script/blog.js" defer></script>'}
 </body></html>
 '''
- out=ROOT/route(lang,article).strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(semantic_html(html))
+ out=ROOT/route(lang,article).strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(inject_gtm(semantic_html(html)))
 
 
 def build():
