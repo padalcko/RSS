@@ -9,18 +9,23 @@ spec=importlib.util.spec_from_file_location('blog',Path(__file__).with_name('bui
 b=importlib.util.module_from_spec(spec); spec.loader.exec_module(b)
 class Page(HTMLParser):
  def __init__(self,text):
-  super().__init__(); self.tags=[]; self.blocks=[]; self.capture=None; self.depth=0; self.prose=False; self.prose_depth=0; self.json=[]; self.script=None; self.feed(text)
+  super().__init__(); self.tags=[]; self.blocks=[]; self.capture=None; self.depth=0; self.prose=False; self.prose_depth=0; self.json=[]; self.script=None; self.audio=False; self.feed(text)
  def handle_starttag(self,tag,attrs):
   a=dict(attrs); self.tags.append((tag,a))
+  if tag=='aside' and a.get('class')=='blog-audio': self.audio=True
+  if self.audio: return
   if tag=='script' and a.get('type')=='application/ld+json': self.script=''
   if 'data-article-intro' in a: self.capture=''
   if 'data-article-body' in a: self.prose=True
-  if self.prose and tag in ['p','h2','h3']: self.capture=''
+  if self.prose and tag in ['p','h2','h3','li']: self.capture=''
  def handle_data(self,data):
   if self.capture is not None:self.capture+=data
   if self.script is not None:self.script+=data
  def handle_endtag(self,tag):
-  if self.capture is not None and tag in ['p','h2','h3']:self.blocks.append(self.capture);self.capture=None
+  if self.audio:
+   if tag=='aside': self.audio=False
+   return
+  if self.capture is not None and tag in ['p','h2','h3','li']:self.blocks.append(self.capture);self.capture=None
   if tag=='div' and self.prose:self.prose=False
   if tag=='script' and self.script is not None:self.json.append(json.loads(self.script));self.script=None
 
@@ -50,6 +55,13 @@ for article in [None]+b.ARTICLES:
   if article:
    expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in b.source(article,lang).split('\n\n')]
    if article.get('inlineStrong'): expected=[re.sub(r'\*\*(.+?)\*\*',r'\1',block) for block in expected]
+   if article.get('orderedLists'):
+    expected=[re.sub(r'^\d+\. ', '', line) for block in expected for line in (block.splitlines() if block.startswith('1. ') else [block])]
+   audio=article['translations'][lang].get('audio')
+   assert sum(tag=='audio' for tag,a in p.tags)==bool(audio)
+   if audio:
+    assert schema['associatedMedia']['contentUrl']==b.BASE+audio['src']
+    assert all(a.get('preload')=='none' and 'autoplay' not in a for tag,a in p.tags if tag=='audio')
    assert p.blocks==expected,(route,'article changed')
    assert schema['author']['name']=='Oleksandr Padalko'
    assert schema['datePublished']==article['published'] and schema['dateModified']==article['modified']

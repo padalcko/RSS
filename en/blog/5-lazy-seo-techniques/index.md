@@ -12,6 +12,8 @@ Some people seem to enjoy creating extra work for themselves. I've met quite a f
 
 Oleksandr Padalko · 20/11/2026 · 7 min read
 
+![Raccoon relaxing with a laptop in a purple office beside a list of five SEO techniques.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
+
 You can spend months researching keywords, ordering articles, analysing competitors, building links and producing impressive monthly reports.
 
 Or you can open Google Search Console, look at your existing website and discover that some of your best opportunities have been sitting there all along.

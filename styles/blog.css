@@ -17,7 +17,8 @@
 .blog-window > span { display: block; padding: 10px 14px; color: var(--primary-color); border-bottom: 1px solid var(--border-color); font-size: 10px; letter-spacing: 4px; }
 .blog-window > div { padding: 22px; font-family: monospace; font-size: 27px; color: var(--primary-hover); }
 .blog-tools { display: grid; gap: 24px; margin-bottom: 24px; }
-.blog-search { display: block; max-width: 440px; }
+.blog-search { display: block; width: 100%; max-width: 440px; }
+.blog-search > span { display: block; margin-bottom: 8px; }
 .blog-search input { width: 100%; min-height: 48px; padding: 12px 16px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--white); color: var(--heading-color); font: inherit; }
 .blog-search input::placeholder { color: var(--slate); opacity: 1; }
 .blog-filters { display: flex; flex-wrap: wrap; gap: 8px; }
@@ -74,3 +75,10 @@
 @media (prefers-reduced-motion: reduce) {
   .blog-card > article > a { transition: none; }
 }
+
+/* Optional article audio uses the existing blog palette. */
+.blog-audio { margin-block: 32px; padding: 24px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--cloud); }
+.blog-audio h2 { margin-top: 0; font-size: 24px; }
+.blog-audio audio { display: block; width: 100%; }
+.blog-prose ol { padding-left: 1.5em; margin-bottom: 22px; }
+.blog-prose li + li { margin-top: 8px; }

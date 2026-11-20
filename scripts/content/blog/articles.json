@@ -1,5 +1,55 @@
 [
   {
+    "id": "three-seo-mistakes",
+    "category": "seo",
+    "published": "2026-11-20",
+    "modified": "2026-11-20",
+    "image": "/images/blog/three-seo-mistakes-raccoon-studio.webp",
+    "socialImage": "/images/blog/three-seo-mistakes-raccoon-studio.webp",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
+    "showCta": false,
+    "relatedIds": [],
+    "inlineStrong": true,
+    "inlineCode": true,
+    "orderedLists": true,
+    "translations": {
+      "uk": {
+        "slug": "3-pomylky-seo",
+        "title": "3 помилки SEO, через які сайт втрачає клієнтів із Google",
+        "seoTitle": "3 помилки SEO, через які сайт втрачає клієнтів із Google | Raccoon SEO Studio",
+        "description": "Чому сайт не отримує клієнтів із Google? Розбираємо три поширені SEO-помилки: неправильні ключові слова, конкуренцію сторінок і проблеми зі структурою.",
+        "excerpt": "Чому сайт є в Google, але не приносить клієнтів? Розбираємо три поширені помилки та способи їх перевірки.",
+        "source": "three-seo-mistakes-uk.md",
+        "imageAlt": "Єнот Raccoon SEO Studio аналізує три поширені помилки SEO на сайті",
+        "audio": {
+          "src": "/assets/audio/seo-mistakes-audio-uk.m4a",
+          "name": "Чому красиві сайти невидимі для алгоритмів",
+          "description": "Аудіоматеріал Raccoon SEO Studio про SEO, структуру сторінок і видимість сайтів у Google.",
+          "duration": "PT21M47.490975S"
+        }
+      },
+      "pl": {
+        "slug": "3-bledy-seo",
+        "title": "3 błędy SEO, przez które Twoja strona traci klientów z Google",
+        "seoTitle": "3 błędy SEO, przez które strona traci klientów z Google | Raccoon SEO Studio",
+        "description": "Twoja strona jest w Google, ale nie zdobywa klientów? Poznaj 3 częste błędy SEO dotyczące słów kluczowych, konkurujących podstron i treści.",
+        "excerpt": "Dlaczego strona jest widoczna w Google, ale nie zdobywa klientów? Sprawdź trzy częste błędy SEO.",
+        "source": "three-seo-mistakes-pl.md",
+        "imageAlt": "Szop Raccoon SEO Studio analizuje trzy częste błędy SEO na stronie internetowej"
+      },
+      "en": {
+        "slug": "3-seo-mistakes",
+        "title": "3 SEO Mistakes That Cost Your Website Google Traffic and Customers",
+        "seoTitle": "3 SEO Mistakes That Cost You Google Traffic | Raccoon SEO Studio",
+        "description": "Your website is indexed but not attracting customers? Discover three common SEO mistakes involving keywords, competing pages, and unclear content.",
+        "excerpt": "Discover three common SEO problems that may prevent your website from attracting customers through Google.",
+        "source": "three-seo-mistakes-en.md",
+        "imageAlt": "Raccoon SEO Studio mascot reviewing three common website SEO problems"
+      }
+    }
+  },
+  {
     "id": "5-lazy-seo-techniques",
     "category": "seo",
     "published": "2026-11-20",
@@ -29,9 +79,8 @@
         "description": "Nie zawsze trzeba inwestować w nowe treści i kosztowne kampanie. Poznaj 5 praktycznych sposobów na poprawę widoczności strony w Google.",
         "excerpt": "Zanim zamówisz kolejne teksty SEO i wydasz pieniądze na pozycjonowanie, sprawdź, czy Twoja strona nie ma już niewykorzystanego potencjału.",
         "source": "5-lazy-seo-techniques-pl.md",
-        "image": null,
-        "socialImage": null,
-        "serviceLinkText": "audytu technicznego"
+        "serviceLinkText": "audytu technicznego",
+        "imageAlt": "Szop odpoczywa z laptopem w fioletowym biurze obok listy pięciu metod SEO."
       },
       "en": {
         "slug": "5-lazy-seo-techniques",
@@ -40,9 +89,8 @@
         "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
         "excerpt": "More content and bigger SEO budgets are not always the answer. Sometimes your existing pages have more potential than you think.",
         "source": "5-lazy-seo-techniques-en.md",
-        "image": null,
-        "socialImage": null,
-        "serviceLinkText": "technical audit"
+        "serviceLinkText": "technical audit",
+        "imageAlt": "Raccoon relaxing with a laptop in a purple office beside a list of five SEO techniques."
       }
     }
   },

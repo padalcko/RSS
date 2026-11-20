@@ -8,6 +8,16 @@
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот Raccoon SEO Studio аналізує три поширені помилки SEO на сайті](https://raccoon-studio.com.ua/images/blog/three-seo-mistakes-raccoon-studio.webp)
+
+SEO
+
+## [3 помилки SEO, через які сайт втрачає клієнтів із Google](https://raccoon-studio.com.ua/blog/3-pomylky-seo/)
+
+Чому сайт є в Google, але не приносить клієнтів? Розбираємо три поширені помилки та способи їх перевірки.
+
+Олександр Падалко · 20.11.2026 · 5 хв читання
+
 ![Єнот відпочиває з ноутбуком у фіолетовому офісі поруч із переліком п’яти SEO-методів.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
 
 SEO

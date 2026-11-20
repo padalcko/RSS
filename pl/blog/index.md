@@ -8,6 +8,18 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Szop Raccoon SEO Studio analizuje trzy częste błędy SEO na stronie internetowej](https://raccoon-studio.com.ua/images/blog/three-seo-mistakes-raccoon-studio.webp)
+
+SEO
+
+## [3 błędy SEO, przez które Twoja strona traci klientów z Google](https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/)
+
+Dlaczego strona jest widoczna w Google, ale nie zdobywa klientów? Sprawdź trzy częste błędy SEO.
+
+Oleksandr Padalko · 20.11.2026 · 6 min czytania
+
+![Szop odpoczywa z laptopem w fioletowym biurze obok listy pięciu metod SEO.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
+
 SEO
 
 ## [5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch](https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/)

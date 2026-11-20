@@ -83,6 +83,13 @@
   ],
   "articles": [
     {
+      "name": "3 помилки SEO, через які сайт втрачає клієнтів із Google",
+      "description": "Чому сайт не отримує клієнтів із Google? Розбираємо три поширені SEO-помилки: неправильні ключові слова, конкуренцію сторінок і проблеми зі структурою.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/3-pomylky-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/3-pomylky-seo/index.md"
+    },
+    {
       "name": "5 лінивих SEO-методів, які реально можуть принести трафік",
       "description": "П'ять практичних SEO-методів, які допоможуть знайти можливості зростання трафіку без зайвих витрат. Пояснюємо просто, з прикладами.",
       "language": "uk",
@@ -132,6 +139,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
     },
     {
+      "name": "3 SEO Mistakes That Cost Your Website Google Traffic and Customers",
+      "description": "Your website is indexed but not attracting customers? Discover three common SEO mistakes involving keywords, competing pages, and unclear content.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/index.md"
+    },
+    {
       "name": "5 Lazy SEO Techniques That Can Actually Bring More Traffic",
       "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
       "language": "en",
@@ -179,6 +193,13 @@
       "language": "en",
       "url": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/",
       "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
+    },
+    {
+      "name": "3 błędy SEO, przez które Twoja strona traci klientów z Google",
+      "description": "Twoja strona jest w Google, ale nie zdobywa klientów? Poznaj 3 częste błędy SEO dotyczące słów kluczowych, konkurujących podstron i treści.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/index.md"
     },
     {
       "name": "5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch",
@@ -244,6 +265,13 @@
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/",
       "markdown": "https://raccoon-studio.com.ua/blog/index.md"
+    },
+    {
+      "name": "3 помилки SEO, через які сайт втрачає клієнтів із Google",
+      "description": "Чому сайт не отримує клієнтів із Google? Розбираємо три поширені SEO-помилки: неправильні ключові слова, конкуренцію сторінок і проблеми зі структурою.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/3-pomylky-seo/",
+      "markdown": "https://raccoon-studio.com.ua/blog/3-pomylky-seo/index.md"
     },
     {
       "name": "5 лінивих SEO-методів, які реально можуть принести трафік",
@@ -344,6 +372,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/index.md"
     },
     {
+      "name": "3 SEO Mistakes That Cost Your Website Google Traffic and Customers",
+      "description": "Your website is indexed but not attracting customers? Discover three common SEO mistakes involving keywords, competing pages, and unclear content.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/index.md"
+    },
+    {
       "name": "5 Lazy SEO Techniques That Can Actually Bring More Traffic",
       "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
       "language": "en",
@@ -405,6 +440,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/index.md"
+    },
+    {
+      "name": "3 błędy SEO, przez które Twoja strona traci klientów z Google",
+      "description": "Twoja strona jest w Google, ale nie zdobywa klientów? Poznaj 3 częste błędy SEO dotyczące słów kluczowych, konkurujących podstron i treści.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/index.md"
     },
     {
       "name": "5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch",

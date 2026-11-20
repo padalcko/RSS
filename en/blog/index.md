@@ -8,6 +8,18 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![Raccoon SEO Studio mascot reviewing three common website SEO problems](https://raccoon-studio.com.ua/images/blog/three-seo-mistakes-raccoon-studio.webp)
+
+SEO
+
+## [3 SEO Mistakes That Cost Your Website Google Traffic and Customers](https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/)
+
+Discover three common SEO problems that may prevent your website from attracting customers through Google.
+
+Oleksandr Padalko · 20/11/2026 · 6 min read
+
+![Raccoon relaxing with a laptop in a purple office beside a list of five SEO techniques.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
+
 SEO
 
 ## [5 Lazy SEO Techniques That Can Actually Bring More Traffic](https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/)

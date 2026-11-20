@@ -26,6 +26,11 @@
   Link: <https://raccoon-studio.com.ua/blog/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/3-pomylky-seo/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/3-pomylky-seo/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/5-lazy-seo-techniques/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/>; rel="canonical"
@@ -96,6 +101,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/3-seo-mistakes/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/3-seo-mistakes/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /en/blog/5-lazy-seo-techniques/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/>; rel="canonical"
@@ -139,6 +149,11 @@
 /pl/blog/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/3-bledy-seo/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/3-bledy-seo/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/5-lazy-seo-techniques/index.md
