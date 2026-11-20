@@ -8,6 +8,16 @@
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот SEO-аналітик перевіряє підозрілий трафік сайту, GA4, Google Search Console, заявки та продажі.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+SEO
+
+## [Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху](https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/)
+
+Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.
+
+Олександр Падалко · 20.11.2026 · 6 хв читання
+
 ![AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
 
 Автоматизація

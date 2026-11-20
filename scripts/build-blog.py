@@ -58,6 +58,7 @@ def article_body(article,lang):
  body='\n'.join(f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
  related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
  if article.get('inlineCode'): body=re.sub(r'`([^`]+)`',r'<code>\1</code>',body)
+ if article.get('inlineStrong'): body=re.sub(r'\*\*(.+?)\*\*',r'<strong>\1</strong>',body)
  cta_button=(f"<a class=\"nav-cta\" style=\"color: var(--white)\" href=\"{home(lang)}#contacts\">{e(t.get('button',c['button']))}</a>" if article.get('contactLink') else f"<button type=\"button\" class=\"nav-cta js-open-modal\">{e(t.get('button',c['button']))}</button>")
  cta_heading=f"<h2>{e(t['ctaTitle'])}</h2>" if t.get('ctaTitle') else ''
  cta_html=f'<aside class="blog-cta">{cta_heading}<p>{e(t.get("cta",c["cta"]))}</p><div>{cta_button}<a href="{home(lang)}#services">{c["services"]}</a></div></aside>' if article.get('showCta',True) else ''

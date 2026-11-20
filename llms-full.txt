@@ -238,6 +238,16 @@ GA4, GTM, Search Console, відстеження конверсій та ана�
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот SEO-аналітик перевіряє підозрілий трафік сайту, GA4, Google Search Console, заявки та продажі.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+SEO
+
+### [Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху](https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/)
+
+Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.
+
+Олександр Падалко · 20.11.2026 · 6 хв читання
+
 ![AI агент на платформі n8n для автоматизації пошти, повідомлень, таблиць і календаря.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
 
 Автоматизація
@@ -823,6 +833,200 @@ Raccoon SEO Studio
 Raccoon SEO Studio допомагає інтегрувати сайти з n8n, налаштовувати автоматичну обробку заявок, сповіщення, звіти та AI-інструменти.
 
 [Обговорити проєкт](https://raccoon-studio.com.ua/#contacts)[Послуги студії](https://raccoon-studio.com.ua/#services)
+
+---
+
+## Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху
+
+Мова: Українська
+
+Канонічна HTML-сторінка: https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/
+
+> Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.
+
+SEO
+
+Уявіть ситуацію. Ви замовили SEO-просування свого сайту, щомісяця платите агентству й отримуєте звіти з красивими графіками.
+
+Олександр Падалко · 20.11.2026 · 6 хв читання
+
+![Єнот SEO-аналітик перевіряє підозрілий трафік сайту, GA4, Google Search Console, заявки та продажі.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+Спочатку сайт відвідували 100 людей на день. Через місяць уже 150. Ще через два місяці 300.
+
+Підрядник демонструє зростання органічного трафіку, а ви бачите, що гроші начебто витрачаються недаремно.
+
+Але є одна проблема.
+
+**Продажів більше не стало.**
+
+Звичайно, відсутність продажів не означає автоматично, що SEO-підрядник вас обманює. Проблема може бути в цінах, самому продукті, сайті або роботі менеджерів.
+
+Проте існують способи штучно збільшувати відвідуваність і навіть створювати фальшиві заявки. І якщо власник бізнесу не знає, де перевіряти справжні результати, помітити маніпуляцію буває складно.
+
+### Як працює імітація SEO-просування
+
+У нормальному SEO зростання трафіку відбувається завдяки реальним змінам.
+
+Спеціаліст виправляє технічні помилки, покращує структуру сайту, працює з контентом, індексацією та внутрішніми посиланнями.
+
+Згодом сторінки починають отримувати більше показів і переходів із Google.
+
+Але недобросовісний підрядник може спробувати піти іншим шляхом.
+
+Замість покращення видимості сайту він організовує штучні відвідування та показує їх клієнту як результат своєї роботи.
+
+Для цього використовують автоматизовані запити, браузерних ботів та інші інструменти генерації трафіку.
+
+Найнеприємніше, що в окремих системах обліку такі відвідування можуть виглядати переконливо.
+
+### Що таке HTTP Referer і чому йому не можна сліпо довіряти
+
+Коли користувач переходить з одного сайту на інший, браузер за певних умов передає адресу попередньої сторінки.
+
+Ця інформація міститься в HTTP-заголовку Referer.
+
+Наприклад, людина знаходить компанію через Google та переходить на її сайт. Система аналітики може використати інформацію про джерело переходу.
+
+Але сам заголовок Referer не є надійним доказом реального пошукового кліку.
+
+Автоматизований клієнт може сформувати HTTP-запит із довільним значенням цього заголовка.
+
+Цю особливість використовують для маніпуляцій зі статистикою, особливо якщо система обліку занадто довіряє отриманим даним.
+
+Водночас важливо розуміти різницю між різними аналітичними інструментами.
+
+GA4 використовує власну систему визначення джерел трафіку, а Google Search Console отримує дані про пошукові покази та кліки з боку Google.
+
+Тому проста підміна Referer не гарантує появи фальшивих органічних сеансів у GA4 і не створює справжніх кліків у Search Console.
+
+### Як створюють красивий графік зростання
+
+Уявімо, що підрядник обіцяє збільшити відвідуваність на 50% за три місяці.
+
+Замість того щоб працювати над позиціями сайту, він поступово збільшує обсяг штучного трафіку.
+
+У перший місяць додає невелику кількість відвідувань. У другий збільшує її. У третій демонструє виконання плану.
+
+Якщо клієнту показують лише вибрані дані, графік може виглядати цілком природно.
+
+Але в Google Search Console реальна кількість кліків може залишатися майже незмінною.
+
+Саме тому я не рекомендую оцінювати SEO за одним показником відвідуваності.
+
+### А якщо власник бізнесу запитає про заявки?
+
+Тут виникає наступна проблема.
+
+Навіть якщо штучний трафік вдалося видати за справжній, він не приносить реальних покупців.
+
+Тому іноді намагаються імітувати ще й конверсії.
+
+Для цього можуть використовувати ботів або людей, які за винагороду виконують прості завдання в інтернеті.
+
+Вони заповнюють контактні форми, залишають номери телефонів, надсилають запити на консультацію.
+
+На папері все чудово. Відвідуваність зростає, кількість заявок також.
+
+Але менеджери не можуть зв'язатися з потенційними клієнтами, контакти виявляються недійсними або люди взагалі не планують нічого купувати.
+
+Зрозуміло, що не кожна неякісна заявка є підробленою.
+
+Проте якщо зростання кількості лідів супроводжується систематичним погіршенням їхньої якості, потрібно перевірити походження цих звернень.
+
+### Як перевірити SEO-підрядника
+
+#### 1. Порівняйте GA4 та Google Search Console
+
+Google Analytics 4 показує взаємодії користувачів із сайтом.
+
+Google Search Console показує пошукові покази та кліки, які Google зафіксував для вашого ресурсу.
+
+Якщо підрядник заявляє про стрімке зростання органічного трафіку з Google, а Search Console не демонструє відповідної динаміки, варто поставити додаткові запитання.
+
+Цифри двох систем не повинні збігатися один до одного. Вони використовують різні методи вимірювання.
+
+Але значна та тривала невідповідність без зрозумілого пояснення заслуговує на перевірку.
+
+#### 2. Перевірте пошукові запити
+
+У Search Console відкрийте звіт про ефективність пошуку.
+
+Подивіться, які запити приносять кліки, які сторінки отримують трафік і як змінюються покази.
+
+Особливу увагу приділіть комерційним запитам, які мають значення для вашого бізнесу.
+
+Зростання відвідуваності без відповідних змін у пошуковій видимості не обов'язково є шахрайством, але потребує пояснення.
+
+#### 3. Перевірте якість заявок
+
+Попросіть показати не лише кількість форм, а й кількість підтверджених контактів.
+
+Корисно знати, скільки звернень були цільовими, скільки завершилися розмовою з менеджером і скільки перетворилися на продажі.
+
+Сто випадкових заявок можуть бути менш цінними, ніж десять звернень від людей, які справді готові купувати.
+
+#### 4. Перегляньте поведінку відвідувачів
+
+У GA4 перевірте залучені сеанси, ключові події, сторінки входу та інші показники взаємодії.
+
+Неприродні повторювані шаблони або раптові сплески активності можуть бути приводом для аналізу.
+
+Однак не варто робити висновок про ботів лише на підставі коротких сеансів або низької залученості.
+
+#### 5. Перевірте серверні журнали
+
+За наявності доступу до логів сервера або CDN можна дослідити частоту запитів, повторювані шаблони, User-Agent та інші технічні характеристики.
+
+Це допомагає виявляти частину автоматизованого трафіку.
+
+Але окрема IP-адреса чи User-Agent не доводять, що відвідувач є ботом. Потрібна сукупність ознак.
+
+### Які звіти повинні викликати запитання
+
+Я б насторожився, якщо SEO-підрядник демонструє лише зростання сеансів, але не може пояснити, які сторінки й запити забезпечили результат.
+
+Ще один тривожний сигнал, коли власнику сайту не надають доступ до Google Search Console та аналітики.
+
+Також варто звернути увагу на відсутність зрозумілого переліку виконаних робіт, небажання обговорювати якість заявок і відмову від незалежної перевірки.
+
+Жодна з цих ознак сама по собі не доводить обману.
+
+Але кілька одночасно є достатньою причиною провести аудит.
+
+### Чи можна повністю захиститися від накрутки?
+
+Повністю усунути автоматизований трафік практично неможливо.
+
+Сайти регулярно відвідують пошукові роботи, системи моніторингу та інші автоматизовані клієнти.
+
+Головне завдання полягає в тому, щоб не плутати цю активність із реальним інтересом потенційних покупців.
+
+Для цього власник бізнесу повинен контролювати свої облікові записи GA4 і Search Console, мати доступ до CRM та розуміти, які показники використовуються для оцінки SEO.
+
+### Висновок
+
+Я працюю з SEO та веброзробкою і вважаю, що найнебезпечніше в подібних ситуаціях не сама можливість накрутки.
+
+Набагато небезпечніше, коли власник бізнесу не може самостійно перевірити результати роботи підрядника.
+
+Йому показують графіки, відсотки та красиві презентації. Але за ними можуть стояти зовсім не ті результати, за які він платить.
+
+Хороше SEO не гарантує продажів. На них впливають ціни, конкуренція, пропозиція та якість обслуговування.
+
+Але хороше SEO повинно бути прозорим.
+
+**Якщо вам обіцяють трафік, запитайте, звідки він прийде. Якщо показують заявки, перевірте їхню якість. Якщо демонструють успіх, попросіть дані, які можна перевірити незалежно.**
+
+Бізнесу потрібні не красиві графіки, а реальні люди, які шукають його товари та послуги.
+
+### Про автора
+
+Олександр Падалко
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 
@@ -2366,6 +2570,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+SEO
+
+### [Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success](https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/)
+
+Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.
+
+Oleksandr Padalko · 20/11/2026 · 6 min read
+
 ![AI agent built with n8n automating email, messages, spreadsheets and calendar tasks.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
 
 Automation
@@ -2415,6 +2629,220 @@ SEO
 Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.
 
 Oleksandr Padalko · 17/11/2026 · 4 min read
+
+---
+
+## Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success
+
+Language: English
+
+Canonical HTML page: https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/
+
+> Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.
+
+SEO
+
+Imagine hiring an SEO agency to improve your website's visibility.
+
+Oleksandr Padalko · 20/11/2026 · 6 min read
+
+![Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+You pay a monthly fee, receive detailed reports and watch the traffic charts climb.
+
+At first, your website receives 100 visits per day. A month later, it receives 150. After another two months, the number reaches 300.
+
+The agency reports impressive organic growth.
+
+Everything looks promising.
+
+Except for one thing.
+
+**Sales have not increased at all.**
+
+A lack of sales does not automatically mean your SEO provider is dishonest. Pricing, product quality, website usability and sales processes can all affect conversions.
+
+However, artificial traffic and fabricated leads are real forms of manipulation.
+
+And without access to independent data, business owners may struggle to identify them.
+
+### How fake SEO performance can be created
+
+Legitimate SEO growth usually follows real improvements.
+
+An SEO specialist fixes technical issues, improves site structure, develops useful content and works on indexing and internal linking.
+
+Over time, the website may earn more impressions and clicks from Google.
+
+A dishonest contractor may try a different approach.
+
+Instead of improving search visibility, they generate artificial visits and present the numbers as evidence of successful SEO.
+
+Automated HTTP requests, browser bots and traffic-generation tools can all play a role in this kind of activity.
+
+Some reporting systems may record these visits in ways that look convincing.
+
+### What is HTTP Referer?
+
+When someone follows a link from one website to another, their browser may send the address of the previous page.
+
+This information is carried in an HTTP header called Referer.
+
+For example, when a user finds a business through Google and opens its website, information about the referring page may be available to analytics systems.
+
+But there is an important limitation.
+
+**A Referer header is not reliable proof of a genuine search engine click.**
+
+An automated HTTP client can submit a request containing an arbitrary Referer value.
+
+This makes certain traffic-counting systems vulnerable to manipulation, particularly when they trust incoming headers without sufficient validation.
+
+Modern analytics tools are more complicated.
+
+Google Analytics 4 uses its own traffic attribution logic, while Google Search Console receives search impression and click data from Google's systems.
+
+Simply changing a Referer header does not guarantee that fake organic sessions will appear in GA4, and it does not create genuine Google Search Console clicks.
+
+### How a convincing growth chart can be manufactured
+
+Suppose an agency promises a 50% traffic increase within three months.
+
+Instead of improving the site's rankings, the contractor gradually increases artificial visits.
+
+A small increase appears in the first month. A larger increase follows in the second. By the third month, the reported target has been achieved.
+
+If the client only sees selected metrics, the chart may look like normal business growth.
+
+Meanwhile, genuine Google Search clicks might remain almost unchanged.
+
+This is why website sessions alone are not enough to measure SEO performance.
+
+### What about leads and inquiries?
+
+Artificial visitors do not become real customers.
+
+That creates another problem for anyone trying to fabricate results.
+
+To make the campaign appear more successful, a dishonest operator may also attempt to generate fake conversions.
+
+These can come from bots or people paid to complete simple online tasks.
+
+They may submit contact forms, request quotations or leave contact details without any genuine intention to buy.
+
+The reports now show both increased traffic and more leads.
+
+But when the sales team follows up, the numbers may be invalid, the contacts may be unreachable or the people involved may have no interest in the product.
+
+Not every low-quality lead is fraudulent.
+
+However, a consistent decline in lead quality alongside dramatic reported growth deserves investigation.
+
+### How to investigate suspicious SEO results
+
+#### 1. Compare GA4 and Google Search Console
+
+Google Analytics 4 measures interactions with your website.
+
+Google Search Console reports impressions and clicks recorded in Google Search.
+
+If an agency claims substantial growth in organic traffic from Google, but Search Console shows no corresponding trend, ask for an explanation.
+
+The numbers will not match exactly because the two systems measure different things.
+
+A persistent, substantial discrepancy without a clear explanation is worth investigating.
+
+#### 2. Examine search queries
+
+Open the Performance report in Google Search Console.
+
+Review which queries generate clicks, which pages receive search traffic and how impressions change over time.
+
+Pay particular attention to queries relevant to your products and services.
+
+A website can receive more visits without necessarily attracting more potential customers.
+
+#### 3. Measure lead quality
+
+Do not judge a campaign solely by the number of submitted forms.
+
+Track how many contacts are valid, how many inquiries are relevant and how many eventually result in sales.
+
+Ten qualified leads may be more valuable than a hundred meaningless submissions.
+
+Also check that conversion tracking is not counting the same action multiple times.
+
+#### 4. Review user engagement
+
+GA4 can provide information about engaged sessions, key events, landing pages and other interaction metrics.
+
+Unusual traffic spikes or highly repetitive patterns may justify further analysis.
+
+However, short sessions and low engagement are not proof of bot activity.
+
+Real visitors can behave in similar ways.
+
+#### 5. Inspect server and CDN logs
+
+If you have access to server or CDN logs, examine request frequency, repeated patterns, User-Agent values and other technical signals.
+
+These records may help identify automated traffic.
+
+A single IP address or User-Agent is not sufficient evidence of fraud, however.
+
+Reliable conclusions require multiple supporting indicators.
+
+### Warning signs in SEO reports
+
+Be cautious when an agency reports traffic growth but cannot explain which pages or search queries are responsible.
+
+A lack of access to your own Google Search Console or analytics accounts is another concern.
+
+Other warning signs include unclear descriptions of completed work, reluctance to discuss lead quality and resistance to independent verification.
+
+None of these issues proves fraud on its own.
+
+Several appearing together should prompt a closer review.
+
+### Can artificial traffic be eliminated completely?
+
+Probably not.
+
+Websites receive automated requests from search crawlers, monitoring systems and many other legitimate or unwanted bots.
+
+The goal is not to eliminate every automated visit.
+
+It is to prevent artificial activity from being mistaken for genuine customer interest.
+
+Business owners should retain control of their analytics, Search Console and sales data.
+
+SEO performance should be evaluated using search visibility, relevant traffic, qualified leads and business outcomes rather than one traffic chart.
+
+### Final thoughts
+
+From the perspective of someone working in SEO and web development, the greatest risk is not simply that artificial traffic can be generated.
+
+The bigger problem is when a business owner cannot independently verify the results being reported.
+
+They receive charts, percentages and polished presentations without understanding what those numbers actually represent.
+
+Good SEO does not guarantee sales. Pricing, competition, the offer and customer service all matter.
+
+But good SEO should be transparent.
+
+**If an agency promises traffic, ask where it will come from. If it reports leads, verify their quality. If it claims success, request evidence you can check independently.**
+
+Businesses do not need impressive charts alone.
+
+They need real people who are genuinely interested in their products and services.
+
+### About the author
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 
@@ -3792,6 +4220,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Szop analityk SEO sprawdza podejrzany ruch na stronie, GA4, Google Search Console, zapytania i sprzedaż.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+SEO
+
+### [Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu](https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/)
+
+Jak rozpoznać sztuczny ruch SEO, fałszywe zapytania i manipulacje statystykami? Sprawdź dane GA4, Google Search Console i realną sprzedaż.
+
+Oleksandr Padalko · 20.11.2026 · 5 min czytania
+
 ![Agent AI w n8n automatyzujący pocztę, wiadomości, arkusze i kalendarz.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
 
 Automatyzacja
@@ -4079,6 +4517,208 @@ Raccoon SEO Studio
 Raccoon SEO Studio pomaga integrować strony internetowe z n8n, automatyzować obsługę zgłoszeń, powiadomienia, raporty i narzędzia AI.
 
 [Porozmawiajmy o projekcie](https://raccoon-studio.com.ua/pl/#contacts)[Usługi studia](https://raccoon-studio.com.ua/pl/#services)
+
+---
+
+## Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu
+
+Język: Polski
+
+Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/
+
+> Jak rozpoznać sztuczny ruch SEO, fałszywe zapytania i manipulacje statystykami? Sprawdź dane GA4, Google Search Console i realną sprzedaż.
+
+SEO
+
+Wyobraź sobie, że zlecasz pozycjonowanie swojej strony internetowej.
+
+Oleksandr Padalko · 20.11.2026 · 5 min czytania
+
+![Szop analityk SEO sprawdza podejrzany ruch na stronie, GA4, Google Search Console, zapytania i sprzedaż.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+Co miesiąc płacisz agencji, otrzymujesz raporty i obserwujesz rosnące wykresy.
+
+Na początku witrynę odwiedzało 100 osób dziennie. Po miesiącu było ich 150, a po kolejnych dwóch już 300.
+
+Agencja informuje o wzroście ruchu organicznego. Wszystko wygląda obiecująco.
+
+Jest tylko jeden problem.
+
+**Sprzedaż wcale nie wzrosła.**
+
+Oczywiście brak sprzedaży nie oznacza automatycznie oszustwa. Przyczyną mogą być ceny, oferta, jakość strony czy sposób obsługi klientów.
+
+Istnieją jednak metody sztucznego zwiększania ruchu i tworzenia fałszywych zapytań. Właściciel firmy, który nie wie, gdzie sprawdzać dane, może długo nie zauważyć manipulacji.
+
+### Jak wygląda pozorowanie skutecznego SEO
+
+Prawidłowo prowadzone SEO opiera się na realnych zmianach.
+
+Specjalista poprawia strukturę strony, usuwa błędy techniczne, rozwija treści i pracuje nad indeksowaniem.
+
+Z czasem witryna może uzyskiwać więcej wyświetleń oraz kliknięć w wynikach Google.
+
+Nieuczciwy wykonawca może jednak wybrać inną drogę.
+
+Zamiast poprawiać widoczność strony, próbuje generować sztuczne wizyty i przedstawiać je jako efekt pozycjonowania.
+
+Do takich działań mogą służyć automatyczne żądania, boty przeglądarkowe i narzędzia generujące ruch.
+
+W niektórych systemach pomiarowych takie wizyty mogą wyglądać wiarygodnie.
+
+### Czym jest HTTP Referer
+
+Kiedy użytkownik przechodzi z jednej strony na drugą, przeglądarka może przekazać adres poprzedniej strony.
+
+Informacja ta znajduje się w nagłówku HTTP Referer.
+
+Jeśli ktoś znajduje firmę w Google i otwiera jej witrynę, informacja o źródle przejścia może zostać wykorzystana przez system analityczny.
+
+Problem polega na tym, że Referer nie jest niepodważalnym dowodem rzeczywistego kliknięcia.
+
+Automatyczny klient HTTP może wysłać żądanie z dowolną wartością tego nagłówka.
+
+To umożliwia manipulowanie niektórymi systemami rejestrującymi ruch, szczególnie gdy bezkrytycznie ufają takim informacjom.
+
+Trzeba jednak pamiętać, że Google Analytics 4 stosuje własne zasady przypisywania źródeł ruchu.
+
+Z kolei Google Search Console korzysta z danych o wyświetleniach i kliknięciach zarejestrowanych przez Google.
+
+Samo podmienienie nagłówka Referer nie gwarantuje więc stworzenia fałszywych sesji organicznych w GA4 i nie powoduje pojawienia się prawdziwych kliknięć w Search Console.
+
+### Jak można stworzyć przekonujący wykres
+
+Załóżmy, że agencja obiecuje zwiększenie ruchu o 50% w ciągu trzech miesięcy.
+
+Zamiast pracować nad widocznością strony, stopniowo zwiększa liczbę sztucznych odwiedzin.
+
+W pierwszym miesiącu pojawia się niewielki wzrost. W kolejnym jeszcze większy. Po trzech miesiącach raport pokazuje realizację celu.
+
+Jeżeli klient otrzymuje tylko wybrane dane, wykres może wyglądać naturalnie.
+
+Tymczasem liczba rzeczywistych kliknięć z wyszukiwarki może pozostawać bez większych zmian.
+
+Dlatego nie warto oceniać skuteczności SEO wyłącznie na podstawie liczby sesji.
+
+### A co z zapytaniami od klientów?
+
+Sztuczne wizyty nie oznaczają prawdziwego zainteresowania ofertą.
+
+Nieuczciwy wykonawca może więc próbować pozorować również konwersje.
+
+W tym celu wykorzystuje się czasem boty lub osoby wykonujące proste zadania za wynagrodzenie.
+
+Mogą one wypełniać formularze kontaktowe, pozostawiać dane i wysyłać prośby o wycenę.
+
+W raporcie wszystko wygląda dobrze. Rośnie liczba odwiedzin i zapytań.
+
+Problem pojawia się wtedy, gdy pracownik firmy próbuje skontaktować się z potencjalnym klientem.
+
+Numer nie odpowiada, dane są nieprawidłowe albo osoba nie zamierza niczego kupować.
+
+Nie każde słabe zapytanie jest oczywiście fałszywe.
+
+Jeżeli jednak liczba leadów rośnie, a ich jakość systematycznie spada, warto sprawdzić źródła tych kontaktów.
+
+### Jak sprawdzić działania agencji SEO
+
+#### 1. Porównaj GA4 z Google Search Console
+
+Google Analytics 4 pokazuje interakcje użytkowników ze stroną.
+
+Google Search Console prezentuje wyświetlenia i kliknięcia z wyników wyszukiwania Google.
+
+Jeśli agencja informuje o gwałtownym wzroście ruchu organicznego z Google, a Search Console nie pokazuje podobnej tendencji, należy wyjaśnić rozbieżność.
+
+Wyniki obu narzędzi nie muszą być identyczne, ponieważ stosują różne metody pomiaru.
+
+Jednak długotrwała, duża różnica bez logicznego wyjaśnienia powinna skłonić do dokładniejszej analizy.
+
+#### 2. Sprawdź zapytania w wyszukiwarce
+
+W Search Console otwórz raport Skuteczność.
+
+Sprawdź, które zapytania przynoszą kliknięcia, jakie podstrony zyskują widoczność i jak zmienia się liczba wyświetleń.
+
+Szczególnie ważne są zapytania związane z usługami i produktami oferowanymi przez firmę.
+
+Sam wzrost liczby odwiedzin nie mówi jeszcze, czy SEO dociera do właściwych odbiorców.
+
+#### 3. Sprawdź jakość leadów
+
+Nie ograniczaj się do liczby wysłanych formularzy.
+
+Sprawdź, z iloma osobami udało się skontaktować, ile zapytań było wartościowych i ile zakończyło się sprzedażą.
+
+Dziesięć dobrych kontaktów może mieć większą wartość niż sto przypadkowych zgłoszeń.
+
+Warto również upewnić się, że system nie rejestruje wielokrotnie tych samych konwersji.
+
+#### 4. Przeanalizuj zachowanie użytkowników
+
+W GA4 można sprawdzić sesje z zaangażowaniem, kluczowe zdarzenia, strony docelowe i inne dane o aktywności.
+
+Powtarzalne wzorce zachowania albo nietypowe skoki ruchu mogą wymagać dodatkowej kontroli.
+
+Nie należy jednak uznawać każdej krótkiej sesji za wizytę bota.
+
+#### 5. Sprawdź logi serwera
+
+Jeżeli masz dostęp do dzienników serwera lub CDN, możesz przeanalizować częstotliwość żądań, powtarzalne schematy, User-Agent i inne parametry techniczne.
+
+Pomaga to wykrywać część zautomatyzowanego ruchu.
+
+Pojedynczy adres IP czy User-Agent nie wystarcza jednak do udowodnienia manipulacji.
+
+### Sygnały ostrzegawcze w raportach SEO
+
+Warto zachować ostrożność, gdy agencja pokazuje wyłącznie liczbę odwiedzin, ale nie potrafi wskazać zapytań i podstron odpowiedzialnych za wzrost.
+
+Niepokojąca jest również sytuacja, w której właściciel witryny nie ma dostępu do Google Search Console lub własnego konta analitycznego.
+
+Kolejne sygnały to brak przejrzystego zestawienia wykonanych prac, unikanie rozmowy o jakości zapytań oraz niechęć do niezależnego audytu.
+
+Żaden z tych elementów nie stanowi samodzielnego dowodu oszustwa.
+
+Kilka takich sytuacji jednocześnie powinno jednak skłonić do weryfikacji.
+
+### Czy można całkowicie wyeliminować sztuczny ruch?
+
+Nie jest to realistyczny cel.
+
+Strony internetowe regularnie odwiedzają roboty wyszukiwarek, systemy monitoringu i inne automatyczne programy.
+
+Najważniejsze, aby nie traktować takiej aktywności jak rzeczywistego zainteresowania klientów.
+
+Właściciel firmy powinien kontrolować dostęp do GA4, Search Console i danych sprzedażowych.
+
+Warto również uzgodnić z wykonawcą, które wskaźniki będą wykorzystywane do oceny efektów SEO.
+
+### Podsumowanie
+
+Z perspektywy osoby pracującej przy SEO i tworzeniu stron internetowych największym zagrożeniem nie jest sama możliwość generowania sztucznego ruchu.
+
+Znacznie większym problemem jest sytuacja, w której właściciel firmy nie potrafi samodzielnie zweryfikować raportowanych wyników.
+
+Otrzymuje wykresy, procenty i prezentacje, ale nie wie, co naprawdę stoi za tymi liczbami.
+
+Dobre SEO nie gwarantuje sprzedaży. Wpływają na nią również ceny, konkurencja, oferta i obsługa klienta.
+
+Jednak dobre SEO powinno być przejrzyste.
+
+**Jeżeli agencja obiecuje ruch, zapytaj, skąd będą pochodzić odwiedzający. Jeżeli pokazuje leady, sprawdź ich jakość. Jeżeli informuje o sukcesie, poproś o dane możliwe do niezależnej weryfikacji.**
+
+Firmie nie są potrzebne wyłącznie ładne wykresy.
+
+Potrzebni są prawdziwi klienci.
+
+### O autorze
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 

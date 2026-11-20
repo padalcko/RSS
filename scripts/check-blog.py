@@ -49,6 +49,7 @@ for article in [None]+b.ARTICLES:
     assert f'id="{url.split("#")[1]}"' in content,(route,url)
   if article:
    expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in b.source(article,lang).split('\n\n')]
+   if article.get('inlineStrong'): expected=[re.sub(r'\*\*(.+?)\*\*',r'\1',block) for block in expected]
    assert p.blocks==expected,(route,'article changed')
    assert schema['author']['name']=='Oleksandr Padalko'
    assert schema['datePublished']==article['published'] and schema['dateModified']==article['modified']

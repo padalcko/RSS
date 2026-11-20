@@ -36,6 +36,11 @@
   Link: <https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/nakrutka-seo-trafiku/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/try-pravyla-seo/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/try-pravyla-seo/>; rel="canonical"
@@ -86,6 +91,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/fake-seo-traffic/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /en/blog/how-to-build-ai-agent-n8n/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/>; rel="canonical"
@@ -124,6 +134,11 @@
 /pl/blog/automatyzacja-biznesu-n8n/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/falszywy-ruch-seo/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/jak-stworzyc-agenta-ai-n8n/index.md

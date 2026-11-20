@@ -1,5 +1,44 @@
 [
   {
+    "id": "fake-seo-traffic",
+    "category": "seo",
+    "published": "2026-11-20",
+    "modified": "2026-11-20",
+    "image": "/images/blog/raccoon-seo-fake-traffic-detection.webp",
+    "socialImage": "/images/blog/raccoon-seo-fake-traffic-detection.webp",
+    "imageWidth": 1671,
+    "imageHeight": 941,
+    "showCta": false,
+    "inlineStrong": true,
+    "relatedIds": [],
+    "translations": {
+      "uk": {
+        "slug": "nakrutka-seo-trafiku",
+        "title": "Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху",
+        "seoTitle": "Накрутка SEO-трафіку: як розпізнати обман підрядника",
+        "description": "Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.",
+        "source": "fake-seo-traffic-uk.md",
+        "imageAlt": "Єнот SEO-аналітик перевіряє підозрілий трафік сайту, GA4, Google Search Console, заявки та продажі."
+      },
+      "pl": {
+        "slug": "falszywy-ruch-seo",
+        "title": "Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu",
+        "seoTitle": "Fałszywy ruch SEO: jak wykryć manipulacje agencji",
+        "description": "Jak rozpoznać sztuczny ruch SEO, fałszywe zapytania i manipulacje statystykami? Sprawdź dane GA4, Google Search Console i realną sprzedaż.",
+        "source": "fake-seo-traffic-pl.md",
+        "imageAlt": "Szop analityk SEO sprawdza podejrzany ruch na stronie, GA4, Google Search Console, zapytania i sprzedaż."
+      },
+      "en": {
+        "slug": "fake-seo-traffic",
+        "title": "Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success",
+        "seoTitle": "Fake SEO Traffic: How to Detect SEO Reporting Fraud",
+        "description": "Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.",
+        "source": "fake-seo-traffic-en.md",
+        "imageAlt": "Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales."
+      }
+    }
+  },
+  {
     "id": "n8n-ai-agent-guide",
     "category": "automation",
     "published": "2026-11-19",

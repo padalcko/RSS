@@ -8,6 +8,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
+
+SEO
+
+## [Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success](https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/)
+
+Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.
+
+Oleksandr Padalko · 20/11/2026 · 6 min read
+
 ![AI agent built with n8n automating email, messages, spreadsheets and calendar tasks.](https://raccoon-studio.com.ua/images/blog/n8n-ai-agent-automation-2026.webp)
 
 Automation

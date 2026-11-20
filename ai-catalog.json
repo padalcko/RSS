@@ -97,6 +97,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
     },
     {
+      "name": "Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху",
+      "description": "Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/",
+      "markdown": "https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/index.md"
+    },
+    {
       "name": "Три правила SEO, які я не раджу порушувати",
       "description": "Чому не варто бездумно змінювати URL, переробляти успішні сторінки та копіювати конкурентів. Три практичні правила технічного SEO.",
       "language": "uk",
@@ -116,6 +123,13 @@
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/",
       "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
+    },
+    {
+      "name": "Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success",
+      "description": "Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/index.md"
     },
     {
       "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
@@ -158,6 +172,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu",
+      "description": "Jak rozpoznać sztuczny ruch SEO, fałszywe zapytania i manipulacje statystykami? Sprawdź dane GA4, Google Search Console i realną sprzedaż.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/index.md"
     },
     {
       "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
@@ -216,6 +237,13 @@
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/",
       "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
+    },
+    {
+      "name": "Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху",
+      "description": "Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/",
+      "markdown": "https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/index.md"
     },
     {
       "name": "Три правила SEO, які я не раджу порушувати",
@@ -288,6 +316,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/index.md"
     },
     {
+      "name": "Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success",
+      "description": "Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/index.md"
+    },
+    {
       "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
       "description": "Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.",
       "language": "en",
@@ -342,6 +377,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md"
+    },
+    {
+      "name": "Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu",
+      "description": "Jak rozpoznać sztuczny ruch SEO, fałszywe zapytania i manipulacje statystykami? Sprawdź dane GA4, Google Search Console i realną sprzedaż.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/index.md"
     },
     {
       "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
