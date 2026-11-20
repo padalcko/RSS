@@ -8,6 +8,14 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+SEO
+
+## [5 Lazy SEO Techniques That Can Actually Bring More Traffic](https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/)
+
+More content and bigger SEO budgets are not always the answer. Sometimes your existing pages have more potential than you think.
+
+Oleksandr Padalko · 20/11/2026 · 7 min read
+
 ![Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
 
 SEO

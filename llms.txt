@@ -21,6 +21,7 @@ Languages: Ukrainian, Polish, English.
 
 - [uk — Створюємо сайти, які працюють на ваш бізнес](https://raccoon-studio.com.ua/) — [Markdown](https://raccoon-studio.com.ua/index.md)
 - [uk — Блог SEO-Єнота](https://raccoon-studio.com.ua/blog/) — [Markdown](https://raccoon-studio.com.ua/blog/index.md)
+- [uk — 5 лінивих SEO-методів, які реально можуть принести трафік](https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/) — [Markdown](https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/index.md)
 - [uk — Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі](https://raccoon-studio.com.ua/blog/multirehionalne-seo/) — [Markdown](https://raccoon-studio.com.ua/blog/multirehionalne-seo/index.md)
 - [uk — n8n: як автоматизувати бізнес-процеси без зайвої рутини](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/) — [Markdown](https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md)
 - [uk — Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху](https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/) — [Markdown](https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/index.md)
@@ -34,6 +35,7 @@ Languages: Ukrainian, Polish, English.
 - [uk — Проєкти, які ми перетворюємо на працюючі digital-рішення](https://raccoon-studio.com.ua/clients.html) — [Markdown](https://raccoon-studio.com.ua/clients.md)
 - [en — Websites that work for your business](https://raccoon-studio.com.ua/en/) — [Markdown](https://raccoon-studio.com.ua/en/index.md)
 - [en — SEO Raccoon's Blog](https://raccoon-studio.com.ua/en/blog/) — [Markdown](https://raccoon-studio.com.ua/en/blog/index.md)
+- [en — 5 Lazy SEO Techniques That Can Actually Bring More Traffic](https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/) — [Markdown](https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/index.md)
 - [en — Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success](https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/) — [Markdown](https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/index.md)
 - [en — How to Build Your Own AI Agent with n8n and Automate Everyday Tasks](https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/) — [Markdown](https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/index.md)
 - [en — Multi-Regional SEO: How to Grow Across European Markets](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/) — [Markdown](https://raccoon-studio.com.ua/en/blog/multi-regional-seo/index.md)
@@ -42,6 +44,7 @@ Languages: Ukrainian, Polish, English.
 - [en — Three SEO Rules I Would Not Ignore](https://raccoon-studio.com.ua/en/blog/three-seo-rules/) — [Markdown](https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md)
 - [pl — Tworzymy strony, które wspierają Twój biznes](https://raccoon-studio.com.ua/pl/) — [Markdown](https://raccoon-studio.com.ua/pl/index.md)
 - [pl — Blog SEO Szopa](https://raccoon-studio.com.ua/pl/blog/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/index.md)
+- [pl — 5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch](https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/index.md)
 - [pl — n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/automatyzacja-biznesu-n8n/index.md)
 - [pl — Fałszywy ruch SEO: jak nieuczciwe agencje tworzą pozory sukcesu](https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/index.md)
 - [pl — Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki](https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/) — [Markdown](https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/index.md)

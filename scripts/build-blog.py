@@ -39,11 +39,17 @@ def breadcrumbs(lang,article=None):
  schema={'@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':i+1,'name':name,'item':BASE+url} for i,(name,url) in enumerate(items)]}
  return html,schema
 
+def localized_visual(article, lang):
+ return {**article, **{k: v for k, v in article["translations"][lang].items() if k in ("image", "socialImage")}}
+
 def card(article,lang,link_title=None):
+ article=localized_visual(article,lang)
  t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}
  excerpt=t.get('excerpt',t['description'])
  author=f"<span>{c['author']}</span>"
- return f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
+ html=f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
+
+ return re.sub(r'<img[^>]*>', '', html, count=1) if not article['image'] else html
 
 def listing(lang):
  c=COPY[lang]; bc,_=breadcrumbs(lang)
@@ -52,6 +58,7 @@ def listing(lang):
 <section class="section blog-listing"><div class="container" data-blog><div class="blog-tools" hidden><label class="blog-search"><span>{c['search']}</span><input type="search" placeholder="{c['search']}" aria-controls="blog-results" autocomplete="off"></label><div class="blog-filters" role="group" aria-label="{e(c['categories'][0])}">{filters}</div></div><p class="blog-count" aria-live="polite" data-label="{c['results']}"></p><ul id="blog-results" class="blog-grid">{''.join(card(a,lang) for a in ARTICLES if lang in a['translations'])}</ul><p class="blog-empty" hidden>{c['empty']}</p><nav class="blog-pagination" aria-label="{c['pagination']}" hidden><button type="button" data-page="previous">{c['previous']}</button><span aria-live="polite"></span><button type="button" data-page="next">{c['next']}</button></nav></div></section>'''
 
 def article_body(article,lang):
+ article=localized_visual(article,lang)
  t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}; bc,_=breadcrumbs(lang,article)
  blocks=source(article,lang).split('\n\n')
  intro=blocks.pop(0)
@@ -63,7 +70,12 @@ def article_body(article,lang):
  cta_heading=f"<h2>{e(t['ctaTitle'])}</h2>" if t.get('ctaTitle') else ''
  cta_html=f'<aside class="blog-cta">{cta_heading}<p>{e(t.get("cta",c["cta"]))}</p><div>{cta_button}<a href="{home(lang)}#services">{c["services"]}</a></div></aside>' if article.get('showCta',True) else ''
  related_html=f'<section class="blog-related"><h2>{c["related"]}</h2><ul class="blog-grid">'+''.join(card(a,lang,t.get('relatedTitles',{}).get(a['id'])) for a in related)+'</ul></section>' if related else ''
- return f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article>{cta_html}{related_html}</div>'''
+ if t.get('serviceLinkText'):
+  text=e(t['serviceLinkText'])
+  body=body.replace(text, f'<a href="{home(lang)}#services">{text}</a>', 1)
+ html=f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article>{cta_html}{related_html}</div>'''
+
+ return re.sub(r'<img class="blog-article-image"[^>]*>', '', html) if not article['image'] else html
 
 def semantic_html(html):
  """Normalize publication semantics without rewriting existing content or chrome."""
@@ -85,7 +97,8 @@ def build_page(lang,article=None):
  title=t.get('seoTitle',t['title']) if t else c['name']+' | Raccoon SEO Studio'
  description=t['description'] if t else c['subtitle']
  visual=article or next(a for a in ARTICLES if a['id']=='website-launch')
- social=BASE+visual['socialImage']
+ visual=localized_visual(visual,lang)
+ social=BASE+visual['socialImage'] if visual['socialImage'] else ''
  image_alt=visual['translations'][lang].get('imageAlt',c['image'])
  original=(ROOT/(home(lang).strip('/')+'/' if lang!='uk' else '')/'index.html').read_text()
  header=re.search(r'<header\b.*?</header>',original,re.S)[0]
@@ -102,7 +115,8 @@ def build_page(lang,article=None):
  author={'@type':'Person','name':'Oleksandr Padalko','jobTitle':'Frontend Developer / SEO Engineer','worksFor':{'@id':BASE+'/#organization'}}
  schema={'@type':'BlogPosting' if article else 'Blog','@id':url+'#'+('article' if article else 'blog'),'url':url,'name':title,'description':description,'inLanguage':lang,'publisher':{'@id':BASE+'/#organization'}}
  if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
- else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],'image':BASE+a['socialImage']} for a in ARTICLES if lang in a['translations']]
+ else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],**({'image':BASE+localized_visual(a,lang)['socialImage']} if localized_visual(a,lang)['socialImage'] else {})} for a in ARTICLES if lang in a['translations']]
+ if article and not social: schema.pop('image',None)
  alternates='\n'.join(f'<link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}">' for l in COPY)+f'\n<link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}">'
  locale={'uk':'uk_UA','pl':'pl_PL','en':'en_GB'}
  og_locales='\n'.join(f'<meta property="og:locale:alternate" content="{value}">' for l,value in locale.items() if l!=lang)
@@ -128,6 +142,9 @@ def build_page(lang,article=None):
 {'' if article else '<script src="/script/blog.js" defer></script>'}
 </body></html>
 '''
+ if not social:
+  html=re.sub(r'<meta (?:property="og:image[^"]*"|name="twitter:image[^"]*")[^>]*>', '', html)
+  html=html.replace('content="summary_large_image"', 'content="summary"')
  out=ROOT/route(lang,article).strip('/')/'index.html'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(inject_gtm(semantic_html(html)))
 
 
@@ -150,7 +167,7 @@ def build():
      data=json.loads(m[1])
      for item in data.get('@graph',[]):
       if item.get('@type')=='Blog':
-       item['blogPost'].insert(0,{'@type':'BlogPosting','headline':selected['translations'][lang]['title'],'url':BASE+route(lang,selected),'author':{'@type':'Person','name':'Oleksandr Padalko'},'datePublished':selected['published'],'dateModified':selected['modified'],'image':BASE+selected['socialImage']})
+       item['blogPost'].insert(0,{'@type':'BlogPosting','headline':selected['translations'][lang]['title'],'url':BASE+route(lang,selected),'author':{'@type':'Person','name':'Oleksandr Padalko'},'datePublished':selected['published'],'dateModified':selected['modified'],**({'image':BASE+localized_visual(selected,lang)['socialImage']} if localized_visual(selected,lang)['socialImage'] else {})})
      return '<script type="application/ld+json">'+json.dumps(data,ensure_ascii=False)+'</script>'
     existing=re.sub(r'<script type="application/ld\+json">(.*?)</script>',add_schema,existing,flags=re.S)
     path.write_text(semantic_html(existing))

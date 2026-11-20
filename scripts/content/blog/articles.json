@@ -1,5 +1,52 @@
 [
   {
+    "id": "5-lazy-seo-techniques",
+    "category": "seo",
+    "published": "2026-11-20",
+    "modified": "2026-11-20",
+    "image": "/images/blog/5-lazy-seo-techniques-uk.webp",
+    "socialImage": "/images/blog/5-lazy-seo-techniques-uk.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "showCta": false,
+    "inlineStrong": true,
+    "relatedIds": [],
+    "translations": {
+      "uk": {
+        "slug": "5-lazy-seo-techniques",
+        "title": "5 лінивих SEO-методів, які реально можуть принести трафік",
+        "seoTitle": "5 лінивих SEO-методів для зростання трафіку",
+        "description": "П'ять практичних SEO-методів, які допоможуть знайти можливості зростання трафіку без зайвих витрат. Пояснюємо просто, з прикладами.",
+        "excerpt": "Не завжди потрібно створювати десятки сторінок і витрачати гроші на нові статті. Іноді достатньо розібратися з тим, що на сайті вже є.",
+        "source": "5-lazy-seo-techniques-uk.md",
+        "imageAlt": "Єнот відпочиває з ноутбуком у фіолетовому офісі поруч із переліком п’яти SEO-методів.",
+        "serviceLinkText": "технічний аудит"
+      },
+      "pl": {
+        "slug": "5-lazy-seo-techniques",
+        "title": "5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch",
+        "seoTitle": "5 prostych sposobów na lepsze SEO i większy ruch",
+        "description": "Nie zawsze trzeba inwestować w nowe treści i kosztowne kampanie. Poznaj 5 praktycznych sposobów na poprawę widoczności strony w Google.",
+        "excerpt": "Zanim zamówisz kolejne teksty SEO i wydasz pieniądze na pozycjonowanie, sprawdź, czy Twoja strona nie ma już niewykorzystanego potencjału.",
+        "source": "5-lazy-seo-techniques-pl.md",
+        "image": null,
+        "socialImage": null,
+        "serviceLinkText": "audytu technicznego"
+      },
+      "en": {
+        "slug": "5-lazy-seo-techniques",
+        "title": "5 Lazy SEO Techniques That Can Actually Bring More Traffic",
+        "seoTitle": "5 Lazy SEO Techniques to Improve Organic Traffic",
+        "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
+        "excerpt": "More content and bigger SEO budgets are not always the answer. Sometimes your existing pages have more potential than you think.",
+        "source": "5-lazy-seo-techniques-en.md",
+        "image": null,
+        "socialImage": null,
+        "serviceLinkText": "technical audit"
+      }
+    }
+  },
+  {
     "id": "fake-seo-traffic",
     "category": "seo",
     "published": "2026-11-20",

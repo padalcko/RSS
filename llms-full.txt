@@ -238,6 +238,16 @@ GA4, GTM, Search Console, відстеження конверсій та ана�
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот відпочиває з ноутбуком у фіолетовому офісі поруч із переліком п’яти SEO-методів.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
+
+SEO
+
+### [5 лінивих SEO-методів, які реально можуть принести трафік](https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/)
+
+Не завжди потрібно створювати десятки сторінок і витрачати гроші на нові статті. Іноді достатньо розібратися з тим, що на сайті вже є.
+
+Олександр Падалко · 20.11.2026 · 7 хв читання
+
 ![Єнот SEO-аналітик перевіряє підозрілий трафік сайту, GA4, Google Search Console, заявки та продажі.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
 
 SEO
@@ -297,6 +307,266 @@ SEO
 Чому новий сайт може місяцями не отримувати трафіку з Google? Розбираємо технічні помилки, індексацію, контент і правильний старт SEO.
 
 Олександр Падалко · 17.11.2026 · 4 хв читання
+
+---
+
+## 5 лінивих SEO-методів, які реально можуть принести трафік
+
+Мова: Українська
+
+Канонічна HTML-сторінка: https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/
+
+> П'ять практичних SEO-методів, які допоможуть знайти можливості зростання трафіку без зайвих витрат. Пояснюємо просто, з прикладами.
+
+SEO
+
+Є така категорія людей, які дуже люблять створювати собі роботу. Особливо багато їх у SEO.
+
+Олександр Падалко · 20.11.2026 · 7 хв читання
+
+![Єнот відпочиває з ноутбуком у фіолетовому офісі поруч із переліком п’яти SEO-методів.](https://raccoon-studio.com.ua/images/blog/5-lazy-seo-techniques-uk.webp)
+
+Можна місяцями збирати семантику, замовляти десятки статей, аналізувати конкурентів, купувати посилання і щотижня звітувати клієнту про величезний обсяг виконаної роботи.
+
+А можна відкрити Google Search Console, подивитися на власний сайт і раптом виявити, що частина можливостей лежить буквально під носом.
+
+І знаєте що? Другий варіант іноді приносить більше користі.
+
+Я не кажу, що SEO це легко. І точно не обіцяю, що після п'яти нескладних дій ваш сайт завтра опиниться на першому місці Google.
+
+Але є речі, які варто зробити до того, як витрачати гроші на чергову масштабну SEO-кампанію.
+
+Назвемо їх лінивими SEO-методами. Не тому, що можна нічого не робити, а тому, що іноді краще попрацювати головою, ніж створювати собі зайву роботу.
+
+### 1. Не шукайте нові ключові слова, поки не розібралися зі старими
+
+Уявімо звичайну ситуацію.
+
+У вас є сайт компанії, яка ремонтує побутову техніку у Вроцлаві. Ви хочете більше клієнтів із Google.
+
+Що робить типовий SEO-спеціаліст?
+
+Починає збирати сотні ключових слів. Створює нові сторінки. Пропонує написати двадцять статей. Складає план просування на пів року.
+
+Але є одне маленьке запитання.
+
+А ви взагалі дивилися, за якими запитами ваш сайт уже показується в Google?
+
+Можливо, за запитом «naprawa pralek Wrocław» ваша сторінка вже перебуває на восьмій позиції.
+
+Тобто Google її знає. Розуміє, про що вона. І навіть показує потенційним клієнтам.
+
+Але до перших позицій вона поки що не дотягує.
+
+І ось тут починається найцікавіше.
+
+Замість створення ще десяти сторінок можна спробувати покращити одну, яка вже має видимість у пошуку.
+
+Перевірити, чи відповідає вона запиту користувача. Чи є там ціни, опис послуг, інформація про місто, контакти, відповіді на популярні запитання.
+
+Можливо, проблема взагалі в тому, що сторінка називається «Наші послуги», а не «Ремонт пральних машин у Вроцлаві».
+
+**Що робимо на практиці?**
+
+Відкриваємо Google Search Console, переходимо до звіту про ефективність і дивимося на запити, за якими сайт отримує покази.
+
+Особливу увагу приділяємо запитам із середніми позиціями приблизно від 4 до 20.
+
+Це не чарівний діапазон, де гарантовано лежать гроші. Просто серед таких запитів часто можна знайти хороші можливості для оптимізації.
+
+І головне, дивимося не лише на позицію, а й на кількість показів, кліків та реальну цінність запиту для бізнесу.
+
+### 2. Перевірте сайт. Ні, серйозно, просто перевірте
+
+Звучить банально, правда?
+
+Але я регулярно бачу ситуації, коли власник сайту платить за просування, а на самому сайті залишаються елементарні технічні проблеми.
+
+Сторінка має неправильний canonical. Декілька сторінок використовують однакові title. Частина внутрішніх посилань веде на 404. А важлива сторінка випадково закрита від індексації.
+
+І все це чудово співіснує з красивими щомісячними SEO-звітами.
+
+Можна довго сперечатися про алгоритми Google, але якщо потрібна сторінка недоступна для індексації, розмова про її просування стає досить дивною.
+
+Звичайно, не кожна технічна помилка впливає на позиції. Наприклад, відсутність meta description сама по собі не означає, що Google покарає ваш сайт.
+
+Але системні проблеми з доступністю, індексацією, внутрішніми посиланнями та структурою здатні серйозно заважати просуванню.
+
+**Що робимо на практиці?**
+
+Проводимо [технічний аудит](https://raccoon-studio.com.ua/#services). Перевіряємо HTTP-статуси, індексацію, заголовки, canonical, robots.txt, sitemap.xml, внутрішні посилання та структуровані дані.
+
+Після цього не кидаємося виправляти абсолютно все.
+
+Спочатку усуваємо проблеми, які реально заважають пошуковим системам і користувачам.
+
+До речі, саме для таких перевірок ми в Raccoon SEO Studio розробляємо власний інструмент Raccoon SEO Scanner.
+
+Ідея проста: показати власнику сайту не страшний список із сотні технічних термінів, а зрозумілий звіт про те, що працює, що потребує уваги та з чого варто почати.
+
+### 3. Перестаньте називати всі сторінки «Наші послуги»
+
+Ось це моя улюблена історія.
+
+Відкриваєш сайт компанії. Дизайн красивий, фотографії чудові, анімації літають.
+
+Заходиш на сторінку послуги.
+
+Заголовок: «Професійні рішення для вашого бізнесу».
+
+Які рішення? Для якого бізнесу? Що ви взагалі продаєте?
+
+Незрозуміло.
+
+Іноді здається, що власники сайтів бояться прямо сказати, чим вони займаються.
+
+Але Google не повинен розгадувати ваші маркетингові загадки. Та й відвідувач сайту теж.
+
+Якщо ви ремонтуєте косметологічні лазери в Польщі, то заголовок на відповідній сторінці цілком може містити слова «Serwis laserów kosmetycznych».
+
+Не потрібно вигадувати щось на кшталт «Інноваційна турбота про технологічне майбутнє вашого салону».
+
+Це може красиво звучати в презентації. Але люди шукають ремонт лазера, а не технологічне майбутнє.
+
+**Що робимо на практиці?**
+
+Перевіряємо title та H1 на важливих сторінках.
+
+Вони повинні зрозуміло пояснювати, що саме людина знайде на сторінці.
+
+І не треба впихати туди всі можливі ключові слова.
+
+Заголовок має бути природним. Його повинна розуміти звичайна людина, а не тільки SEO-спеціаліст із таблицею ключових запитів.
+
+### 4. Google може бачити вашу сторінку зовсім не так, як ви
+
+Уявіть, що ви відкрили магазин велосипедів.
+
+Створили сторінку про гірські велосипеди.
+
+Але половина тексту присвячена доставці, третина історії компанії, а решта розповіді про те, які ви молодці.
+
+Про самі велосипеди декілька речень.
+
+Потім дивуєтеся, чому сторінка погано ранжується за відповідними запитами.
+
+Проблема не обов'язково в кількості ключових слів.
+
+Проблема може бути в тому, що сторінка не дає людині того, за чим вона прийшла.
+
+Якщо користувач шукає «купити гірський велосипед», він, найімовірніше, хоче побачити моделі, характеристики, ціни, наявність і можливість покупки.
+
+А не п'ять абзаців про місію вашої компанії.
+
+І тут важливо зрозуміти одну річ.
+
+SEO давно не зводиться до того, скільки разів ви написали потрібне слово.
+
+Важливий пошуковий намір.
+
+Людина хоче купити? Порівняти? Дізнатися ціну? Знайти майстра? Отримати інструкцію?
+
+Відповідь на це запитання часто визначає, якою повинна бути сторінка.
+
+**Що робимо на практиці?**
+
+Беремо важливий пошуковий запит і дивимося, які сторінки Google показує за ним.
+
+Потім відкриваємо власну сторінку й чесно відповідаємо собі: чи допомагає вона людині вирішити її завдання?
+
+Якщо ні, покращуємо зміст.
+
+І не потрібно писати ще три тисячі слів лише тому, що у конкурентів довший текст.
+
+Іноді хороша таблиця характеристик, зрозуміла ціна та кнопка зв'язку корисніші за цілий роман.
+
+### 5. Сторінка без трафіку не завжди сміття
+
+А ось тут починається небезпечна частина.
+
+Існує популярна порада: якщо сторінка не приносить органічного трафіку, її потрібно видалити.
+
+Логіка нібито зрозуміла. Навіщо тримати на сайті те, чим ніхто не користується?
+
+Але давайте розберемося.
+
+У вас є сторінка з умовами гарантії. Вона майже не отримує переходів із Google.
+
+Видаляємо?
+
+Звичайно, ні.
+
+Або сторінка з дуже специфічною послугою, яку шукають лише декілька людей на місяць. Але кожне таке звернення може принести компанії хороше замовлення.
+
+Теж видаляємо?
+
+Сподіваюся, що ні.
+
+Відсутність органічного трафіку ще не означає, що сторінка марна.
+
+І навпаки, тисяча відвідувачів на статті, яка не має жодного стосунку до вашого бізнесу, не обов'язково приносить користь.
+
+Тому я не прихильник масового видалення сторінок за принципом «немає кліків, до побачення».
+
+**Що робимо на практиці?**
+
+Знаходимо сторінки, які довго не отримують органічних переходів, і аналізуємо їх окремо.
+
+Можливо, сторінку потрібно оновити. Можливо, об'єднати з іншою. Можливо, налаштувати перенаправлення.
+
+А можливо, її взагалі не треба чіпати.
+
+Головне, не перетворювати SEO-оптимізацію на прибирання бензопилою.
+
+### То чому ці методи називаються лінивими?
+
+Тому що вони не вимагають починати все з нуля.
+
+Ви вже маєте сайт. Уже маєте сторінки. Можливо, навіть маєте певну видимість у Google.
+
+І перш ніж будувати величезну стратегію просування, логічно розібратися з тим, що у вас уже є.
+
+Іноді достатньо правильно назвати сторінку.
+
+Іноді потрібно виправити технічну помилку.
+
+Іноді переписати кілька абзаців так, щоб вони відповідали на реальні запитання клієнтів.
+
+А іноді після перевірки виявляється, що сайт потребує значно серйознішої роботи.
+
+І це теж нормальний результат.
+
+Бо SEO це не магія і не набір секретних кнопок, які потрібно натиснути, щоб Google вас полюбив.
+
+Це послідовна робота над сайтом, його змістом, технічним станом та користю для людей.
+
+### З чого почати?
+
+Я б почав із простого.
+
+Перевірив би технічний стан сайту. Подивився б у Google Search Console, за якими запитами він уже показується. А потім вибрав би кілька сторінок, які мають реальний потенціал.
+
+Не п'ятдесят. Не двісті.
+
+Для початку хоча б п'ять.
+
+І спробував би зробити їх кращими.
+
+Саме такий підхід мені подобається найбільше: менше імітації бурхливої діяльності, більше зрозумілих дій.
+
+А якщо ви не знаєте, з чого почати, можете звернутися до Raccoon SEO Studio.
+
+Ми допоможемо побачити технічні проблеми та визначити, на що варто звернути увагу насамперед.
+
+Бо хороший SEO-спеціаліст не той, хто створює найбільше роботи. А той, хто розуміє, яку роботу взагалі варто робити.
+
+### Про автора
+
+Олександр Падалко
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 
@@ -2570,6 +2840,14 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+SEO
+
+### [5 Lazy SEO Techniques That Can Actually Bring More Traffic](https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/)
+
+More content and bigger SEO budgets are not always the answer. Sometimes your existing pages have more potential than you think.
+
+Oleksandr Padalko · 20/11/2026 · 7 min read
+
 ![Raccoon SEO analyst investigating suspicious website traffic, GA4, Google Search Console, leads and sales.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
 
 SEO
@@ -2629,6 +2907,276 @@ SEO
 Why do some new websites struggle to attract Google traffic? Learn how technical SEO, indexing, content and site structure affect a new launch.
 
 Oleksandr Padalko · 17/11/2026 · 4 min read
+
+---
+
+## 5 Lazy SEO Techniques That Can Actually Bring More Traffic
+
+Language: English
+
+Canonical HTML page: https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/
+
+> Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.
+
+SEO
+
+Some people seem to enjoy creating extra work for themselves. I've met quite a few of them in SEO.
+
+Oleksandr Padalko · 20/11/2026 · 7 min read
+
+You can spend months researching keywords, ordering articles, analysing competitors, building links and producing impressive monthly reports.
+
+Or you can open Google Search Console, look at your existing website and discover that some of your best opportunities have been sitting there all along.
+
+Sometimes the second approach is more useful.
+
+I'm not suggesting that SEO is easy. And I'm certainly not promising first place on Google after five quick fixes.
+
+But before spending money on another large SEO campaign, there are a few things worth checking.
+
+I call them lazy SEO techniques.
+
+Not because you can do nothing, but because doing the right work often matters more than doing a lot of work.
+
+### 1. Stop hunting for new keywords before checking the ones you already rank for
+
+Imagine you run an appliance repair business in London.
+
+You want more customers from Google.
+
+The usual approach might involve building a huge keyword list, creating new landing pages and commissioning twenty blog posts.
+
+But here's a question.
+
+Have you checked which searches already show your website?
+
+Perhaps your page is currently ranking eighth for "washing machine repair London".
+
+Google already knows the page exists. It considers the page relevant enough to display it.
+
+It just isn't ranking particularly high yet.
+
+So why not look at that page before creating ten more?
+
+Does it explain the service clearly? Are the prices or pricing process easy to understand? Can customers see which areas you cover? Is your phone number easy to find?
+
+Perhaps the page needs better content.
+
+Perhaps its title is too vague.
+
+Perhaps competitors answer customers' questions more effectively.
+
+**What should you do?**
+
+Open the Performance report in Google Search Console.
+
+Look at queries generating impressions and identify pages that may have room to improve.
+
+Queries with average positions around 4 to 20 can be a useful starting point.
+
+There is nothing magical about that range. It simply helps narrow down the opportunities.
+
+Remember to consider impressions, clicks, search intent and commercial value, not just average position.
+
+### 2. Audit your website. Seriously, just check it
+
+It sounds obvious.
+
+Yet I've seen websites receiving ongoing SEO work while basic technical problems remain untouched.
+
+Incorrect canonical tags. Multiple pages with identical titles. Internal links pointing to 404 pages. Important content accidentally blocked from indexing.
+
+Meanwhile, the monthly SEO report looks fantastic.
+
+You can spend hours discussing Google's algorithms, but if an important page cannot be indexed, expecting it to perform in organic search is rather optimistic.
+
+Of course, not every technical warning is a ranking problem.
+
+A missing meta description, for example, does not automatically mean Google will penalise your website.
+
+The important thing is to identify issues that genuinely affect accessibility, indexing and usability.
+
+**What should you do?**
+
+Check HTTP status codes, indexing, page titles, headings, canonical tags, robots.txt, sitemap.xml, internal links and structured data.
+
+Then prioritise.
+
+Don't waste time fixing every minor warning simply because an audit tool has highlighted it in red.
+
+Start with the problems that actually prevent search engines and users from accessing useful content.
+
+At Raccoon SEO Studio, we're developing Raccoon SEO Scanner to make these checks easier to understand.
+
+The idea is simple. Business owners should receive a clear explanation of what works, what needs attention and where to start, rather than a frightening list of technical terminology.
+
+### 3. Please stop calling every page "Our Services"
+
+This is one of my favourite examples.
+
+You visit a company website.
+
+Beautiful design. Great photography. Smooth animations. Everything looks professional.
+
+Then you open a service page.
+
+The headline says: "Innovative Solutions for Your Business".
+
+What solutions? For which businesses? What do you actually sell?
+
+Nobody knows.
+
+Sometimes it feels as though companies are afraid to explain what they do.
+
+But visitors shouldn't have to solve a marketing puzzle.
+
+If your company repairs commercial air conditioning systems, a heading such as "Commercial Air Conditioning Repair" is usually much clearer than "Innovative Climate Solutions for Modern Businesses".
+
+The second version may look impressive in a presentation.
+
+But someone with a broken air conditioner is looking for a repair service.
+
+**What should you do?**
+
+Review the title tags and H1 headings on your important pages.
+
+Make sure they clearly describe what visitors will find.
+
+Don't cram every possible keyword into a single headline.
+
+A good heading should make sense to an ordinary customer, not just an SEO specialist looking at a spreadsheet.
+
+### 4. Your page might be answering the wrong question
+
+Imagine you own a bicycle shop.
+
+You create a page about mountain bikes.
+
+Half the content explains your delivery service. Another section tells the history of your company. The rest talks about how passionate your team is.
+
+The actual bikes barely get a mention.
+
+Then you wonder why the page isn't performing well for relevant searches.
+
+The problem may have nothing to do with keyword density.
+
+Perhaps the page simply doesn't give people what they came for.
+
+Someone searching for "buy mountain bike" probably wants to see available models, specifications, prices, stock information and purchasing options.
+
+They don't need five paragraphs about your company's mission.
+
+Search intent matters.
+
+Is the visitor trying to buy something? Compare options? Find a specialist? Check a price? Learn how to solve a problem?
+
+The answer should influence what you put on the page.
+
+**What should you do?**
+
+Search Google for the query you're targeting.
+
+Look at the types of pages and information being shown.
+
+Then examine your own page.
+
+Can visitors actually complete the task they came to do?
+
+If not, improve the content.
+
+And please don't add another three thousand words just because a competitor has a longer article.
+
+Sometimes a useful comparison table, clear pricing and an easy way to get in touch are far more valuable.
+
+### 5. A page with no organic traffic isn't necessarily useless
+
+This is where some SEO advice becomes dangerous.
+
+You may have heard that pages receiving no organic traffic should simply be deleted.
+
+The logic sounds reasonable.
+
+If nobody visits a page from Google, why keep it?
+
+But consider your warranty information page.
+
+It might receive almost no organic search traffic, yet customers still need it.
+
+Or imagine a highly specialised service that only a handful of people search for each month.
+
+One enquiry could be worth thousands to your business.
+
+Would you really delete that page?
+
+No organic traffic doesn't automatically mean no business value.
+
+And the opposite is also true.
+
+A blog post attracting thousands of irrelevant visitors may contribute very little to your business.
+
+**What should you do?**
+
+Identify pages with low organic traffic and review them individually.
+
+Some may need updating.
+
+Others could be combined with related content.
+
+Sometimes a redirect makes sense.
+
+And sometimes the best decision is to leave the page alone.
+
+Don't turn SEO optimisation into demolition work.
+
+### So why are these techniques lazy?
+
+Because they focus on what you already have.
+
+Your website exists. Your pages exist. Google may already be showing some of them to potential customers.
+
+Before launching an expensive campaign, it makes sense to check whether those existing pages are doing their jobs properly.
+
+Sometimes a clearer heading helps.
+
+Sometimes you need to fix a technical problem.
+
+Sometimes a few useful paragraphs make the difference between a confusing page and one that answers a customer's question.
+
+And sometimes an audit reveals that the website needs much more substantial work.
+
+That's useful information too.
+
+SEO isn't magic. There is no secret button that makes Google fall in love with your website.
+
+It's a process of improving technical quality, content and the experience people have when they visit.
+
+### Where should you start?
+
+I'd start with a [technical audit](https://raccoon-studio.com.ua/en/#services) and Google Search Console.
+
+Then I'd choose five pages with genuine potential.
+
+Not fifty. Not two hundred.
+
+Just five.
+
+Check their content, headings, indexing and how well they match what visitors are looking for.
+
+Make sensible improvements and monitor the results.
+
+If you're unsure where to begin, Raccoon SEO Studio can help you review your website and identify the issues worth addressing first.
+
+A good SEO specialist isn't the person who creates the most work.
+
+It's the person who understands which work is actually worth doing.
+
+### About the author
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 
@@ -4220,6 +4768,14 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+SEO
+
+### [5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch](https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/)
+
+Zanim zamówisz kolejne teksty SEO i wydasz pieniądze na pozycjonowanie, sprawdź, czy Twoja strona nie ma już niewykorzystanego potencjału.
+
+Oleksandr Padalko · 20.11.2026 · 6 min czytania
+
 ![Szop analityk SEO sprawdza podejrzany ruch na stronie, GA4, Google Search Console, zapytania i sprzedaż.](https://raccoon-studio.com.ua/images/blog/raccoon-seo-fake-traffic-detection.webp)
 
 SEO
@@ -4279,6 +4835,248 @@ SEO
 Nowa strona nie zdobywa ruchu z Google? Sprawdź, jakie błędy techniczne i problemy z treścią mogą utrudniać jej rozwój.
 
 Oleksandr Padalko · 17.11.2026 · 4 min czytania
+
+---
+
+## 5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch
+
+Język: Polski
+
+Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/
+
+> Nie zawsze trzeba inwestować w nowe treści i kosztowne kampanie. Poznaj 5 praktycznych sposobów na poprawę widoczności strony w Google.
+
+SEO
+
+Są ludzie, którzy wyjątkowo lubią dokładać sobie pracy. W branży SEO spotykam ich całkiem sporo.
+
+Oleksandr Padalko · 20.11.2026 · 6 min czytania
+
+Można miesiącami zbierać słowa kluczowe, zamawiać artykuły, analizować konkurencję, budować linki i co tydzień przygotowywać raporty pokazujące, ile pracy zostało wykonane.
+
+Można też otworzyć Google Search Console i sprawdzić, co już dzieje się na stronie.
+
+Czasami okazuje się, że najprostsze możliwości poprawy widoczności są dosłownie pod ręką.
+
+Nie twierdzę, że pozycjonowanie jest łatwe. Nie obiecuję też pierwszego miejsca w Google po pięciu poprawkach.
+
+Chodzi mi o coś innego. Zanim zaczniemy inwestować w kolejną dużą kampanię SEO, warto sprawdzić, czy wykorzystaliśmy już to, co mamy.
+
+Nazwijmy to leniwym SEO. Nie dlatego, że nic nie trzeba robić. Raczej dlatego, że lepiej wykonać pięć sensownych działań niż pięćdziesiąt niepotrzebnych.
+
+### 1. Zanim zaczniesz szukać nowych słów kluczowych, sprawdź obecne
+
+Załóżmy, że prowadzisz firmę zajmującą się naprawą pralek we Wrocławiu.
+
+Chcesz pozyskiwać więcej klientów z Google.
+
+Pierwszy pomysł? Przygotować ogromną listę słów kluczowych, stworzyć nowe podstrony i zamówić kilkanaście artykułów.
+
+Tylko czy ktoś wcześniej sprawdził, na jakie zapytania Twoja strona już się wyświetla?
+
+Być może fraza „naprawa pralek Wrocław” znajduje się na ósmej pozycji.
+
+To oznacza, że Google już zna Twoją stronę i uznaje ją za potencjalnie przydatną dla tego zapytania.
+
+Zamiast tworzyć dziesięć kolejnych podstron, można najpierw poprawić tę jedną.
+
+Sprawdzić, czy użytkownik znajdzie na niej zakres usług, informacje o cenach, obsługiwany obszar, numer telefonu i odpowiedzi na najczęstsze pytania.
+
+Może wystarczy uzupełnić treść. Może problemem jest niejasny tytuł. A może konkurencja po prostu lepiej odpowiada na potrzeby klienta.
+
+**Co zrobić?**
+
+Otwórz raport skuteczności w Google Search Console.
+
+Sprawdź zapytania, które generują wyświetlenia, ale nie przynoszą tylu kliknięć, ile mogłyby.
+
+Warto przyjrzeć się frazom ze średnimi pozycjami od około 4 do 20.
+
+Nie jest to żadna magiczna granica. To po prostu wygodny punkt wyjścia do szukania możliwości.
+
+Pamiętaj jednak, że sama pozycja nie wystarczy. Liczą się również wyświetlenia, kliknięcia, intencja użytkownika i wartość zapytania dla firmy.
+
+### 2. Zrób audyt strony. Tak, zwykły audyt
+
+Brzmi banalnie?
+
+A jednak zdarzają się strony, na których prowadzone są kosztowne działania SEO, podczas gdy podstawowe problemy techniczne pozostają nierozwiązane.
+
+Nieprawidłowy canonical. Kilka podstron z identycznym title. Linki prowadzące do błędów 404. Ważna strona przypadkowo wykluczona z indeksowania.
+
+I obok tego wszystkiego piękny miesięczny raport z pozycjonowania.
+
+Możemy godzinami rozmawiać o algorytmach Google, ale jeśli ważna podstrona nie może zostać zaindeksowana, trudno oczekiwać od niej dobrych wyników organicznych.
+
+Oczywiście nie każdy błąd techniczny oznacza spadek pozycji. Brak meta description nie jest automatyczną karą od Google.
+
+Warto jednak rozróżniać drobne niedociągnięcia od problemów, które rzeczywiście utrudniają działanie strony.
+
+**Co zrobić?**
+
+Sprawdź statusy HTTP, indeksowanie, title, nagłówki, canonical, robots.txt, sitemap.xml, linkowanie wewnętrzne i dane strukturalne.
+
+Potem ustal priorytety.
+
+Nie chodzi o to, żeby poprawiać wszystko tylko dlatego, że narzędzie oznaczyło coś na czerwono.
+
+Najpierw zajmij się tym, co naprawdę przeszkadza użytkownikom i wyszukiwarkom.
+
+W Raccoon SEO Studio rozwijamy właśnie Raccoon SEO Scanner, narzędzie do takich podstawowych kontroli.
+
+Chcemy, żeby właściciel strony otrzymywał zrozumiałe informacje, a nie listę stu technicznych komunikatów, z których niewiele wynika.
+
+### 3. Przestań nazywać każdą podstronę „Nasze usługi”
+
+To jeden z moich ulubionych przykładów.
+
+Wchodzisz na stronę firmy. Ładny projekt, świetne zdjęcia, animacje, nowoczesne menu.
+
+Otwierasz konkretną usługę.
+
+Nagłówek: „Kompleksowe rozwiązania dla Twojego biznesu”.
+
+Jakie rozwiązania? Dla kogo? Co właściwie sprzedajecie?
+
+Nie wiadomo.
+
+Czasami mam wrażenie, że firmy boją się powiedzieć wprost, czym się zajmują.
+
+Tymczasem klient nie powinien rozwiązywać zagadki marketingowej.
+
+Jeżeli serwisujesz lasery kosmetyczne, nagłówek „Serwis i naprawa laserów kosmetycznych” będzie zwykle bardziej zrozumiały niż „Innowacyjne wsparcie technologiczne dla branży beauty”.
+
+To drugie może dobrze wyglądać w prezentacji. Ale klient szuka serwisu lasera.
+
+**Co zrobić?**
+
+Przejrzyj title i H1 najważniejszych podstron.
+
+Sprawdź, czy jasno opisują zawartość.
+
+Nie upychaj wszystkich możliwych słów kluczowych w jednym zdaniu.
+
+Dobry nagłówek powinien być zrozumiały dla człowieka, a nie tylko dla specjalisty SEO z arkuszem kalkulacyjnym.
+
+### 4. Twoja strona może odpowiadać na zupełnie inne pytanie niż to, które zadaje klient
+
+Wyobraź sobie sklep rowerowy.
+
+Tworzysz podstronę o rowerach górskich.
+
+Połowa treści dotyczy dostawy, kolejna część historii firmy, a reszta opowiada o tym, jak bardzo zależy Ci na klientach.
+
+Samych rowerów prawie nie widać.
+
+Potem pojawia się pytanie, dlaczego strona słabo radzi sobie w wynikach wyszukiwania.
+
+Problem nie musi dotyczyć liczby słów kluczowych.
+
+Może chodzić o to, że użytkownik nie znajduje tego, czego szuka.
+
+Osoba wpisująca „rower górski sklep” prawdopodobnie chce zobaczyć modele, parametry, ceny, dostępność i możliwość zakupu.
+
+Nie potrzebuje pięciu akapitów o misji firmy.
+
+W SEO bardzo ważna jest intencja wyszukiwania.
+
+Czy ktoś chce kupić produkt? Porównać oferty? Znaleźć specjalistę? Poznać cenę? Przeczytać instrukcję?
+
+Od tego zależy, jaka treść będzie przydatna.
+
+**Co zrobić?**
+
+Sprawdź wyniki Google dla najważniejszego zapytania.
+
+Zobacz, jakie informacje zawierają strony odpowiadające na podobną potrzebę.
+
+Następnie oceń własną podstronę.
+
+Czy klient rzeczywiście może na niej załatwić swoją sprawę?
+
+Jeżeli nie, popraw treść i strukturę.
+
+Nie musisz pisać dodatkowych trzech tysięcy słów tylko dlatego, że konkurencja ma dłuższy artykuł.
+
+Czasami dobra tabela parametrów, czytelna cena i łatwy kontakt są znacznie bardziej przydatne.
+
+### 5. Strona bez ruchu nie zawsze nadaje się do usunięcia
+
+Tutaj trzeba uważać.
+
+Czasami można spotkać poradę, żeby usuwać wszystkie podstrony, które przez kilka miesięcy nie generują ruchu organicznego.
+
+Na pierwszy rzut oka brzmi logicznie.
+
+Skoro nikt nie odwiedza strony z Google, po co ją utrzymywać?
+
+Ale wyobraź sobie podstronę z warunkami gwarancji.
+
+Może nie generować praktycznie żadnego ruchu organicznego, a mimo to być bardzo ważna dla klientów.
+
+Albo specjalistyczną usługę, której szuka kilka osób miesięcznie, ale jedno zlecenie ma dużą wartość.
+
+Czy naprawdę chcesz ją usunąć?
+
+Brak ruchu organicznego nie oznacza braku wartości biznesowej.
+
+Z drugiej strony artykuł z tysiącem przypadkowych odwiedzin nie musi przynosić firmie żadnych korzyści.
+
+**Co zrobić?**
+
+Znajdź podstrony z niewielkim ruchem i sprawdź każdą z osobna.
+
+Może wymagają aktualizacji. Może warto je połączyć. Czasami sensowne będzie przekierowanie na inną stronę.
+
+A czasami najlepiej zostawić je w spokoju.
+
+Nie zamieniaj optymalizacji SEO w porządki wykonywane piłą mechaniczną.
+
+### Dlaczego nazywam te metody leniwymi?
+
+Bo nie wymagają zaczynania wszystkiego od zera.
+
+Masz już stronę, treści, usługi i być może pewną widoczność w Google.
+
+Zanim zainwestujesz w ogromny plan pozycjonowania, warto sprawdzić, czy obecna strona działa tak dobrze, jak mogłaby.
+
+Czasami trzeba poprawić jeden nagłówek.
+
+Czasami usunąć błąd techniczny.
+
+Czasami dopisać kilka konkretnych informacji, których klient szuka od pierwszej sekundy.
+
+Oczywiście nie każdą stronę da się poprawić kilkoma drobnymi zmianami. Bywa, że potrzebna jest poważna przebudowa.
+
+Ale o tym też lepiej dowiedzieć się na początku niż po kilku miesiącach niepotrzebnych wydatków.
+
+### Od czego zacząć?
+
+Ja zacząłbym od [audytu technicznego](https://raccoon-studio.com.ua/pl/#services) i Google Search Console.
+
+Potem wybrałbym pięć podstron, które mają największy potencjał.
+
+Nie pięćdziesiąt. Nie dwieście.
+
+Pięć.
+
+Sprawdziłbym ich treść, nagłówki, indeksowanie i zgodność z potrzebami użytkowników.
+
+A następnie obserwował wyniki.
+
+Jeżeli nie wiesz, od czego zacząć, możesz skontaktować się z Raccoon SEO Studio.
+
+Pomożemy sprawdzić stronę i ustalić, które problemy warto rozwiązać w pierwszej kolejności.
+
+Dobry specjalista SEO nie musi wykonywać największej liczby zadań. Powinien wiedzieć, które zadania rzeczywiście mają sens.
+
+### O autorze
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
 
 ---
 

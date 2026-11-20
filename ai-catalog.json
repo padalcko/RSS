@@ -83,6 +83,13 @@
   ],
   "articles": [
     {
+      "name": "5 лінивих SEO-методів, які реально можуть принести трафік",
+      "description": "П'ять практичних SEO-методів, які допоможуть знайти можливості зростання трафіку без зайвих витрат. Пояснюємо просто, з прикладами.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/index.md"
+    },
+    {
       "name": "Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі",
       "description": "Як просувати сайт у кількох містах і країнах? Розбираємо локальне SEO, структуру регіональних сторінок, Google Business Profile та hreflang.",
       "language": "uk",
@@ -125,6 +132,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/zapusk-novoho-saitu-seo/index.md"
     },
     {
+      "name": "5 Lazy SEO Techniques That Can Actually Bring More Traffic",
+      "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/index.md"
+    },
+    {
       "name": "Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success",
       "description": "Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.",
       "language": "en",
@@ -165,6 +179,13 @@
       "language": "en",
       "url": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/",
       "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
+    },
+    {
+      "name": "5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch",
+      "description": "Nie zawsze trzeba inwestować w nowe treści i kosztowne kampanie. Poznaj 5 praktycznych sposobów na poprawę widoczności strony w Google.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/index.md"
     },
     {
       "name": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę",
@@ -223,6 +244,13 @@
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/",
       "markdown": "https://raccoon-studio.com.ua/blog/index.md"
+    },
+    {
+      "name": "5 лінивих SEO-методів, які реально можуть принести трафік",
+      "description": "П'ять практичних SEO-методів, які допоможуть знайти можливості зростання трафіку без зайвих витрат. Пояснюємо просто, з прикладами.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/index.md"
     },
     {
       "name": "Мультирегіональне SEO: як просувати сайт в Україні, Польщі та Європі",
@@ -316,6 +344,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/index.md"
     },
     {
+      "name": "5 Lazy SEO Techniques That Can Actually Bring More Traffic",
+      "description": "Before spending more on SEO, check what your website already has. Five practical ways to improve search visibility without unnecessary work.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/index.md"
+    },
+    {
       "name": "Fake SEO Traffic: How Dishonest Agencies Create the Illusion of Success",
       "description": "Learn how fake SEO traffic and fabricated leads can mislead business owners, and how to investigate suspicious results using GA4 and Search Console.",
       "language": "en",
@@ -370,6 +405,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/index.md"
+    },
+    {
+      "name": "5 leniwych sposobów na SEO, które naprawdę mogą zwiększyć ruch",
+      "description": "Nie zawsze trzeba inwestować w nowe treści i kosztowne kampanie. Poznaj 5 praktycznych sposobów na poprawę widoczności strony w Google.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/index.md"
     },
     {
       "name": "n8n: jak automatyzować procesy biznesowe i ograniczyć rutynę",

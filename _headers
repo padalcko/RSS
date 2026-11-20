@@ -26,6 +26,11 @@
   Link: <https://raccoon-studio.com.ua/blog/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/5-lazy-seo-techniques/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/multirehionalne-seo/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/multirehionalne-seo/>; rel="canonical"
@@ -91,6 +96,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/5-lazy-seo-techniques/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/5-lazy-seo-techniques/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /en/blog/fake-seo-traffic/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/>; rel="canonical"
@@ -129,6 +139,11 @@
 /pl/blog/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/5-lazy-seo-techniques/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/5-lazy-seo-techniques/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/automatyzacja-biznesu-n8n/index.md

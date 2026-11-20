@@ -159,6 +159,7 @@ def discover():
         assert len(h1) == len(main) == 1, url
         assert meta.get('description') and next(tree.all('title')).text(), url
         for key in ('og:title', 'og:description', 'og:url', 'og:image', 'og:type', 'twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'):
+            if key in ('og:image', 'twitter:image') and meta.get('twitter:card') == 'summary': continue
             assert meta.get(key), (url, key)
         schemas = []
         for n in tree.all('script'):
