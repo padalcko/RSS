@@ -1,5 +1,66 @@
 [
   {
+    "id": "geo-optimization-europe",
+    "category": "seo",
+    "published": "2026-11-21",
+    "modified": "2026-11-21",
+    "image": "/images/blog/geo-raccoon-studio.png",
+    "socialImage": "/images/blog/geo-raccoon-studio.png",
+    "imageWidth": 1671,
+    "imageHeight": 941,
+    "showCta": false,
+    "xDefaultLang": "pl",
+    "relatedIds": [],
+    "translations": {
+      "uk": {
+        "slug": "geo-prosuvannia-chatgpt-google-ai",
+        "title": "GEO-просування у 2026 році. Як зробити так, щоб ChatGPT і Google AI помітили ваш бізнес?",
+        "seoTitle": "GEO-просування у 2026 році: ChatGPT та Google AI",
+        "description": "Як працює GEO-просування у 2026 році? Дізнайтеся, як підвищувати видимість бізнесу в ChatGPT, Google AI та Perplexity в Україні та Європі.",
+        "excerpt": "Як зробити інформацію про бізнес зрозумілою та доступною для систем AI-пошуку? Практичний огляд GEO для компаній в Україні та Європі.",
+        "source": "geo-uk.md",
+        "author": "Raccoon SEO Studio",
+        "imageAlt": "Єнот Raccoon SEO Studio розповідає про GEO та видимість бізнесу в ChatGPT, Google AI і Perplexity.",
+        "audio": {
+          "src": "/assets/audio/geo-prosuvannia-chatgpt-google-ai.m4a",
+          "name": "GEO-просування у 2026 році",
+          "description": "Аудіоверсія статті про GEO-просування та видимість бізнесу в системах AI-пошуку.",
+          "heading": "Прослухати статтю",
+          "caption": "Немає часу читати? Прослухайте аудіоверсію матеріалу.",
+          "fallback": "Ваш браузер не підтримує відтворення аудіо."
+        }
+      },
+      "pl": {
+        "slug": "pozycjonowanie-geo-w-polsce",
+        "title": "GEO w Polsce. Jak sprawić, żeby ChatGPT i Google AI zauważyły Twoją firmę?",
+        "seoTitle": "Pozycjonowanie GEO w Polsce – ChatGPT i Google AI",
+        "description": "Dowiedz się, czym jest pozycjonowanie GEO w Polsce i jak zwiększać widoczność firmy w ChatGPT, Google AI i Perplexity. Praktyczny poradnik.",
+        "excerpt": "Jak zwiększać widoczność firmy w ChatGPT, Google AI i Perplexity? Praktyczny przewodnik po GEO dla polskiego rynku.",
+        "source": "geo-pl.md",
+        "author": "Raccoon SEO Studio",
+        "imageAlt": "Maskotka Raccoon SEO Studio omawia GEO i widoczność firmy w ChatGPT, Google AI oraz Perplexity.",
+        "audio": {
+          "src": "/assets/audio/geo-pozycjonowanie-w-polsce.m4a",
+          "name": "Pozycjonowanie GEO w Polsce",
+          "description": "Wersja audio artykułu o GEO i widoczności firmy w wyszukiwarkach opartych na AI.",
+          "heading": "Posłuchaj tego artykułu",
+          "caption": "Wolisz słuchać zamiast czytać? Odtwórz wersję audio artykułu.",
+          "fallback": "Twoja przeglądarka nie obsługuje odtwarzania audio."
+        }
+      },
+      "en": {
+        "slug": "geo-optimization-europe-ai-search",
+        "title": "GEO in Europe: How to Make Your Business Visible in ChatGPT and Google AI",
+        "seoTitle": "GEO in Europe: How to Get Found in ChatGPT & Google AI",
+        "description": "Learn how GEO optimization works in Europe in 2026. Improve your business visibility in ChatGPT, Google AI and Perplexity with practical SEO strategies.",
+        "excerpt": "Learn how European businesses can make accurate, useful information easier for AI-powered search systems to discover and understand.",
+        "source": "geo-en.md",
+        "author": "Raccoon SEO Studio",
+        "imageAlt": "Raccoon SEO Studio mascot exploring GEO and business visibility in ChatGPT, Google AI and Perplexity."
+      }
+    }
+  },
+  {
     "id": "three-seo-mistakes",
     "category": "seo",
     "published": "2026-11-20",

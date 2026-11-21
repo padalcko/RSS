@@ -62,13 +62,14 @@ def article_body(article,lang):
  t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}; bc,_=breadcrumbs(lang,article)
  blocks=source(article,lang).split('\n\n')
  intro=blocks.pop(0)
+ intro=re.sub(r"^#\s+", "", intro)
  body='\n'.join(f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
  related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
  if article.get('orderedLists'):
   body=re.sub(r'<p>(1\. .*?)</p>', lambda m: '<ol>'+''.join('<li>'+re.sub(r'^\d+\. ', '', line)+'</li>' for line in m[1].splitlines())+'</ol>', body, flags=re.S)
  if t.get('audio'):
   audio=t['audio']
-  player=f'''<aside class="blog-audio" aria-labelledby="audio-heading"><h2 id="audio-heading">Послухати аудіоматеріал</h2><p>{e(audio['name'])}</p><p>Немає часу читати? Увімкніть аудіо та послухайте матеріал про SEO, структуру сторінок і видимість сайтів у Google.</p><audio controls preload="none" aria-label="{e(audio['name'])}"><source src="{audio['src']}" type="audio/mp4">Ваш браузер не підтримує відтворення аудіо.</audio></aside>'''
+  player=f'''<aside class="blog-audio" aria-labelledby="audio-heading"><h2 id="audio-heading">{e(audio['heading'])}</h2><p>{e(audio['name'])}</p><p>{e(audio['caption'])}</p><audio controls preload="metadata" aria-label="{e(audio['name'])}"><source src="{audio['src']}" type="audio/mp4">{e(audio['fallback'])}</audio></aside>'''
   body=body.replace('<h2>',player+'<h2>',1)
  if article.get('inlineCode'): body=re.sub(r'`([^`]+)`',r'<code>\1</code>',body)
  if article.get('inlineStrong'): body=re.sub(r'\*\*(.+?)\*\*',r'<strong>\1</strong>',body)
@@ -118,15 +119,16 @@ def build_page(lang,article=None):
  common='\n'.join(re.findall(r'<link\b(?=[^>]*(?:rel="(?:stylesheet|preconnect|icon|shortcut icon|apple-touch-icon|manifest)"))[^>]*>',original,re.S))
  publisher={'@type':'Organization','@id':BASE+'/#organization','name':'Raccoon SEO Studio','url':BASE+'/','logo':{'@type':'ImageObject','url':BASE+'/images/brand/raccoon-icon-512.png'}}
  _,bc=breadcrumbs(lang,article)
- author={'@type':'Person','name':'Oleksandr Padalko','jobTitle':'Frontend Developer / SEO Engineer','worksFor':{'@id':BASE+'/#organization'}}
+ author={'@type':'Organization','name':t.get('author','Oleksandr Padalko'),'@id':BASE+'/#organization'} if article and t.get('author')=='Raccoon SEO Studio' else {'@type':'Person','name':'Oleksandr Padalko','jobTitle':'Frontend Developer / SEO Engineer','worksFor':{'@id':BASE+'/#organization'}}
  schema={'@type':'BlogPosting' if article else 'Blog','@id':url+'#'+('article' if article else 'blog'),'url':url,'name':title,'description':description,'inLanguage':lang,'publisher':{'@id':BASE+'/#organization'}}
  if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
  else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],**({'image':BASE+localized_visual(a,lang)['socialImage']} if localized_visual(a,lang)['socialImage'] else {})} for a in ARTICLES if lang in a['translations']]
  if article and not social: schema.pop('image',None)
  if article and t.get('audio'):
   audio=t['audio']
-  schema['associatedMedia']={'@type':'AudioObject','name':audio['name'],'description':audio['description'],'encodingFormat':'audio/mp4','inLanguage':lang,'contentUrl':BASE+audio['src'],'duration':audio['duration']}
- alternates='\n'.join(f'<link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}">' for l in COPY)+f'\n<link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}">'
+  schema['associatedMedia']={'@type':'AudioObject','name':audio['name'],'description':audio['description'],'encodingFormat':'audio/mp4','inLanguage':lang,'contentUrl':BASE+audio['src'],**({'duration':audio['duration']} if audio.get('duration') else {})}
+ x_default=article.get('xDefaultLang','uk') if article else 'uk'
+ alternates='\n'.join(f'<link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}">' for l in COPY)+f'\n<link rel="alternate" hreflang="x-default" href="{BASE+route(x_default,article)}">'
  locale={'uk':'uk_UA','pl':'pl_PL','en':'en_GB'}
  og_locales='\n'.join(f'<meta property="og:locale:alternate" content="{value}">' for l,value in locale.items() if l!=lang)
  html=f'''<!DOCTYPE html>
@@ -196,7 +198,7 @@ def build():
  for article in [None]+ARTICLES:
   for lang in COPY:
    links=''.join(f'<xhtml:link rel="alternate" hreflang="{language_tag(l,article)}" href="{BASE+route(l,article)}" />' for l in COPY)
-   links+=f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE+route("uk",article)}" />'
+   links+=f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE+route(article.get("xDefaultLang","uk") if article else "uk",article)}" />'
    entries.append(f'  <url><loc>{BASE+route(lang,article)}</loc>'+ (f'<lastmod>{article["modified"]}</lastmod>' if article else '')+links+'</url>')
  sitemap=sitemap.replace('</urlset>','  <!-- BLOG START -->\n'+'\n'.join(entries)+'\n  <!-- BLOG END -->\n</urlset>'); path.write_text(sitemap)
  print('Built 3 blog indexes and',sum(len(a['translations']) for a in ARTICLES),'article pages.')

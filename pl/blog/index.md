@@ -8,6 +8,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Maskotka Raccoon SEO Studio omawia GEO i widoczność firmy w ChatGPT, Google AI oraz Perplexity.](https://raccoon-studio.com.ua/images/blog/geo-raccoon-studio.png)
+
+SEO
+
+## [GEO w Polsce. Jak sprawić, żeby ChatGPT i Google AI zauważyły Twoją firmę?](https://raccoon-studio.com.ua/pl/blog/pozycjonowanie-geo-w-polsce/)
+
+Jak zwiększać widoczność firmy w ChatGPT, Google AI i Perplexity? Praktyczny przewodnik po GEO dla polskiego rynku.
+
+Raccoon SEO Studio · 21.11.2026 · 12 min czytania
+
 ![Szop Raccoon SEO Studio analizuje trzy częste błędy SEO na stronie internetowej](https://raccoon-studio.com.ua/images/blog/three-seo-mistakes-raccoon-studio.webp)
 
 SEO

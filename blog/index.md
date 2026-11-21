@@ -8,6 +8,16 @@
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот Raccoon SEO Studio розповідає про GEO та видимість бізнесу в ChatGPT, Google AI і Perplexity.](https://raccoon-studio.com.ua/images/blog/geo-raccoon-studio.png)
+
+SEO
+
+## [GEO-просування у 2026 році. Як зробити так, щоб ChatGPT і Google AI помітили ваш бізнес?](https://raccoon-studio.com.ua/blog/geo-prosuvannia-chatgpt-google-ai/)
+
+Як зробити інформацію про бізнес зрозумілою та доступною для систем AI-пошуку? Практичний огляд GEO для компаній в Україні та Європі.
+
+Raccoon SEO Studio · 21.11.2026 · 9 хв читання
+
 ![Єнот Raccoon SEO Studio аналізує три поширені помилки SEO на сайті](https://raccoon-studio.com.ua/images/blog/three-seo-mistakes-raccoon-studio.webp)
 
 SEO

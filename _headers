@@ -36,6 +36,11 @@
   Link: <https://raccoon-studio.com.ua/blog/5-lazy-seo-techniques/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/geo-prosuvannia-chatgpt-google-ai/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/geo-prosuvannia-chatgpt-google-ai/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/multirehionalne-seo/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/multirehionalne-seo/>; rel="canonical"
@@ -116,6 +121,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/fake-seo-traffic/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/geo-optimization-europe-ai-search/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/geo-optimization-europe-ai-search/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /en/blog/how-to-build-ai-agent-n8n/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/>; rel="canonical"
@@ -174,6 +184,11 @@
 /pl/blog/jak-stworzyc-agenta-ai-n8n/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/pozycjonowanie-geo-w-polsce/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/pozycjonowanie-geo-w-polsce/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/seo-wieloregionalne/index.md

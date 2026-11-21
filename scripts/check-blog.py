@@ -37,7 +37,7 @@ for article in [None]+b.ARTICLES:
   assert sum(t=='h1' for t,a in p.tags)==1,route
   canonical=[a['href'] for t,a in p.tags if t=='link' and a.get('rel')=='canonical'];assert canonical==[b.BASE+route]
   alt={a['hreflang']:a['href'] for t,a in p.tags if t=='link' and a.get('rel')=='alternate'}
-  assert alt=={**{b.language_tag(l,article):b.BASE+b.route(l,article) for l in b.COPY},'x-default':b.BASE+b.route('uk',article)}
+  assert alt=={**{b.language_tag(l,article):b.BASE+b.route(l,article) for l in b.COPY},'x-default':b.BASE+b.route(article.get('xDefaultLang','uk') if article else 'uk',article)}
   languages={a['lang']:a['href'] for t,a in p.tags if t=='a' and a.get('class')=='language-link'}
   assert languages=={l:b.route(l,article) for l in b.COPY}
   assert urls.count(b.BASE+route)==1
@@ -53,7 +53,8 @@ for article in [None]+b.ARTICLES:
     content=(dest/'index.html' if dest.is_dir() else dest).read_text()
     assert f'id="{url.split("#")[1]}"' in content,(route,url)
   if article:
-   expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in b.source(article,lang).split('\n\n')]
+   expected=[re.sub(r'^#\s+','',block) if i==0 else block for i,block in enumerate(b.source(article,lang).split('\n\n'))]
+   expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in expected]
    if article.get('inlineStrong'): expected=[re.sub(r'\*\*(.+?)\*\*',r'\1',block) for block in expected]
    if article.get('orderedLists'):
     expected=[re.sub(r'^\d+\. ', '', line) for block in expected for line in (block.splitlines() if block.startswith('1. ') else [block])]
@@ -61,9 +62,10 @@ for article in [None]+b.ARTICLES:
    assert sum(tag=='audio' for tag,a in p.tags)==bool(audio)
    if audio:
     assert schema['associatedMedia']['contentUrl']==b.BASE+audio['src']
-    assert all(a.get('preload')=='none' and 'autoplay' not in a for tag,a in p.tags if tag=='audio')
+    expected_preload='metadata' if article['id']=='geo-optimization-europe' else 'none'
+    assert all(a.get('preload')==expected_preload and 'autoplay' not in a for tag,a in p.tags if tag=='audio')
    assert p.blocks==expected,(route,'article changed')
-   assert schema['author']['name']=='Oleksandr Padalko'
+   assert schema['author']['name']==('Raccoon SEO Studio' if article['translations'][lang].get('author')=='Raccoon SEO Studio' else 'Oleksandr Padalko')
    assert schema['datePublished']==article['published'] and schema['dateModified']==article['modified']
   checked+=1
 print(f'PASS: {checked} routes; exact article text, local links, canonicals, language switching, hreflang, JSON-LD and sitemap.')
