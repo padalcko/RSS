@@ -9,7 +9,7 @@ spec=importlib.util.spec_from_file_location('blog',Path(__file__).with_name('bui
 b=importlib.util.module_from_spec(spec); spec.loader.exec_module(b)
 class Page(HTMLParser):
  def __init__(self,text):
-  super().__init__(); self.tags=[]; self.blocks=[]; self.capture=None; self.depth=0; self.prose=False; self.prose_depth=0; self.json=[]; self.script=None; self.audio=False; self.feed(text)
+  super().__init__(); self.tags=[]; self.blocks=[]; self.cells=[]; self.cell=None; self.capture=None; self.depth=0; self.prose=False; self.prose_depth=0; self.json=[]; self.script=None; self.audio=False; self.feed(text)
  def handle_starttag(self,tag,attrs):
   a=dict(attrs); self.tags.append((tag,a))
   if tag=='aside' and a.get('class')=='blog-audio': self.audio=True
@@ -18,14 +18,17 @@ class Page(HTMLParser):
   if 'data-article-intro' in a: self.capture=''
   if 'data-article-body' in a: self.prose=True
   if self.prose and tag in ['p','h2','h3','li']: self.capture=''
+  if self.prose and tag in ['th','td']: self.cell=''
  def handle_data(self,data):
   if self.capture is not None:self.capture+=data
+  if self.cell is not None:self.cell+=data
   if self.script is not None:self.script+=data
  def handle_endtag(self,tag):
   if self.audio:
    if tag=='aside': self.audio=False
    return
   if self.capture is not None and tag in ['p','h2','h3','li']:self.blocks.append(self.capture);self.capture=None
+  if self.cell is not None and tag in ['th','td']:self.cells.append(self.cell);self.cell=None
   if tag=='div' and self.prose:self.prose=False
   if tag=='script' and self.script is not None:self.json.append(json.loads(self.script));self.script=None
 
@@ -54,6 +57,11 @@ for article in [None]+b.ARTICLES:
     assert f'id="{url.split("#")[1]}"' in content,(route,url)
   if article:
    expected=[re.sub(r'^#\s+','',block) if i==0 else block for i,block in enumerate(b.source(article,lang).split('\n\n'))]
+   if article.get('tables'):
+    table_blocks=[block for block in expected if block.startswith('| ')]
+    expected_cells=[cell.strip() for block in table_blocks for line in block.splitlines() if not re.fullmatch(r'\|[|:\- ]+\|',line) for cell in line.strip().strip('|').split('|')]
+    assert p.cells==expected_cells,(route,'table changed')
+    expected=[block for block in expected if not block.startswith('| ')]
    expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in expected]
    if article.get('inlineStrong'): expected=[re.sub(r'\*\*(.+?)\*\*',r'\1',block) for block in expected]
    if article.get('inlineEmphasis'): expected=[re.sub(r'\*(.+?)\*',r'\1',block) for block in expected]

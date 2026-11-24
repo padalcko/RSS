@@ -6,7 +6,7 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/przyszlosc-seo-202
 
 > Autorskie przemyślenia o przyszłości SEO w 2027 roku, automatyzacji treści w n8n, sztucznej inteligencji i perspektywach stron małych firm.
 
-SEO
+SEO · Sztuczna inteligencja · Automatyzacja
 
 Ostatnio sporo czytam o zmianach w SEO, analizuję wyniki wyszukiwania, obserwuję własne projekty i próbuję zrozumieć, w jakim kierunku zmierza ta branża.
 

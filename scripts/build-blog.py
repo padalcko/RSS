@@ -21,6 +21,16 @@ COPY = {
 }
 KEYS = ['all','seo','ai','automation','development','cases']
 
+def categories(article): return article.get('categories', [article['category']])
+def category_label(article,lang): return ' · '.join(COPY[lang]['categories'][KEYS.index(key)] for key in categories(article))
+
+def table_html(block):
+ rows=[[cell.strip() for cell in line.strip().strip('|').split('|')] for line in block.splitlines()]
+ assert len(rows)>2 and all(len(row)==len(rows[0]) for row in rows) and all(re.fullmatch(r':?-+:?',cell) for cell in rows[1])
+ head=''.join(f'<th scope="col">{e(cell)}</th>' for cell in rows[0])
+ body=''.join('<tr>'+''.join(f'<td>{e(cell)}</td>' for cell in row)+'</tr>' for row in rows[2:])
+ return f'<figure class="blog-table-scroll"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></figure>'
+
 def home(lang): return '/' if lang == 'uk' else f'/{lang}/'
 def route(lang, article=None): return home(lang)+'blog/'+(article['translations'][lang]['slug']+'/' if article else '')
 def language_tag(lang,article=None): return (article or {}).get('hreflang',{}).get(lang,lang)
@@ -47,7 +57,7 @@ def card(article,lang,link_title=None):
  t=article['translations'][lang]; c={**COPY[lang], 'author':t.get('author',COPY[lang]['author'])}
  excerpt=t.get('excerpt',t['description'])
  author=f"<span>{c['author']}</span>"
- html=f'''<li class="blog-card" data-category="{article['category']}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{c['categories'][KEYS.index(article['category'])]}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
+ html=f'''<li class="blog-card" data-category="{' '.join(categories(article))}" data-search="{e(t['title']+' '+excerpt,quote=True)}"><a href="{route(lang,article)}"><img src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" loading="lazy" decoding="async"><div class="blog-card-copy"><span class="blog-category">{category_label(article,lang)}</span><h2>{e(link_title or t['title'])}</h2><p>{e(excerpt)}</p><p class="blog-meta">{author}<time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></p><span class="blog-read">{c['read']} <span aria-hidden="true">↗</span></span></div></a></li>'''
 
  return re.sub(r'<img[^>]*>', '', html, count=1) if not article['image'] else html
 
@@ -63,7 +73,7 @@ def article_body(article,lang):
  blocks=source(article,lang).split('\n\n')
  intro=blocks.pop(0)
  intro=re.sub(r"^#\s+", "", intro)
- body='\n'.join(f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
+ body='\n'.join(table_html(b) if article.get('tables') and b.startswith('| ') else f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
  related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
  if article.get('orderedLists'):
   body=re.sub(r'<p>(1\. .*?)</p>', lambda m: '<ol>'+''.join('<li>'+re.sub(r'^\d+\. ', '', line)+'</li>' for line in m[1].splitlines())+'</ol>', body, flags=re.S)
@@ -87,7 +97,8 @@ def article_body(article,lang):
  if t.get('serviceLinkText'):
   text=e(t['serviceLinkText'])
   body=body.replace(text, f'<a href="{home(lang)}#services">{text}</a>', 1)
- html=f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{c['categories'][KEYS.index(article['category'])]}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div><aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article>{cta_html}{related_html}</div>'''
+ sources_html=('<section class="blog-prose blog-sources"><h2>'+e(t['sourcesHeading'])+'</h2><ul>'+''.join(f'<li><a href="{e(url,quote=True)}">{e(label)}</a></li>' for url,label in zip(article['sources'],t['sourceLabels']))+'</ul></section>') if article.get('sources') else ''
+ html=f'''<div class="container blog-article-container">{bc}<article><header class="blog-article-heading"><p class="blog-category">{category_label(article,lang)}</p><h1>{e(t['title'])}</h1><p class="blog-intro" data-article-intro>{e(intro)}</p><div class="blog-meta"><span>{c['author']}</span><time datetime="{article['published']}">{date_label(article['published'],lang)}</time><span>{minutes(article,lang)} {c['minutes']}</span></div></header><img class="blog-article-image" src="{article['image']}" alt="{e(t.get('imageAlt',c['image']))}" width="{article.get('imageWidth',1200)}" height="{article.get('imageHeight',675)}" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body>{body}</div>{sources_html}<aside class="blog-author"><h2>{c['authorLabel']}</h2><p>{c['author']}</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article>{cta_html}{related_html}</div>'''
 
  return re.sub(r'<img class="blog-article-image"[^>]*>', '', html) if not article['image'] else html
 
@@ -128,7 +139,7 @@ def build_page(lang,article=None):
  _,bc=breadcrumbs(lang,article)
  author={'@type':'Organization','name':t.get('author','Oleksandr Padalko'),'@id':BASE+'/#organization'} if article and t.get('author')=='Raccoon SEO Studio' else {'@type':'Person','name':'Oleksandr Padalko','jobTitle':'Frontend Developer / SEO Engineer','worksFor':{'@id':BASE+'/#organization'}}
  schema={'@type':'BlogPosting' if article else 'Blog','@id':url+'#'+('article' if article else 'blog'),'url':url,'name':title,'description':description,'inLanguage':lang,'publisher':{'@id':BASE+'/#organization'}}
- if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
+ if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=[c['categories'][KEYS.index(key)] for key in categories(article)] if article.get('categories') else c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
  else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],**({'image':BASE+localized_visual(a,lang)['socialImage']} if localized_visual(a,lang)['socialImage'] else {})} for a in ARTICLES if lang in a['translations']]
  if article and not social: schema.pop('image',None)
  if article and t.get('audio'):

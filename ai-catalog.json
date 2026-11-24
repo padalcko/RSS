@@ -125,6 +125,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
     },
     {
+      "name": "Накрутка факторів поведінки користувача: як бізнес платить за ботів замість реальних клієнтів",
+      "description": "Як накрутка факторів поведінки користувача спотворює аналітику, створює ризики для SEO та дозволяє підрядникам обманювати бізнес.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/nakrutka-faktoriv-povedinky-korystuvacha/",
+      "markdown": "https://raccoon-studio.com.ua/blog/nakrutka-faktoriv-povedinky-korystuvacha/index.md"
+    },
+    {
       "name": "Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху",
       "description": "Як розпізнати фальшивий SEO-трафік, підроблені заявки та маніпуляції зі статистикою. Практична перевірка через GA4 і Google Search Console.",
       "language": "uk",
@@ -223,6 +230,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
     },
     {
+      "name": "User Behavior Manipulation in SEO: Why Businesses Pay for Bots Instead of Real Customers",
+      "description": "Learn how artificial traffic and user behavior manipulation distort analytics, create SEO risks and mislead business owners.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/user-behavior-manipulation/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/user-behavior-manipulation/index.md"
+    },
+    {
       "name": "3 błędy SEO, przez które Twoja strona traci klientów z Google",
       "description": "Twoja strona jest w Google, ale nie zdobywa klientów? Poznaj 3 częste błędy SEO dotyczące słów kluczowych, konkurujących podstron i treści.",
       "language": "pl",
@@ -256,6 +270,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/index.md"
+    },
+    {
+      "name": "Manipulacja czynnikami behawioralnymi: dlaczego firmy płacą za boty zamiast prawdziwych klientów",
+      "description": "Jak sztuczny ruch i manipulacja zachowaniem użytkowników zniekształcają analitykę, wpływają na SEO i narażają firmy na straty.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/manipulacja-czynnikami-behawioralnymi/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/manipulacja-czynnikami-behawioralnymi/index.md"
     },
     {
       "name": "GEO w Polsce. Jak sprawić, żeby ChatGPT i Google AI zauważyły Twoją firmę?",
@@ -349,6 +370,13 @@
       "language": "uk",
       "url": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/",
       "markdown": "https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/index.md"
+    },
+    {
+      "name": "Накрутка факторів поведінки користувача: як бізнес платить за ботів замість реальних клієнтів",
+      "description": "Як накрутка факторів поведінки користувача спотворює аналітику, створює ризики для SEO та дозволяє підрядникам обманювати бізнес.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/nakrutka-faktoriv-povedinky-korystuvacha/",
+      "markdown": "https://raccoon-studio.com.ua/blog/nakrutka-faktoriv-povedinky-korystuvacha/index.md"
     },
     {
       "name": "Накрутка SEO-трафіку: як недобросовісні підрядники створюють ілюзію успіху",
@@ -498,6 +526,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/three-seo-rules/index.md"
     },
     {
+      "name": "User Behavior Manipulation in SEO: Why Businesses Pay for Bots Instead of Real Customers",
+      "description": "Learn how artificial traffic and user behavior manipulation distort analytics, create SEO risks and mislead business owners.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/user-behavior-manipulation/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/user-behavior-manipulation/index.md"
+    },
+    {
       "name": "Tworzymy strony, które wspierają Twój biznes",
       "description": "Raccoon SEO Studio — SEO, tworzenie stron internetowych, automatyzacje AI, n8n, integracje CRM i rozwiązania digital dla firm.",
       "language": "pl",
@@ -545,6 +580,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/index.md"
+    },
+    {
+      "name": "Manipulacja czynnikami behawioralnymi: dlaczego firmy płacą za boty zamiast prawdziwych klientów",
+      "description": "Jak sztuczny ruch i manipulacja zachowaniem użytkowników zniekształcają analitykę, wpływają na SEO i narażają firmy na straty.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/manipulacja-czynnikami-behawioralnymi/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/manipulacja-czynnikami-behawioralnymi/index.md"
     },
     {
       "name": "GEO w Polsce. Jak sprawić, żeby ChatGPT i Google AI zauważyły Twoją firmę?",

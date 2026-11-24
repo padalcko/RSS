@@ -1,7 +1,123 @@
 [
   {
+    "id": "user-behavior-manipulation",
+    "category": "seo",
+    "published": "2026-11-24",
+    "modified": "2026-11-24",
+    "image": "/images/blog/user-behavior-manipulation.webp",
+    "socialImage": "/images/blog/user-behavior-manipulation.webp",
+    "imageWidth": 1600,
+    "imageHeight": 900,
+    "orderedLists": true,
+    "tables": true,
+    "relatedIds": [
+      "fake-seo-traffic",
+      "three-seo-mistakes"
+    ],
+    "sources": [
+      "https://developers.google.com/search/docs/essentials/spam-policies",
+      "https://developers.google.com/search/docs/appearance/ranking-systems-guide",
+      "https://support.google.com/analytics/answer/9888366",
+      "https://support.google.com/webmasters/answer/9044175"
+    ],
+    "translations": {
+      "uk": {
+        "slug": "nakrutka-faktoriv-povedinky-korystuvacha",
+        "title": "Накрутка факторів поведінки користувача: як бізнес платить за ботів замість реальних клієнтів",
+        "seoTitle": "Накрутка поведінкових факторів: ризики для бізнесу",
+        "description": "Як накрутка факторів поведінки користувача спотворює аналітику, створює ризики для SEO та дозволяє підрядникам обманювати бізнес.",
+        "source": "user-behavior-manipulation-uk.md",
+        "imageAlt": "Єнот аналізує накрутку поведінкових факторів і штучний трафік.",
+        "sourcesHeading": "Офіційні джерела",
+        "sourceLabels": [
+          "Правила Google щодо спаму в пошуку",
+          "Огляд систем ранжування Google",
+          "Google Analytics: виключення відомих ботів",
+          "Google Search Console: звіт про ручні заходи"
+        ],
+        "inlineLinks": [
+          {
+            "text": "накрутку відвідуваності сайту",
+            "href": "/blog/nakrutka-seo-trafiku/"
+          },
+          {
+            "text": "автоматизації на основі n8n",
+            "href": "/blog/n8n-avtomatyzatsiia-biznesu/"
+          },
+          {
+            "text": "Правильне SEO",
+            "href": "/#services"
+          }
+        ]
+      },
+      "pl": {
+        "slug": "manipulacja-czynnikami-behawioralnymi",
+        "title": "Manipulacja czynnikami behawioralnymi: dlaczego firmy płacą za boty zamiast prawdziwych klientów",
+        "seoTitle": "Manipulacja czynnikami behawioralnymi w SEO",
+        "description": "Jak sztuczny ruch i manipulacja zachowaniem użytkowników zniekształcają analitykę, wpływają na SEO i narażają firmy na straty.",
+        "source": "user-behavior-manipulation-pl.md",
+        "imageAlt": "Szop analizujący manipulację czynnikami behawioralnymi i sztuczny ruch internetowy.",
+        "sourcesHeading": "Oficjalne źródła",
+        "sourceLabels": [
+          "Zasady Google dotyczące spamu w wyszukiwarce",
+          "Przewodnik po systemach rankingowych Google",
+          "Google Analytics: wykluczanie znanych botów",
+          "Google Search Console: raport działań ręcznych"
+        ],
+        "inlineLinks": [
+          {
+            "text": "sztucznego ruchu",
+            "href": "/pl/blog/falszywy-ruch-seo/"
+          },
+          {
+            "text": "automatyzacji opartej na n8n",
+            "href": "/pl/blog/automatyzacja-biznesu-n8n/"
+          },
+          {
+            "text": "Prawidłowe SEO",
+            "href": "/pl/#services"
+          }
+        ]
+      },
+      "en": {
+        "slug": "user-behavior-manipulation",
+        "title": "User Behavior Manipulation in SEO: Why Businesses Pay for Bots Instead of Real Customers",
+        "seoTitle": "User Behavior Manipulation in SEO: Business Risks",
+        "description": "Learn how artificial traffic and user behavior manipulation distort analytics, create SEO risks and mislead business owners.",
+        "source": "user-behavior-manipulation-en.md",
+        "imageAlt": "Raccoon analyzing user behavior manipulation and artificial website traffic.",
+        "sourcesHeading": "Official sources",
+        "sourceLabels": [
+          "Google Search spam policies",
+          "Google Search ranking systems guide",
+          "Google Analytics known bot traffic exclusion",
+          "Google Search Console Manual Actions report"
+        ],
+        "inlineLinks": [
+          {
+            "text": "artificial traffic",
+            "href": "/en/blog/fake-seo-traffic/"
+          },
+          {
+            "text": "n8n-based automation",
+            "href": "/en/blog/n8n-business-automation/"
+          },
+          {
+            "text": "Proper SEO",
+            "href": "/en/#services"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "seo-future-2027",
     "category": "seo",
+    "categories": [
+      "seo",
+      "ai",
+      "automation"
+    ],
     "published": "2026-11-24",
     "modified": "2026-11-24",
     "image": "/images/blog/seo-future-2027.webp",

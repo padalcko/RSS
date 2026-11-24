@@ -56,6 +56,11 @@
   Link: <https://raccoon-studio.com.ua/blog/n8n-avtomatyzatsiia-biznesu/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/nakrutka-faktoriv-povedinky-korystuvacha/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/nakrutka-faktoriv-povedinky-korystuvacha/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/nakrutka-seo-trafiku/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/>; rel="canonical"
@@ -161,6 +166,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/three-seo-rules/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/user-behavior-manipulation/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/user-behavior-manipulation/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /pl/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/>; rel="canonical"
@@ -194,6 +204,11 @@
 /pl/blog/jak-stworzyc-agenta-ai-n8n/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/manipulacja-czynnikami-behawioralnymi/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/manipulacja-czynnikami-behawioralnymi/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/pozycjonowanie-geo-w-polsce/index.md

@@ -17,7 +17,7 @@
   const normalize = text => text.normalize('NFKC').toLocaleLowerCase(document.documentElement.lang).trim();
   function render() {
     const query = normalize(search.value);
-    const matches = cards.filter(card => (category === 'all' || card.dataset.category === category) && normalize(card.dataset.search).includes(query));
+    const matches = cards.filter(card => (category === 'all' || card.dataset.category.split(' ').includes(category)) && normalize(card.dataset.search).includes(query));
     const pages = Math.max(1, Math.ceil(matches.length / pageSize));
     page = Math.min(page, pages);
     const visible = new Set(matches.slice((page - 1) * pageSize, page * pageSize));

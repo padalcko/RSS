@@ -6,7 +6,7 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/future-of-seo-2027/
 
 > Personal reflections on the future of SEO in 2027, content automation with n8n, artificial intelligence and the prospects for small business websites.
 
-SEO
+SEO · Artificial Intelligence · Automation
 
 Lately, I have been reading quite a lot about changes in SEO, analysing search results, observing my own projects and trying to understand where this industry is heading.
 
