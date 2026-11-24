@@ -67,12 +67,19 @@ def article_body(article,lang):
  related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
  if article.get('orderedLists'):
   body=re.sub(r'<p>(1\. .*?)</p>', lambda m: '<ol>'+''.join('<li>'+re.sub(r'^\d+\. ', '', line)+'</li>' for line in m[1].splitlines())+'</ol>', body, flags=re.S)
+ if article.get('unorderedLists'):
+  body=re.sub(r'<p>(- .*?)</p>', lambda m: '<ul>'+''.join('<li>'+line[2:]+'</li>' for line in m[1].splitlines())+'</ul>', body, flags=re.S)
  if t.get('audio'):
   audio=t['audio']
   player=f'''<aside class="blog-audio" aria-labelledby="audio-heading"><h2 id="audio-heading">{e(audio['heading'])}</h2><p>{e(audio['name'])}</p><p>{e(audio['caption'])}</p><audio controls preload="metadata" aria-label="{e(audio['name'])}"><source src="{audio['src']}" type="audio/mp4">{e(audio['fallback'])}</audio></aside>'''
   body=body.replace('<h2>',player+'<h2>',1)
  if article.get('inlineCode'): body=re.sub(r'`([^`]+)`',r'<code>\1</code>',body)
  if article.get('inlineStrong'): body=re.sub(r'\*\*(.+?)\*\*',r'<strong>\1</strong>',body)
+ if article.get('inlineEmphasis'): body=re.sub(r'\*(.+?)\*',r'<em>\1</em>',body)
+ for link in t.get('inlineLinks',[]):
+  label=e(link['text'])
+  assert label in body, (article['id'],lang,label)
+  body=body.replace(label,f'<a href="{link["href"]}">{label}</a>',1)
  cta_button=(f"<a class=\"nav-cta\" style=\"color: var(--white)\" href=\"{home(lang)}#contacts\">{e(t.get('button',c['button']))}</a>" if article.get('contactLink') else f"<button type=\"button\" class=\"nav-cta js-open-modal\">{e(t.get('button',c['button']))}</button>")
  cta_heading=f"<h2>{e(t['ctaTitle'])}</h2>" if t.get('ctaTitle') else ''
  cta_html=f'<aside class="blog-cta">{cta_heading}<p>{e(t.get("cta",c["cta"]))}</p><div>{cta_button}<a href="{home(lang)}#services">{c["services"]}</a></div></aside>' if article.get('showCta',True) else ''

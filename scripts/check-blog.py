@@ -56,8 +56,11 @@ for article in [None]+b.ARTICLES:
    expected=[re.sub(r'^#\s+','',block) if i==0 else block for i,block in enumerate(b.source(article,lang).split('\n\n'))]
    expected=[re.sub(r'^#{2,3} ','',block).replace('`','') if article.get('inlineCode') else re.sub(r'^#{2,3} ','',block) for block in expected]
    if article.get('inlineStrong'): expected=[re.sub(r'\*\*(.+?)\*\*',r'\1',block) for block in expected]
+   if article.get('inlineEmphasis'): expected=[re.sub(r'\*(.+?)\*',r'\1',block) for block in expected]
    if article.get('orderedLists'):
     expected=[re.sub(r'^\d+\. ', '', line) for block in expected for line in (block.splitlines() if block.startswith('1. ') else [block])]
+   if article.get('unorderedLists'):
+    expected=[re.sub(r'^- ', '', line) for block in expected for line in (block.splitlines() if block.startswith('- ') else [block])]
    audio=article['translations'][lang].get('audio')
    assert sum(tag=='audio' for tag,a in p.tags)==bool(audio)
    if audio:

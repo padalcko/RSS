@@ -1,5 +1,104 @@
 [
   {
+    "id": "seo-future-2027",
+    "category": "seo",
+    "published": "2026-11-24",
+    "modified": "2026-11-24",
+    "image": "/images/blog/seo-future-2027.webp",
+    "socialImage": "/images/blog/seo-future-2027.webp",
+    "imageWidth": 1600,
+    "imageHeight": 900,
+    "showCta": false,
+    "relatedIds": [],
+    "orderedLists": true,
+    "unorderedLists": true,
+    "inlineStrong": true,
+    "inlineEmphasis": true,
+    "translations": {
+      "uk": {
+        "slug": "maibutnie-seo-2027",
+        "title": "Куди рухається SEO у 2027 році і чи є майбутнє у звичайних сайтів?",
+        "seoTitle": "Майбутнє SEO у 2027 році: автоматизація, AI та бренди",
+        "description": "Авторські роздуми про майбутнє SEO у 2027 році, автоматизацію контенту в n8n, розвиток штучного інтелекту та перспективи сайтів малого бізнесу.",
+        "excerpt": "Створювати сайти та контент стає дедалі простіше. Як це змінює SEO, чому бізнесу варто розвивати власний бренд і на чому я б зосередився у 2027 році.",
+        "source": "seo-future-2027-uk.md",
+        "imageAlt": "Єнот за ноутбуком розмірковує про майбутнє SEO, масове створення сайтів та розвиток брендів",
+        "inlineLinks": [
+          {
+            "text": "той самий n8n",
+            "href": "/blog/yak-stvoryty-ai-agenta-n8n/"
+          },
+          {
+            "text": "як інформація про компанії представлена для систем штучного інтелекту",
+            "href": "/blog/geo-prosuvannia-chatgpt-google-ai/"
+          },
+          {
+            "text": "Класичне SEO",
+            "href": "/#services"
+          },
+          {
+            "text": "Автоматизація рутинних процесів",
+            "href": "/#automation"
+          }
+        ]
+      },
+      "pl": {
+        "slug": "przyszlosc-seo-2027",
+        "title": "Dokąd zmierza SEO w 2027 roku i czy zwykłe strony internetowe mają przyszłość?",
+        "seoTitle": "Przyszłość SEO w 2027 roku: automatyzacja, AI i marki",
+        "description": "Autorskie przemyślenia o przyszłości SEO w 2027 roku, automatyzacji treści w n8n, sztucznej inteligencji i perspektywach stron małych firm.",
+        "excerpt": "Tworzenie stron internetowych i treści staje się coraz prostsze. Jak zmienia to SEO, dlaczego warto rozwijać własną markę i na czym skupiłbym się w 2027 roku.",
+        "source": "seo-future-2027-pl.md",
+        "imageAlt": "Szop przy laptopie rozważa przyszłość SEO, masowe tworzenie stron internetowych i rozwój marek",
+        "inlineLinks": [
+          {
+            "text": "n8n, z którym aktywnie pracuję",
+            "href": "/pl/blog/jak-stworzyc-agenta-ai-n8n/"
+          },
+          {
+            "text": "sposób, w jaki informacje o firmach są przedstawiane systemom sztucznej inteligencji",
+            "href": "/pl/blog/pozycjonowanie-geo-w-polsce/"
+          },
+          {
+            "text": "Klasyczne SEO",
+            "href": "/pl/#services"
+          },
+          {
+            "text": "Automatyzacja rutynowych procesów",
+            "href": "/pl/#automation"
+          }
+        ]
+      },
+      "en": {
+        "slug": "future-of-seo-2027",
+        "title": "Where is SEO heading in 2027, and do ordinary websites have a future?",
+        "seoTitle": "The Future of SEO in 2027: Automation, AI and Brands",
+        "description": "Personal reflections on the future of SEO in 2027, content automation with n8n, artificial intelligence and the prospects for small business websites.",
+        "excerpt": "Creating websites and content is becoming easier. How does this change SEO, why should businesses develop their brands, and what would I focus on in 2027?",
+        "source": "seo-future-2027-en.md",
+        "imageAlt": "Raccoon at a laptop reflecting on the future of SEO, mass website production and brand development",
+        "inlineLinks": [
+          {
+            "text": "n8n, for example",
+            "href": "/en/blog/how-to-build-ai-agent-n8n/"
+          },
+          {
+            "text": "how information about companies is presented to artificial intelligence systems",
+            "href": "/en/blog/geo-optimization-europe-ai-search/"
+          },
+          {
+            "text": "Traditional SEO",
+            "href": "/en/#services"
+          },
+          {
+            "text": "Automation of routine processes",
+            "href": "/en/#automation"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "geo-optimization-europe",
     "category": "seo",
     "published": "2026-11-21",
