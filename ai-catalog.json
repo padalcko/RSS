@@ -146,6 +146,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
     },
     {
+      "name": "Анатомія AI-агента: як насправді працюють агенти штучного інтелекту",
+      "description": "Як працюють AI-агенти, з чого вони складаються, чому помиляються та як автоматизують бізнес. Пояснення від розробника простими словами.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/",
+      "markdown": "https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/index.md"
+    },
+    {
       "name": "Як створити власного AI-агента на n8n і позбутися щоденної рутини",
       "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.",
       "language": "uk",
@@ -193,6 +200,13 @@
       "language": "en",
       "url": "https://raccoon-studio.com.ua/en/blog/geo-optimization-europe-ai-search/",
       "markdown": "https://raccoon-studio.com.ua/en/blog/geo-optimization-europe-ai-search/index.md"
+    },
+    {
+      "name": "Anatomy of an AI Agent: How AI Agents Really Work",
+      "description": "Learn how AI agents work, what they are made of, why they make mistakes and how they automate business tasks. Explained by a developer in plain language.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/index.md"
     },
     {
       "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
@@ -263,6 +277,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/index.md"
+    },
+    {
+      "name": "Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji",
+      "description": "Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/index.md"
     },
     {
       "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",
@@ -393,6 +414,13 @@
       "markdown": "https://raccoon-studio.com.ua/blog/try-pravyla-seo/index.md"
     },
     {
+      "name": "Анатомія AI-агента: як насправді працюють агенти штучного інтелекту",
+      "description": "Як працюють AI-агенти, з чого вони складаються, чому помиляються та як автоматизують бізнес. Пояснення від розробника простими словами.",
+      "language": "uk",
+      "url": "https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/",
+      "markdown": "https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/index.md"
+    },
+    {
       "name": "Як створити власного AI-агента на n8n і позбутися щоденної рутини",
       "description": "Дізнайтеся, як створити AI-агента в n8n без складного програмування. Покрокова інструкція, приклади автоматизації та поради для початківців.",
       "language": "uk",
@@ -491,6 +519,13 @@
       "markdown": "https://raccoon-studio.com.ua/en/blog/geo-optimization-europe-ai-search/index.md"
     },
     {
+      "name": "Anatomy of an AI Agent: How AI Agents Really Work",
+      "description": "Learn how AI agents work, what they are made of, why they make mistakes and how they automate business tasks. Explained by a developer in plain language.",
+      "language": "en",
+      "url": "https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/",
+      "markdown": "https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/index.md"
+    },
+    {
       "name": "How to Build Your Own AI Agent with n8n and Automate Everyday Tasks",
       "description": "Learn how to build an AI agent with n8n. Follow a beginner-friendly tutorial with practical automation examples and setup instructions.",
       "language": "en",
@@ -573,6 +608,13 @@
       "language": "pl",
       "url": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/",
       "markdown": "https://raccoon-studio.com.ua/pl/blog/falszywy-ruch-seo/index.md"
+    },
+    {
+      "name": "Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji",
+      "description": "Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.",
+      "language": "pl",
+      "url": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/",
+      "markdown": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/index.md"
     },
     {
       "name": "Jak zbudować własnego agenta AI w n8n i ograniczyć codzienne obowiązki",

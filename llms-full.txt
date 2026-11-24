@@ -238,6 +238,16 @@ GA4, GTM, Search Console, відстеження конверсій та ана�
 
 SEO, AI, розробка сайтів та автоматизація. Пишемо про те, що перевіряємо на практиці.
 
+![Єнот Raccoon SEO Studio пояснює архітектуру AI-агентів та їхню взаємодію з цифровими інструментами.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+AI та автоматизація
+
+### [Анатомія AI-агента: як насправді працюють агенти штучного інтелекту](https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/)
+
+Як AI-агенти виконують завдання, користуються інструментами та приймають рішення. Практичні приклади автоматизації на n8n, можливості та обмеження.
+
+Олександр Падалко · 24.11.2026 · 14 хв читання
+
 ![Єнот аналізує накрутку поведінкових факторів і штучний трафік.](https://raccoon-studio.com.ua/images/blog/user-behavior-manipulation.webp)
 
 SEO
@@ -2569,6 +2579,410 @@ SEO
 
 ---
 
+## Анатомія AI-агента: як насправді працюють агенти штучного інтелекту
+
+Мова: Українська
+
+Канонічна HTML-сторінка: https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/
+
+> Як працюють AI-агенти, з чого вони складаються, чому помиляються та як автоматизують бізнес. Пояснення від розробника простими словами.
+
+AI та автоматизація
+
+Займаючись розробкою автоматизацій та AI-агентів, я часто стикаюся з тим, що люди не зовсім розуміють принцип їхньої роботи. Хтось вважає агента звичайним чат-ботом, хтось сприймає його як повноцінного цифрового співробітника, якому достатньо поставити завдання і чекати на результат.
+
+Олександр Падалко · 24.11.2026 · 14 хв читання
+
+![Єнот Raccoon SEO Studio пояснює архітектуру AI-агентів та їхню взаємодію з цифровими інструментами.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+Спробую пояснити, як влаштовані такі системи, чому вони помиляються, від чого залежить вартість їхньої роботи та в яких випадках бізнесу взагалі потрібен AI-агент.
+
+Для розуміння цієї статті не потрібно знати програмування.
+
+### Що таке AI-агент
+
+Припустимо, у вас є інтернет-магазин. Ви хочете щопонеділка отримувати інформацію про ціни п'яти основних конкурентів у вигляді таблиці в Telegram.
+
+Звичайному ChatGPT можна поставити таке завдання в межах діалогу. Але для регулярного автоматичного виконання знадобиться система, яка матиме доступ до необхідних інструментів, запускатиметься за розкладом і надсилатиме результати.
+
+Така система може самостійно знайти сайти конкурентів, переглянути їхні пропозиції, зібрати інформацію, порівняти ціни, сформувати таблицю та надіслати її вам.
+
+При цьому сама мовна модель не відкриває браузер, не створює файл на диску і не заходить у Telegram. Ці операції виконує програмне забезпечення, до якого вона підключена.
+
+Мовна модель визначає, що потрібно зробити, а програмний код виконує відповідну дію.
+
+### З чого складається AI-агент
+
+У спрощеному вигляді агент складається з кількох основних компонентів:
+
+- Мовна модель (LLM), наприклад GPT, Claude або Gemini.
+
+- Програмна оболонка, яка керує роботою моделі.
+
+- Інструменти для виконання конкретних операцій.
+
+- Механізми збереження інформації.
+
+- Правила, обмеження та перевірки результатів.
+
+Програмну оболонку в середовищі розробників часто називають Harness.
+
+Вона передає завдання мовній моделі, отримує від неї запити на виконання операцій, запускає необхідні інструменти та повертає результати.
+
+Наприклад, якщо агенту потрібно дізнатися актуальну ціну товару, модель може сформувати запит на відкриття відповідної сторінки. Програмна оболонка отримує цей запит, завантажує сторінку та передає її вміст моделі.
+
+Після цього модель аналізує отриману інформацію і визначає наступну дію.
+
+Такий процес може повторюватися багато разів у межах одного завдання.
+
+### Як агент користується інструментами
+
+Уявімо, що я розробляю агента для аналізу конкурентів.
+
+Я можу надати йому такі інструменти:
+
+- Пошук інформації в інтернеті.
+
+- Отримання вмісту вебсторінок.
+
+- Виконання розрахунків.
+
+- Створення електронних таблиць.
+
+- Надсилання повідомлень у Telegram.
+
+Кожен інструмент має конкретне призначення, опис та параметри, необхідні для його запуску.
+
+Коли модель визначає, що їй потрібно знайти конкурентів, вона звертається до інструмента пошуку. Отримавши список сайтів, використовує інструмент для читання вебсторінок. Після збору інформації може перейти до створення таблиці.
+
+Цей механізм називається Tool Calling, тобто виклик інструментів.
+
+Розробник визначає, якими інструментами агент може користуватися, а модель у межах наданих можливостей вирішує, коли і для чого їх застосовувати.
+
+Якщо я не надам агенту доступ до електронної пошти, він не зможе прочитати мої листи через відповідний інструмент. Якщо не підключу Telegram, він не зможе самостійно надіслати туди повідомлення.
+
+Можливості агента значною мірою залежать від того, як його спроєктували.
+
+### Що таке MCP і навіщо він потрібен
+
+Під час розробки агентів часто виникає необхідність підключати їх до сторонніх сервісів. Це можуть бути Google Drive, Gmail, CRM, GitHub, бази даних або внутрішні системи компанії.
+
+Для спрощення такої інтеграції у 2024 році компанія Anthropic представила відкритий протокол MCP (Model Context Protocol).
+
+Його можна порівняти з універсальним роз'ємом USB-C.
+
+Замість того щоб щоразу створювати окремий механізм взаємодії між агентом та зовнішньою системою, розробники можуть використовувати стандартизований протокол.
+
+Наприклад, MCP-сервер для роботи з поштою може надавати можливість шукати повідомлення, читати їхній вміст або створювати чернетки.
+
+Агент отримує інформацію про доступні операції та може використовувати їх під час виконання завдань.
+
+Водночас MCP не замінює авторизацію, не скасовує необхідності налаштовувати права доступу і сам по собі не гарантує безпеку.
+
+Це спосіб стандартизувати взаємодію між AI-системою та зовнішніми інструментами.
+
+### Чим AI-агент відрізняється від звичайної автоматизації
+
+Припустимо, у вас на сайті є контактна форма. Коли клієнт її заповнює, інформація повинна потрапити до CRM, а менеджер має отримати повідомлення в Telegram.
+
+Для цього не потрібен штучний інтелект.
+
+Можна створити просту автоматизацію в [n8n](https://raccoon-studio.com.ua/blog/yak-stvoryty-ai-agenta-n8n/), яка прийматиме дані, перевірятиме їх, записуватиме до CRM та надсилатиме повідомлення.
+
+Послідовність операцій відома заздалегідь. Результат кожного кроку можна перевірити звичайним програмним кодом.
+
+Інша ситуація виникає, якщо необхідно проаналізувати зміст звернення клієнта, визначити його потреби, знайти відповідну послугу, підготувати персоналізовану відповідь та вирішити, якому спеціалісту передати заявку.
+
+Тут використання мовної моделі вже може бути виправданим.
+
+А якщо система повинна самостійно вибирати джерела інформації, інструменти та послідовність дій залежно від ситуації, можна говорити про агентний підхід.
+
+У своїй роботі я надаю перевагу поєднанню звичайної автоматизації та штучного інтелекту.
+
+Там, де результат можна отримати за допомогою програмного коду, немає сенсу витрачати ресурси мовної моделі.
+
+### Практичний приклад: ранковий поштовий асистент
+
+Припустимо, ви щодня починаєте роботу з перегляду електронної пошти. За ніч накопичуються повідомлення від клієнтів, рекламні розсилки, рахунки, сповіщення від різних сервісів та звичайний спам.
+
+Замість того щоб щоранку витрачати час на перегляд усіх повідомлень, можна автоматизувати їхній попередній аналіз.
+
+Наприклад, щодня о сьомій ранку система підключається до вашої поштової скриньки, отримує нові листи за визначений нічний період, аналізує їхній зміст, розподіляє за категоріями та формує короткий звіт, який надсилає вам у Telegram.
+
+Для реалізації такої системи достатньо використати n8n, підключити електронну пошту, мовну модель та Telegram-бота.
+
+#### Як виглядає workflow у n8n
+
+![Схема автоматизації n8n для ранкового аналізу електронної пошти та надсилання звіту в Telegram.](https://raccoon-studio.com.ua/images/blog/n8n-email-assistant-workflow.webp)
+
+Спрощена схема роботи поштового асистента на базі n8n.
+
+Перший вузол запускає автоматизацію щодня о 07:00. Наступний отримує нові повідомлення з Gmail. Мовна модель аналізує зміст листів, визначає їхню категорію та важливість. Програмний код підраховує результати, формує звіт, після чого Telegram-бот надсилає його користувачу.
+
+У цій схемі AI Agent позначає компонент аналізу листів. Для реальної реалізації до нього потрібно підключити мовну модель. Якщо самостійний вибір інструментів не потрібен, достатньо звичайного LLM-вузла або класифікатора тексту.
+
+#### Що отримує користувач
+
+Ви прокидаєтеся, берете телефон і бачите повідомлення про те, що за ніч надійшло 24 нових листи. З них 11 робочих, 8 визначено як спам, а 5 належать до підписок та розсилок.
+
+Крім статистики, система виділяє важливі повідомлення: підтверджену зустріч із клієнтом, рахунок із наближенням терміну оплати та нову заявку з сайту.
+
+![Приклад ранкового повідомлення AI-асистента в Telegram із результатами аналізу 24 електронних листів.](https://raccoon-studio.com.ua/images/blog/ai-email-assistant-telegram-report.webp)
+
+Демонстраційний приклад ранкового звіту, який користувач може отримувати в Telegram.
+
+Звичайна автоматизація відповідає за запуск за розкладом, отримання листів, підрахунок повідомлень та надсилання звіту. Мовна модель аналізує зміст листів, визначає їхню категорію та важливість.
+
+При цьому системі достатньо надати доступ до читання пошти. Їй не потрібно дозволяти видаляти повідомлення або відповідати на них від вашого імені.
+
+За необхідності функціонал можна розширити. Наприклад, асистент може готувати чернетки відповідей клієнтам, знаходити рахунки на оплату, визначати терміни виконання завдань або пропонувати додати зустріч до календаря.
+
+Якщо модель отримує можливість самостійно вибирати необхідні інструменти залежно від змісту листа, така автоматизація набуває ознак повноцінного AI-агента.
+
+Це досить проста система, яка не потребує складної архітектури, але може щодня економити ваш час.
+
+### Чому AI-агент не завжди може прочитати сайт
+
+Це питання особливо актуальне для мене як для розробника сайтів та спеціаліста з SEO.
+
+Коли людина відкриває вебсторінку, вона бачить її повністю: зображення, ціни, кнопки, характеристики товарів та інші елементи.
+
+Агент може отримати зовсім іншу інформацію.
+
+Частина сучасних сайтів завантажує дані за допомогою JavaScript уже після відкриття сторінки. Якщо інструмент агента отримує лише початковий HTML-код, необхідної інформації в ньому може не бути.
+
+Людина бачить ціну товару, а агент отримує порожній контейнер.
+
+Для вирішення таких завдань можна використовувати повноцінний браузер, наприклад Chromium, керований за допомогою Playwright.
+
+Існує також технологія Computer Use, яка дозволяє моделі аналізувати зображення екрана та формувати команди для натискання кнопок, введення тексту або прокручування сторінки.
+
+Але такі операції потребують більше часу та обчислювальних ресурсів.
+
+Тому під час розробки агента важливо правильно вибрати спосіб отримання інформації. Якщо необхідні дані можна отримати через API або звичайний HTTP-запит, запускати браузер немає потреби.
+
+### Чому AI-агенти забувають поставлене завдання
+
+Якщо ви тривалий час працювали з ChatGPT або іншою мовною моделлю в одному діалозі, то, ймовірно, помічали, що з часом вона може почати ігнорувати попередні домовленості.
+
+Ви вже пояснювали певну вимогу, але модель знову припускається тієї самої помилки.
+
+Одна з причин полягає в особливостях роботи контекстного вікна.
+
+Контекстне вікно містить інформацію, яку модель отримує для виконання поточного завдання. Це можуть бути інструкції, повідомлення користувача, програмний код, результати пошуку, вміст файлів та відповіді зовнішніх інструментів.
+
+Під час роботи агента обсяг цієї інформації постійно збільшується.
+
+Він відкрив один сайт, потім другий, прочитав документацію, виконав кілька команд, отримав помилки та спробував їх виправити. Усе це може накопичуватися в контексті.
+
+Зі збільшенням обсягу інформації моделі іноді стає складніше знаходити важливі деталі та послідовно дотримуватися початкових вимог.
+
+Це явище часто називають Context Rot.
+
+Для роботи з великими завданнями розробники використовують різні механізми управління контекстом.
+
+Один із них називається Compaction. Система створює скорочений виклад попередньої роботи, щоб звільнити місце для нової інформації.
+
+Також агент може зберігати проміжні результати в окремих файлах, базах даних або робочих нотатках.
+
+Інструкції для конкретних типів завдань можна зберігати окремо та завантажувати лише тоді, коли вони потрібні. Такий підхід використовується, зокрема, у механізмі Skills.
+
+Під час скорочення контексту можуть втрачатися важливі деталі. Саме тому критичні правила роботи агента не варто залишати лише у вигляді текстових інструкцій.
+
+### Чому я не довіряю безпеку агента одному промпту
+
+Припустимо, я створюю агента для роботи з електронною поштою.
+
+Його завдання полягає в тому, щоб знаходити непотрібні повідомлення та формувати список листів, які користувач може видалити.
+
+Я можу написати в системній інструкції, що агенту категорично заборонено самостійно видаляти повідомлення.
+
+Але якщо завдання агента полягає лише в аналізі пошти, навіщо взагалі надавати йому інструмент видалення?
+
+З інженерної точки зору значно надійніше обмежити його права на рівні програмного забезпечення.
+
+Якщо агент має лише доступ до читання, помилка мовної моделі не призведе до видалення листів через цей інструмент.
+
+Якщо ж видалення є частиною необхідного функціоналу, можна реалізувати окремий механізм підтвердження. Агент готує список повідомлень, а користувач самостійно підтверджує операцію.
+
+Те саме стосується роботи з файлами, фінансовими операціями, базами даних, публікаціями на сайтах та іншими важливими ресурсами.
+
+Промпт визначає бажану поведінку моделі. Програмний код визначає межі її можливостей.
+
+### Що таке Prompt Injection
+
+Ще одна проблема виникає, коли агент отримує інформацію із зовнішніх джерел.
+
+Припустимо, він аналізує сайт конкурента. На цьому сайті може бути розміщений текст, який містить не інформацію про товари, а сторонні інструкції, спрямовані безпосередньо на мовну модель.
+
+Якщо система неправильно обробляє такі дані, модель може сприйняти їх як частину поставленого завдання.
+
+Цей тип атак називається Prompt Injection.
+
+Особливо небезпечною є ситуація, коли агент одночасно має доступ до конфіденційної інформації, читає неперевірені зовнішні джерела та може надсилати дані за межі системи.
+
+Дослідник Саймон Віллісон називає таке поєднання Lethal Trifecta.
+
+Зменшити ризики можна за допомогою обмеження прав доступу, ізоляції інструментів, перевірки зовнішніх запитів та підтвердження небезпечних операцій людиною.
+
+Якщо я створюю агента для моніторингу цін конкурентів, йому не потрібен доступ до моєї особистої пошти, фінансових документів або внутрішнього листування компанії.
+
+Чим менше зайвих можливостей має система, тим простіше контролювати її роботу.
+
+### Навіщо потрібні субагенти
+
+Складні завдання можна розділяти між кількома агентами.
+
+Повернемося до прикладу з аналізом п'яти конкурентів.
+
+Замість того щоб одна модель послідовно аналізувала всі п'ять сайтів, можна створити окремі завдання для п'яти субагентів.
+
+Кожен із них працюватиме зі своїм джерелом інформації та повертатиме результати головному агенту, який сформує загальний звіт.
+
+Такий підхід дозволяє розділяти контекст, паралельно виконувати операції та в деяких випадках покращувати якість результату.
+
+Проте створення команди агентів не гарантує, що завдання буде виконано краще.
+
+Кожен субагент використовує ресурси мовної моделі. Крім того, необхідно передавати завдання, отримувати результати, перевіряти їх та об'єднувати.
+
+Якщо просте завдання можна виконати одним агентом або звичайним скриптом, створення мультиагентної системи лише ускладнить розробку та збільшить витрати.
+
+### Чому робота AI-агентів може дорого коштувати
+
+Коли користувач спілкується з мовною моделлю у звичайному чаті, він не завжди замислюється над кількістю інформації, яку система обробляє.
+
+Під час розробки агентів це стає важливою частиною роботи.
+
+Мовні моделі обробляють інформацію у вигляді токенів. При використанні API вартість зазвичай залежить від кількості вхідних та вихідних токенів, а також від вибраної моделі.
+
+Припустимо, агент отримав завдання перевірити п'ять сторінок сайту.
+
+Замість того щоб одразу перейти до необхідних сторінок, він починає досліджувати структуру всього ресурсу, завантажує додаткові документи, аналізує сторонні матеріали, запускає повторні перевірки та виправляє власні помилки.
+
+Користувач поставив одне завдання, але система виконала десятки операцій.
+
+У деяких випадках це виправдано. В інших агент витрачає ресурси на дії, які взагалі не потрібні для отримання результату.
+
+Саме тому під час розробки необхідно передбачати обмеження кількості кроків, обсягу контексту, повторних спроб та доступних інструментів.
+
+Також не кожна операція потребує використання найдорожчої мовної моделі.
+
+Прості завдання можна передавати дешевшим моделям, а формальні перевірки виконувати звичайним кодом.
+
+Вартість роботи агента залежить не лише від ціни моделі, а й від архітектури всієї системи.
+
+### Чи можна повністю довірити роботу AI-агенту
+
+Припустимо, що розроблений агент правильно виконує поставлене завдання у 80% випадків.
+
+На перший погляд, це непоганий результат.
+
+Але якщо агент повинен формувати звіт щотижня, то за умови незалежності виконань імовірність отримати чотири правильні звіти поспіль становитиме приблизно 41%.
+
+Це умовний математичний приклад, а не статистика роботи конкретного агента.
+
+Якщо система здатна виявляти помилки та має можливість повторити виконання, цей показник може покращитися.
+
+Однак повторний запуск не завжди вирішує проблему. Якщо агент використовує неправильне джерело інформації або його інструмент працює некоректно, він може повторювати ту саму помилку.
+
+Тому важливо не лише отримати результат, а й мати можливість перевірити його правильність.
+
+Для цього використовуються автоматизовані тести, перевірки програмним кодом, додаткові моделі та контроль з боку людини.
+
+У розробці AI-систем такий підхід часто називають Evals.
+
+Наприклад, якщо агент повинен зібрати ціни п'яти конкурентів, звичайний код може перевірити кількість записів, наявність обов'язкових полів та коректність формату даних.
+
+Але для перевірки того, чи відповідає знайдена ціна конкретному товару, можуть знадобитися додаткові механізми контролю.
+
+Рівень перевірки повинен відповідати наслідкам можливої помилки.
+
+Помилка в чернетці статті та помилка під час фінансової операції мають зовсім різну ціну.
+
+### Практичний приклад із моєї роботи: Raccoon SEO Scanner
+
+Один із напрямів, яким я займаюся, це автоматизація технічного SEO-аудиту сайтів.
+
+Для реалізації такого завдання можна використовувати n8n, звичайний програмний код та мовну модель.
+
+У рамках розробки Raccoon SEO Scanner я працюю над системою, яка отримує адресу вебсторінки та перевіряє:
+
+- HTTP-статус.
+
+- Title та Meta Description.
+
+- Заголовки H1.
+
+- Canonical.
+
+- Метаінструкції Robots.
+
+- Hreflang.
+
+- Open Graph.
+
+- Зображення та їхні альтернативні описи.
+
+- Внутрішні та зовнішні посилання.
+
+Для більшості цих перевірок штучний інтелект не потрібен.
+
+Звичайний програмний код може визначити, чи є на сторінці заголовок H1, яку адресу містить Canonical та який HTTP-статус повертає сервер.
+
+Передавати весь HTML-код мовній моделі та просити її самостійно виконувати кожну з цих перевірок було б зайвою витратою ресурсів.
+
+Але після збору результатів можна підключити мовну модель для іншого завдання.
+
+Вона може пояснити власнику сайту, що означають виявлені проблеми, чому вони важливі, які з них потребують першочергового виправлення та що необхідно зробити далі.
+
+Таким чином, програмний код збирає фактичні дані, а штучний інтелект допомагає їх інтерпретувати.
+
+На мою думку, саме такі комбіновані рішення мають великий практичний потенціал для бізнесу.
+
+### З чого почати автоматизацію власного бізнесу
+
+Я б не радив починати з розробки універсального AI-агента, який повинен уміти все.
+
+Спочатку варто визначити конкретний процес, який регулярно забирає ваш час або час ваших співробітників.
+
+Це може бути обробка заявок, підготовка звітів, аналіз документів, моніторинг конкурентів, класифікація звернень або робота з клієнтською базою.
+
+Після цього необхідно зрозуміти, які операції можна автоматизувати звичайним кодом, а де дійсно потрібна мовна модель.
+
+Для багатьох завдань достатньо n8n або Make. Для інших знадобиться підключення мовної моделі через API. Складніші процеси можуть потребувати розробки повноцінної агентної системи.
+
+Вибір технології повинен залежати від завдання, а не від популярності конкретного інструмента.
+
+### Мої висновки
+
+Я розглядаю AI-агентів як ще один інструмент розробника. Дуже потужний, перспективний, але зі своїми особливостями та обмеженнями.
+
+Мені подобається можливість створювати системи, які можуть працювати з інформацією, аналізувати її та виконувати операції, на які раніше доводилося витрачати години ручної роботи.
+
+Водночас я не бачу сенсу підключати штучний інтелект до кожного процесу лише тому, що сьогодні це популярно.
+
+Якщо завдання вирішується десятьма рядками JavaScript, я використаю десять рядків JavaScript. Якщо необхідно проаналізувати великий обсяг неструктурованої інформації, підключу мовну модель. Якщо система повинна самостійно вибирати інструменти та планувати свої дії, розглядатиму агентну архітектуру.
+
+Для власника бізнесу, зрештою, не має особливого значення, скільки мовних моделей, субагентів та інструментів працює всередині системи.
+
+Йому важливо, щоб вона правильно виконувала свою роботу, економила час, не створювала додаткових проблем і коштувала менше, ніж процес, який вона замінює.
+
+Саме з цього, на мою думку, і потрібно починати розробку будь-якої автоматизації.
+
+### Про автора
+
+Олександр Падалко
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+Плануєте запуск нового сайту або хочете зрозуміти, чому чинний сайт не отримує трафіку? Raccoon SEO Studio допомагає з технічним SEO, розробкою та оптимізацією сайтів.
+
+[Послуги студії](https://raccoon-studio.com.ua/#services)
+
+---
+
 ## Як створити власного AI-агента на n8n і позбутися щоденної рутини
 
 Мова: Українська
@@ -3912,6 +4326,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 > SEO, AI, web development and automation. We write about what we actually test.
 
 SEO, AI, web development and automation. We write about what we actually test.
+
+![Raccoon SEO Studio mascot explaining AI agent architecture and its connections to digital tools.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+AI and Automation
+
+### [Anatomy of an AI Agent: How AI Agents Really Work](https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/)
+
+How AI agents perform tasks, use tools and make decisions. Practical n8n automation examples, capabilities and limitations.
+
+Oleksandr Padalko · 24/11/2026 · 16 min read
 
 ![Raccoon analyzing user behavior manipulation and artificial website traffic.](https://raccoon-studio.com.ua/images/blog/user-behavior-manipulation.webp)
 
@@ -5289,6 +5713,408 @@ Raccoon SEO Studio
 Frontend Developer / SEO Engineer
 
 Raccoon SEO Studio
+
+---
+
+## Anatomy of an AI Agent: How AI Agents Really Work
+
+Language: English
+
+Canonical HTML page: https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/
+
+> Learn how AI agents work, what they are made of, why they make mistakes and how they automate business tasks. Explained by a developer in plain language.
+
+AI and Automation
+
+While developing automations and AI agents, I often meet people who do not quite understand how these systems work. Some think an agent is just a chatbot. Others see it as a digital employee who only needs to be given a task before delivering the expected result.
+
+Oleksandr Padalko · 24/11/2026 · 16 min read
+
+![Raccoon SEO Studio mascot explaining AI agent architecture and its connections to digital tools.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+I want to explain how these systems are built, why they make mistakes, what determines their operating costs and when a business actually needs an AI agent.
+
+You do not need any programming knowledge to understand this article.
+
+### What is an AI agent?
+
+Imagine that you run an online store. Every Monday, you want to receive a spreadsheet containing the prices of your five main competitors through Telegram.
+
+You can ask ChatGPT to perform such a task during a conversation. However, to perform it automatically on a regular basis, you need a system with access to the necessary tools, a schedule and a way to deliver the results.
+
+Such a system could find competitor websites, examine their offers, collect information, compare prices, prepare a spreadsheet and send it to you.
+
+The language model itself does not open a browser, create files on a disk or log in to Telegram. These operations are performed by the software connected to it.
+
+The language model determines what needs to be done, while the software executes the corresponding action.
+
+### What is an AI agent made of?
+
+In simple terms, an agent consists of several main components:
+
+- A large language model (LLM), such as GPT, Claude or Gemini.
+
+- A software layer that manages the model.
+
+- Tools for performing specific operations.
+
+- Mechanisms for storing information.
+
+- Rules, restrictions and result validation mechanisms.
+
+Developers often refer to the software layer that manages the model as a harness.
+
+It passes the task to the language model, receives requests to perform operations, runs the appropriate tools and returns their results.
+
+For example, if an agent needs to find the current price of a product, the model can request the relevant webpage. The harness receives the request, downloads the page and passes its contents to the model.
+
+The model then analyses the information and determines the next action.
+
+This process may repeat many times within a single task.
+
+### How does an agent use tools?
+
+Imagine that I am developing an agent for competitor analysis.
+
+I can provide it with the following tools:
+
+- Internet search.
+
+- Webpage content retrieval.
+
+- Calculations.
+
+- Spreadsheet creation.
+
+- Telegram messaging.
+
+Each tool has a specific purpose, a description and parameters required to run it.
+
+When the model determines that it needs to find competitors, it uses the search tool. After receiving a list of websites, it retrieves their content. Once the information has been collected, it can move on to preparing a spreadsheet.
+
+This mechanism is known as tool calling.
+
+The developer determines which tools are available to the agent. The model decides when and why to use them within the capabilities it has been given.
+
+If I do not provide the agent with access to email, it cannot read my messages through an email tool. If I do not connect Telegram, it cannot send messages there.
+
+An agent's capabilities depend largely on how it has been designed.
+
+### What is MCP and why is it useful?
+
+When developing agents, we often need to connect them to external services. These may include Google Drive, Gmail, CRM systems, GitHub, databases or internal business applications.
+
+In 2024, Anthropic introduced an open protocol called MCP, or Model Context Protocol, to simplify these integrations.
+
+It can be compared to a universal USB-C connector.
+
+Instead of creating a separate communication mechanism between an agent and every external system, developers can use a standardised protocol.
+
+For example, an MCP server for email could provide operations for searching messages, reading their contents or creating drafts.
+
+The agent receives information about the available operations and can use them while performing tasks.
+
+However, MCP does not replace authorisation, remove the need to configure access permissions or guarantee security on its own.
+
+It provides a standard way for AI systems to communicate with external tools.
+
+### How is an AI agent different from conventional automation?
+
+Imagine that your website has a contact form. Whenever a customer submits it, the information should be saved in your CRM, and a manager should receive a Telegram notification.
+
+Artificial intelligence is not necessary for this.
+
+You can create a simple automation in [n8n](https://raccoon-studio.com.ua/en/blog/how-to-build-ai-agent-n8n/) that receives the data, validates it, saves it in the CRM and sends a notification.
+
+The sequence of operations is known in advance. The result of each step can be checked using conventional code.
+
+The situation changes when you need to analyse the customer's enquiry, identify their needs, find a suitable service, prepare a personalised response and determine which specialist should receive the request.
+
+Using a language model may be justified in this case.
+
+If the system also needs to select information sources, tools and the sequence of actions depending on the situation, we can talk about an agentic approach.
+
+In my work, I prefer combining conventional automation with artificial intelligence.
+
+Where a result can be obtained using ordinary code, there is little reason to spend language model resources.
+
+### Practical example: a morning email assistant
+
+Imagine starting every working day by checking your email. During the night, messages arrive from customers, advertising newsletters, invoices, service notifications and ordinary spam.
+
+Instead of spending time reviewing every message each morning, you can automate their initial analysis.
+
+Every day at seven in the morning, the system connects to your mailbox, retrieves new messages from a defined overnight period, analyses their content, assigns categories and prepares a short report delivered through Telegram.
+
+To build such a system, you can use n8n, an email connection, a language model and a Telegram bot.
+
+#### What does the n8n workflow look like?
+
+![n8n automation workflow for morning email analysis and Telegram report delivery.](https://raccoon-studio.com.ua/images/blog/n8n-email-assistant-workflow.webp)
+
+A simplified n8n workflow for an email assistant. The labels in the illustration are in Ukrainian.
+
+The first node starts the automation every day at 07:00. The next node retrieves new messages from Gmail. The language model analyses their content, determines their category and importance. Conventional code counts the results and prepares a report, which the Telegram bot sends to the user.
+
+The AI Agent node in the illustration represents the email analysis component. In an actual implementation, a language model must be connected to it. If independent tool selection is unnecessary, a standard LLM node or text classifier is sufficient.
+
+#### What does the user receive?
+
+You wake up, pick up your phone and see that 24 new emails arrived overnight. Eleven are work-related, eight have been classified as spam, and five are subscriptions or newsletters.
+
+In addition to these statistics, the system highlights important messages: a confirmed customer meeting, a supplier invoice approaching its payment deadline and a new enquiry from your website.
+
+![Example morning Telegram report from an AI assistant summarising 24 incoming emails.](https://raccoon-studio.com.ua/images/blog/ai-email-assistant-telegram-report.webp)
+
+An illustrative example of a morning report delivered through Telegram. The message shown is in Ukrainian.
+
+Conventional automation handles scheduling, email retrieval, counting messages and sending the report. The language model analyses the content and determines the category and importance of each message.
+
+The system only needs read access to the mailbox. There is no need to allow it to delete messages or reply on your behalf.
+
+Its functionality can be expanded if necessary. For example, the assistant could prepare draft replies, identify invoices, extract task deadlines or suggest adding meetings to a calendar.
+
+If the model can independently select the appropriate tools depending on the contents of a message, the automation begins to take on the characteristics of a fully fledged AI agent.
+
+It is a relatively simple system that does not require complex architecture but could save time every day.
+
+### Why an AI agent cannot always read a website
+
+As a web developer and SEO specialist, I find this particularly relevant.
+
+When a person opens a webpage, they see images, prices, buttons, product specifications and other elements.
+
+An agent may receive completely different information.
+
+Some modern websites load their data through JavaScript after the initial page has opened. If the agent's tool retrieves only the initial HTML, the required information may not be present.
+
+A person sees the product price, while the agent receives an empty container.
+
+A full browser, such as Chromium controlled through Playwright, can be used to handle such tasks.
+
+There is also a technology known as Computer Use, which allows a model to analyse screenshots and generate instructions for clicking buttons, entering text or scrolling through a page.
+
+These operations require more time and computing resources.
+
+When developing an agent, it is important to choose the appropriate method of retrieving information. If the necessary data is available through an API or a conventional HTTP request, there is no need to launch a browser.
+
+### Why AI agents forget their original task
+
+If you have worked with ChatGPT or another language model in a long conversation, you may have noticed that it sometimes starts ignoring previous agreements.
+
+You have already explained a particular requirement, but the model makes the same mistake again.
+
+One reason is related to how the context window works.
+
+The context window contains information provided to the model for its current task. This can include instructions, user messages, source code, search results, file contents and responses from external tools.
+
+While an agent is working, the amount of this information continues to grow.
+
+It opens one website, then another, reads documentation, runs several commands, encounters errors and attempts to fix them. All of this can accumulate in the context.
+
+As the amount of information increases, the model may find it more difficult to identify important details and consistently follow the original requirements.
+
+This phenomenon is often referred to as context rot.
+
+Developers use various context management techniques when handling large tasks.
+
+One of them is called compaction. The system creates a condensed summary of previous work to make room for new information.
+
+An agent can also store intermediate results in separate files, databases or working notes.
+
+Instructions for specific types of tasks can be stored separately and loaded only when needed. This approach is used by mechanisms such as Skills.
+
+Important details may be lost during context compression. This is why critical operating rules should not exist solely as written instructions.
+
+### Why I do not rely on a single prompt for agent security
+
+Imagine that I am developing an agent for email management.
+
+Its task is to identify unnecessary messages and prepare a list of emails that the user could delete.
+
+I could write a system instruction explicitly prohibiting the agent from deleting messages independently.
+
+But if its task is only to analyse email, why give it a deletion tool in the first place?
+
+From an engineering perspective, restricting its permissions at the software level is more reliable.
+
+If the agent has read-only access, a language model error cannot cause emails to be deleted through that tool.
+
+If deletion is a required feature, a separate approval mechanism can be implemented. The agent prepares a list of messages, and the user confirms the operation.
+
+The same applies to files, financial transactions, databases, website publishing and other important resources.
+
+A prompt defines the desired behaviour of the model. Software defines the limits of its capabilities.
+
+### What is prompt injection?
+
+Another problem arises when an agent receives information from external sources.
+
+Imagine that it is analysing a competitor's website. The website could contain text that, instead of providing product information, includes instructions directed at the language model itself.
+
+If the system handles such data incorrectly, the model may interpret these instructions as part of its assigned task.
+
+This type of attack is known as prompt injection.
+
+A particularly dangerous situation occurs when an agent simultaneously has access to confidential information, reads untrusted external sources and can send data outside the system.
+
+Researcher Simon Willison calls this combination the Lethal Trifecta.
+
+The risks can be reduced through restricted permissions, tool isolation, validation of external requests and human approval of dangerous operations.
+
+If I am developing an agent to monitor competitor prices, it does not need access to my personal email, financial documents or internal company correspondence.
+
+The fewer unnecessary capabilities a system has, the easier it is to control.
+
+### Why are subagents useful?
+
+Complex tasks can be divided among multiple agents.
+
+Returning to the example of analysing five competitors, instead of having one model examine all five websites sequentially, separate tasks could be assigned to five subagents.
+
+Each subagent works with its own information source and returns its results to the main agent, which prepares the combined report.
+
+This approach makes it possible to separate context, perform operations in parallel and, in some cases, improve the quality of the results.
+
+However, creating a team of agents does not guarantee better performance.
+
+Every subagent consumes language model resources. Tasks must also be assigned, results collected, validated and combined.
+
+If a simple task can be performed by one agent or an ordinary script, creating a multi-agent system will only increase development complexity and costs.
+
+### Why AI agents can be expensive to operate
+
+When using a language model in a normal conversation, people do not always think about the amount of information being processed.
+
+When developing agents, this becomes an important consideration.
+
+Language models process information in units called tokens. When using an API, costs generally depend on the number of input and output tokens and the selected model.
+
+Imagine that an agent has been asked to check five webpages.
+
+Instead of going directly to those pages, it starts examining the entire website structure, downloading additional documents, analysing external materials, running repeated checks and correcting its own mistakes.
+
+The user assigned one task, but the system performed dozens of operations.
+
+Sometimes this is justified. In other cases, the agent consumes resources on activities that are not required to obtain the result.
+
+This is why agent development should include limits on the number of steps, context size, retries and available tools.
+
+Not every operation requires the most expensive language model either.
+
+Simple tasks can be assigned to cheaper models, while formal checks can be performed using conventional code.
+
+The cost of operating an agent depends not only on the price of the model but also on the architecture of the entire system.
+
+### Can an AI agent be trusted completely?
+
+Imagine that an agent performs its assigned task correctly in 80% of cases.
+
+At first glance, this may seem like a reasonable result.
+
+However, if the agent needs to prepare a weekly report, assuming independent executions, the probability of receiving four correct reports in a row is approximately 41%.
+
+This is a hypothetical mathematical example, not a performance statistic for a particular agent.
+
+If the system can detect errors and retry a task, its performance may improve.
+
+However, repeating an operation does not always solve the problem. If the agent uses an incorrect information source or one of its tools is malfunctioning, it may repeat the same mistake.
+
+It is therefore important not only to obtain a result but also to have a way of verifying its correctness.
+
+Automated tests, code-based validation, additional models and human oversight can all be used for this purpose.
+
+In AI development, such evaluation methods are often referred to as evals.
+
+For example, if an agent needs to collect prices from five competitors, conventional code can verify the number of records, the presence of required fields and the validity of the data format.
+
+However, verifying whether a particular price actually belongs to the correct product may require additional checks.
+
+The level of verification should reflect the consequences of a potential error.
+
+A mistake in an article draft and a mistake during a financial transaction have very different costs.
+
+### A practical example from my work: Raccoon SEO Scanner
+
+One of the areas I work on is the automation of technical SEO audits.
+
+Such a task can be implemented using n8n, conventional code and a language model.
+
+As part of the development of Raccoon SEO Scanner, I am working on a system that receives a webpage URL and checks:
+
+- HTTP status.
+
+- Title and Meta Description.
+
+- H1 headings.
+
+- Canonical.
+
+- Robots directives.
+
+- Hreflang.
+
+- Open Graph.
+
+- Images and their alternative text.
+
+- Internal and external links.
+
+Artificial intelligence is not necessary for most of these checks.
+
+Conventional code can determine whether a page contains an H1 heading, which URL is specified in its canonical tag and which HTTP status the server returns.
+
+Passing the entire HTML document to a language model and asking it to perform every check would be an unnecessary use of resources.
+
+However, once the results have been collected, a language model can be used for a different task.
+
+It can explain to the website owner what the detected issues mean, why they matter, which ones should be addressed first and what to do next.
+
+Conventional code collects factual data, while artificial intelligence helps interpret it.
+
+In my opinion, these combined solutions have considerable practical potential for businesses.
+
+### Where should a business start with automation?
+
+I would not recommend starting with the development of a universal AI agent that is supposed to do everything.
+
+First, identify a specific process that regularly consumes your time or the time of your employees.
+
+This could be handling enquiries, preparing reports, analysing documents, monitoring competitors, classifying customer requests or managing a customer database.
+
+Then determine which operations can be automated using conventional code and where a language model is genuinely necessary.
+
+For many tasks, n8n or Make will be sufficient. Others will require connecting a language model through an API. More complex processes may require a fully fledged agentic system.
+
+The choice of technology should depend on the task, not on the popularity of a particular tool.
+
+### My conclusions
+
+I see AI agents as another tool available to developers. A powerful and promising one, but one with its own characteristics and limitations.
+
+I enjoy building systems that can work with information, analyse it and perform operations that previously required hours of manual work.
+
+At the same time, I see little reason to introduce artificial intelligence into every process simply because it is currently popular.
+
+If a task can be solved with ten lines of JavaScript, I will use ten lines of JavaScript. If a large amount of unstructured information needs to be analysed, I will connect a language model. If a system needs to independently select tools and plan its actions, I will consider an agentic architecture.
+
+For a business owner, the number of language models, subagents and tools operating inside the system is ultimately of little importance.
+
+What matters is that the system performs its work correctly, saves time, does not create additional problems and costs less than the process it replaces.
+
+In my opinion, that is where the development of any automation should begin.
+
+### About the author
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+Planning a new website or trying to understand why your existing site gets little organic traffic? Raccoon SEO Studio works with technical SEO, web development and website optimization.
+
+[Studio services](https://raccoon-studio.com.ua/en/#services)
 
 ---
 
@@ -6982,6 +7808,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+AI i automatyzacja
+
+### [Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji](https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/)
+
+Jak agenci AI wykonują zadania, korzystają z narzędzi i podejmują decyzje. Praktyczne przykłady automatyzacji w n8n oraz możliwości i ograniczenia AI.
+
+Oleksandr Padalko · 24.11.2026 · 13 min czytania
+
 ![Szop analizujący manipulację czynnikami behawioralnymi i sztuczny ruch internetowy.](https://raccoon-studio.com.ua/images/blog/user-behavior-manipulation.webp)
 
 SEO
@@ -8023,6 +8859,410 @@ Oleksandr Padalko
 Frontend Developer / SEO Engineer
 
 Raccoon SEO Studio
+
+---
+
+## Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji
+
+Język: Polski
+
+Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/
+
+> Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.
+
+AI i automatyzacja
+
+Zajmując się tworzeniem automatyzacji i agentów AI, często spotykam osoby, które nie do końca rozumieją zasadę ich działania. Jedni uważają agenta za zwykłego chatbota, inni traktują go jak cyfrowego pracownika, któremu wystarczy przydzielić zadanie i poczekać na rezultat.
+
+Oleksandr Padalko · 24.11.2026 · 13 min czytania
+
+![Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+Spróbuję wyjaśnić, jak zbudowane są takie systemy, dlaczego popełniają błędy, od czego zależą koszty ich działania oraz kiedy firma rzeczywiście potrzebuje agenta AI.
+
+Do zrozumienia tego artykułu nie jest potrzebna znajomość programowania.
+
+### Czym jest agent AI?
+
+Załóżmy, że prowadzisz sklep internetowy. Chcesz w każdy poniedziałek otrzymywać informacje o cenach pięciu głównych konkurentów w formie tabeli przesyłanej przez Telegram.
+
+Możesz zlecić takie zadanie ChatGPT podczas rozmowy. Jednak do regularnego, automatycznego wykonywania tej pracy potrzebny będzie system, który ma dostęp do odpowiednich narzędzi, uruchamia się zgodnie z harmonogramem i przesyła wyniki.
+
+Taki system może samodzielnie znaleźć strony konkurencji, przeanalizować ich oferty, zebrać informacje, porównać ceny, przygotować tabelę i wysłać ją użytkownikowi.
+
+Sam model językowy nie otwiera jednak przeglądarki, nie zapisuje plików na dysku i nie loguje się do Telegrama. Operacje te wykonuje oprogramowanie, z którym model jest połączony.
+
+Model językowy określa, co należy zrobić, a kod programu wykonuje odpowiednią operację.
+
+### Z czego składa się agent AI?
+
+W uproszczeniu agent składa się z kilku podstawowych elementów:
+
+- Modelu językowego (LLM), na przykład GPT, Claude lub Gemini.
+
+- Warstwy programowej zarządzającej działaniem modelu.
+
+- Narzędzi do wykonywania konkretnych operacji.
+
+- Mechanizmów przechowywania informacji.
+
+- Reguł, ograniczeń i mechanizmów weryfikacji wyników.
+
+Warstwę programową zarządzającą modelem programiści często określają jako Harness.
+
+Przekazuje ona zadanie modelowi językowemu, odbiera żądania wykonania operacji, uruchamia odpowiednie narzędzia i zwraca wyniki.
+
+Jeżeli agent potrzebuje aktualnej ceny produktu, model może wygenerować żądanie otwarcia odpowiedniej strony. Oprogramowanie pobiera jej zawartość i przekazuje ją modelowi.
+
+Model analizuje otrzymane informacje i określa kolejny krok.
+
+Proces ten może powtarzać się wielokrotnie w ramach jednego zadania.
+
+### Jak agent korzysta z narzędzi?
+
+Załóżmy, że tworzę agenta do analizy konkurencji.
+
+Mogę udostępnić mu następujące narzędzia:
+
+- Wyszukiwanie informacji w internecie.
+
+- Pobieranie zawartości stron internetowych.
+
+- Wykonywanie obliczeń.
+
+- Tworzenie arkuszy kalkulacyjnych.
+
+- Wysyłanie wiadomości przez Telegram.
+
+Każde narzędzie ma określone przeznaczenie, opis i parametry potrzebne do jego uruchomienia.
+
+Gdy model ustali, że należy znaleźć konkurentów, korzysta z narzędzia wyszukiwania. Po otrzymaniu listy stron może pobrać ich zawartość, a następnie przygotować tabelę.
+
+Mechanizm ten nazywa się Tool Calling, czyli wywoływanie narzędzi.
+
+Programista określa, z jakich narzędzi agent może korzystać. Model decyduje, kiedy i w jakim celu użyć dostępnych funkcji.
+
+Jeżeli nie udostępnię agentowi poczty elektronicznej, nie będzie mógł odczytać moich wiadomości za pomocą odpowiedniego narzędzia. Jeżeli nie podłączę Telegrama, agent nie wyśle tam wiadomości.
+
+Możliwości agenta w dużym stopniu zależą od sposobu jego zaprojektowania.
+
+### Czym jest MCP i do czego służy?
+
+Podczas tworzenia agentów często trzeba połączyć ich z zewnętrznymi usługami. Mogą to być Google Drive, Gmail, CRM, GitHub, bazy danych lub wewnętrzne systemy przedsiębiorstwa.
+
+W 2024 roku firma Anthropic przedstawiła otwarty protokół MCP (Model Context Protocol), który ułatwia takie integracje.
+
+Można go porównać do uniwersalnego złącza USB-C.
+
+Zamiast za każdym razem tworzyć osobny mechanizm komunikacji pomiędzy agentem a zewnętrznym systemem, programiści mogą korzystać ze standardowego protokołu.
+
+Serwer MCP obsługujący pocztę może na przykład umożliwiać wyszukiwanie wiadomości, odczytywanie ich zawartości lub tworzenie wersji roboczych.
+
+Agent otrzymuje informacje o dostępnych operacjach i może z nich korzystać podczas wykonywania zadań.
+
+MCP nie zastępuje jednak autoryzacji, nie zwalnia z konieczności konfigurowania uprawnień i sam w sobie nie gwarantuje bezpieczeństwa.
+
+Jest sposobem na standaryzację komunikacji pomiędzy systemem AI a zewnętrznymi narzędziami.
+
+### Czym agent AI różni się od zwykłej automatyzacji?
+
+Załóżmy, że na Twojej stronie znajduje się formularz kontaktowy. Po jego wypełnieniu dane klienta powinny trafić do CRM, a pracownik powinien otrzymać powiadomienie w Telegramie.
+
+Do tego nie potrzeba sztucznej inteligencji.
+
+W [n8n](https://raccoon-studio.com.ua/pl/blog/jak-stworzyc-agenta-ai-n8n/) można stworzyć prostą automatyzację, która odbierze dane, sprawdzi je, zapisze w CRM i wyśle wiadomość.
+
+Kolejność operacji jest znana z góry. Wynik każdego kroku można sprawdzić zwykłym kodem.
+
+Inaczej wygląda sytuacja, gdy trzeba przeanalizować treść zapytania klienta, określić jego potrzeby, znaleźć odpowiednią usługę, przygotować spersonalizowaną odpowiedź i zdecydować, któremu specjaliście przekazać zgłoszenie.
+
+W takim przypadku zastosowanie modelu językowego może być uzasadnione.
+
+Jeżeli system ma samodzielnie wybierać źródła informacji, narzędzia i kolejność działań zależnie od sytuacji, możemy mówić o podejściu agentowym.
+
+W swojej pracy preferuję łączenie zwykłej automatyzacji ze sztuczną inteligencją.
+
+Tam, gdzie wynik można uzyskać za pomocą kodu, nie ma sensu zużywać zasobów modelu językowego.
+
+### Praktyczny przykład: poranny asystent poczty elektronicznej
+
+Załóżmy, że każdego dnia zaczynasz pracę od przeglądania poczty. W nocy przychodzą wiadomości od klientów, reklamy, faktury, powiadomienia z różnych usług i zwykły spam.
+
+Zamiast codziennie rano przeglądać wszystkie wiadomości, można zautomatyzować ich wstępną analizę.
+
+Każdego dnia o siódmej rano system łączy się ze skrzynką pocztową, pobiera nowe wiadomości z określonego okresu nocnego, analizuje ich treść, przypisuje je do kategorii i przygotowuje raport przesyłany przez Telegram.
+
+Do stworzenia takiego rozwiązania wystarczy n8n, dostęp do poczty elektronicznej, model językowy i bot Telegrama.
+
+#### Jak wygląda workflow w n8n?
+
+![Schemat automatyzacji n8n do porannej analizy poczty elektronicznej i wysyłania raportu przez Telegram.](https://raccoon-studio.com.ua/images/blog/n8n-email-assistant-workflow.webp)
+
+Uproszczony schemat działania asystenta poczty w n8n. Opisy na ilustracji są w języku ukraińskim.
+
+Pierwszy węzeł uruchamia automatyzację codziennie o 07:00. Kolejny pobiera nowe wiadomości z Gmaila. Model językowy analizuje ich treść, określa kategorię i ważność. Kod zlicza wyniki, przygotowuje raport, a bot Telegrama przesyła go użytkownikowi.
+
+Węzeł AI Agent na schemacie reprezentuje komponent analizujący wiadomości. W rzeczywistej konfiguracji należy podłączyć do niego model językowy. Jeżeli samodzielny wybór narzędzi nie jest potrzebny, wystarczy zwykły węzeł LLM lub klasyfikator tekstu.
+
+#### Co otrzymuje użytkownik?
+
+Po przebudzeniu bierzesz telefon i widzisz informację, że w nocy przyszły 24 nowe wiadomości. Jedenaście z nich dotyczy pracy, osiem zostało sklasyfikowanych jako spam, a pięć należy do subskrypcji i newsletterów.
+
+Oprócz statystyk system wyróżnia ważne wiadomości: potwierdzone spotkanie z klientem, fakturę ze zbliżającym się terminem płatności oraz nowe zapytanie ze strony internetowej.
+
+![Przykładowy poranny raport asystenta AI w Telegramie zawierający wyniki analizy 24 wiadomości e-mail.](https://raccoon-studio.com.ua/images/blog/ai-email-assistant-telegram-report.webp)
+
+Demonstracyjny przykład porannego raportu w Telegramie. Treść ilustracji jest w języku ukraińskim.
+
+Zwykła automatyzacja odpowiada za uruchamianie procesu według harmonogramu, pobieranie wiadomości, ich zliczanie oraz wysyłanie raportu. Model językowy analizuje treść wiadomości i określa ich kategorię oraz ważność.
+
+Systemowi wystarczy dostęp do odczytu poczty. Nie trzeba pozwalać mu na usuwanie wiadomości ani odpowiadanie w imieniu użytkownika.
+
+W razie potrzeby funkcjonalność można rozszerzyć. Asystent może przygotowywać wersje robocze odpowiedzi, wyszukiwać faktury, identyfikować terminy wykonania zadań lub proponować dodanie spotkania do kalendarza.
+
+Jeżeli model samodzielnie wybiera odpowiednie narzędzia zależnie od treści wiadomości, taka automatyzacja nabiera cech pełnoprawnego agenta AI.
+
+Jest to stosunkowo prosty system, który nie wymaga skomplikowanej architektury, a może codziennie oszczędzać czas.
+
+### Dlaczego agent AI nie zawsze potrafi odczytać stronę internetową?
+
+Jako programista stron internetowych i specjalista SEO uważam ten temat za szczególnie istotny.
+
+Kiedy człowiek otwiera stronę internetową, widzi zdjęcia, ceny, przyciski, parametry produktów i pozostałe elementy.
+
+Agent może otrzymać zupełnie inne informacje.
+
+Część współczesnych stron pobiera dane za pomocą JavaScript już po otwarciu strony. Jeżeli narzędzie agenta pobiera wyłącznie początkowy kod HTML, potrzebnych informacji może w nim nie być.
+
+Człowiek widzi cenę produktu, a agent otrzymuje pusty kontener.
+
+Do takich zadań można wykorzystać pełnoprawną przeglądarkę, na przykład Chromium sterowaną przez Playwright.
+
+Istnieje również technologia Computer Use, która pozwala modelowi analizować obraz ekranu i generować polecenia klikania przycisków, wpisywania tekstu lub przewijania strony.
+
+Takie operacje wymagają jednak więcej czasu i zasobów obliczeniowych.
+
+Podczas projektowania agenta warto wybrać odpowiednią metodę pobierania informacji. Jeżeli dane można uzyskać przez API lub zwykłe żądanie HTTP, uruchamianie przeglądarki nie jest konieczne.
+
+### Dlaczego agenci AI zapominają o zadaniu?
+
+Jeżeli przez dłuższy czas korzystasz z ChatGPT lub innego modelu językowego w ramach jednej rozmowy, możesz zauważyć, że z czasem zaczyna on ignorować wcześniejsze ustalenia.
+
+Wyjaśniłeś już określone wymaganie, ale model ponownie popełnia ten sam błąd.
+
+Jedna z przyczyn wynika ze sposobu działania okna kontekstowego.
+
+Okno kontekstowe zawiera informacje przekazywane modelowi w celu wykonania aktualnego zadania. Mogą to być instrukcje, wiadomości użytkownika, kod, wyniki wyszukiwania, zawartość plików i odpowiedzi zewnętrznych narzędzi.
+
+Podczas pracy agenta ilość tych informacji stale rośnie.
+
+Agent otworzył jedną stronę, następnie drugą, przeczytał dokumentację, wykonał kilka poleceń, otrzymał błędy i próbował je naprawić. Wszystkie te informacje mogą gromadzić się w kontekście.
+
+Wraz ze wzrostem ilości danych modelowi może być trudniej odnaleźć istotne szczegóły i konsekwentnie przestrzegać początkowych wymagań.
+
+Zjawisko to często określa się jako Context Rot.
+
+Do obsługi dużych zadań programiści wykorzystują różne mechanizmy zarządzania kontekstem.
+
+Jeden z nich nosi nazwę Compaction. System tworzy skrócony opis dotychczasowej pracy, aby zwolnić miejsce na nowe informacje.
+
+Agent może również zapisywać wyniki pośrednie w osobnych plikach, bazach danych lub notatkach roboczych.
+
+Instrukcje dotyczące konkretnych rodzajów zadań można przechowywać osobno i ładować tylko wtedy, gdy są potrzebne. Takie podejście wykorzystuje między innymi mechanizm Skills.
+
+Podczas skracania kontekstu mogą zostać utracone ważne szczegóły. Dlatego najważniejsze reguły działania agenta nie powinny istnieć wyłącznie w postaci instrukcji tekstowych.
+
+### Dlaczego nie powierzam bezpieczeństwa agenta jednemu promptowi?
+
+Załóżmy, że tworzę agenta do obsługi poczty elektronicznej.
+
+Jego zadaniem jest wyszukiwanie niepotrzebnych wiadomości i przygotowywanie listy e-maili, które użytkownik może usunąć.
+
+Mogę zapisać w instrukcji systemowej, że agentowi nie wolno samodzielnie usuwać wiadomości.
+
+Jeżeli jednak jego zadanie polega wyłącznie na analizie poczty, po co w ogóle udostępniać mu narzędzie do usuwania?
+
+Z punktu widzenia programisty znacznie bezpieczniej jest ograniczyć uprawnienia na poziomie oprogramowania.
+
+Jeżeli agent ma wyłącznie dostęp do odczytu, błąd modelu językowego nie spowoduje usunięcia wiadomości za pomocą tego narzędzia.
+
+Jeżeli usuwanie jest potrzebną funkcją, można wdrożyć osobny mechanizm potwierdzania. Agent przygotowuje listę wiadomości, a użytkownik sam zatwierdza operację.
+
+Dotyczy to również plików, operacji finansowych, baz danych, publikowania treści na stronach i innych ważnych zasobów.
+
+Prompt określa pożądane zachowanie modelu. Kod programu wyznacza granice jego możliwości.
+
+### Czym jest Prompt Injection?
+
+Kolejny problem pojawia się, gdy agent pobiera informacje ze źródeł zewnętrznych.
+
+Załóżmy, że analizuje stronę konkurencji. Na stronie może znajdować się tekst, który zamiast informacji o produktach zawiera instrukcje skierowane bezpośrednio do modelu językowego.
+
+Jeżeli system nieprawidłowo przetwarza takie dane, model może potraktować je jako część otrzymanego zadania.
+
+Ten rodzaj ataku nazywa się Prompt Injection.
+
+Szczególnie niebezpieczna jest sytuacja, w której agent ma jednocześnie dostęp do poufnych informacji, odczytuje niezaufane źródła zewnętrzne i może wysyłać dane poza system.
+
+Badacz Simon Willison określa takie połączenie jako Lethal Trifecta.
+
+Ryzyko można ograniczać poprzez odpowiednie uprawnienia, izolowanie narzędzi, kontrolowanie zewnętrznych żądań i zatwierdzanie niebezpiecznych operacji przez człowieka.
+
+Jeżeli tworzę agenta do monitorowania cen konkurencji, nie potrzebuje on dostępu do mojej prywatnej poczty, dokumentów finansowych ani wewnętrznej korespondencji firmy.
+
+Im mniej zbędnych możliwości ma system, tym łatwiej kontrolować jego działanie.
+
+### Do czego służą subagenci?
+
+Złożone zadania można rozdzielać pomiędzy kilku agentów.
+
+Wróćmy do przykładu analizy pięciu konkurentów.
+
+Zamiast analizować wszystkie strony za pomocą jednego modelu, można przydzielić osobne zadania pięciu subagentom.
+
+Każdy pracuje z własnym źródłem informacji i przekazuje wyniki głównemu agentowi, który przygotowuje raport zbiorczy.
+
+Takie podejście pozwala rozdzielić kontekst, wykonywać operacje równolegle i w niektórych przypadkach poprawić jakość wyników.
+
+Stworzenie zespołu agentów nie gwarantuje jednak lepszego wykonania zadania.
+
+Każdy subagent wykorzystuje zasoby modelu językowego. Trzeba również przekazywać zadania, odbierać wyniki, sprawdzać je i łączyć.
+
+Jeżeli proste zadanie można wykonać jednym agentem lub zwykłym skryptem, tworzenie systemu wieloagentowego jedynie skomplikuje projekt i zwiększy koszty.
+
+### Dlaczego działanie agentów AI może być kosztowne?
+
+Podczas zwykłej rozmowy z modelem językowym użytkownik nie zawsze zastanawia się nad ilością przetwarzanych informacji.
+
+Przy tworzeniu agentów jest to istotny element pracy.
+
+Modele językowe przetwarzają informacje w postaci tokenów. W przypadku korzystania z API koszt zazwyczaj zależy od liczby tokenów wejściowych i wyjściowych oraz wybranego modelu.
+
+Załóżmy, że agent otrzymał zadanie sprawdzenia pięciu podstron.
+
+Zamiast przejść bezpośrednio do wskazanych stron, zaczyna analizować strukturę całego serwisu, pobiera dodatkowe dokumenty, przegląda zewnętrzne materiały, powtarza testy i poprawia własne błędy.
+
+Użytkownik zlecił jedno zadanie, ale system wykonał dziesiątki operacji.
+
+Czasami jest to uzasadnione. W innych przypadkach agent zużywa zasoby na działania, które nie są potrzebne do uzyskania wyniku.
+
+Dlatego podczas projektowania należy przewidzieć ograniczenia liczby kroków, wielkości kontekstu, ponownych prób i dostępnych narzędzi.
+
+Nie każda operacja wymaga również najdroższego modelu językowego.
+
+Proste zadania można przekazywać tańszym modelom, a formalne kontrole wykonywać zwykłym kodem.
+
+Koszt działania agenta zależy nie tylko od ceny modelu, lecz także od architektury całego systemu.
+
+### Czy można całkowicie zaufać agentowi AI?
+
+Załóżmy, że opracowany agent poprawnie wykonuje zadanie w 80% przypadków.
+
+Na pierwszy rzut oka jest to całkiem dobry wynik.
+
+Jeżeli jednak agent ma przygotowywać raport co tydzień, to przy założeniu niezależności kolejnych wykonań prawdopodobieństwo otrzymania czterech poprawnych raportów z rzędu wynosi około 41%.
+
+Jest to hipotetyczny przykład matematyczny, a nie statystyka konkretnego agenta.
+
+Jeżeli system potrafi wykrywać błędy i ponawiać wykonanie zadania, wynik może się poprawić.
+
+Ponowne uruchomienie nie zawsze rozwiązuje jednak problem. Jeżeli agent korzysta z niewłaściwego źródła lub jego narzędzie działa nieprawidłowo, może powtarzać ten sam błąd.
+
+Ważne jest więc nie tylko uzyskanie wyniku, lecz także możliwość sprawdzenia jego poprawności.
+
+Wykorzystuje się do tego automatyczne testy, kontrole wykonywane przez kod, dodatkowe modele i nadzór człowieka.
+
+W tworzeniu systemów AI takie metody oceny często określa się jako Evals.
+
+Jeżeli agent ma zebrać ceny pięciu konkurentów, zwykły kod może sprawdzić liczbę rekordów, obecność wymaganych pól i poprawność formatu danych.
+
+Sprawdzenie, czy znaleziona cena rzeczywiście dotyczy konkretnego produktu, może jednak wymagać dodatkowych mechanizmów kontroli.
+
+Poziom weryfikacji powinien odpowiadać konsekwencjom potencjalnego błędu.
+
+Błąd w szkicu artykułu i błąd podczas operacji finansowej mają zupełnie inną cenę.
+
+### Praktyczny przykład z mojej pracy: Raccoon SEO Scanner
+
+Jednym z obszarów, którymi się zajmuję, jest automatyzacja technicznych audytów SEO.
+
+Do realizacji takiego zadania można wykorzystać n8n, zwykły kod i model językowy.
+
+W ramach rozwoju Raccoon SEO Scanner pracuję nad systemem, który otrzymuje adres strony internetowej i sprawdza:
+
+- Status HTTP.
+
+- Title i Meta Description.
+
+- Nagłówki H1.
+
+- Canonical.
+
+- Dyrektywy Robots.
+
+- Hreflang.
+
+- Open Graph.
+
+- Obrazy i ich opisy alternatywne.
+
+- Linki wewnętrzne i zewnętrzne.
+
+Do większości tych kontroli sztuczna inteligencja nie jest potrzebna.
+
+Zwykły kod może ustalić, czy strona zawiera nagłówek H1, jaki adres znajduje się w Canonical i jaki status HTTP zwraca serwer.
+
+Przekazywanie całego kodu HTML modelowi językowemu i zlecanie mu wykonania każdej kontroli byłoby niepotrzebnym zużywaniem zasobów.
+
+Po zebraniu wyników można jednak wykorzystać model językowy do innego zadania.
+
+Może on wyjaśnić właścicielowi strony, co oznaczają wykryte problemy, dlaczego są istotne, które należy usunąć w pierwszej kolejności i jakie działania podjąć.
+
+Kod zbiera faktyczne dane, a sztuczna inteligencja pomaga je interpretować.
+
+Moim zdaniem właśnie takie połączenia mają duży potencjał praktyczny dla przedsiębiorstw.
+
+### Od czego zacząć automatyzację własnej firmy?
+
+Nie polecałbym rozpoczynania od tworzenia uniwersalnego agenta AI, który ma potrafić wszystko.
+
+Najpierw warto określić konkretny proces, który regularnie zabiera czas Tobie lub Twoim pracownikom.
+
+Może to być obsługa zgłoszeń, przygotowywanie raportów, analiza dokumentów, monitorowanie konkurencji, klasyfikacja zapytań lub praca z bazą klientów.
+
+Następnie trzeba ustalić, które operacje można zautomatyzować zwykłym kodem, a gdzie rzeczywiście potrzebny jest model językowy.
+
+Do wielu zadań wystarczy n8n lub Make. Inne będą wymagały podłączenia modelu językowego przez API. Bardziej złożone procesy mogą potrzebować pełnoprawnego systemu agentowego.
+
+Wybór technologii powinien zależeć od zadania, a nie od popularności konkretnego narzędzia.
+
+### Moje wnioski
+
+Traktuję agentów AI jako kolejne narzędzie programisty. Bardzo przydatne i perspektywiczne, ale mające własne ograniczenia.
+
+Podoba mi się możliwość tworzenia systemów, które potrafią pracować z informacjami, analizować je i wykonywać operacje wymagające wcześniej wielu godzin ręcznej pracy.
+
+Nie widzę jednak sensu włączania sztucznej inteligencji do każdego procesu tylko dlatego, że jest obecnie popularna.
+
+Jeżeli zadanie można rozwiązać dziesięcioma liniami JavaScriptu, użyję dziesięciu linii JavaScriptu. Jeżeli trzeba przeanalizować dużą ilość nieustrukturyzowanych informacji, podłączę model językowy. Jeżeli system powinien samodzielnie wybierać narzędzia i planować działania, rozważę architekturę agentową.
+
+Dla właściciela firmy nie ma większego znaczenia, ile modeli językowych, subagentów i narzędzi pracuje wewnątrz systemu.
+
+Ważne jest, aby system prawidłowo wykonywał swoją pracę, oszczędzał czas, nie tworzył dodatkowych problemów i kosztował mniej niż proces, który zastępuje.
+
+Moim zdaniem od tego należy zaczynać tworzenie każdej automatyzacji.
+
+### O autorze
+
+Oleksandr Padalko
+
+Frontend Developer / SEO Engineer
+
+Raccoon SEO Studio
+
+Planujesz uruchomienie nowej strony lub chcesz sprawdzić, dlaczego obecna witryna nie zdobywa ruchu? Raccoon SEO Studio zajmuje się technicznym SEO, tworzeniem i optymalizacją stron internetowych.
+
+[Usługi studia](https://raccoon-studio.com.ua/pl/#services)
 
 ---
 

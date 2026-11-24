@@ -8,6 +8,16 @@ Kanoniczna strona HTML: https://raccoon-studio.com.ua/pl/blog/
 
 SEO, AI, tworzenie stron i automatyzacja. Piszemy o tym, co sprawdzamy w praktyce.
 
+![Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+AI i automatyzacja
+
+## [Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji](https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/)
+
+Jak agenci AI wykonują zadania, korzystają z narzędzi i podejmują decyzje. Praktyczne przykłady automatyzacji w n8n oraz możliwości i ograniczenia AI.
+
+Oleksandr Padalko · 24.11.2026 · 13 min czytania
+
 ![Szop analizujący manipulację czynnikami behawioralnymi i sztuczny ruch internetowy.](https://raccoon-studio.com.ua/images/blog/user-behavior-manipulation.webp)
 
 SEO

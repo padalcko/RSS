@@ -22,7 +22,7 @@ COPY = {
 KEYS = ['all','seo','ai','automation','development','cases']
 
 def categories(article): return article.get('categories', [article['category']])
-def category_label(article,lang): return ' · '.join(COPY[lang]['categories'][KEYS.index(key)] for key in categories(article))
+def category_label(article,lang): return article['translations'][lang].get('categoryLabel') or ' · '.join(COPY[lang]['categories'][KEYS.index(key)] for key in categories(article))
 
 def table_html(block):
  rows=[[cell.strip() for cell in line.strip().strip('|').split('|')] for line in block.splitlines()]
@@ -74,6 +74,12 @@ def article_body(article,lang):
  intro=blocks.pop(0)
  intro=re.sub(r"^#\s+", "", intro)
  body='\n'.join(table_html(b) if article.get('tables') and b.startswith('| ') else f'<h3>{e(b[4:])}</h3>' if b.startswith('### ') else f'<h2>{e(b[3:])}</h2>' if b.startswith('## ') else f'<p>{e(b)}</p>' for b in blocks)
+ if article.get('inlineFigures'):
+  figures={'N8N_WORKFLOW':('n8n-email-assistant-workflow.webp',2172,724,'blog-figure'), 'TELEGRAM_REPORT':('ai-email-assistant-telegram-report.webp',1192,1320,'blog-figure blog-figure--telegram')}
+  def figure(m):
+   filename,width,height,cls=figures[m[1]]
+   return f'<figure class="{cls}"><img src="/images/blog/{filename}" alt="{m[2]}" width="{width}" height="{height}" loading="lazy" decoding="async"><figcaption>{m[3]}</figcaption></figure>'
+  body=re.sub(r'<p>\[INSERT_IMAGE_(N8N_WORKFLOW|TELEGRAM_REPORT)\]</p>\n<p>Alt: (.*?)</p>\n<p>Figcaption: (.*?)</p>',figure,body)
  related=[a for a in ARTICLES if a['id']!=article['id'] and a['category']==article['category'] and lang in a['translations'] and ('relatedIds' not in article or a['id'] in article['relatedIds'])][:3]
  if article.get('orderedLists'):
   body=re.sub(r'<p>(1\. .*?)</p>', lambda m: '<ol>'+''.join('<li>'+re.sub(r'^\d+\. ', '', line)+'</li>' for line in m[1].splitlines())+'</ol>', body, flags=re.S)

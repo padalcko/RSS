@@ -1,5 +1,75 @@
 [
   {
+    "id": "ai-agents-work",
+    "category": "ai",
+    "categories": [
+      "ai",
+      "automation"
+    ],
+    "published": "2026-11-24",
+    "modified": "2026-11-24",
+    "image": "/images/blog/how-ai-agents-work-cover.webp",
+    "socialImage": "/images/blog/how-ai-agents-work-cover.webp",
+    "imageWidth": 1672,
+    "imageHeight": 941,
+    "unorderedLists": true,
+    "inlineFigures": true,
+    "relatedIds": [
+      "n8n-ai-agent-guide",
+      "n8n-business-automation"
+    ],
+    "translations": {
+      "uk": {
+        "slug": "yak-pratsiuiut-ai-ahenty",
+        "title": "Анатомія AI-агента: як насправді працюють агенти штучного інтелекту",
+        "seoTitle": "Як працюють AI-агенти: архітектура, можливості та ризики",
+        "description": "Як працюють AI-агенти, з чого вони складаються, чому помиляються та як автоматизують бізнес. Пояснення від розробника простими словами.",
+        "excerpt": "Як AI-агенти виконують завдання, користуються інструментами та приймають рішення. Практичні приклади автоматизації на n8n, можливості та обмеження.",
+        "source": "ai-agents-work-uk.md",
+        "imageAlt": "Єнот Raccoon SEO Studio пояснює архітектуру AI-агентів та їхню взаємодію з цифровими інструментами.",
+        "categoryLabel": "AI та автоматизація",
+        "inlineLinks": [
+          {
+            "text": "n8n",
+            "href": "/blog/yak-stvoryty-ai-agenta-n8n/"
+          }
+        ]
+      },
+      "pl": {
+        "slug": "jak-dzialaja-agenci-ai",
+        "title": "Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji",
+        "seoTitle": "Jak działają agenci AI? Architektura, możliwości i zagrożenia",
+        "description": "Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.",
+        "excerpt": "Jak agenci AI wykonują zadania, korzystają z narzędzi i podejmują decyzje. Praktyczne przykłady automatyzacji w n8n oraz możliwości i ograniczenia AI.",
+        "source": "ai-agents-work-pl.md",
+        "imageAlt": "Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.",
+        "categoryLabel": "AI i automatyzacja",
+        "inlineLinks": [
+          {
+            "text": "n8n",
+            "href": "/pl/blog/jak-stworzyc-agenta-ai-n8n/"
+          }
+        ]
+      },
+      "en": {
+        "slug": "how-ai-agents-work",
+        "title": "Anatomy of an AI Agent: How AI Agents Really Work",
+        "seoTitle": "How AI Agents Work: Architecture, Capabilities and Risks",
+        "description": "Learn how AI agents work, what they are made of, why they make mistakes and how they automate business tasks. Explained by a developer in plain language.",
+        "excerpt": "How AI agents perform tasks, use tools and make decisions. Practical n8n automation examples, capabilities and limitations.",
+        "source": "ai-agents-work-en.md",
+        "imageAlt": "Raccoon SEO Studio mascot explaining AI agent architecture and its connections to digital tools.",
+        "categoryLabel": "AI and Automation",
+        "inlineLinks": [
+          {
+            "text": "n8n",
+            "href": "/en/blog/how-to-build-ai-agent-n8n/"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "user-behavior-manipulation",
     "category": "seo",
     "published": "2026-11-24",

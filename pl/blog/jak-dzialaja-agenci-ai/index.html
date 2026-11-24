@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pl"><head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJBB3K4Q');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jak działają agenci AI? Architektura, możliwości i zagrożenia</title><meta name="description" content="Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.">
+<meta name="author" content="Oleksandr Padalko"><meta name="robots" content="index, follow">
+<link rel="canonical" href="https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/"><link rel="alternate" hreflang="uk" href="https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/">
+<link rel="alternate" hreflang="pl" href="https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/">
+<link rel="alternate" hreflang="en" href="https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/">
+<link rel="alternate" hreflang="x-default" href="https://raccoon-studio.com.ua/blog/yak-pratsiuiut-ai-ahenty/">
+<meta property="og:type" content="article"><meta property="og:site_name" content="Raccoon SEO Studio"><meta property="og:locale" content="pl_PL"><meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Jak działają agenci AI? Architektura, możliwości i zagrożenia"><meta property="og:description" content="Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem."><meta property="og:url" content="https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/"><meta property="og:image" content="https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp"><meta property="og:image:width" content="1672"><meta property="og:image:height" content="941"><meta property="og:image:alt" content="Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Jak działają agenci AI? Architektura, możliwości i zagrożenia"><meta name="twitter:description" content="Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem."><meta name="twitter:image" content="https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp"><meta name="twitter:image:alt" content="Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi.">
+<link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+    rel="stylesheet"
+  />
+<link
+    rel="stylesheet"
+    href="/styles/style.css"
+  />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="/images/brand/raccoon-icon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="/images/brand/raccoon-icon-64.png" type="image/png" sizes="64x64" />
+<link rel="shortcut icon" href="/images/brand/raccoon-favicon.ico" />
+<link rel="apple-touch-icon" href="/images/brand/raccoon-icon-180.png" sizes="180x180" />
+<link rel="stylesheet" href="/styles/blog.css"><meta name="theme-color" content="#4D5AE5">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://raccoon-studio.com.ua/#organization", "name": "Raccoon SEO Studio", "url": "https://raccoon-studio.com.ua/", "logo": {"@type": "ImageObject", "url": "https://raccoon-studio.com.ua/images/brand/raccoon-icon-512.png"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://raccoon-studio.com.ua/pl/"}, {"@type": "ListItem", "position": 2, "name": "Blog SEO Szopa", "item": "https://raccoon-studio.com.ua/pl/blog/"}, {"@type": "ListItem", "position": 3, "name": "Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji", "item": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/"}]}, {"@type": "BlogPosting", "@id": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/#article", "url": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/", "name": "Jak działają agenci AI? Architektura, możliwości i zagrożenia", "description": "Jak działają agenci AI, z czego się składają, dlaczego popełniają błędy i jak automatyzują pracę. Wyjaśnienie programisty prostym językiem.", "inLanguage": "pl", "publisher": {"@id": "https://raccoon-studio.com.ua/#organization"}, "headline": "Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji", "author": {"@type": "Person", "name": "Oleksandr Padalko", "jobTitle": "Frontend Developer / SEO Engineer", "worksFor": {"@id": "https://raccoon-studio.com.ua/#organization"}}, "datePublished": "2026-11-24", "dateModified": "2026-11-24", "image": "https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp", "wordCount": 2581, "articleSection": ["Sztuczna inteligencja", "Automatyzacja"], "mainEntityOfPage": {"@type": "WebPage", "@id": "https://raccoon-studio.com.ua/pl/blog/jak-dzialaja-agenci-ai/"}, "isPartOf": {"@type": "Blog", "@id": "https://raccoon-studio.com.ua/pl/blog/#blog", "name": "Blog SEO Szopa"}}]}</script>
+</head><body class="studio-v5 blog-page">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJBB3K4Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#main-content">Przejdź do treści</a>
+<header class="header">
+
+    <div class="container header-container">
+
+        <a
+          href="/pl/"
+          class="logo"
+          aria-label="Raccoon SEO Studio"
+        >
+          RACCOON<span class="logo-dark">STUDIO</span>
+        </a>
+
+
+      <div class="header-right">
+
+      <nav
+        class="nav"
+        aria-label="Główna nawigacja"
+      >
+
+
+        <ul class="nav-list" id="site-navigation"><li><a class="nav-link" href="/pl/">Strona główna</a></li><li><a class="nav-link" href="/pl/#services">Usługi</a></li><li><a class="nav-link" href="/pl/#work">Portfolio</a></li><li><a class="nav-link" href="/pl/#team">Zespół</a></li><li><a class="nav-link" href="/pl/#contacts">Kontakt</a></li><li><a class="nav-link active" href="/pl/blog/">Blog</a></li><li><button type="button" class="nav-cta js-open-modal">Porozmawiajmy o projekcie</button></li></ul>
+
+      </nav>
+
+        <div class="language-switch"><button type="button" class="language-toggle" aria-expanded="false" aria-controls="language-options" aria-label="Język strony: Polski"><span aria-hidden="true">🇵🇱</span><span>PL</span><span class="language-chevron" aria-hidden="true">⌄</span></button><div class="language-options" id="language-options" hidden><a href="/blog/yak-pratsiuiut-ai-ahenty/" class="language-link" lang="uk" hreflang="uk"><span aria-hidden="true">🇺🇦</span><span>Українська</span><span class="language-check" aria-hidden="true"></span></a><a href="/pl/blog/jak-dzialaja-agenci-ai/" class="language-link" lang="pl" hreflang="pl" aria-current="page"><span aria-hidden="true">🇵🇱</span><span>Polski</span><span class="language-check" aria-hidden="true">✓</span></a><a href="/en/blog/how-ai-agents-work/" class="language-link" lang="en" hreflang="en"><span aria-hidden="true">🇬🇧</span><span>English</span><span class="language-check" aria-hidden="true"></span></a></div></div>
+
+
+        <button
+          class="burger"
+          type="button"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+
+      <ul class="contacts-list">
+
+        <li>
+          <a
+            href="mailto:seoraccoonstudio@gmail.com"
+            class="contact-link"
+          >
+            seoraccoonstudio@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="tel:+48793121665"
+            class="contact-link"
+          >
+            +48 793-121-665
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+<main id="main-content" tabindex="-1"><div class="container blog-article-container"><nav class="blog-breadcrumbs" aria-label="Ścieżka nawigacji"><ol><li><a href="/pl/">Strona główna</a></li><li><a href="/pl/blog/">Blog SEO Szopa</a></li><li><span aria-current="page">Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji</span></li></ol></nav><article><header class="blog-article-heading"><p class="blog-category">AI i automatyzacja</p><h1>Anatomia agenta AI: jak naprawdę działają agenci sztucznej inteligencji</h1><p class="blog-intro" data-article-intro>Zajmując się tworzeniem automatyzacji i agentów AI, często spotykam osoby, które nie do końca rozumieją zasadę ich działania. Jedni uważają agenta za zwykłego chatbota, inni traktują go jak cyfrowego pracownika, któremu wystarczy przydzielić zadanie i poczekać na rezultat.</p><div class="blog-meta"><span>Oleksandr Padalko</span><time datetime="2026-11-24">24.11.2026</time><span>13 min czytania</span></div></header><img class="blog-article-image" src="/images/blog/how-ai-agents-work-cover.webp" alt="Szop Raccoon SEO Studio przedstawia architekturę agentów AI i ich współpracę z narzędziami cyfrowymi." width="1672" height="941" fetchpriority="high" decoding="async"><div class="blog-prose" data-article-body><p>Spróbuję wyjaśnić, jak zbudowane są takie systemy, dlaczego popełniają błędy, od czego zależą koszty ich działania oraz kiedy firma rzeczywiście potrzebuje agenta AI.</p>
+<p>Do zrozumienia tego artykułu nie jest potrzebna znajomość programowania.</p>
+<h2>Czym jest agent AI?</h2>
+<p>Załóżmy, że prowadzisz sklep internetowy. Chcesz w każdy poniedziałek otrzymywać informacje o cenach pięciu głównych konkurentów w formie tabeli przesyłanej przez Telegram.</p>
+<p>Możesz zlecić takie zadanie ChatGPT podczas rozmowy. Jednak do regularnego, automatycznego wykonywania tej pracy potrzebny będzie system, który ma dostęp do odpowiednich narzędzi, uruchamia się zgodnie z harmonogramem i przesyła wyniki.</p>
+<p>Taki system może samodzielnie znaleźć strony konkurencji, przeanalizować ich oferty, zebrać informacje, porównać ceny, przygotować tabelę i wysłać ją użytkownikowi.</p>
+<p>Sam model językowy nie otwiera jednak przeglądarki, nie zapisuje plików na dysku i nie loguje się do Telegrama. Operacje te wykonuje oprogramowanie, z którym model jest połączony.</p>
+<p>Model językowy określa, co należy zrobić, a kod programu wykonuje odpowiednią operację.</p>
+<h2>Z czego składa się agent AI?</h2>
+<p>W uproszczeniu agent składa się z kilku podstawowych elementów:</p>
+<ul><li>Modelu językowego (LLM), na przykład GPT, Claude lub Gemini.</li><li>Warstwy programowej zarządzającej działaniem modelu.</li><li>Narzędzi do wykonywania konkretnych operacji.</li><li>Mechanizmów przechowywania informacji.</li><li>Reguł, ograniczeń i mechanizmów weryfikacji wyników.</li></ul>
+<p>Warstwę programową zarządzającą modelem programiści często określają jako Harness.</p>
+<p>Przekazuje ona zadanie modelowi językowemu, odbiera żądania wykonania operacji, uruchamia odpowiednie narzędzia i zwraca wyniki.</p>
+<p>Jeżeli agent potrzebuje aktualnej ceny produktu, model może wygenerować żądanie otwarcia odpowiedniej strony. Oprogramowanie pobiera jej zawartość i przekazuje ją modelowi.</p>
+<p>Model analizuje otrzymane informacje i określa kolejny krok.</p>
+<p>Proces ten może powtarzać się wielokrotnie w ramach jednego zadania.</p>
+<h2>Jak agent korzysta z narzędzi?</h2>
+<p>Załóżmy, że tworzę agenta do analizy konkurencji.</p>
+<p>Mogę udostępnić mu następujące narzędzia:</p>
+<ul><li>Wyszukiwanie informacji w internecie.</li><li>Pobieranie zawartości stron internetowych.</li><li>Wykonywanie obliczeń.</li><li>Tworzenie arkuszy kalkulacyjnych.</li><li>Wysyłanie wiadomości przez Telegram.</li></ul>
+<p>Każde narzędzie ma określone przeznaczenie, opis i parametry potrzebne do jego uruchomienia.</p>
+<p>Gdy model ustali, że należy znaleźć konkurentów, korzysta z narzędzia wyszukiwania. Po otrzymaniu listy stron może pobrać ich zawartość, a następnie przygotować tabelę.</p>
+<p>Mechanizm ten nazywa się Tool Calling, czyli wywoływanie narzędzi.</p>
+<p>Programista określa, z jakich narzędzi agent może korzystać. Model decyduje, kiedy i w jakim celu użyć dostępnych funkcji.</p>
+<p>Jeżeli nie udostępnię agentowi poczty elektronicznej, nie będzie mógł odczytać moich wiadomości za pomocą odpowiedniego narzędzia. Jeżeli nie podłączę Telegrama, agent nie wyśle tam wiadomości.</p>
+<p>Możliwości agenta w dużym stopniu zależą od sposobu jego zaprojektowania.</p>
+<h2>Czym jest MCP i do czego służy?</h2>
+<p>Podczas tworzenia agentów często trzeba połączyć ich z zewnętrznymi usługami. Mogą to być Google Drive, Gmail, CRM, GitHub, bazy danych lub wewnętrzne systemy przedsiębiorstwa.</p>
+<p>W 2024 roku firma Anthropic przedstawiła otwarty protokół MCP (Model Context Protocol), który ułatwia takie integracje.</p>
+<p>Można go porównać do uniwersalnego złącza USB-C.</p>
+<p>Zamiast za każdym razem tworzyć osobny mechanizm komunikacji pomiędzy agentem a zewnętrznym systemem, programiści mogą korzystać ze standardowego protokołu.</p>
+<p>Serwer MCP obsługujący pocztę może na przykład umożliwiać wyszukiwanie wiadomości, odczytywanie ich zawartości lub tworzenie wersji roboczych.</p>
+<p>Agent otrzymuje informacje o dostępnych operacjach i może z nich korzystać podczas wykonywania zadań.</p>
+<p>MCP nie zastępuje jednak autoryzacji, nie zwalnia z konieczności konfigurowania uprawnień i sam w sobie nie gwarantuje bezpieczeństwa.</p>
+<p>Jest sposobem na standaryzację komunikacji pomiędzy systemem AI a zewnętrznymi narzędziami.</p>
+<h2>Czym agent AI różni się od zwykłej automatyzacji?</h2>
+<p>Załóżmy, że na Twojej stronie znajduje się formularz kontaktowy. Po jego wypełnieniu dane klienta powinny trafić do CRM, a pracownik powinien otrzymać powiadomienie w Telegramie.</p>
+<p>Do tego nie potrzeba sztucznej inteligencji.</p>
+<p>W <a href="/pl/blog/jak-stworzyc-agenta-ai-n8n/">n8n</a> można stworzyć prostą automatyzację, która odbierze dane, sprawdzi je, zapisze w CRM i wyśle wiadomość.</p>
+<p>Kolejność operacji jest znana z góry. Wynik każdego kroku można sprawdzić zwykłym kodem.</p>
+<p>Inaczej wygląda sytuacja, gdy trzeba przeanalizować treść zapytania klienta, określić jego potrzeby, znaleźć odpowiednią usługę, przygotować spersonalizowaną odpowiedź i zdecydować, któremu specjaliście przekazać zgłoszenie.</p>
+<p>W takim przypadku zastosowanie modelu językowego może być uzasadnione.</p>
+<p>Jeżeli system ma samodzielnie wybierać źródła informacji, narzędzia i kolejność działań zależnie od sytuacji, możemy mówić o podejściu agentowym.</p>
+<p>W swojej pracy preferuję łączenie zwykłej automatyzacji ze sztuczną inteligencją.</p>
+<p>Tam, gdzie wynik można uzyskać za pomocą kodu, nie ma sensu zużywać zasobów modelu językowego.</p>
+<h2>Praktyczny przykład: poranny asystent poczty elektronicznej</h2>
+<p>Załóżmy, że każdego dnia zaczynasz pracę od przeglądania poczty. W nocy przychodzą wiadomości od klientów, reklamy, faktury, powiadomienia z różnych usług i zwykły spam.</p>
+<p>Zamiast codziennie rano przeglądać wszystkie wiadomości, można zautomatyzować ich wstępną analizę.</p>
+<p>Każdego dnia o siódmej rano system łączy się ze skrzynką pocztową, pobiera nowe wiadomości z określonego okresu nocnego, analizuje ich treść, przypisuje je do kategorii i przygotowuje raport przesyłany przez Telegram.</p>
+<p>Do stworzenia takiego rozwiązania wystarczy n8n, dostęp do poczty elektronicznej, model językowy i bot Telegrama.</p>
+<h3>Jak wygląda workflow w n8n?</h3>
+<figure class="blog-figure"><img src="/images/blog/n8n-email-assistant-workflow.webp" alt="Schemat automatyzacji n8n do porannej analizy poczty elektronicznej i wysyłania raportu przez Telegram." width="2172" height="724" loading="lazy" decoding="async"><figcaption>Uproszczony schemat działania asystenta poczty w n8n. Opisy na ilustracji są w języku ukraińskim.</figcaption></figure>
+<p>Pierwszy węzeł uruchamia automatyzację codziennie o 07:00. Kolejny pobiera nowe wiadomości z Gmaila. Model językowy analizuje ich treść, określa kategorię i ważność. Kod zlicza wyniki, przygotowuje raport, a bot Telegrama przesyła go użytkownikowi.</p>
+<p>Węzeł AI Agent na schemacie reprezentuje komponent analizujący wiadomości. W rzeczywistej konfiguracji należy podłączyć do niego model językowy. Jeżeli samodzielny wybór narzędzi nie jest potrzebny, wystarczy zwykły węzeł LLM lub klasyfikator tekstu.</p>
+<h3>Co otrzymuje użytkownik?</h3>
+<p>Po przebudzeniu bierzesz telefon i widzisz informację, że w nocy przyszły 24 nowe wiadomości. Jedenaście z nich dotyczy pracy, osiem zostało sklasyfikowanych jako spam, a pięć należy do subskrypcji i newsletterów.</p>
+<p>Oprócz statystyk system wyróżnia ważne wiadomości: potwierdzone spotkanie z klientem, fakturę ze zbliżającym się terminem płatności oraz nowe zapytanie ze strony internetowej.</p>
+<figure class="blog-figure blog-figure--telegram"><img src="/images/blog/ai-email-assistant-telegram-report.webp" alt="Przykładowy poranny raport asystenta AI w Telegramie zawierający wyniki analizy 24 wiadomości e-mail." width="1192" height="1320" loading="lazy" decoding="async"><figcaption>Demonstracyjny przykład porannego raportu w Telegramie. Treść ilustracji jest w języku ukraińskim.</figcaption></figure>
+<p>Zwykła automatyzacja odpowiada za uruchamianie procesu według harmonogramu, pobieranie wiadomości, ich zliczanie oraz wysyłanie raportu. Model językowy analizuje treść wiadomości i określa ich kategorię oraz ważność.</p>
+<p>Systemowi wystarczy dostęp do odczytu poczty. Nie trzeba pozwalać mu na usuwanie wiadomości ani odpowiadanie w imieniu użytkownika.</p>
+<p>W razie potrzeby funkcjonalność można rozszerzyć. Asystent może przygotowywać wersje robocze odpowiedzi, wyszukiwać faktury, identyfikować terminy wykonania zadań lub proponować dodanie spotkania do kalendarza.</p>
+<p>Jeżeli model samodzielnie wybiera odpowiednie narzędzia zależnie od treści wiadomości, taka automatyzacja nabiera cech pełnoprawnego agenta AI.</p>
+<p>Jest to stosunkowo prosty system, który nie wymaga skomplikowanej architektury, a może codziennie oszczędzać czas.</p>
+<h2>Dlaczego agent AI nie zawsze potrafi odczytać stronę internetową?</h2>
+<p>Jako programista stron internetowych i specjalista SEO uważam ten temat za szczególnie istotny.</p>
+<p>Kiedy człowiek otwiera stronę internetową, widzi zdjęcia, ceny, przyciski, parametry produktów i pozostałe elementy.</p>
+<p>Agent może otrzymać zupełnie inne informacje.</p>
+<p>Część współczesnych stron pobiera dane za pomocą JavaScript już po otwarciu strony. Jeżeli narzędzie agenta pobiera wyłącznie początkowy kod HTML, potrzebnych informacji może w nim nie być.</p>
+<p>Człowiek widzi cenę produktu, a agent otrzymuje pusty kontener.</p>
+<p>Do takich zadań można wykorzystać pełnoprawną przeglądarkę, na przykład Chromium sterowaną przez Playwright.</p>
+<p>Istnieje również technologia Computer Use, która pozwala modelowi analizować obraz ekranu i generować polecenia klikania przycisków, wpisywania tekstu lub przewijania strony.</p>
+<p>Takie operacje wymagają jednak więcej czasu i zasobów obliczeniowych.</p>
+<p>Podczas projektowania agenta warto wybrać odpowiednią metodę pobierania informacji. Jeżeli dane można uzyskać przez API lub zwykłe żądanie HTTP, uruchamianie przeglądarki nie jest konieczne.</p>
+<h2>Dlaczego agenci AI zapominają o zadaniu?</h2>
+<p>Jeżeli przez dłuższy czas korzystasz z ChatGPT lub innego modelu językowego w ramach jednej rozmowy, możesz zauważyć, że z czasem zaczyna on ignorować wcześniejsze ustalenia.</p>
+<p>Wyjaśniłeś już określone wymaganie, ale model ponownie popełnia ten sam błąd.</p>
+<p>Jedna z przyczyn wynika ze sposobu działania okna kontekstowego.</p>
+<p>Okno kontekstowe zawiera informacje przekazywane modelowi w celu wykonania aktualnego zadania. Mogą to być instrukcje, wiadomości użytkownika, kod, wyniki wyszukiwania, zawartość plików i odpowiedzi zewnętrznych narzędzi.</p>
+<p>Podczas pracy agenta ilość tych informacji stale rośnie.</p>
+<p>Agent otworzył jedną stronę, następnie drugą, przeczytał dokumentację, wykonał kilka poleceń, otrzymał błędy i próbował je naprawić. Wszystkie te informacje mogą gromadzić się w kontekście.</p>
+<p>Wraz ze wzrostem ilości danych modelowi może być trudniej odnaleźć istotne szczegóły i konsekwentnie przestrzegać początkowych wymagań.</p>
+<p>Zjawisko to często określa się jako Context Rot.</p>
+<p>Do obsługi dużych zadań programiści wykorzystują różne mechanizmy zarządzania kontekstem.</p>
+<p>Jeden z nich nosi nazwę Compaction. System tworzy skrócony opis dotychczasowej pracy, aby zwolnić miejsce na nowe informacje.</p>
+<p>Agent może również zapisywać wyniki pośrednie w osobnych plikach, bazach danych lub notatkach roboczych.</p>
+<p>Instrukcje dotyczące konkretnych rodzajów zadań można przechowywać osobno i ładować tylko wtedy, gdy są potrzebne. Takie podejście wykorzystuje między innymi mechanizm Skills.</p>
+<p>Podczas skracania kontekstu mogą zostać utracone ważne szczegóły. Dlatego najważniejsze reguły działania agenta nie powinny istnieć wyłącznie w postaci instrukcji tekstowych.</p>
+<h2>Dlaczego nie powierzam bezpieczeństwa agenta jednemu promptowi?</h2>
+<p>Załóżmy, że tworzę agenta do obsługi poczty elektronicznej.</p>
+<p>Jego zadaniem jest wyszukiwanie niepotrzebnych wiadomości i przygotowywanie listy e-maili, które użytkownik może usunąć.</p>
+<p>Mogę zapisać w instrukcji systemowej, że agentowi nie wolno samodzielnie usuwać wiadomości.</p>
+<p>Jeżeli jednak jego zadanie polega wyłącznie na analizie poczty, po co w ogóle udostępniać mu narzędzie do usuwania?</p>
+<p>Z punktu widzenia programisty znacznie bezpieczniej jest ograniczyć uprawnienia na poziomie oprogramowania.</p>
+<p>Jeżeli agent ma wyłącznie dostęp do odczytu, błąd modelu językowego nie spowoduje usunięcia wiadomości za pomocą tego narzędzia.</p>
+<p>Jeżeli usuwanie jest potrzebną funkcją, można wdrożyć osobny mechanizm potwierdzania. Agent przygotowuje listę wiadomości, a użytkownik sam zatwierdza operację.</p>
+<p>Dotyczy to również plików, operacji finansowych, baz danych, publikowania treści na stronach i innych ważnych zasobów.</p>
+<p>Prompt określa pożądane zachowanie modelu. Kod programu wyznacza granice jego możliwości.</p>
+<h2>Czym jest Prompt Injection?</h2>
+<p>Kolejny problem pojawia się, gdy agent pobiera informacje ze źródeł zewnętrznych.</p>
+<p>Załóżmy, że analizuje stronę konkurencji. Na stronie może znajdować się tekst, który zamiast informacji o produktach zawiera instrukcje skierowane bezpośrednio do modelu językowego.</p>
+<p>Jeżeli system nieprawidłowo przetwarza takie dane, model może potraktować je jako część otrzymanego zadania.</p>
+<p>Ten rodzaj ataku nazywa się Prompt Injection.</p>
+<p>Szczególnie niebezpieczna jest sytuacja, w której agent ma jednocześnie dostęp do poufnych informacji, odczytuje niezaufane źródła zewnętrzne i może wysyłać dane poza system.</p>
+<p>Badacz Simon Willison określa takie połączenie jako Lethal Trifecta.</p>
+<p>Ryzyko można ograniczać poprzez odpowiednie uprawnienia, izolowanie narzędzi, kontrolowanie zewnętrznych żądań i zatwierdzanie niebezpiecznych operacji przez człowieka.</p>
+<p>Jeżeli tworzę agenta do monitorowania cen konkurencji, nie potrzebuje on dostępu do mojej prywatnej poczty, dokumentów finansowych ani wewnętrznej korespondencji firmy.</p>
+<p>Im mniej zbędnych możliwości ma system, tym łatwiej kontrolować jego działanie.</p>
+<h2>Do czego służą subagenci?</h2>
+<p>Złożone zadania można rozdzielać pomiędzy kilku agentów.</p>
+<p>Wróćmy do przykładu analizy pięciu konkurentów.</p>
+<p>Zamiast analizować wszystkie strony za pomocą jednego modelu, można przydzielić osobne zadania pięciu subagentom.</p>
+<p>Każdy pracuje z własnym źródłem informacji i przekazuje wyniki głównemu agentowi, który przygotowuje raport zbiorczy.</p>
+<p>Takie podejście pozwala rozdzielić kontekst, wykonywać operacje równolegle i w niektórych przypadkach poprawić jakość wyników.</p>
+<p>Stworzenie zespołu agentów nie gwarantuje jednak lepszego wykonania zadania.</p>
+<p>Każdy subagent wykorzystuje zasoby modelu językowego. Trzeba również przekazywać zadania, odbierać wyniki, sprawdzać je i łączyć.</p>
+<p>Jeżeli proste zadanie można wykonać jednym agentem lub zwykłym skryptem, tworzenie systemu wieloagentowego jedynie skomplikuje projekt i zwiększy koszty.</p>
+<h2>Dlaczego działanie agentów AI może być kosztowne?</h2>
+<p>Podczas zwykłej rozmowy z modelem językowym użytkownik nie zawsze zastanawia się nad ilością przetwarzanych informacji.</p>
+<p>Przy tworzeniu agentów jest to istotny element pracy.</p>
+<p>Modele językowe przetwarzają informacje w postaci tokenów. W przypadku korzystania z API koszt zazwyczaj zależy od liczby tokenów wejściowych i wyjściowych oraz wybranego modelu.</p>
+<p>Załóżmy, że agent otrzymał zadanie sprawdzenia pięciu podstron.</p>
+<p>Zamiast przejść bezpośrednio do wskazanych stron, zaczyna analizować strukturę całego serwisu, pobiera dodatkowe dokumenty, przegląda zewnętrzne materiały, powtarza testy i poprawia własne błędy.</p>
+<p>Użytkownik zlecił jedno zadanie, ale system wykonał dziesiątki operacji.</p>
+<p>Czasami jest to uzasadnione. W innych przypadkach agent zużywa zasoby na działania, które nie są potrzebne do uzyskania wyniku.</p>
+<p>Dlatego podczas projektowania należy przewidzieć ograniczenia liczby kroków, wielkości kontekstu, ponownych prób i dostępnych narzędzi.</p>
+<p>Nie każda operacja wymaga również najdroższego modelu językowego.</p>
+<p>Proste zadania można przekazywać tańszym modelom, a formalne kontrole wykonywać zwykłym kodem.</p>
+<p>Koszt działania agenta zależy nie tylko od ceny modelu, lecz także od architektury całego systemu.</p>
+<h2>Czy można całkowicie zaufać agentowi AI?</h2>
+<p>Załóżmy, że opracowany agent poprawnie wykonuje zadanie w 80% przypadków.</p>
+<p>Na pierwszy rzut oka jest to całkiem dobry wynik.</p>
+<p>Jeżeli jednak agent ma przygotowywać raport co tydzień, to przy założeniu niezależności kolejnych wykonań prawdopodobieństwo otrzymania czterech poprawnych raportów z rzędu wynosi około 41%.</p>
+<p>Jest to hipotetyczny przykład matematyczny, a nie statystyka konkretnego agenta.</p>
+<p>Jeżeli system potrafi wykrywać błędy i ponawiać wykonanie zadania, wynik może się poprawić.</p>
+<p>Ponowne uruchomienie nie zawsze rozwiązuje jednak problem. Jeżeli agent korzysta z niewłaściwego źródła lub jego narzędzie działa nieprawidłowo, może powtarzać ten sam błąd.</p>
+<p>Ważne jest więc nie tylko uzyskanie wyniku, lecz także możliwość sprawdzenia jego poprawności.</p>
+<p>Wykorzystuje się do tego automatyczne testy, kontrole wykonywane przez kod, dodatkowe modele i nadzór człowieka.</p>
+<p>W tworzeniu systemów AI takie metody oceny często określa się jako Evals.</p>
+<p>Jeżeli agent ma zebrać ceny pięciu konkurentów, zwykły kod może sprawdzić liczbę rekordów, obecność wymaganych pól i poprawność formatu danych.</p>
+<p>Sprawdzenie, czy znaleziona cena rzeczywiście dotyczy konkretnego produktu, może jednak wymagać dodatkowych mechanizmów kontroli.</p>
+<p>Poziom weryfikacji powinien odpowiadać konsekwencjom potencjalnego błędu.</p>
+<p>Błąd w szkicu artykułu i błąd podczas operacji finansowej mają zupełnie inną cenę.</p>
+<h2>Praktyczny przykład z mojej pracy: Raccoon SEO Scanner</h2>
+<p>Jednym z obszarów, którymi się zajmuję, jest automatyzacja technicznych audytów SEO.</p>
+<p>Do realizacji takiego zadania można wykorzystać n8n, zwykły kod i model językowy.</p>
+<p>W ramach rozwoju Raccoon SEO Scanner pracuję nad systemem, który otrzymuje adres strony internetowej i sprawdza:</p>
+<ul><li>Status HTTP.</li><li>Title i Meta Description.</li><li>Nagłówki H1.</li><li>Canonical.</li><li>Dyrektywy Robots.</li><li>Hreflang.</li><li>Open Graph.</li><li>Obrazy i ich opisy alternatywne.</li><li>Linki wewnętrzne i zewnętrzne.</li></ul>
+<p>Do większości tych kontroli sztuczna inteligencja nie jest potrzebna.</p>
+<p>Zwykły kod może ustalić, czy strona zawiera nagłówek H1, jaki adres znajduje się w Canonical i jaki status HTTP zwraca serwer.</p>
+<p>Przekazywanie całego kodu HTML modelowi językowemu i zlecanie mu wykonania każdej kontroli byłoby niepotrzebnym zużywaniem zasobów.</p>
+<p>Po zebraniu wyników można jednak wykorzystać model językowy do innego zadania.</p>
+<p>Może on wyjaśnić właścicielowi strony, co oznaczają wykryte problemy, dlaczego są istotne, które należy usunąć w pierwszej kolejności i jakie działania podjąć.</p>
+<p>Kod zbiera faktyczne dane, a sztuczna inteligencja pomaga je interpretować.</p>
+<p>Moim zdaniem właśnie takie połączenia mają duży potencjał praktyczny dla przedsiębiorstw.</p>
+<h2>Od czego zacząć automatyzację własnej firmy?</h2>
+<p>Nie polecałbym rozpoczynania od tworzenia uniwersalnego agenta AI, który ma potrafić wszystko.</p>
+<p>Najpierw warto określić konkretny proces, który regularnie zabiera czas Tobie lub Twoim pracownikom.</p>
+<p>Może to być obsługa zgłoszeń, przygotowywanie raportów, analiza dokumentów, monitorowanie konkurencji, klasyfikacja zapytań lub praca z bazą klientów.</p>
+<p>Następnie trzeba ustalić, które operacje można zautomatyzować zwykłym kodem, a gdzie rzeczywiście potrzebny jest model językowy.</p>
+<p>Do wielu zadań wystarczy n8n lub Make. Inne będą wymagały podłączenia modelu językowego przez API. Bardziej złożone procesy mogą potrzebować pełnoprawnego systemu agentowego.</p>
+<p>Wybór technologii powinien zależeć od zadania, a nie od popularności konkretnego narzędzia.</p>
+<h2>Moje wnioski</h2>
+<p>Traktuję agentów AI jako kolejne narzędzie programisty. Bardzo przydatne i perspektywiczne, ale mające własne ograniczenia.</p>
+<p>Podoba mi się możliwość tworzenia systemów, które potrafią pracować z informacjami, analizować je i wykonywać operacje wymagające wcześniej wielu godzin ręcznej pracy.</p>
+<p>Nie widzę jednak sensu włączania sztucznej inteligencji do każdego procesu tylko dlatego, że jest obecnie popularna.</p>
+<p>Jeżeli zadanie można rozwiązać dziesięcioma liniami JavaScriptu, użyję dziesięciu linii JavaScriptu. Jeżeli trzeba przeanalizować dużą ilość nieustrukturyzowanych informacji, podłączę model językowy. Jeżeli system powinien samodzielnie wybierać narzędzia i planować działania, rozważę architekturę agentową.</p>
+<p>Dla właściciela firmy nie ma większego znaczenia, ile modeli językowych, subagentów i narzędzi pracuje wewnątrz systemu.</p>
+<p>Ważne jest, aby system prawidłowo wykonywał swoją pracę, oszczędzał czas, nie tworzył dodatkowych problemów i kosztował mniej niż proces, który zastępuje.</p>
+<p>Moim zdaniem od tego należy zaczynać tworzenie każdej automatyzacji.</p></div><aside class="blog-author"><h2>O autorze</h2><p>Oleksandr Padalko</p><p>Frontend Developer / SEO Engineer</p><p>Raccoon SEO Studio</p></aside></article><aside class="blog-cta"><p>Planujesz uruchomienie nowej strony lub chcesz sprawdzić, dlaczego obecna witryna nie zdobywa ruchu? Raccoon SEO Studio zajmuje się technicznym SEO, tworzeniem i optymalizacją stron internetowych.</p><div><button type="button" class="nav-cta js-open-modal">Porozmawiajmy o projekcie</button><a href="/pl/#services">Usługi studia</a></div></aside></div></main>
+<footer
+    id="contacts"
+    class="footer"
+  >
+
+    <div class="container footer-container">
+
+      <div class="footer-info">
+
+        <a
+          href="/pl/"
+          class="logo logo-footer"
+        >RACCOON<span class="logo-accent">STUDIO</span></a>
+
+        <p class="footer-text">
+          SEO, strony internetowe
+          i automatyzacja AI
+          dla rozwoju biznesu.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links"><a href="/pl/#services">Usługi</a>
+
+        <p class="footer-subtitle">
+          Nawigacja
+        </p>
+
+        <a href="/pl/">
+          Strona główna
+        </a>
+
+        <a href="/pl/clients.html">
+          Realizacje
+        </a>
+
+        <a href="/pl/#lead">
+          Wyślij zapytanie
+        </a>
+
+      </div>
+
+
+      <div class="footer-contact">
+
+        <p class="footer-subtitle">
+          Kontakt
+        </p>
+
+        <a href="tel:+48793121665">
+          +48 793-121-665
+        </a>
+
+        <a href="mailto:seoraccoonstudio@gmail.com">
+          seoraccoonstudio@gmail.com
+        </a>
+
+      </div>
+
+
+      <div class="footer-cta"><p class="footer-subtitle">Masz pomysł lub projekt?</p><p>Porozmawiajmy o tym, jak zamienić Twój pomysł w skuteczne rozwiązanie online.</p><button type="button" class="modal-btn js-open-modal">Porozmawiajmy o projekcie</button></div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+      Created by Raccoon Studio © 2026
+    </div>
+
+  </footer>
+  <div class="js-backdrop is-hidden">
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+
+      <button
+        class="js-close-modal modal-close"
+        type="button"
+        aria-label="Zamknij"
+      >
+        ×
+      </button>
+
+      <h2
+        class="modal-title"
+        id="modal-title"
+      >
+        Porozmawiajmy o projekcie
+      </h2>
+
+
+      <form class="modal-form js-lead-form">
+
+        <label class="modal-field" for="modal-name">Imię</label><input
+          type="text"
+          id="modal-name" name="name" autocomplete="name"
+          class="modal-input"
+          placeholder="Twoje imię"
+          required
+        />
+
+        <label class="modal-field" for="modal-phone">Telefon</label><input
+          type="tel"
+          id="modal-phone" name="phone" autocomplete="tel"
+          class="modal-input"
+          placeholder="+48 000 000 000"
+          required
+        />
+
+        <label class="modal-field" for="modal-email">E-mail</label><input
+          type="email"
+          id="modal-email" name="email" autocomplete="email"
+          class="modal-input"
+          placeholder="Email"
+          required
+        />
+
+        <label class="modal-field" for="modal-company">Firma</label><input
+          type="text"
+          id="modal-company" name="company"
+          class="modal-input"
+          placeholder="Nazwa firmy"
+        />
+
+        <label class="modal-field" for="modal-service">Usługa</label><select
+          id="modal-service" name="service"
+          class="modal-input"
+        >
+
+          <option value="">
+            Wybierz usługę
+          </option>
+
+          <option value="SEO">
+            SEO
+          </option>
+
+          <option value="Tworzenie strony internetowej">
+            Tworzenie strony internetowej
+          </option>
+
+          <option value="AI agent">
+            AI agent
+          </option>
+
+          <option value="n8n automation">
+            n8n automation
+          </option>
+
+          <option value="Kompleksowe rozwiązanie">
+            Kompleksowe rozwiązanie
+          </option>
+
+        </select>
+
+
+        <label class="modal-field" for="modal-comment">Wiadomość</label><textarea
+          id="modal-comment" name="comment"
+          class="modal-textarea"
+          placeholder="Krótko opisz zadanie"
+        ></textarea>
+
+
+        <label class="modal-check">
+
+          <input
+            type="checkbox"
+            required
+          />
+
+          Akceptuję warunki Polityki prywatności
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="modal-btn"
+        >
+          Wyślij
+        </button>
+
+
+        <p
+          class="form-status js-form-status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+
+<script src="/script/script.js" defer></script>
+
+</body></html>

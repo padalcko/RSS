@@ -8,6 +8,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![Raccoon SEO Studio mascot explaining AI agent architecture and its connections to digital tools.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
+
+AI and Automation
+
+## [Anatomy of an AI Agent: How AI Agents Really Work](https://raccoon-studio.com.ua/en/blog/how-ai-agents-work/)
+
+How AI agents perform tasks, use tools and make decisions. Practical n8n automation examples, capabilities and limitations.
+
+Oleksandr Padalko · 24/11/2026 · 16 min read
+
 ![Raccoon analyzing user behavior manipulation and artificial website traffic.](https://raccoon-studio.com.ua/images/blog/user-behavior-manipulation.webp)
 
 SEO

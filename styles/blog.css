@@ -82,6 +82,10 @@
 .blog-audio audio { display: block; width: 100%; }
 .blog-prose ol { padding-left: 1.5em; margin-bottom: 22px; }
 .blog-prose li + li { margin-top: 8px; }
+.blog-figure { margin: 0 0 22px; }
+.blog-figure img { display: block; width: 100%; height: auto; }
+.blog-figure--telegram { max-width: 650px; margin-inline: auto; }
+.blog-figure figcaption { margin-top: 8px; font-size: 15px; line-height: 1.5; text-align: center; }
 .blog-table-scroll { max-width: 100%; margin: 0 0 22px; overflow-x: auto; }
 .blog-table-scroll table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
 .blog-table-scroll th, .blog-table-scroll td { padding: 10px 12px; border: 1px solid var(--border-color); text-align: left; }
