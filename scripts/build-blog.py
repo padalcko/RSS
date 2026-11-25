@@ -147,6 +147,8 @@ def build_page(lang,article=None):
  schema={'@type':'BlogPosting' if article else 'Blog','@id':url+'#'+('article' if article else 'blog'),'url':url,'name':title,'description':description,'inLanguage':lang,'publisher':{'@id':BASE+'/#organization'}}
  if article: schema.update(headline=t['title'],author=author,datePublished=article['published'],dateModified=article['modified'],image=social,wordCount=words(article,lang),articleSection=[c['categories'][KEYS.index(key)] for key in categories(article)] if article.get('categories') else c['categories'][KEYS.index(article['category'])],mainEntityOfPage={'@type':'WebPage','@id':url},isPartOf={'@type':'Blog','@id':BASE+route(lang)+'#blog','name':c['name']})
  else: schema['blogPost']=[{'@type':'BlogPosting','headline':a['translations'][lang]['title'],'url':BASE+route(lang,a),'author':author,'datePublished':a['published'],'dateModified':a['modified'],**({'image':BASE+localized_visual(a,lang)['socialImage']} if localized_visual(a,lang)['socialImage'] else {})} for a in ARTICLES if lang in a['translations']]
+ if article and t.get('keywords'): schema['keywords']=t['keywords']
+ if article and article.get('sources'): schema['citation']=article['sources']
  if article and not social: schema.pop('image',None)
  if article and t.get('audio'):
   audio=t['audio']

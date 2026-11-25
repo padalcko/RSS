@@ -1,5 +1,112 @@
 [
   {
+    "id": "seo-2026-google-ai-search",
+    "category": "seo",
+    "published": "2026-11-25",
+    "modified": "2026-11-25",
+    "image": "/images/blog/seo-2026-google-ai-search.webp",
+    "socialImage": "/images/blog/seo-2026-google-ai-search.webp",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
+    "tables": true,
+    "orderedLists": true,
+    "unorderedLists": true,
+    "showCta": false,
+    "sources": [
+      "https://www.pewresearch.org/short-reads/2025/07/21/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
+      "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
+      "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "https://developers.google.com/search/docs/appearance/ai-features"
+    ],
+    "translations": {
+      "uk": {
+        "slug": "seo-2026-google-ai-search",
+        "title": "SEO у 2026 році: як залучати клієнтів із Google та штучного інтелекту",
+        "seoTitle": "SEO 2026: клієнти з Google та AI Search",
+        "description": "Як SEO змінюється у 2026 році. Дослідження AI Overviews, генеративний пошук, GEO, тематичні кластери та практичні рекомендації для бізнесу.",
+        "excerpt": "Чому високі позиції в Google більше не гарантують стабільного трафіку, як штучний інтелект змінює пошук та що з цим робити власникам бізнесу.",
+        "source": "seo-2026-google-ai-search-uk.md",
+        "imageAlt": "Єнот аналізує результати Google та генеративного пошуку зі штучним інтелектом.",
+        "keywords": "SEO, GEO, AI Search, Google, AI Overviews, E-E-A-T, цифровий маркетинг",
+        "sourcesHeading": "Джерела та дослідження",
+        "sourceLabels": [
+          "Pew Research Center. Google users are less likely to click on links when an AI summary appears in the results. July 2025.",
+          "Ahrefs. Update: AI Overviews Reduce Clicks by 58%. February 4, 2026.",
+          "Google Search Central. Optimizing your website for generative AI features on Google Search.",
+          "Google Search Central. Creating helpful, reliable, people-first content.",
+          "Google Search Central. AI features and your website."
+        ],
+        "inlineLinks": [
+          {
+            "text": "GEO (Generative Engine Optimization)",
+            "href": "/blog/geo-prosuvannia-chatgpt-google-ai/"
+          },
+          {
+            "text": "технічний стан ресурсу",
+            "href": "/blog/zapusk-novoho-saitu-seo/"
+          }
+        ]
+      },
+      "pl": {
+        "slug": "seo-2026-google-ai-search",
+        "title": "SEO w 2026 roku: jak pozyskiwać klientów z Google i sztucznej inteligencji",
+        "seoTitle": "SEO 2026: pozyskiwanie klientów z Google i AI",
+        "description": "Jak zmienia się SEO w 2026 roku? Badania AI Overviews, wyszukiwanie generatywne, GEO, klastry tematyczne i praktyczne wskazówki dla firm.",
+        "excerpt": "Dlaczego wysokie pozycje w Google nie gwarantują już stabilnego ruchu, jak AI zmienia wyszukiwanie i co mogą zrobić właściciele firm.",
+        "source": "seo-2026-google-ai-search-pl.md",
+        "imageAlt": "Szop analizuje wyniki wyszukiwania Google i wyszukiwania generatywnego AI.",
+        "keywords": "SEO, GEO, AI Search, Google, AI Overviews, E-E-A-T, marketing cyfrowy",
+        "sourcesHeading": "Źródła i badania",
+        "sourceLabels": [
+          "Pew Research Center. Google users are less likely to click on links when an AI summary appears in the results. July 2025.",
+          "Ahrefs. Update: AI Overviews Reduce Clicks by 58%. February 4, 2026.",
+          "Google Search Central. Optimizing your website for generative AI features on Google Search.",
+          "Google Search Central. Creating helpful, reliable, people-first content.",
+          "Google Search Central. AI features and your website."
+        ],
+        "inlineLinks": [
+          {
+            "text": "GEO (Generative Engine Optimization)",
+            "href": "/pl/blog/pozycjonowanie-geo-w-polsce/"
+          },
+          {
+            "text": "stan techniczny strony",
+            "href": "/pl/blog/start-nowej-strony-seo/"
+          }
+        ]
+      },
+      "en": {
+        "slug": "seo-2026-google-ai-search",
+        "title": "SEO in 2026: How to Attract Customers Through Google and AI Search",
+        "seoTitle": "SEO 2026: Attract Customers Through Google and AI",
+        "description": "Explore how SEO is changing in 2026, including AI Overviews research, generative search, GEO, topic clusters and practical strategies for businesses.",
+        "excerpt": "Why high Google rankings no longer guarantee stable traffic, how AI is changing search behaviour, and what businesses can do about it.",
+        "source": "seo-2026-google-ai-search-en.md",
+        "imageAlt": "Raccoon analysing Google search results and AI-powered search.",
+        "keywords": "SEO, GEO, AI Search, Google, AI Overviews, E-E-A-T, digital marketing",
+        "sourcesHeading": "Sources and research",
+        "sourceLabels": [
+          "Pew Research Center. Google users are less likely to click on links when an AI summary appears in the results. July 2025.",
+          "Ahrefs. Update: AI Overviews Reduce Clicks by 58%. February 4, 2026.",
+          "Google Search Central. Optimizing your website for generative AI features on Google Search.",
+          "Google Search Central. Creating helpful, reliable, people-first content.",
+          "Google Search Central. AI features and your website."
+        ],
+        "inlineLinks": [
+          {
+            "text": "Generative Engine Optimization (GEO)",
+            "href": "/en/blog/geo-optimization-europe-ai-search/"
+          },
+          {
+            "text": "technical condition of their websites",
+            "href": "/en/blog/new-website-seo-launch/"
+          }
+        ]
+      }
+    }
+  },
+  {
     "id": "ai-agents-work",
     "category": "ai",
     "categories": [

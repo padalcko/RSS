@@ -66,6 +66,11 @@
   Link: <https://raccoon-studio.com.ua/blog/nakrutka-seo-trafiku/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/blog/seo-2026-google-ai-search/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/blog/seo-2026-google-ai-search/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /blog/try-pravyla-seo/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/blog/try-pravyla-seo/>; rel="canonical"
@@ -171,6 +176,11 @@
   Link: <https://raccoon-studio.com.ua/en/blog/new-website-seo-launch/>; rel="canonical"
   X-Robots-Tag: noindex
 
+/en/blog/seo-2026-google-ai-search/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/en/blog/seo-2026-google-ai-search/>; rel="canonical"
+  X-Robots-Tag: noindex
+
 /en/blog/three-seo-rules/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/en/blog/three-seo-rules/>; rel="canonical"
@@ -234,6 +244,11 @@
 /pl/blog/przyszlosc-seo-2027/index.md
   Content-Type: text/markdown; charset=utf-8
   Link: <https://raccoon-studio.com.ua/pl/blog/przyszlosc-seo-2027/>; rel="canonical"
+  X-Robots-Tag: noindex
+
+/pl/blog/seo-2026-google-ai-search/index.md
+  Content-Type: text/markdown; charset=utf-8
+  Link: <https://raccoon-studio.com.ua/pl/blog/seo-2026-google-ai-search/>; rel="canonical"
   X-Robots-Tag: noindex
 
 /pl/blog/seo-wieloregionalne/index.md

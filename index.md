@@ -36,7 +36,7 @@
 
 SEO Specialist
 
-![Олександр Падалко — Frontend Developer та AI Automator](https://raccoon-studio.com.ua/images/optimized/oleksandr-800.webp)
+![Олександр Падалко — Frontend Developer та AI Automator](https://raccoon-studio.com.ua/images/optimized/oleksandr-office-800.webp)
 
 ### Олександр Падалко
 

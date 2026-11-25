@@ -8,6 +8,16 @@ Canonical HTML page: https://raccoon-studio.com.ua/en/blog/
 
 SEO, AI, web development and automation. We write about what we actually test.
 
+![Raccoon analysing Google search results and AI-powered search.](https://raccoon-studio.com.ua/images/blog/seo-2026-google-ai-search.webp)
+
+SEO
+
+## [SEO in 2026: How to Attract Customers Through Google and AI Search](https://raccoon-studio.com.ua/en/blog/seo-2026-google-ai-search/)
+
+Why high Google rankings no longer guarantee stable traffic, how AI is changing search behaviour, and what businesses can do about it.
+
+Oleksandr Padalko · 25/11/2026 · 8 min read
+
 ![Raccoon SEO Studio mascot explaining AI agent architecture and its connections to digital tools.](https://raccoon-studio.com.ua/images/blog/how-ai-agents-work-cover.webp)
 
 AI and Automation

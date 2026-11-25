@@ -36,7 +36,7 @@ We combine SEO, frontend development, content and automation to create solutions
 
 SEO Specialist
 
-![Oleksandr Padalko — Frontend Developer / AI Automator](https://raccoon-studio.com.ua/images/optimized/oleksandr-800.webp)
+![Oleksandr Padalko — Frontend Developer / AI Automator](https://raccoon-studio.com.ua/images/optimized/oleksandr-office-800.webp)
 
 ### Oleksandr Padalko
 
